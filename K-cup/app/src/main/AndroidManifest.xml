@@ -6,16 +6,62 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:theme="@style/style_no_need_player">
+        <activity android:name="home.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="dialog.WarningActivity"
+            android:theme="@style/DialogTheme"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <activity
+            android:name="home.MainActivity"
+            android:theme="@style/style_no_need_player" />
+
+        <activity
+            android:name="player.PlayerActivity"
+            android:theme="@style/style_no_need_player" />
+
+        <activity
+            android:name="game.NoNeedPlayerActivity"
+            android:theme="@style/style_no_need_player" />
+
+        <activity
+            android:name="game.ChallengeActivity"
+            android:theme="@style/style_challenge" />
+
+        <activity
+            android:name="game.ChoiceActivity"
+            android:theme="@style/style_choice" />
+
+        <activity
+            android:name="game.NewRuleActivity"
+            android:theme="@style/style_new_rule" />
+
+        <activity
+            android:name="game.NewRuleNextActivity"
+            android:theme="@style/style_new_rule" />
+
+        <activity
+            android:name="end.EndGameActivity"
+            android:theme="@style/style_no_need_player" />
+
+        <activity
+            android:name="dialog.CancelActivity"
+            android:theme="@style/DialogTheme"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="2c075f7e7c3929525aa5ba75ba8432fe865bce13" />
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

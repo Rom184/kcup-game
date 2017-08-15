@@ -1,3 +1,594 @@
 <resources>
+
     <string name="app_name">K-cup</string>
+
+    <!--Main -->
+    <string name="normal_game">Le K-Cup</string>
+    <string name="new_game_now">Le K-Cup !</string>
+    <string name="add_player">Ajouter un joueur ?</string>
+    <string name="challenge">K-Cup veut :</string>
+
+    <!-- config -->
+    <string name="new_game">Nouvelle partie</string>
+    <string name="fast_game">Partie rapide</string>
+    <string name="continue_game">Continuer</string>
+    <string name="enter_name">Entrez le nom des joueurs</string>
+    <string name="player_nb">Joueur</string>
+    <string name="player">Joueur %s</string>
+    <string name="with_king_rule">K-Cup sera-til de la partie ?</string>
+    <string name="long_game">L\'alcool ne vous fait pas peur ? </string>
+    <string name="lets_go">On veut boire !</string>
+    <string name="end">Merci pour cette partie!</string>
+    <string name="end_game">Disposer !</string>
+
+    <string name="dialog_warning_title">Eh toi !\n\nL\'abus d\'alcool est dangereux pour la sante. En jouant avec k-cup vous confirmez que vous etes responsable des eventuelles consequences.</string>
+    <string name="dialog_warning_no">Annuler</string>
+    <string name="dialog_warning_yes">Je joue !</string>
+    <string name="dialog_game_title">Alors ?\n\nOn ne veut plus boire ?</string>
+    <string name="dialog_game_no">Jamais !</string>
+    <string name="dialog_game_yes">Oui j\'ai trop bu.</string>
+
+    <string name="drink">gorgee</string>
+    <string name="drinks">gorgees</string>
+
+    <!-- fast game -->
+    <string-array name="no_need_player_array" formatted="false">
+        <item>Les mains en l\'air ! La derniere personne boit %b</item>
+        <item>L\'hote distribue %b. S\'il n\'y en a pas, Tout le monde boit %b</item>
+        <item>Tout le monde debout ! La derniere personne boit %b gorgee</item>
+        <item>Le derniere personne a avoir fete son anniversaire peut distribuer %b !</item>
+        <item>Le premiere personne a s\'etre leve ce matin boit %b</item>
+        <item>La premiere personne a sortir un mouchoir distribue %b</item>
+        <item>La premiere personne a sortir une capote distribue %b</item>
+        <item>La premiere personne a sortir un briquet distribue %b</item>
+        <item>La premiere personne a crier ""ENCORE"" boit %b</item>
+        <item>La premiere personne a crier ""MOI"" distribue %b</item>
+        <item>La premiere personne qui crit ""DRINK-Cup"" distribue %b</item>
+        <item>La premiere personne a se lever distribue %b</item>
+        <item>La derniere personne a etre allee aux toilettes boit %b</item>
+        <item>La premiere personne qui trouve le joueur le plus jeune distribue %b</item>
+        <item>La derniere personne a avoir publie un statut Facebook boit %b</item>
+        <item>La derniere persoone qui etait debout boit %b</item>
+        <item>Le dernier a s\'etre servi un verre boit %b</item>
+        <item>Le dernier a avoir bu distribue %b</item>
+        <item>Le dernier joueur a avoir vomi en soiree distribue %b</item>
+        <item>Les gauchers/gaucheres boivent %b</item>
+        <item>Les droitiers/droitieres boivent %b</item>
+        <item>Ceux qui sont deja alle a un concert distribuent %b</item>
+        <item>Ceux dont le telephone est sur la table boivent %b</item>
+        <item>Ceux qui avaient moins de 8 ans pendant la coupe du monde 98 boivent %b</item>
+        <item>Ceux qui sont deja alle au theatre boivent %b</item>
+        <item>Ceux qui sont (encore) a boire de l\'alcool soft (vin, biere, ..) boivent %b</item>
+        <item>Ceux qui sont a l\'alcool pur distribuent %b</item>
+        <item>Ceux qui sont au whisky boivent %b</item>
+        <item>Ceux qui ont deja regarde un film porno boivent %b</item>
+        <item>Ceux qui entendent cette phrase boivent %b</item>
+        <item>Ceux qui ont deja lu un ""Chaire de poule"" boivent %b !</item>
+        <item>Ceux qui ont deja lu un ""Agata Christie"" boivent %b !</item>
+        <item>Ceux qui ont deja lu un ""Twilight"" boivent %b !</item>
+        <item>Ceux qui ont deja lu un manga boivent %b !</item>
+        <item>Ceux qui ont deja lu un comics boivent %b !</item>
+        <item>Ceux qui ont deja habite dans plus de 3 villes boivent %b !</item>
+        <item>Ceux qui vivent dans leur ville natale distribuent %b !</item>
+        <item>Ceux qui n\'aime pas le MacDonald ont %b !</item>
+        <item>Ceux qui sont alles au MacDonald cette semaine offre %b !</item>
+        <item>Celui/Celle qui a le plus d\'amis sur Facebook boit %b</item>
+        <item>Celui/Celle qui a le moins d\'amis sur Facebook distribue %b</item>
+        <item>Celui/Celle qui n\'est pas sur Facebook boit %b</item>
+        <item>Celui/Celle qui n\'est pas sur Instagram boit %b</item>
+        <item>Celui/Celle qui a mis la musique ou la tele distribue %b</item>
+        <item>Celui/Celle ayant le verre le plus rempli boit %b</item>
+        <item>Celui/Celle qui a le moins de cheveux boit %b</item>
+        <item>Celui/Celle qui a le moins de cheveux distribue %b</item>
+        <item>Celui/Celle qui a le plus de cheveux boit %b</item>
+        <item>Celui ou celle qui lit cette phrase boit %b</item>
+        <item>Celui ou celle qui lit cette phrase distribue %b</item>
+        <item>Celui ou celle qui a le plus grand nez parmi vous boit %b</item>
+        <item>Tous ceux dont le prenom comporte un ""E"" boivent %b</item>
+        <item>Tous ceux dont le prenom comporte un ""A"" boivent %b</item>
+        <item>Tous ceux dont le prenom comporte un ""R"" boivent %b</item>
+        <item>Tous ceux dont le prenom comporte un ""C"" boivent %b</item>
+        <item>Tous ceux dont le prenom comporte un ""T"" boivent %b</item>
+        <item>Tous les blonds/blondes boivent %b</item>
+        <item>Tous les bruns/brunes boivent %b</item>
+        <item>Tu es roux ? Alors bois %b !</item>
+        <item>Les enfants uniques boivent %b !</item>
+        <item>Tu as un frere ? %b !</item>
+        <item>Tu as une sœur ? %b !</item>
+        <item>Les redoublants boivent %b !</item>
+        <item>Si tu n\'a jamais redouble, tu peux distribuer %b</item>
+        <item>Si t\'as deja cherche quelque chose alors que c\'etait dans ta poche bois %b</item>
+        <item>Les barbus, vous buvez %b !</item>
+        <item>Les imberbes, vous buvez %b !</item>
+        <item>Les binoclards boivent %b</item>
+        <item>Les hommes distribuent %b</item>
+        <item>Les hommes boivent %b !</item>
+        <item>Les femmes boivent %b !</item>
+        <item>Les femmes distribuent %b</item>
+        <item>Les personnes en couple boivent %b</item>
+        <item>Les personnes celibataires boivent %b</item>
+        <item>Le joueur le plus grand distribue %b</item>
+        <item>Le joueur le plus jeune distribue %b</item>
+        <item>Le joueur le plus vieux distribue %b</item>
+        <item>Le joueur le plus jeune boit %b</item>
+        <item>Le joueur avec les habits les plus flashy distribue %b</item>
+        <item>Le joueur avec le verre le plus alcoolise distribue %b</item>
+        <item>Les joueurs sans alcool distribuent %b</item>
+        <item>Les personnes qui n\'ont jamais joue au DrinK-Cup avant ce soir boivent %b</item>
+        <item>Les personnes qui ont deja joue au DrinK-Cup avant ce soir ditribue %b</item>
+        <item>Tous les blonds/blondes boivent %b</item>
+        <item>Si ton jour d\'anniversaire est un nombre pair, bois %b</item>
+        <item>Si ton jour d\'anniversaire est un nombre impair, bois %b</item>
+        <item>Les personnes tatouees boivent %b</item>
+        <item>Les personnes ayant un piercing boivent %b</item>
+        <item>Ceux qui sont arrives en retard pour demarrer DrinK-Cup boivent %b !</item>
+        <item>Ceux qui portent un string boivent %b</item>
+        <item>Ceux qui ont fait un sport en club distribuent %b</item>
+        <item>Ceux qui ont fait un sport en club boivent %b</item>
+        <item>Ceux qui n\'ont pas pris de douche aujourd\'hui boivent %b</item>
+        <item>Ceux qui ont un iPhone boivent %b</item>
+        <item>Ceux qui ont un produit Samsung boivent %b</item>
+        <item>Ceux qui viennent du Nord boivent %b</item>
+        <item>Ceux qui viennent du Sud boivent %b</item>
+        <item>Ceux qui ont les yeux bleus boivent %b</item>
+        <item>Ceux qui ont les yeux marrons boivent %b</item>
+        <item>Ceux qui sont alles en Amerique boivent %b</item>
+        <item>Ceux qui sont alles en Asie boivent %b</item>
+        <item>Ceux qui sont alles en Europe boivent %b</item>
+        <item>Ceux qui sont alles en Thailande distribuent %b</item>
+        <item>Ceux qui sont alles en Chine boivent %b</item>
+        <item>Ceux qui sont alles au Japon boivent %b</item>
+        <item>Ceux qui sont alles en Italie distribuent %b</item>
+        <item>Ceux qui sont alles en Espagne boivent %b</item>
+        <item>Ceux qui sont alles en Suisse boivent %b</item>
+        <item>Ceux qui sont deja alles a un match de foot boivent %b</item>
+        <item>Ceux qui ont deja pisse ou chie dans l\'ocean boivent %b</item>
+        <item>Ceux qui ont deja pisse dans la rue vous buvez %b</item>
+        <item>Ceux qui sont alles sur facebook aujourd\'hui boivent %b</item>
+        <item>Ceux qui sont nes a plus de 100km d\'ici boivent %b !</item>
+        <item>Ceux qui sont nes a moins de 50km d\'ici distribuent %b !</item>
+        <item>Ceux qui ont deja pris un rond point a l\'envers distribuent %b !</item>
+        <item>Ceux qui ont deja fait l\'amour dans l\'eau boivent %b</item>
+        <item>Ceux qui ont deja compare la taille de leur sexe avec des amis boivent %b</item>
+        <item>Ceux qui travaillent ou etudient dans la finance ou la comptabilite boivent %b</item>
+        <item>Ceux qui travaillent ou etudient dans l\'informatique boivent %b</item>
+        <item>Ceux qui travaillent ou etudient dans le commerce ou la vente boivent %b</item>
+        <item>Ceux qui son etudiants, %b pour mieux etudier !</item>
+        <item>Ceux qui ont un debut de calvitie distribuent %b</item>
+        <item>Ceux qui ont du rouge a levres boivent %b</item>
+        <item>Ceux qui ont un collier distribuent %b</item>
+        <item>Ceux qui ont une bague boivent %b</item>
+        <item>Ceux qui ecoutent du rap boivent %b</item>
+        <item>Ceux qui ecoutent du rock boivent %b</item>
+        <item>Ceux qui mangent trop de sucreries boivent %b</item>
+        <item>Ceux qui n\'ont pas like la page facebook K-cup boivent leur verre, sauf si vous mettez un ""j’aime"" dans la minute car le K-Cup est tolerant ;)</item>
+        <item>Les fans de football boivent %b</item>
+        <item>Les fans de jeux videos boivent %b</item>
+        <item>Les fans de serie boivent %b</item>
+        <item>Les fans de manga boivent %b</item>
+        <item>Les fans de series tele realite boivent %b</item>
+        <item>Les moins de 21 ans boivent %b !</item>
+        <item>Les plus de 25 ans boivent %b !</item>
+        <item>La prochaine  personne qui dit OUI ou NON prend %b</item>
+        <item>La prochaine personne qui dit BOIT distribue %b</item>
+        <item>La prochaine personne qui s\'allume une cigarette boit %b gorgees</item>
+        <item>La ou les prochaines personnes a devoir boire doublera son nombre de gorgees !</item>
+        <item>La ou les prochaines personnes a devoir boire triplera son nombre de gorgees !</item>
+        <item>Le prochain joueur a devoir boire distribue %b</item>
+        <item>Le prochain joueur a devoir boire distribue %b</item>
+        <item>Le prochain joueur a devoir boire distribue ses gorgees</item>
+        <item>Le joueur a droite de celui ou celle qui vient de lire cette regle boit %b</item>
+        <item>Le joueur a droite de celui ou celle qui vient de lire cette regle distribue %b</item>
+        <item>Le joueur a gauche de celui ou celle qui vient de lire cette regle boit %b</item>
+        <item>Le joueur a gauche de celui ou celle qui vient de lire cette regle distribue %b</item>
+        <item>Le joueur qui vient de toucher sur l\'ecran boit %b</item>
+        <item>Le joueur qui vient de toucher sur l\'ecran distribue %b</item>
+        <item>Le dernier joueur qui a parle donne %b</item>
+        <item>Le dernier joueur qui a parle boit %b</item>
+        <item>%b gorgee pour les fumeurs !</item>
+        <item>%b gorgee pour les etudiants !</item>
+        <item>%b gorgees pour les chomeurs !</item>
+        <item>%b gorgees pour les couples qui jouent à ce jeu !</item>
+        <item>%b gorgee pour tout le monde !</item>
+    </string-array>
+
+    <string-array name="challenge_array" formatted="false">
+        <!-- solo challenge -->
+        <item>%s, c\'est ton anniversaire ? Non ? \n\nAlors boit %b</item>
+        <item>%s, c\'est ton jour de conges aujourd\'hui ? Non ? \n\nAlors boit %b</item>
+        <item>%s, c\'est ton jour de malchance ! \n\nBois %b</item>
+        <item>%s, c\'est ton jour de chance ! \nDistribue %b</item>
+        <item>%s, remplis ton verre! \nS\'il etait deja plein bois %b</item>
+        <item>%s, distribue %b si tu as deja eu un accident de voiture</item>
+        <item>%s, distribue %b si tu as n\'a jamais eu un accident de voiture</item>
+        <item>%s distribue %b si tu as deja ete opere(e)</item>
+        <item>%s bois %b si tu as Netflix</item>
+        <item>%s bois %b si tu as regardé Netflix cette semaine</item>
+        <item>%s bois %b si tu va regulierement au cinema</item>
+        <item>%s bois si tu ne connais pas les couleurs d\'un arc en ciel</item>
+        <item>%s bois si tu connais la couleur blanche du cheval d\'Henri IV</item>
+        <item>%s si tu es une fille distribue %b, autrement bois-les</item>
+        <item>%s si tu es un garcon distribue %b, autrement bois-les</item>
+        <item>%s si tu es un elfe distribue %b, sinon bois-les</item>
+        <item>%s, montre les 5 dernieres photos de ton portable ou bois %b</item>
+        <item>%s, trouve un joueur moins bronze que toi et donne lui %b !</item>
+        <item>%s, trouve un joueur plus bronze que toi et donne lui %b !</item>
+        <item>%s tu es bronze ?\n\n Non. Alors %b !</item>
+        <item>%s, si tes jambes ne sont pas epilees bois %b</item>
+        <item>%s raconte un dossier sur un des joueurs ou boit %b et il ou elle boit %b</item>
+        <item>%s raconte une histoire sympa sur un des joueurs ou boit %b</item>
+        <item>Le joueur a droite de %s boit %b</item>
+        <item>Le joueur a droite de %s distribue %b</item>
+        <item>Le joueur a gauche de %s boit %b</item>
+        <item>Le joueur a gauche de %s distribue %b</item>
+        <item>%s, tous ceux qui ne sont pas dans le repertoire de ton telephone boivent %b</item>
+        <item>%s, tous ceux que tu ne connais pas depuis au moins 2 ans boivent %b</item>
+        <item>%s, tous ceux que tu connais depuis au moins 2 ans te donnent %b</item>
+        <item>%s, tous ceux qui font partis de ta famille boivent %b</item>
+        <item>%s, tous ceux qui font partis de ta famille te donnent %b</item>
+        <item>%s regarde ton telephone si ton dernier appel est une personne pres de toi alors %b chacun</item>
+        <item>%s, donne le titre du dernier film que tu as vu au cinema. Ceux qui ne l\'ont pas vu boivent %b</item>
+        <item>%s, donne le titre de la derniere serie que tu as vu. Ceux qui l\'ont vu boivent %b</item>
+        <item>%s, tu as 3 secondes pour donner le nombre de personnes avec toi. L\'echec c\'est %b</item>
+        <item>%s, tu as 3 secondes pour donner le nombre de filles avec toi. L\'echec c\'est %b</item>
+        <item>%s, tu as 3 secondes pour donner le nom du président en France actuellement. L\'echec c\'est %b</item>
+        <item>%s, tu as 3 secondes pour donner le nom de la personne que tu aimes. L\'echec c\'est %b</item>
+        <item>%s, imite un autre joueur, la premiere personne qui trouve distribue %b</item>
+        <item>%s, si tu as deja fait la sieste au travail/en classe bois %b</item>
+        <item>%s, si tu as deja vole dans un magasin bois %b\n\nVoleur !</item>
+        <item>%s, si tu as deja declare ta flamme par texto en etant soûl bois %b</item>
+        <item>%s, si tu as deja vole dans un magasin bois %b</item>
+        <item>%s, si tu as deja ete vire de bar / boite bois %b</item>
+        <item>%s, si tu as deja rompu avec quelqu\'un par sms bois %b</item>
+        <item>%s, si tu as deja menti sur ton age pour chopper distribue %b</item>
+        <item>%s, si tu t\'es deja battu avec quelqu\'un tu bois %b</item>
+        <item>%s, si tu es a ton 1er verre tu bois %b</item>
+        <item>%s, si tu as bu moins de 2 verres tu bois %b</item>
+        <item>%s, si tu as bu plus de 3 verres tu peux distribuer %b</item>
+        <item>%s distribue autant de gorgees qu\'il ou elle a de freres et sœurs !</item>
+        <item>%s distribue %b si tes chaussettes sont blanches</item>
+        <item>%s distribue %b si tu portes un string</item>
+        <item>%s boit %b si tu portes un slip</item>
+        <item>%s boit %b si tu portes un pantalon</item>
+        <item>%s distribue %b si tu te ronges les ongles</item>
+        <item>%s distribue %b si tu dois bosser demain</item>
+        <item>%s boit %b si tu es alle sur Instagram aujourd\'hui</item>
+        <item>%s boit %b si tu es alle sur un jeu sur ton telephone aujourd\'hui</item>
+        <item>%s distribue %b a une personne a qui tu fais un clin d\'oeil</item>
+        <item>%s distribue %b a une personne a qui tu fais un sourire</item>
+        <item>%s, bois autant de gorgees que tu as visite de pays !</item>
+        <item>%s, distribue autant de gorgees que tu as visite de pays !</item>
+        <item>%s distribue %b si tu as deja achete un portable plus de 600 euros</item>
+        <item>%s si ton age est pair tu bois %b, 5 s\'il est impair !</item>
+        <item>%s si ton age est pair tu distribues %b, 6 s\'il est impair !</item>
+        <item>%s, fais 2 culs sec d\'affilee ou distribue %b</item>
+        <item>%s bois %b si tu laisses la porte des toilettes ouverte quand tu vas aux toilettes chez toi</item>
+        <item>%s bois %b si tu aimes secretement une personne de ton entourage</item>
+        <item>%s bois %b si tu penses finir tes jours avec la meme personne qu\'aujourd\'hui, bois meme si c\'est pas vrai !</item>
+        <item>%s bois %b si t\'as deja mesure ton sexe ou celui de ton partenaire</item>
+        <item>%s bois %b si tu t\'es deja reveille dans le lit de quelqu\'un en te demandant comment t\'es arrive la</item>
+        <item>%s bois %b si tu as souvent le rituel cafe - clope - caca le matin</item>
+        <item>%s bois %b si tes chaussures ont des lacets</item>
+        <item>%s bois %b si tu as deja depense plus de 1000€ dans la meme journee</item>
+        <item>%s bois %b si tu as deja porte un appareil dentaire</item>
+        <item>%s bois %b si tu as achete ton portable plus de 300 euros</item>
+        <item>%s bois %b si tu n\'as pas ton veritable nom sur Facebook</item>
+        <item>%s bois %b si tu as fait l\'amour pour la premiere fois apres 16 ans</item>
+        <item>%s bois %b si tu as fait l\'amour pour la premiere fois apres 20 ans</item>
+        <item>Les mots synonymes de ""PENIS"", le joueur qui repete ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""BELGE"", le joueur qui repete ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""BANDER"", le joueur qui repete ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""CHAUCOLA"", le joueur qui repete ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""ANUS"", le joueur qui repete ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""CUL"", le joueur qui repete ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""BOIRE"", le joueur qui repete ou qui se trompe boit %b ! %s commence</item>
+        <item>%s tu expliques pourquoi te ne devrais pas boire %b la tout de suite. Les autres joueurs trancheront si oui ou non !</item>
+        <item>%s tu expliques pourquoi te ne devrais pas boire ton verre la tout de suite. Les autres joueurs trancheront si oui ou non !</item>
+        <item>Nouveau decret avec %b en jeu : ""les persos de Tintin"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les persos Matrix"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les persos de Teletubbies"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les films d\'horreur"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les belles chanteuses"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les chanteurs bogosse"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""le fait d\'etre un homme c\'est mieux"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""le fait d\'etre une femme c\'est mieux"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""etre bourre c\'est super"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les noms de cocktail"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les personnages de Marvel"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les fast food"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les series"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les emissions de television"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les villes des Etats-Unis"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les pays asiatiques"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les pays en europe"", %s prend en 1er la parole</item>
+        <item>Photo souvenir, %s prend une jolie photo et la poste sur le Facebook de DrinK-CupGame</item>
+        <item>Photo souvenir, %s prend une photo avec une belle grimace et la poste sur le Facebook de DrinK-CupGame</item>
+        <item>Photo dossier, %s prend une photo de toi bien arrosé et la poste sur le Facebook de DrinK-CupGame</item>
+
+        <!-- duo challenge -->
+        <item>%s distribue %b a %a !</item>
+        <item>%s boit %b avec %a !</item>
+        <item>%s et %a se mettent d\'accords pour donner %b a un autre joueur</item>
+        <item>%s et %a se mettent d\'accords pour se donner %b</item>
+        <item>%s, si ton verre contient un alcool moins cher que celui de %a, bois %b</item>
+        <item>%s, si ton verre contient un alcool plus cher que celui de %a, distribue %b</item>
+        <item>Photo souvenir, %s et %a se prennent en selfie en train de loucher</item>
+        <item>Photo souvenir, %s et %a se prennent en selfie en train de sourire</item>
+        <item>Photo souvenir, %s et %a se prennent en selfie et le poste sur le Facebook de DrinK-CupGame</item>
+        <item>%s rajoute du soft ou de l\'alcool dans le verre de %a</item>
+        <item>%s rajoute que de l\'alcool dans le verre de %a</item>
+        <item>%s tu sers le verre de %a jusqu\'a la fin de la partie</item>
+        <item>%s tu te met a cote de %a jusqu\'a la fin de la partie</item>
+        <item>%s tu te met en face de %a jusqu\'a la fin de la partie</item>
+        <item>%s et %a, buvez ensemble %b puis une autre bien sur !</item>
+        <item>%s et %a, buvez ensemble %b</item>
+        <item>%s, donne l\'age de %a ou bois %b</item>
+        <item>%s, si tu te trouves plus jolie que %a bois %b</item>
+        <item>%s doit boire %b pendant que %a te chuchote des choses cochonnes a l\'oreille</item>
+        <item>%s doit boire %b pendant que %a te regarde avec passion !</item>
+        <item>%s fait une grimace en se faisant prendre en photo par %a, et boit %b !</item>
+        <item>%s devine une chose que %a adore. Si tu as juste tu lui donne %b, sinon tu bois %b</item>
+        <item>%s devine une chose que %a deteste. Si tu as juste tu lui donne %b, sinon tu bois %b</item>
+        <item>%s devine une chose que %a a fait hier. Si tu as juste tu lui donne %b, sinon tu bois %b</item>
+        <item>%s devra faire un bruit d\'animal apres chaque gorgee sinon %b de plus jusqu\'a son prochain tour, %a choisit quel sera l\'animal</item>
+        <item>%s devra dire un mot apres chaque gorgee sinon %b de plus jusqu\'a son prochain tour, %a choisit quel sera le mot</item>
+        <item>%s devra faire un geste apres chaque gorgee sinon %b de plus jusqu\'a son prochain tour, %a choisit quel sera le geste</item>
+        <item>%s tu expliques pourquoi te ne devrais distribuer %b a %a la tout de suite. Les autres joueurs trancheront si oui ou non !</item>
+        <item>%s tu expliques pourquoi te ne devrais distribuer %bs a %a. Les autres joueurs trancheront si oui ou non !</item>
+    </string-array>
+
+    <string-array name="choice_array" formatted="false">
+        <item>Plutot Stars Wars ou Star Trek ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot Marvel ou DC ?\n\nVotez ! Le plus petit nombre boit %b</item>
+        <item>Plutot Paris ou Lyon ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot s\'eclater a Bangkok ou a Las Vegas ? Le plus petit nombre boit %b</item>
+        <item>Plutot vivre seul ou toujours avec quelqu\'un tout le temps avectoi ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot France ou pays etranger ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot etre coiffe style 80\'s ou etre habille style 80\'s ?\n\nVotez ! Le plus grand petit boit %b</item>
+        <item>Plutot Mario ou Sonic ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot Zombie ou Vampire ?\n\nVotez ! Le plus petit nombre boit %b</item>
+        <item>Plutot Voiture ou Moto ?\n\nVotez ! Le plus petit nombre boit %b</item>
+        <item>Plutot prendre son temps ou aller vite ?\n\nVotez ! Le plus petit nombre boit %b</item>
+        <item>Plutot Alien ou Predator ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot Superman ou Sangoku ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot Rouge ou Vert ?\n\nVotez ! Le plus petit nombre boit %b</item>
+        <item>Plutot Disney ou Pixar ?\n\nVotez ! Le plus petit nombre boit %b</item>
+        <item>Plutot Biere ou Vin ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot sandwich ou hamburger ?\n\nVotez ! Le plus petit nombre boit %b</item>
+        <item>Plutot Macdonald ou Burger K-Cup ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot Zelda ou Links ?\n\nVotez ! Le plus petit nombre boit %b</item>
+        <item>Plutot Playstation ou Xbox ?\n\nVotez ! Le plus petit nombre boit %b</item>
+        <item>Plutot Pc ou console ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot ange ou demon ?\n\nVotez ! Le plus petit nombre boit %b</item>
+        <item>Plutot manger au resto ou a la maison ?\n\nVotez ! Le plus petit nombre boit %b</item>
+        <item>Plutot film d\'amour ou d\'action ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot Soleil ou Pluie ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot pour ou contre les preliminaires ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot pour le mariage ou contre ?\n\nVotez ! Le plus petit nombre boit %b</item>
+        <item>Plutot vivre dans un pays chaud ou froid ?\n\nVotez ! Le plus petit nombre boit %b</item>
+        <item>Plutot immortalite ou jeunesse eternelle ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot pour ou contre le retablissement de la peine de mort ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot pour ou contre que quelqu\'un vomisse ce soir ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot pour ou contre le gel dans les cheveux ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot Emma Waston ou Megan Fox ?\n\nVotez ! Le plus petit nombre boit %b</item>
+        <item>Plutot pate ou riz ?\n\nVotez ! Le plus petit nombre boit %b</item>
+        <item>Plutot etre la personne la plus intelligente au monde ou la plus sexy ?\n\nVotez ! Le plus petit nombre boit %b</item>
+        <item>Plutot vivre sur une ile ou en foret ?\n\nVotez ! Le plus petit nombre boit %b</item>
+        <item>Plutot regarder un film sans le son ou ecouter un film sans l\'image ?\n\nVotez ! Le plus petit nombre boit %b</item>
+        <item>Plutot changer son nom de famille pour Hitler ou ne plus jamais manger de chocolat ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot etre un ninja ou un pirate ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot etre le mechant ou le gentil ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot noir ou blanc ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Choisissez le plus mauvais caractere d\'entre vous qui boira %b !</item>
+        <item>Choisissez le plus sage d\'entre vous qui distribura %b !</item>
+        <item>Choisissez le plus sobre d\'entre vous qui distribura %b !</item>
+        <item>Choisissez la personne qui parle le plus d\'entre vous qui boira %b !</item>
+        <item>Choisissez une personne qui devra choisir un nom de film !\n\nSi la majorite ne l\'aime pas cette personne boit %b</item>
+        <item>Choisissez une personne qui devra dire une blague !\n\nSi la majorite ne l\'aime pas cette personne boit 6 gorgees</item>
+        <item>Choisissez une personne qui devra dire une blague sexiste !\n\nSi la majorite ne l\'aime pas cette personne boit %b</item>
+        <item>Choisissez les deux joueurs les plus debiles, ils boivent %b !</item>
+        <item>Choisissez les deux joueurs les plus gentils, ils distribuent %b !</item>
+        <item>Choisissez les deux joueurs les plus mechants, ils boivent %b et encore %b!</item>
+        <item>Choisissez une personne qui devra boire %b !</item>
+        <item>Choisissez une personne qui devra distribuer %b !</item>
+        <item>Choisssez une personne qui doit boire %b (avec le sourire sinon cul sec !)</item>
+        <item>Choisssez une personne qui doit boire %b (en froncant les sourcils sinon cul sec !)</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un handicapes celebre, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un personnage de Futurama, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un personnage de Simpsons, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un personnage de South Park, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un nain de Blanche neige, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un film francais, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un film americain, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver une serie americaine, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un film des annees 90, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un film des annees 80, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver une musique des annees 2000, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver une musique des annees 90, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes en 5 secondes, le groupe le moins nombreux boit %b</item>
+        <item>%s tu choisis 1 personne et jusqu\'a la fin de la partie, interdit d\'allumer une clope sinon cul sec !</item>
+        <item>%s tu choisis 2 personnes et jusqu\'a la fin de la partie, interdit d\'allumer une clope sinon cul sec !</item>
+        <item>%s tu choisis 1 personne et echange ta place avec ! Et puis tu peux distribuer %b</item>
+        <item>%s tu choisis 1 personne, vous buvez %b puis chacun distribue %b</item>
+        <item>%s tu choisis 1 personne, complimente cette personne ou bois %b</item>
+        <item>%s tu choisis 1 personne, insulte cette personne ou elle boit %b</item>
+        <item>%s tu choisis 1 personne qui devra pendant 1 minute sourire non stop, %b a chaque seconde sans sourire</item>
+        <item>%s tu choisis 1 personne qui devra etre d\'accord avec toi pendant 1 minutes non stop, %b a chaque refus</item>
+        <item>%s tu choisis 1 personne qui devra t\'appeler ""MAITRE"" jusqu\'a ton prochain tour, %b a chaque oublie</item>
+        <item>%s tu choisis 1 personne qui devra t\'appeler ""CHERIE"" jusqu\'a ton prochain tour, %b a chaque oublie</item>
+        <item>%s tu choisis 1 personne, si un des deux boit l\'autre boit jusqu\'au prochain tour de %s, sinon %b par oublie (chacun) !</item>
+        <item>%s tu choisis 1 personne, si %s boit l\'autre boit, jusqu\'au prochain tour de %s !</item>
+        <item>%s tu choisis 1 personne, si l\'autre boit %s boit, jusqu\'au prochain tour de %s !</item>
+        <item>%s tu choisis 1 personne et tu lui remplis son verre. Vous buvez %b chacun !</item>
+        <item>%s tu choisis 1 personne et tu lui remplis son verre. Vous distribuez %b chacun !</item>
+        <item>%s tu choisis 3 personnes. Vous distribuez %b chacun !</item>
+        <item>%s tu choisis un joueur et a tour de role vous devez trouvez les noms de Pokemons, le perdant boit %b !</item>
+        <item>%s tu choisis un joueur et a tour de role vous devez trouvez les personnage de Dragon Ball Z, le perdant boit %b !</item>
+        <item>%s tu choisis un joueur et a tour de role vous devez trouvez les personnage de One piece, le perdant boit %b !</item>
+        <item>%s tu choisis un joueur et a tour de role vous devez trouvez les personnage du seigneur des anneaux, le perdant boit %b !</item>
+        <item>%s tu choisis un joueur et a tour de role vous devez trouvez les personnage d\'Harry Potter, le gagnant distribue %b !</item>
+        <item>%s tu choisis 2 joueurs et a tour de role vous devez trouvez les personnage de Stars Wars, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et a tour de role vous devez trouvez les personnage de Game of throne, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et a tour de role vous devez trouvez des slogans de pub, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et a tour de role vous devez trouvez des marques, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et a tour de role vous devez trouvez des proverbes, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et a tour de role vous devez trouvez les menu de Macdonald, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et a tour de role vous devez trouvez les actrices sexy du cinema, le perdant boit %b !</item>
+        <item>%s tu choisis un joueur et a tour de role vous devez trouvez les acteurs beau gosse du cinema, le perdant boit %b !</item>
+        <item>%s tu choisis 2 joueurs et a tour de role vous devez trouvez les noms de Disney, le gagnant distribue %b !</item>
+        <item>%s tu choisis 2 joueurs et a tour de role vous devez trouvez des dinausores, le gagnant distribue %b !</item>
+    </string-array>
+
+    <string-array name="new_rule_array">
+        <item>Tout le monde doit se parler avec une question! Chaque oublie c\'est %b</item>
+        <item>Tout le monde debout! Chaque joueur qui s\'assoit c\'est %b</item>
+        <item>Tout le monde se tait! Chaque parole sera sanctionne de %b</item>
+        <item>A chaque fois qu\'un joueur boit, il me remercie (le grand K-Cup !), sinon %b</item>
+        <item>A chaque fois qu\'un joueur boit, il me remercie (le grand K-Cup !), sinon %b</item>
+        <item>A chaque fois qu\'un joueur boit, il dit ensuite ""Oye Oye"", sinon %b</item>
+        <item>Choisissez mon meilleur pote.\nIl decide d\'une nouvelle regle</item>
+        <item>Choisissez mon meilleur pote.\nIl decide d\'une nouvelle regle</item>
+        <item>Choisissez ma petite amie, elle ne peut plus boire !</item>
+        <item>Choisissez ma petite amie, elle ne peut plus boire !</item>
+
+        <item>Choisissez mon moqueur, il rigole a chaque fois qu\'il parle !</item>
+        <item>Choisissez mon moqueur, il rigole a chaque fois qu\'il parle !</item>
+        <item>Choisissez mon souffre douleur, il boit a chaque fois qu\'un joueur boit !</item>
+        <item>Choisissez mon souffre douleur, il boit a chaque fois qu\'un joueur boit !</item>
+        <item>Choisissez la personne la plus gentille.\nJe lui offre 1 gorgee a chaque tour (pour son sourire)</item>
+        <item>Choisissez la personne la plus gentille.\nJe lui offre 1 gorgee a chaque tour (pour le sourire)</item>
+        <item>Choisissez la personne la plus mechante.\nJe lui permet de donner 1 gorgee a chaque tour</item>
+        <item>Choisissez la personne la plus mechante.\nJe lui permet de donner 1 gorgee a chaque tour</item>
+        <item>Faites 2 groupes !</item>
+        <item>Faites 2 groupes !</item>
+
+        <item>Choisissez mon conseiller, il se met derriere un joueur avant chaque tour, si ce joueur boit il doit doubler ses gorgees !</item>
+        <item>Choisissez mon conseiller, il se met debout derriere un joueur avant chaque tour, si ce joueur boit il doit doubler ses gorgees !</item>
+        <item>Choisissez mon assistant, chaque joueur qui boit peut lui donner une de ses gorgees !</item>
+        <item>Choisissez mon assistant, chaque joueur qui boit peut lui donner une de ses gorgees !</item>
+        <item>Choisissez mon barde, il doit choisir une musique !</item>
+        <item>Choisissez mon barde, il doit choisir une musique !</item>
+        <item>Le mot ""BOIRE"" devient prohibe !\nChaque oublie sera sanctionne de %b !</item>
+        <item>Les mots ""OUI/NON"" devient prohibe !\nChaque oublie sera sanctionne de %b !</item>
+        <item>Les Prenoms deviennet interdits !\n\n%b par oublie !</item>
+        <item>Choisissez un joueur, il boit a chaque tour ou son nom apparait sur l\'ecran !</item>
+
+        <item>Choisissez mon erudit, a chaque tour il doit repondre a une question, une erreur est %b</item>
+        <item>Choisissez mon erudit, a chaque tour il doit repondre a une question, une erreur est %b</item>
+        <item>Choisissez un donneur de lecons, a chaque tour il doit se la ramener sinon %b</item>
+        <item>Choisissez un donneur de lecons, a chaque tour il doit se la ramener sinon %b</item>
+        <item>Choisissez un bouseux.\n\nIl s\'ecarte de toutes les dames</item>
+        <item>Choisissez un bouseux.\n\nIl s\'ecarte de toutes les dames</item>
+        <item>Il est interdit de dire des pronoms personnels !</item>
+        <item>Tous les verbes deviennent ""SCHTROUMPFFER"" </item>
+        <item>Choisissez le vengeur, a chaque fois qu\'il boit il en distribue autant</item>
+        <item>Choisissez le vengeur, a chaque fois qu\'il boit il en distribue autant</item>
+
+        <item>Choisissez mon pignouf, a chaque fin de phrase un gros mot, sinon %b</item>
+        <item>Choisissez mon pignouf, a chaque fin de phrase un gros mot, sinon %b</item>
+        <item>Choisissez le medium, il parle seulement au futur, sinon %b</item>
+        <item>Choisissez le medium, il parle seulement au futur, sinon %b</item>
+        <item>Choisissez un historien, il parle seulement au passe, sinon %b</item>
+        <item>Choisissez un historien, il parle seulement au passe, sinon %b</item>
+        <item>Choisissez le debile sans avis, il dit ""c\'est clair"" a chaque fois qu\'un joueur parle sinon %b</item>
+        <item>Choisissez le debile sans avis, il dit ""c\'est clair"" a chaque fois qu\'un joueur parle sinon %b</item>
+        <item>Choississez mon magicien !</item>
+        <item>Choississez mon magicien !</item>
+
+        <item>Les questions sont interdites ! Sinon %b</item>
+        <item>Les gorgees sont doublees !</item>
+        <item>Il est interdit de toucher la table sinon %b</item>
+        <item>Il est interdit de lacher son verre sinon %b</item>
+        <item>Choisissez mon sponsor.\n\nIl ne parle qu\'avec des slogans de pub, sinon %b !</item>
+        <item>Choisissez mon sponsor, il ne parle qu\'avec des slogans de pub, sinon %b !</item>
+        <item>Faites une photo de tout le monde et poster sur le facebook de K-CupGame !</item>
+    </string-array>
+
+    <string-array name="new_rule_next_array" formatted="false">
+        <item>Vous pouvez parler sans poser de questions !</item>
+        <item>Vous pouvez vous assoir !</item>
+        <item>Vous pouvez parler !</item>
+        <item>Arretez les remerciements./n\n Vous me genez !</item>
+        <item>Pour vous remercier gracieusement %b pour tout le monde !</item>
+        <item>"Oye Oye !\n\nEt %b de ma part !</item>
+        <item>C\'est quoi ce meilleur pote ?\n\n Il boit %b</item>
+        <item>T\'es le meilleur des frangins !\n\n Tu peux distribuer %b</item>
+        <item>Vous etes jaloux de ma petite amie ?\n\nAllez %b pour tout le monde (sauf ma cherie)</item>
+        <item>Elle, Ma petite amie ?\nEt puis quoi encore !\nFinis ton verre maintenant !</item>
+
+        <item>Tu trouves ca drole ?\n\n %b pour te calmer !</item>
+        <item>C\'était trop drole !\n\n Tu peux donner %b !</item>
+        <item>J\'aime trop la torture !\n\b Finis ton verre !</item>
+        <item>Je ne supporte plus tant de haine !\n\nTu peux donner %b</item>
+        <item>Trop bon trop K-cup !\n\nTu peux donner %b</item>
+        <item>Tu te crois meilleur que moi ?\n\nAlors %b pretentieux !</item>
+        <item>Oh oui continue !\n\n Et %b a distribuer pour finir !</item>
+        <item>Seul le grand K-cup est cruel !\n\n Finis ton verre !</item>
+        <item>Le groupe le plus petit boit %b</item>
+        <item>Le groupe le plus grand boit %b</item>
+
+        <item>Conseil final !\n\nDonne %b à tout le monde</item>
+        <item>Quels conseils mediocres !\n\n%b pour t\'apprendre a boire avant de reflechir !</item>
+        <item>Il te reste beaucoup a apprendre jeune padawan !\n\n vide ton verre doit etre</item>
+        <item>Apprend jeune assistant et donne %b</item>
+        <item>Tu appelles cela de la musique ?\n\n %b pour toi et ceux qui ont aime !</item>
+        <item>Quelle musique ! \n\Tu peux esquiver %b !</item>
+        <item>""BOIRE"" est authorise !</item>
+        <item>On peut redire ""OUI/NON""\n Et oui, %b pour tout le monde</item>
+        <item>Les prenoms sont revenus !</item>
+        <item>Si tu a vu ton nom apparaitre, tu peux donner un cul sec !</item>
+
+        <item>Est-ce que tu savais que tu devais boire %b ?</item>
+        <item>Quel puit de connaissances !\n\nTu peux donner %b !</item>
+        <item>Il faut dire ce que l\'on pense !\n\nDonne maintenant %b</item>
+        <item>Il y a toujours quelqu\'un pour se la ramener\n\n Tu bois %b</item>
+        <item>Tu peux revenir mais bois %b pour ne pas faire de betises !</item>
+        <item>Le mieux c\'est de rester loin !\n\nBois %b pour t\'encourager</item>
+        <item>Vous pouvez utiliser des pronoms personnels</item>
+        <item>Vous pouvez SCHTROUMPFFER...\nNon !je voulais dire :\n\nVous buvez %b</item>
+        <item>Se venger c\'est mal voyez !\n\n et %b pour apprendre la sagesse !</item>
+        <item>Il faut arreter cette violence !\n\n%b pour te calmer</item>
+
+        <item>Et %b pour t\'apprendre a mieux parler</item>
+        <item>Et puis merde !\n\n%b pour tout le monde, bande de pignoufs</item>
+        <item>Le K-Cup predit que vous allez distribuer 4 gorgees</item>
+        <item>%b pour toi !\n\nTu l\'as pas vu venir celle-la ?</item>
+        <item>Je suis nostalgique ! %b pour respecter le passe</item>
+        <item>Tu penses a maintenant ?/n\n%b pour revenir dans le present !</item>
+        <item>C\'est clair que tu bois %b !</item>
+        <item>Commence une phrase par ""c\'est clair"" et distribue %b</item>
+        <item>Ouuuuuuuaaaa !\n\nLe magicien fait disparaitre son verre !</item>
+        <item>Le magicien fait disparaître le verre du joueur qu\'il veut !</item>
+
+        <item>C\'est le retour des questions</item>
+        <item>Mieux vaut un que deux !</item>
+        <item>La table est aussi notre amie !\n\nEt %b pour se reconcilier !</item>
+        <item>Il faut lacher un peu vos verres.\n\n Alcooliques !</item>
+        <item>Je ne comprends rien a ce qu\il dit...\n\n Allez %b pour se comprendre</item>
+        <item>On a toujours besoin d\'un sponsor !\n\nLe mien c\'est %b pour tout le monde !</item>
+        <item>C\'est comme une grande famille (alcoolique) !</item>
+    </string-array>
+
+    <string-array name="end_array">
+        <item>Je vous attend pour une future buverie !</item>
+        <item>Le grand K-Cup est bon.\nVous pouvez vous en allez !</item>
+        <item>Et si on refaisait un K-Cup ?</item>
+        <item>Le grand K-Cup est partout !</item>
+        <item>Un jeu cree par des fous buvant toute la journee !</item>
+        <item>Avec alcool les buveries sont plus folles !</item>
+        <item>N\'oubliez pas de mettre 5 etoiles sinon cul sec !</item>
+        <item>Si vous avez aime n\'oubliez pas de faire tourner !</item>
+        <item>N\'oubliez pas de parler de cette application si vous avez apprecie y jouer !</item>
+        <item>Et si on allait boire un verre ?</item>
+        <item>L\'eau c\'est tabou on en viendra tous a bout !</item>
+        <item>Ecoutez toujours le grand K-Cup, il a toujours raison !</item>
+        <item>Pardon mais votre verre ne serait pas vide ?</item>
+        <item>Le moment le plus dur :\n\n la fin !</item>
+        <item>Pour rester zen, mangez des nems !</item>
+        <item>En esperant vous revoir bientot !</item>
+        <item>Un verre...\nDeux verres...\nTrois v.........</item>
+        <item>Si vous avez aime laissez nous un commentaire d\'amour !</item>
+        <item>Une idee ? Dites le nous !</item>
+    </string-array>
+
 </resources>
