@@ -1,30 +1,36 @@
 package home;
 
+import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.kcup.drinkgame.k_cup.R;
-
-import java.util.List;
 
 import game.ChallengeActivity;
 import game.ChoiceActivity;
 import game.NewRuleActivity;
 import game.NewRuleNextActivity;
 import game.NoNeedPlayerActivity;
-import identity.Rule;
 import player.PlayerActivity;
 import utils.GameUtils;
 import utils.SharedPreferenceUtils;
 
 public class HomeMainFragment extends Fragment {
+
+    public static String FACEBOOK_URL = "https://www.facebook.com/KCupGame/";
+    public static String FACEBOOK_PAGE_ID = "KCupGame";
 
     private View view;
 
@@ -44,8 +50,26 @@ public class HomeMainFragment extends Fragment {
         Button continueGame = (Button) view.findViewById(R.id.continue_game);
         continueGame.setTypeface(typeface);
 
+        ImageView like = (ImageView) view.findViewById(R.id.like);
+        like.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToFacebookPage();
+            }
+        });
+
+        ImageView mail = (ImageView) view.findViewById(R.id.mail);
+        mail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendMail();
+            }
+        });
+
+        LinearLayout continueArea = (LinearLayout) view.findViewById(R.id.continue_area);
+
         if (SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext()) > 0) {
-            continueGame.setVisibility(View.VISIBLE);
+            continueArea.setVisibility(View.VISIBLE);
             continueGame.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -83,7 +107,7 @@ public class HomeMainFragment extends Fragment {
                 }
             });
         } else {
-            continueGame.setVisibility(View.GONE);
+            continueArea.setVisibility(View.GONE);
         }
 
         newNormalGame.setOnClickListener(new View.OnClickListener() {
@@ -100,6 +124,46 @@ public class HomeMainFragment extends Fragment {
     public void onResume() {
         super.onResume();
         bindview();
+    }
+
+    private void goToFacebookPage() {
+        Intent facebookIntent = new Intent(Intent.ACTION_VIEW);
+        String facebookUrl = getFacebookPageURL(getActivity());
+        facebookIntent.setData(Uri.parse(facebookUrl));
+        startActivity(facebookIntent);
+    }
+
+    public String getFacebookPageURL(Context context) {
+        PackageManager packageManager = context.getPackageManager();
+        try {
+            int versionCode = packageManager.getPackageInfo("com.facebook.katana", 0).versionCode;
+            if (versionCode >= 3002850) {
+                return "fb://facewebmodal/f?href=" + FACEBOOK_URL;
+            } else {
+                return "fb://page/" + FACEBOOK_PAGE_ID;
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+            return FACEBOOK_URL;
+        }
+    }
+
+    private void sendMail() {
+        String[] TO = {""};
+        String[] CC = {""};
+        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+
+        emailIntent.setData(Uri.parse("mailto:"));
+        emailIntent.setType("text/plain");
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
+        emailIntent.putExtra(Intent.EXTRA_CC, CC);
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Your subject");
+        emailIntent.putExtra(Intent.EXTRA_TEXT, "Email message goes here");
+
+        try {
+            startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+        } catch (android.content.ActivityNotFoundException ex) {
+            Toast.makeText(getActivity(), "There is no email client installed.", Toast.LENGTH_SHORT).show();
+        }
     }
 
 }

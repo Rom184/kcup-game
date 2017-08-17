@@ -40,7 +40,7 @@ public class NewRuleNextActivity extends AppCompatActivity {
 
         content = (FrameLayout) findViewById(R.id.background);
         bulle = (ImageView) findViewById(R.id.bulle);
-        //back = (ImageView) findViewById(R.id.back);
+        back = (ImageView) findViewById(R.id.back);
         ruleContent = (TextView) findViewById(R.id.content_rule);
         ruleContent.setTypeface(typeface);
 
@@ -62,7 +62,7 @@ public class NewRuleNextActivity extends AppCompatActivity {
                 goToNextRule();
             }
         });
-        /*if (position > 0) {
+        if (position > 0) {
             back.setVisibility(View.VISIBLE);
         }
         back.setOnClickListener(new View.OnClickListener() {
@@ -70,7 +70,7 @@ public class NewRuleNextActivity extends AppCompatActivity {
             public void onClick(View v) {
                 getBack();
             }
-        });*/
+        });
     }
 
     private void goToNextRule() {

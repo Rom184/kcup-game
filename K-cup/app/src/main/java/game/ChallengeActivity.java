@@ -26,7 +26,7 @@ public class ChallengeActivity extends AppCompatActivity {
     private int position;
 
     private ImageView bulle;
-    //private ImageView back;
+    private ImageView back;
 
     private FrameLayout content;
     private TextView ruleContent;
@@ -41,7 +41,7 @@ public class ChallengeActivity extends AppCompatActivity {
 
         content = (FrameLayout) findViewById(R.id.background);
         bulle = (ImageView) findViewById(R.id.bulle);
-        //back = (ImageView) findViewById(R.id.back);
+        back = (ImageView) findViewById(R.id.back);
         ruleContent = (TextView) findViewById(R.id.content_rule);
         ruleContent.setTypeface(typeface);
 
@@ -68,15 +68,15 @@ public class ChallengeActivity extends AppCompatActivity {
             }
         });
 
-       /* if (position > 0) {
+        if (position > 0) {
             back.setVisibility(View.VISIBLE);
-        }*/
-        /*back.setOnClickListener(new View.OnClickListener() {
+        }
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getBack();
             }
-        });*/
+        });
     }
 
     private void bindViewNext() {
@@ -91,15 +91,15 @@ public class ChallengeActivity extends AppCompatActivity {
                 goToNextRule();
             }
         });
-        /*if (position > 0) {
+        if (position > 0) {
             back.setVisibility(View.VISIBLE);
-        }*/
-        /*back.setOnClickListener(new View.OnClickListener() {
+        }
+        back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getBack();
             }
-        });*/
+        });
     }
 
     private void goToNextRule() {
@@ -147,34 +147,34 @@ public class ChallengeActivity extends AppCompatActivity {
                 get(position);
     }
 
-    /*private void getBack() {
+    private void getBack() {
 
         if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1)
                 .getType().equals((GameUtils.Type.NO_NEED_PLAYER.toString()))) {
             SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
-            Intent k = new Intent(NewRuleActivity.this, DrinkGameActivity.class);
+            Intent k = new Intent(ChallengeActivity.this, NoNeedPlayerActivity.class);
             startActivity(k);
         } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1)
                 .getType().equals((GameUtils.Type.CHALLENGE.toString()))) {
             SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
-            Intent k = new Intent(NewRuleActivity.this, ChallengeActivity.class);
+            Intent k = new Intent(ChallengeActivity.this, ChallengeActivity.class);
             startActivity(k);
         } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1)
                 .getType().equals((GameUtils.Type.CHOICE.toString()))) {
             SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
-            Intent k = new Intent(NewRuleActivity.this, ChoiceActivity.class);
+            Intent k = new Intent(ChallengeActivity.this, ChoiceActivity.class);
             startActivity(k);
         } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1).getType()
                 .equals(GameUtils.Type.NEW_RULE.toString())
                 || SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1).getType()
                 .equals(GameUtils.Type.NEW_RULE_NEXT.toString())) {
             SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
-            Intent k = new Intent(NewRuleActivity.this, NewRuleActivity.class);
+            Intent k = new Intent(ChallengeActivity.this, NewRuleActivity.class);
             startActivity(k);
         }
         finish();
 
-    }*/
+    }
 
     @Override
     public void onBackPressed() {
