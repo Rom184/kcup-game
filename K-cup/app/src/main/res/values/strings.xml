@@ -4,6 +4,9 @@
 
     <!--Main -->
     <string name="normal_game">Le K-Cup</string>
+    <string name="normal_game_info">Un mode pour s\'ambiancer !</string>
+    <string name="berserk_game">Le berserk</string>
+    <string name="berserk_game_info">Le mode pour les vrais alcoolos !</string>
     <string name="new_game_now">Le K-Cup !</string>
     <string name="add_player">Ajouter un joueur ?</string>
     <string name="challenge">K-Cup veut :</string>
@@ -20,6 +23,10 @@
     <string name="lets_go">On veut boire !</string>
     <string name="end">Merci pour cette partie!</string>
     <string name="end_game">Disposer !</string>
+    <string name="send_mail">Envoie de mail</string>
+    <string name="error_send_mail">Envoie de mail impossible !</string>
+    <string name="adress_mail">kcup-drink-game@hotmail.com</string>
+    <string name="subject_mail">Grand K-cup - J\'ai des conseils a te dire :</string>
 
     <string name="dialog_warning_title">Eh toi !\n\nL\'abus d\'alcool est dangereux pour la sante. En jouant avec k-cup vous confirmez que vous etes responsable des eventuelles consequences.</string>
     <string name="dialog_warning_no">Annuler</string>

@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.kcup.drinkgame.k_cup.R;
@@ -44,11 +45,20 @@ public class HomeMainFragment extends Fragment {
 
         Typeface typeface = Typeface.createFromAsset(getActivity().getAssets(), "Roboto-Medium.ttf");
 
-        Button newNormalGame = (Button) view.findViewById(R.id.new_game);
+        Button newNormalGame = (Button) view.findViewById(R.id.new_game_normal);
         newNormalGame.setTypeface(typeface);
+
+        TextView infoNormalGame = (TextView) view.findViewById(R.id.normal_game_info);
+        infoNormalGame.setTypeface(typeface);
 
         Button continueGame = (Button) view.findViewById(R.id.continue_game);
         continueGame.setTypeface(typeface);
+
+        Button newBerserkGame = (Button) view.findViewById(R.id.new_game_berserk);
+        newBerserkGame.setTypeface(typeface);
+
+        TextView infoBerserkGame = (TextView) view.findViewById(R.id.berserk_game_info);
+        infoBerserkGame.setTypeface(typeface);
 
         ImageView like = (ImageView) view.findViewById(R.id.like);
         like.setOnClickListener(new View.OnClickListener() {
@@ -148,7 +158,7 @@ public class HomeMainFragment extends Fragment {
     }
 
     private void sendMail() {
-        String[] TO = {""};
+        String[] TO = {"kcup-drink-game@hotmail.com"};
         String[] CC = {""};
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
 
@@ -156,13 +166,12 @@ public class HomeMainFragment extends Fragment {
         emailIntent.setType("text/plain");
         emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
         emailIntent.putExtra(Intent.EXTRA_CC, CC);
-        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Your subject");
-        emailIntent.putExtra(Intent.EXTRA_TEXT, "Email message goes here");
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.subject_mail));
 
         try {
-            startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+            startActivity(Intent.createChooser(emailIntent, getString(R.string.send_mail)));
         } catch (android.content.ActivityNotFoundException ex) {
-            Toast.makeText(getActivity(), "There is no email client installed.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), getString(R.string.error_send_mail), Toast.LENGTH_SHORT).show();
         }
     }
 
