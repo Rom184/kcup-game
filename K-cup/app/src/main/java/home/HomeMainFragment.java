@@ -45,20 +45,21 @@ public class HomeMainFragment extends Fragment {
 
         Typeface typeface = Typeface.createFromAsset(getActivity().getAssets(), "Roboto-Medium.ttf");
 
-        Button newNormalGame = (Button) view.findViewById(R.id.new_game_normal);
-        newNormalGame.setTypeface(typeface);
-
-        TextView infoNormalGame = (TextView) view.findViewById(R.id.normal_game_info);
-        infoNormalGame.setTypeface(typeface);
+        LinearLayout newNormalGame = (LinearLayout) view.findViewById(R.id.new_game_normal);
+        TextView titleNormalGame = (TextView) view.findViewById(R.id.new_normal_game_title);
+        TextView contentNormalGame = (TextView) view.findViewById(R.id.normal_game_info);
+        titleNormalGame.setTypeface(typeface);
+        contentNormalGame.setTypeface(typeface);
 
         Button continueGame = (Button) view.findViewById(R.id.continue_game);
         continueGame.setTypeface(typeface);
 
-        Button newBerserkGame = (Button) view.findViewById(R.id.new_game_berserk);
-        newBerserkGame.setTypeface(typeface);
 
-        TextView infoBerserkGame = (TextView) view.findViewById(R.id.berserk_game_info);
-        infoBerserkGame.setTypeface(typeface);
+        LinearLayout newBerserkGame = (LinearLayout) view.findViewById(R.id.new_game_berserk);
+        TextView titleBerserkGame = (TextView) view.findViewById(R.id.berserk_game_title);
+        TextView contentBerserkGame = (TextView) view.findViewById(R.id.berserk_game_info);
+        titleBerserkGame.setTypeface(typeface);
+        contentBerserkGame.setTypeface(typeface);
 
         ImageView like = (ImageView) view.findViewById(R.id.like);
         like.setOnClickListener(new View.OnClickListener() {

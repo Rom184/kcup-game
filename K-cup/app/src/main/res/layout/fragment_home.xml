@@ -57,56 +57,72 @@
 
             </LinearLayout>
 
-            <Button
+            <LinearLayout
                 android:id="@+id/new_game_normal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
                 android:background="@drawable/bouton_type"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:padding="10dp"
-                android:text="@string/normal_game"
-                android:textAllCaps="false"
-                android:textSize="20sp" />
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <TextView
-                android:id="@+id/normal_game_info"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="12dp"
-                android:text="@string/normal_game_info"
-                android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/new_normal_game_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/normal_game"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2px"
-                android:layout_marginTop="12dp"
-                android:background="@android:color/black" />
+                <TextView
+                    android:id="@+id/normal_game_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/normal_game_info"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
 
-            <Button
+            </LinearLayout>
+
+            <LinearLayout
                 android:id="@+id/new_game_berserk"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
                 android:background="@drawable/bouton_type"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:padding="10dp"
-                android:text="@string/berserk_game"
-                android:textAllCaps="false"
-                android:textSize="20sp" />
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <TextView
-                android:id="@+id/berserk_game_info"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="12dp"
-                android:text="@string/berserk_game_info"
-                android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/berserk_game_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/berserk_game"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/berserk_game_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/berserk_game_info"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
