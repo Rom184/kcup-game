@@ -69,7 +69,7 @@
         <item>Ceux qui sont déjà allés dans un bar avec des hôtesses boivent %b</item>
         <item>Ceux qui sont déjà allés à un l\'école boivent %b</item>
         <item>Ceux qui sont déjà allés à dans une auberge distribuent %b</item>
-        <item>Ceux dont le telephone est sur la table boivent %b</item>
+        <item>Ceux dont le téléphone est sur la table boivent %b</item>
         <item>Ceux qui avaient moins de 8 ans pendant la coupe du monde 98 boivent %b</item>
         <item>Ceux qui avaient moins de 15 ans pour leur première fois distribuent %b</item>
         <item>Ceux qui avaient plus de 20 ans pour leur première fois boivent %b</item>
@@ -97,7 +97,7 @@
         <item>Ceux qui ont plus d\'une couleur de cheveux boivent %b</item>
         <item>Ceux qui ont du rose ou violet sur eux distribuent %b</item>
         <item>Ceux qui ont du rouge ou vert sur eux boivent %b</item>
-        <item>Ceux qui ont penser qu'\il n\'allait pas boire boivent %b\n\nMais non, tout le monde boit !</item>
+        <item>Ceux qui ont penser qu\'il n\'allait pas boire boivent %b\n\nMais non, tout le monde boit !</item>
         <item>Celui/Celle qui a le plus d\'amis sur Facebook boit %b</item>
         <item>Celui/Celle qui a le moins d\'amis sur Facebook distribue %b</item>
         <item>Celui/Celle qui n\'est pas sur Facebook boit %b</item>
@@ -242,60 +242,62 @@
         <item>%b gorgée pour tout le monde !</item>
     </string-array>
 
-    <string-array name="challénge_array" formatted="false">
-        <!-- solo challénge -->
-        <item>%s, c\'est ton anniversaire ? Non ? \n\nAlors boit %b</item>
-        <item>%s, c\'est ton jour de conges aujourd\'hui ? Non ? \n\nAlors boit %b</item>
+    <string-array name="challenge_array" formatted="false">
+        <!-- solo challenge -->
+        <item>%s, c\'est ton anniversaire ? Non ? \n\nAlors bois %b</item>
+        <item>%s, c\'est ton jour de congés aujourd\'hui ? Non ? \n\nAlors bois %b</item>
         <item>%s, c\'est ton jour de malchance ! \n\nBois %b</item>
         <item>%s, c\'est ton jour de chance ! \nDistribue %b</item>
         <item>%s, remplis ton verre! \nS\'il était déjà plein bois %b</item>
         <item>%s, distribue %b si tu as déjà eu un accident de voiture</item>
         <item>%s, distribue %b si tu as n\'a jamais eu un accident de voiture</item>
-        <item>%s distribue %b si tu as déjà ete opere(e)</item>
+        <item>%s distribue %b si tu as déjà ete opéré(e)</item>
         <item>%s bois %b si tu as Netflix</item>
         <item>%s bois %b si tu as regardé Netflix cette semaine</item>
-        <item>%s bois %b si tu va regulierement au cinema</item>
+        <item>%s bois %b si tu va régulierement au cinéma</item>
         <item>%s bois si tu ne connais pas les couleurs d\'un arc en ciel</item>
         <item>%s bois si tu connais la couleur blanche du cheval d\'Henri IV</item>
         <item>%s si tu es une fille distribue %b, autrement bois-les</item>
-        <item>%s si tu es un garcon distribue %b, autrement bois-les</item>
+        <item>%s si tu es un garçon distribue %b, autrement bois-les</item>
         <item>%s si tu es un elfe distribue %b, sinon bois-les</item>
         <item>%s, montre les 5 dernières photos de ton portable ou bois %b</item>
-        <item>%s, trouve un joueur moins bronze que toi et donne lui %b !</item>
-        <item>%s, trouve un joueur plus bronze que toi et donne lui %b !</item>
-        <item>%s tu es bronze ?\n\n Non. Alors %b !</item>
-        <item>%s, si tes jambes ne sont pas epilees bois %b</item>
+        <item>%s, trouve un joueur moins bronzé que toi et donne lui %b !</item>
+        <item>%s, trouve un joueur plus bronzé que toi et donne lui %b !</item>
+        <item>%s tu es bronzé ?\n\n Non. Alors %b !</item>
+        <item>%s tu es enceinte ?\n\n Non. Alors %b (si Oui on ne boit surtout pas !)</item>
+        <item>%s, si tes jambes ne sont pas épileés bois %b</item>
         <item>%s raconte un dossier sur un des joueurs ou boit %b et il ou elle boit %b</item>
         <item>%s raconte une histoire sympa sur un des joueurs ou boit %b</item>
-        <item>Le joueur a droite de %s boit %b</item>
-        <item>Le joueur a droite de %s distribue %b</item>
-        <item>Le joueur a gauche de %s boit %b</item>
-        <item>Le joueur a gauche de %s distribue %b</item>
-        <item>%s, tous ceux qui ne sont pas dans le repertoire de ton telephone boivent %b</item>
+        <item>%s raconte une histoire pour boire %b</item>
+        <item>Le joueur à droite de %s boit %b</item>
+        <item>Le joueur à droite de %s distribue %b</item>
+        <item>Le joueur à gauche de %s boit %b</item>
+        <item>Le joueur à gauche de %s distribue %b</item>
+        <item>%s, tous ceux qui ne sont pas dans le répertoire de ton téléphone boivent %b</item>
         <item>%s, tous ceux que tu ne connais pas depuis au moins 2 ans boivent %b</item>
         <item>%s, tous ceux que tu connais depuis au moins 2 ans te donnent %b</item>
         <item>%s, tous ceux qui font partis de ta famille boivent %b</item>
         <item>%s, tous ceux qui font partis de ta famille te donnent %b</item>
-        <item>%s regarde ton telephone si ton dernier appel est une personne pres de toi alors %b chacun</item>
+        <item>%s regarde ton téléphone si ton dernier appel est une personne pres de toi alors %b chacun</item>
         <item>%s, donne le titre du dernier film que tu as vu au cinema. Ceux qui ne l\'ont pas vu boivent %b</item>
-        <item>%s, donne le titre de la dernière serie que tu as vu. Ceux qui l\'ont vu boivent %b</item>
+        <item>%s, donne le titre de la dernière série que tu as vu. Ceux qui l\'ont vu boivent %b</item>
         <item>%s, tu as 3 secondes pour donner le nombre de personnes avec toi. L\'echec c\'est %b</item>
         <item>%s, tu as 3 secondes pour donner le nombre de filles avec toi. L\'echec c\'est %b</item>
         <item>%s, tu as 3 secondes pour donner le nom du président en France actuellement. L\'echec c\'est %b</item>
         <item>%s, tu as 3 secondes pour donner le nom de la personne que tu aimes. L\'echec c\'est %b</item>
-        <item>%s, imite un autre joueur, la première personne qui trouve distribue %b</item>
+        <item>%s, imite un autre joueur, la première personne qui trouve la réponse distribue %b</item>
         <item>%s, si tu as déjà fait la sieste au travail/en classe bois %b</item>
-        <item>%s, si tu as déjà vole dans un magasin bois %b\n\nVoleur !</item>
-        <item>%s, si tu as déjà declare ta flamme par texto en etant soûl bois %b</item>
-        <item>%s, si tu as déjà vole dans un magasin bois %b</item>
-        <item>%s, si tu as déjà ete vire de bar / boite bois %b</item>
+        <item>%s, si tu as déjà volé dans un magasin bois %b\n\nVoleur !</item>
+        <item>%s, si tu as déjà déclaré ta flamme par texto en étant soûl bois %b</item>
+        <item>%s, si tu as déjà volé dans un magasin bois %b</item>
+        <item>%s, si tu as déjà ete viré de bar / boite bois %b</item>
         <item>%s, si tu as déjà rompu avec quelqu\'un par sms bois %b</item>
         <item>%s, si tu as déjà menti sur ton age pour chopper distribue %b</item>
         <item>%s, si tu t\'es déjà battu avec quelqu\'un tu bois %b</item>
         <item>%s, si tu es a ton 1er verre tu bois %b</item>
         <item>%s, si tu as bu moins de 2 verres tu bois %b</item>
         <item>%s, si tu as bu plus de 3 verres tu peux distribuer %b</item>
-        <item>%s distribue autant de gorgées qu\'il ou elle a de freres et sœurs !</item>
+        <item>%s distribue autant de gorgées qu\'il ou elle a de frères et soeurs !</item>
         <item>%s distribue %b si tes chaussettes sont blanches</item>
         <item>%s distribue %b si tu portes un string</item>
         <item>%s boit %b si tu portes un slip</item>
@@ -303,21 +305,26 @@
         <item>%s distribue %b si tu te ronges les ongles</item>
         <item>%s distribue %b si tu dois bosser demain</item>
         <item>%s boit %b si tu es allé sur Instagram aujourd\'hui</item>
-        <item>%s boit %b si tu es allé sur un jeu sur ton telephone aujourd\'hui</item>
+        <item>%s boit %b si tu es allé sur un jeu sur ton téléphone aujourd\'hui</item>
         <item>%s distribue %b a une personne a qui tu fais un clin d\'oeil</item>
         <item>%s distribue %b a une personne a qui tu fais un sourire</item>
-        <item>%s, bois autant de gorgées que tu as visite de pays !</item>
-        <item>%s, distribue autant de gorgées que tu as visite de pays !</item>
-        <item>%s distribue %b si tu as déjà achete un portable plus de 600 euros</item>
+        <item>%s distribue %b a une personne a qui tu montres ton verre</item>
+        <item>%s distribue %b a une personne parce qu\'il faut boire voyons !</item>
+        <item>%s boit %b si tu aimes la viande</item>
+        <item>%s boit %b si tu aimes trop les légumes</item>
+        <item>%s boit %b si tu aimes trop l\'ouvrir</item>
+        <item>%s, bois autant de gorgées que tu as visité de pays !</item>
+        <item>%s, distribue autant de gorgées que tu as visité de pays !</item>
+        <item>%s distribue %b si tu as déjà acheté un portable plus de 600 euros</item>
         <item>%s si ton age est pair tu bois %b, 5 s\'il est impair !</item>
         <item>%s si ton age est pair tu distribues %b, 6 s\'il est impair !</item>
-        <item>%s, fais 2 culs sec d\'affilee ou distribue %b</item>
+        <item>%s, fais 2 culs sec d\'affilée ou distribue %b</item>
         <item>%s bois %b si tu laisses la porte des toilettes ouverte quand tu vas aux toilettes chez toi</item>
-        <item>%s bois %b si tu aimes secretement une personne de ton entourage</item>
+        <item>%s bois %b si tu aimes secrètement une personne de ton entourage</item>
         <item>%s bois %b si tu penses finir tes jours avec la meme personne qu\'aujourd\'hui, bois meme si c\'est pas vrai !</item>
-        <item>%s bois %b si t\'as déjà mesure ton sexe ou celui de ton partenaire</item>
-        <item>%s bois %b si tu t\'es déjà reveille dans le lit de quelqu\'un en te demandant comment t\'es arrive la</item>
-        <item>%s bois %b si tu as souvent le rituel cafe - clope - caca le matin</item>
+        <item>%s bois %b si t\'as déjà mesuré ton sexe ou celui de ton partenaire</item>
+        <item>%s bois %b si tu t\'es déjà réveillé dans le lit de quelqu\'un en te demandant comment t\'es arrivé la</item>
+        <item>%s bois %b si tu as souvent le rituel café - clope - caca le matin</item>
         <item>%s bois %b si tes chaussures ont des lacets</item>
         <item>%s bois %b si tu as déjà depense plus de 1000€ dans la meme journee</item>
         <item>%s bois %b si tu as déjà porte un appareil dentaire</item>
@@ -346,7 +353,7 @@
         <item>Nouveau decret avec %b en jeu : ""les noms de cocktail"", %s prend en 1er la parole</item>
         <item>Nouveau decret avec %b en jeu : ""les personnages de Marvel"", %s prend en 1er la parole</item>
         <item>Nouveau decret avec %b en jeu : ""les fast food"", %s prend en 1er la parole</item>
-        <item>Nouveau decret avec %b en jeu : ""les series"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les séries"", %s prend en 1er la parole</item>
         <item>Nouveau decret avec %b en jeu : ""les emissions de television"", %s prend en 1er la parole</item>
         <item>Nouveau decret avec %b en jeu : ""les villes des Etats-Unis"", %s prend en 1er la parole</item>
         <item>Nouveau decret avec %b en jeu : ""les pays asiatiques"", %s prend en 1er la parole</item>
@@ -450,7 +457,7 @@
         <item>Faites 2 groupes, pour chaque groupe il faut trouver un nain de Blanche neige, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
         <item>Faites 2 groupes, pour chaque groupe il faut trouver un film francais, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
         <item>Faites 2 groupes, pour chaque groupe il faut trouver un film americain, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
-        <item>Faites 2 groupes, pour chaque groupe il faut trouver une serie americaine, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver une série americaine, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
         <item>Faites 2 groupes, pour chaque groupe il faut trouver un film des annees 90, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
         <item>Faites 2 groupes, pour chaque groupe il faut trouver un film des annees 80, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
         <item>Faites 2 groupes, pour chaque groupe il faut trouver une musique des annees 2000, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
