@@ -40,6 +40,7 @@
     <!-- fast game -->
     <string-array name="no_need_player_array" formatted="false">
         <item>Les mains en l\'air ! La dernière personne boit %b</item>
+        <item>C\'est le jour des elfes ! \nEt %b pour faire la fête avec K-Cup</item>
         <item>L\'hote distribue %b. S\'il n\'y en a pas, Tout le monde boit %b</item>
         <item>Tout le monde debout ! La dernière personne boit %b</item>
         <item>Le dernière personne à avoir fêté son anniversaire peut distribuer %b !</item>
@@ -272,22 +273,47 @@
 
     <string-array name="challenge_array" formatted="false">
         <!-- solo challenge -->
-        <item>%s, c\'est ton anniversaire ? Non ? \n\nAlors bois %b</item>aa
+        <item>%s, c\'est ton anniversaire ? Non ? \n\nAlors bois %b</item>
         <item>%s, c\'est ton jour de congés aujourd\'hui ? Non ? \n\nAlors bois %b</item>
         <item>%s, c\'est ton jour de malchance ! \n\nBois %b</item>
         <item>%s, c\'est ton jour de chance ! \nDistribue %b</item>
+        <item>%s, c\'est le jour de la bière ! \nDistribue %b de bière où bois %b</item>
+        <item>%s, c\'est le jour du vin ! \nDistribue %b de vin où bois %b</item>
+        <item>%s, c\'est le jour du wiskhy ! \nDistribue %b de wiskhy où bois %b</item>
+        <item>%s, c\'est le jour de la vodka ! \nDistribue %b de vodka où bois %b</item>
+        <item>%s, c\'est le jour du partage ! \nDistribue %b puis bois %b</item>
+        <item>%s, c\'est le jour du communisme ! \nBois %b puis les autres joueurs pour l\'équilibre</item>
+        <item>%s, c\'est le jour des héros ! \nUn sauveur se choisit et doit boire %b à ta place</item>
+        <item>%s, c\'est le jour des vengeances ! \nBois %b puis distribue le double</item>
+        <item>%s, tu crois aux fées ? Non ? Alors bois %b</item>
+        <item>%s, tu crois à la chance ? Non ? Pourtant le joueur à ta droite bois %b</item>
+        <item>%s, tu crois à la chance ? Non ? Pourtant le joueur à ta gauche bois %b</item>
+        <item>%s, tu crois à la magie ? Non ? Alors ferme les yeux et quand tu les ouvriras ton verre sera vide</item>
+        <item>%s, tu crois aux miracles ? Mais si ! Alors distribue %b</item>
         <item>%s, remplis ton verre! \nS\'il était déjà plein bois %b</item>
         <item>%s, distribue %b si tu as déjà eu un accident de voiture</item>
         <item>%s, distribue %b si tu as n\'a jamais eu un accident de voiture</item>
-        <item>%s distribue %b si tu as déjà ete opéré(e)</item>
+        <item>%s, distribue %b si tu t\'es déjà cassé le bras ou la jambe</item>
+        <item>%s, distribue %b si tu as déjà eu l\'appendicite</item>
+        <item>%s, distribue %b si tu as déjà eu un plâtre</item>
+        <item>%s distribue %b si tu as déjà été opéré(e)</item>
+        <item>%s distribue %b si tu as déjà eu une anesthésie générale</item>
         <item>%s bois %b si tu as Netflix</item>
+        <item>%s bois %b si tu télécharges (voleur!)</item>
         <item>%s bois %b si tu as regardé Netflix cette semaine</item>
-        <item>%s bois %b si tu va régulierement au cinéma</item>
+        <item>%s bois %b si tu va régulièrement au cinéma</item>
         <item>%s bois si tu ne connais pas les couleurs d\'un arc en ciel</item>
-        <item>%s bois si tu connais la couleur blanche du cheval d\'Henri IV</item>
+        <item>%s bois si tu connais la couleur du cheval blanc d\'Henri IV</item>
+        <item>%s distribue %b si tu connais l\'alphabet à l\'envers</item>
         <item>%s si tu es une fille distribue %b, autrement bois-les</item>
         <item>%s si tu es un garçon distribue %b, autrement bois-les</item>
         <item>%s si tu es un elfe distribue %b, sinon bois-les</item>
+        <item>%s si tu es puceau distribue %b, sinon bois-les</item>
+        <item>%s si tu aimes les filles distribue %b, sinon bois-les</item>
+        <item>%s si tu aimes les garçons distribue %b, sinon bois-les</item>
+        <item>%s la princesse en toi veut combler les garçons alors %b pour tous les hommes !</item>
+        <item>%s le prince en toi veut combler les filles alors %b pour toutes les femmes !</item>
+        aa
         <item>%s, montre les 5 dernières photos de ton portable ou bois %b</item>
         <item>%s, trouve un joueur moins bronzé que toi et donne lui %b !</item>
         <item>%s, trouve un joueur plus bronzé que toi et donne lui %b !</item>
@@ -318,7 +344,7 @@
         <item>%s, si tu as déjà volé dans un magasin bois %b\n\nVoleur !</item>
         <item>%s, si tu as déjà déclaré ta flamme par texto en étant soûl bois %b</item>
         <item>%s, si tu as déjà volé dans un magasin bois %b</item>
-        <item>%s, si tu as déjà ete viré de bar / boite bois %b</item>
+        <item>%s, si tu as déjà été viré de bar / boite bois %b</item>
         <item>%s, si tu as déjà rompu avec quelqu\'un par sms bois %b</item>
         <item>%s, si tu as déjà menti sur ton age pour chopper distribue %b</item>
         <item>%s, si tu t\'es déjà battu avec quelqu\'un tu bois %b</item>
@@ -356,17 +382,17 @@
         <item>%s bois %b si tes chaussures ont des lacets</item>
         <item>%s bois %b si tu as déjà depense plus de 1000€ dans la meme journee</item>
         <item>%s bois %b si tu as déjà porte un appareil dentaire</item>
-        <item>%s bois %b si tu as achete ton portable plus de 300 euros</item>
+        <item>%s bois %b si tu as achété ton portable plus de 300 euros</item>
         <item>%s bois %b si tu n\'as pas ton veritable nom sur Facebook</item>
         <item>%s bois %b si tu as fait l\'amour pour la première fois apres 16 ans</item>
         <item>%s bois %b si tu as fait l\'amour pour la première fois apres 20 ans</item>
-        <item>Les mots synonymes de ""PENIS"", le joueur qui repete ou qui se trompe boit %b ! %s commence</item>
-        <item>Les mots synonymes de ""BELGE"", le joueur qui repete ou qui se trompe boit %b ! %s commence</item>
-        <item>Les mots synonymes de ""BANDER"", le joueur qui repete ou qui se trompe boit %b ! %s commence</item>
-        <item>Les mots synonymes de ""CHAUCOLA"", le joueur qui repete ou qui se trompe boit %b ! %s commence</item>
-        <item>Les mots synonymes de ""ANUS"", le joueur qui repete ou qui se trompe boit %b ! %s commence</item>
-        <item>Les mots synonymes de ""CUL"", le joueur qui repete ou qui se trompe boit %b ! %s commence</item>
-        <item>Les mots synonymes de ""BOIRE"", le joueur qui repete ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""PENIS"", le joueur qui repété ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""BELGE"", le joueur qui repété ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""BANDER"", le joueur qui repété ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""CHAUCOLA"", le joueur qui repété ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""ANUS"", le joueur qui repété ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""CUL"", le joueur qui repété ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""BOIRE"", le joueur qui repété ou qui se trompe boit %b ! %s commence</item>
         <item>%s tu expliques pourquoi te ne devrais pas boire %b la tout de suite. Les autres joueurs trancheront si oui ou non !</item>
         <item>%s tu expliques pourquoi te ne devrais pas boire ton verre la tout de suite. Les autres joueurs trancheront si oui ou non !</item>
         <item>Nouveau decret avec %b en jeu : ""les persos de Tintin"", %s prend en 1er la parole</item>
@@ -390,7 +416,7 @@
         <item>Photo souvenir, %s prend une photo avec une belle grimace et la poste sur le Facebook de DrinK-CupGame</item>
         <item>Photo dossier, %s prend une photo de toi bien arrosé et la poste sur le Facebook de DrinK-CupGame</item>
 
-        <!-- duo challénge -->
+        <!-- duo challenge -->
         <item>%s distribue %b a %a !</item>
         <item>%s boit %b avec %a !</item>
         <item>%s et %a se mettent d\'accords pour donner %b a un autre joueur</item>
@@ -413,7 +439,7 @@
         <item>%s doit boire %b pendant que %a te regarde avec passion !</item>
         <item>%s fait une grimace en se faisant prendre en photo par %a, et boit %b !</item>
         <item>%s devine une chose que %a adore. Si tu as juste tu lui donne %b, sinon tu bois %b</item>
-        <item>%s devine une chose que %a deteste. Si tu as juste tu lui donne %b, sinon tu bois %b</item>
+        <item>%s devine une chose que %a détéste. Si tu as juste tu lui donne %b, sinon tu bois %b</item>
         <item>%s devine une chose que %a a fait hier. Si tu as juste tu lui donne %b, sinon tu bois %b</item>
         <item>%s devra faire un bruit d\'animal apres chaque gorgée sinon %b de plus jusqu\'a son prochain tour, %a choisit quel sera l\'animal</item>
         <item>%s devra dire un mot apres chaque gorgée sinon %b de plus jusqu\'a son prochain tour, %a choisit quel sera le mot</item>
@@ -451,7 +477,7 @@
         <item>Plutot pour ou contre les preliminaires ?\n\nVotez ! Le plus grand nombre boit %b</item>
         <item>Plutot pour le mariage ou contre ?\n\nVotez ! Le plus petit nombre boit %b</item>
         <item>Plutot vivre dans un pays chaud ou froid ?\n\nVotez ! Le plus petit nombre boit %b</item>
-        <item>Plutot immortalite ou jeunesse eternelle ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot immortalite ou jeunesse étérnelle ?\n\nVotez ! Le plus grand nombre boit %b</item>
         <item>Plutot pour ou contre le retablissement de la peine de mort ?\n\nVotez ! Le plus grand nombre boit %b</item>
         <item>Plutot pour ou contre que quelqu\'un vomisse ce soir ?\n\nVotez ! Le plus grand nombre boit %b</item>
         <item>Plutot pour ou contre le gel dans les cheveux ?\n\nVotez ! Le plus grand nombre boit %b</item>
@@ -593,12 +619,12 @@
         <item>Vous pouvez parler sans poser de questions !</item>
         <item>Vous pouvez vous assoir !</item>
         <item>Vous pouvez parler !</item>
-        <item>Arretez les remerciements./n\n Vous me genez !</item>
+        <item>Arrétéz les remerciements./n\n Vous me genez !</item>
         <item>Pour vous remercier gracieusement %b pour tout le monde !</item>
         <item>"Oye Oye !\n\nEt %b de ma part !</item>
         <item>C\'est quoi ce meilleur pote ?\n\n Il boit %b</item>
         <item>T\'es le meilleur des frangins !\n\n Tu peux distribuer %b</item>
-        <item>Vous etes jaloux de ma petite amie ?\n\nalléz %b pour tout le monde (sauf ma cherie)</item>
+        <item>Vous étés jaloux de ma petite amie ?\n\nalléz %b pour tout le monde (sauf ma cherie)</item>
         <item>Elle, Ma petite amie ?\nEt puis quoi encore !\nFinis ton verre maintenant !</item>
 
         <item>Tu trouves ca drole ?\n\n %b pour te calmer !</item>
@@ -606,7 +632,7 @@
         <item>J\'aime trop la torture !\n\b Finis ton verre !</item>
         <item>Je ne supporte plus tant de haine !\n\nTu peux donner %b</item>
         <item>Trop bon trop K-cup !\n\nTu peux donner %b</item>
-        <item>Tu te crois meilleur que moi ?\n\nAlors %b pretentieux !</item>
+        <item>Tu te crois meilleur que moi ?\n\nAlors %b préténtieux !</item>
         <item>Oh oui continue !\n\n Et %b a distribuer pour finir !</item>
         <item>Seul le grand K-cup est cruel !\n\n Finis ton verre !</item>
         <item>Le groupe le plus petit boit %b</item>
@@ -632,7 +658,7 @@
         <item>Vous pouvez utiliser des pronoms personnels</item>
         <item>Vous pouvez SCHTROUMPFFER...\nNon !je voulais dire :\n\nVous buvez %b</item>
         <item>Se venger c\'est mal voyez !\n\n et %b pour apprendre la sagesse !</item>
-        <item>Il faut arreter cette violence !\n\n%b pour te calmer</item>
+        <item>Il faut arrétér cette violence !\n\n%b pour te calmer</item>
 
         <item>Et %b pour t\'apprendre a mieux parler</item>
         <item>Et puis merde !\n\n%b pour tout le monde, bande de pignoufs</item>
@@ -655,14 +681,16 @@
     </string-array>
 
     <string-array name="end_array">
-        <item>Je vous attend pour une future buverie !</item>
-        <item>Le grand K-Cup est bon.\nVous pouvez vous en alléz !</item>
+        <item>Rechargement des verres en cours...</item>
+        <item>Celui qui vomit à perdu !</item>
+        <item>Le grand K-Cup vous attend pour une future buverie !</item>
+        <item>Le grand K-Cup est bon.\nVous pouvez vous en allez !</item>
         <item>Et si on refaisait un K-Cup ?</item>
         <item>Le grand K-Cup est partout !</item>
-        <item>Un jeu cree par des fous buvant toute la journee !</item>
+        <item>Un jeu crée par des fous buvant toute la journée !</item>
         <item>Avec alcool les buveries sont plus folles !</item>
-        <item>N\'oubliez pas de mettre 5 etoiles sinon cul sec !</item>
-        <item>Si vous avez aime n\'oubliez pas de faire tourner !</item>
+        <item>N\'oubliez pas de mettre 5 étoiles sinon cul sec !</item>
+        <item>Si vous avez aimé n\'oubliez pas de faire tourner !</item>
         <item>N\'oubliez pas de parler de cette application si vous avez apprecie y jouer !</item>
         <item>Et si on allait boire un verre ?</item>
         <item>L\'eau c\'est tabou on en viendra tous a bout !</item>
@@ -670,10 +698,10 @@
         <item>Pardon mais votre verre ne serait pas vide ?</item>
         <item>Le moment le plus dur :\n\n la fin !</item>
         <item>Pour rester zen, mangez des nems !</item>
-        <item>En esperant vous revoir bientot !</item>
+        <item>En espérant vous revoir bientot !</item>
         <item>Un verre...\nDeux verres...\nTrois v.........</item>
-        <item>Si vous avez aime laissez nous un commentaire d\'amour !</item>
-        <item>Une idee ? Dites le nous !</item>
+        <item>Si vous avez aimé, laissez nous un commentaire d\'amour !</item>
+        <item>Une idée ? Dites le nous !</item>
     </string-array>
 
 </resources>
