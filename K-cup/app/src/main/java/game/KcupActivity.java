@@ -29,6 +29,7 @@ public class KcupActivity extends AppCompatActivity {
     private ImageView back;
 
     private FrameLayout content;
+    private TextView ruleTitle;
     private TextView ruleContent;
 
     @Override
@@ -42,7 +43,10 @@ public class KcupActivity extends AppCompatActivity {
         content = (FrameLayout) findViewById(R.id.background);
         bulle = (ImageView) findViewById(R.id.bulle);
         back = (ImageView) findViewById(R.id.back);
+        ruleTitle = (TextView) findViewById(R.id.title_rule);
         ruleContent = (TextView) findViewById(R.id.content_rule);
+
+        ruleTitle.setTypeface(typeface);
         ruleContent.setTypeface(typeface);
 
         getCurrentRule();
@@ -57,6 +61,7 @@ public class KcupActivity extends AppCompatActivity {
 
     private void bindView() {
         final Animation anim1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.effect_challenge);
+        ruleTitle.startAnimation(anim1);
         ruleContent.startAnimation(anim1);
         bulle.startAnimation(anim1);
 
@@ -80,6 +85,7 @@ public class KcupActivity extends AppCompatActivity {
 
     private void bindViewNext() {
         final Animation anim1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.effect_challenge);
+        ruleTitle.startAnimation(anim1);
         ruleContent.startAnimation(anim1);
         bulle.startAnimation(anim1);
 
