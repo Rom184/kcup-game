@@ -20,7 +20,7 @@ import identity.Rule;
 import utils.GameUtils;
 import utils.SharedPreferenceUtils;
 
-public class NewRuleActivity extends AppCompatActivity {
+public class KcupActivity extends AppCompatActivity {
 
     private Rule currentRule;
     private int position;
@@ -35,7 +35,7 @@ public class NewRuleActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_new_rule);
+        setContentView(R.layout.activity_kcup);
 
         Typeface typeface = Typeface.createFromAsset(getAssets(), "Roboto-Medium.ttf");
 
@@ -56,7 +56,6 @@ public class NewRuleActivity extends AppCompatActivity {
     }
 
     private void bindView() {
-        ruleContent.setText(currentRule.getContent());
         final Animation anim1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.effect_challenge);
         ruleContent.startAnimation(anim1);
         bulle.startAnimation(anim1);
@@ -80,7 +79,6 @@ public class NewRuleActivity extends AppCompatActivity {
     }
 
     private void bindViewNext() {
-        ruleContent.setText(currentRule.getContent());
         final Animation anim1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.effect_challenge);
         ruleContent.startAnimation(anim1);
         bulle.startAnimation(anim1);
@@ -103,33 +101,42 @@ public class NewRuleActivity extends AppCompatActivity {
     }
 
     private void goToNextRule() {
-        SharedPreferenceUtils.setPositionGame(getApplicationContext(), position + 1);
-        if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
-                .equals(GameUtils.Type.NO_NEED_PLAYER.toString())) {
-            Intent k = new Intent(NewRuleActivity.this, NoNeedPlayerActivity.class);
-            startActivity(k);
-            finish();
-        } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
-                .equals(GameUtils.Type.CHALLENGE.toString())) {
-            Intent k = new Intent(NewRuleActivity.this, ChallengeActivity.class);
-            startActivity(k);
-            finish();
-        } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
-                .equals(GameUtils.Type.CHOICE.toString())) {
-            Intent k = new Intent(NewRuleActivity.this, ChoiceActivity.class);
-            startActivity(k);
-            finish();
-        } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
-                .equals(GameUtils.Type.KCUPS.toString())) {
-            Intent k = new Intent(NewRuleActivity.this, KcupActivity.class);
-            startActivity(k);
-            finish();
+
+        if (position < SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).size() - 1) {
+            SharedPreferenceUtils.setPositionGame(getApplicationContext(), position + 1);
+            if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
+                    .equals(GameUtils.Type.NO_NEED_PLAYER.toString())) {
+                Intent k = new Intent(KcupActivity.this, NoNeedPlayerActivity.class);
+                startActivity(k);
+                finish();
+            } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
+                    .equals(GameUtils.Type.CHALLENGE.toString())) {
+                Intent k = new Intent(KcupActivity.this, ChallengeActivity.class);
+                startActivity(k);
+                finish();
+            } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
+                    .equals(GameUtils.Type.CHOICE.toString())) {
+                Intent k = new Intent(KcupActivity.this, ChoiceActivity.class);
+                startActivity(k);
+                finish();
+            } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
+                    .equals(GameUtils.Type.NEW_RULE.toString())) {
+                Intent k = new Intent(KcupActivity.this, NewRuleActivity.class);
+                startActivity(k);
+                finish();
+            } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
+                    .equals(GameUtils.Type.NEW_RULE_NEXT.toString())) {
+                Intent k = new Intent(KcupActivity.this, NewRuleNextActivity.class);
+                startActivity(k);
+                finish();
+            }
         } else {
             SharedPreferenceUtils.setPositionGame(getApplicationContext(), 0);
-            Intent k = new Intent(NewRuleActivity.this, EndGameActivity.class);
+            Intent k = new Intent(KcupActivity.this, EndGameActivity.class);
             startActivity(k);
             finish();
         }
+
     }
 
     private void getCurrentRule() {
@@ -143,29 +150,24 @@ public class NewRuleActivity extends AppCompatActivity {
         if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1)
                 .getType().equals((GameUtils.Type.NO_NEED_PLAYER.toString()))) {
             SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
-            Intent k = new Intent(NewRuleActivity.this, ChallengeActivity.class);
+            Intent k = new Intent(KcupActivity.this, NoNeedPlayerActivity.class);
             startActivity(k);
         } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1)
                 .getType().equals((GameUtils.Type.CHALLENGE.toString()))) {
             SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
-            Intent k = new Intent(NewRuleActivity.this, ChallengeActivity.class);
+            Intent k = new Intent(KcupActivity.this, ChallengeActivity.class);
             startActivity(k);
         } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1)
                 .getType().equals((GameUtils.Type.CHOICE.toString()))) {
             SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
-            Intent k = new Intent(NewRuleActivity.this, ChoiceActivity.class);
-            startActivity(k);
-        } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1)
-                .getType().equals((GameUtils.Type.KCUPS.toString()))) {
-            SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
-            Intent k = new Intent(NewRuleActivity.this, KcupActivity.class);
+            Intent k = new Intent(KcupActivity.this, ChoiceActivity.class);
             startActivity(k);
         } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1).getType()
                 .equals(GameUtils.Type.NEW_RULE.toString())
                 || SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1).getType()
                 .equals(GameUtils.Type.NEW_RULE_NEXT.toString())) {
             SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
-            Intent k = new Intent(NewRuleActivity.this, NewRuleActivity.class);
+            Intent k = new Intent(KcupActivity.this, NewRuleActivity.class);
             startActivity(k);
         }
         finish();

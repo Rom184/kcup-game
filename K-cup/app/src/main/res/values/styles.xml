@@ -35,6 +35,10 @@
         <item name="colorPrimaryDark">@color/orange</item>
     </style>
 
+    <style name="style_kcup" parent="AppTheme.NoActionBar">
+        <item name="colorPrimaryDark">@color/plum</item>
+    </style>
+
     <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.kcup.drinkgame.k_cup.R;
 
 import dialog.CancelActivity;
+import end.EndGameActivity;
 import identity.Rule;
 import utils.GameUtils;
 import utils.SharedPreferenceUtils;
@@ -90,9 +91,19 @@ public class NewRuleNextActivity extends AppCompatActivity {
             Intent k = new Intent(NewRuleNextActivity.this, ChoiceActivity.class);
             startActivity(k);
             finish();
-        } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
+        }  else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
                 .equals(GameUtils.Type.NEW_RULE.toString())) {
             Intent k = new Intent(NewRuleNextActivity.this, NewRuleActivity.class);
+            startActivity(k);
+            finish();
+        } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
+                .equals(GameUtils.Type.KCUPS.toString())) {
+            Intent k = new Intent(NewRuleNextActivity.this, KcupActivity.class);
+            startActivity(k);
+            finish();
+        } else {
+            SharedPreferenceUtils.setPositionGame(getApplicationContext(), 0);
+            Intent k = new Intent(NewRuleNextActivity.this, EndGameActivity.class);
             startActivity(k);
             finish();
         }
@@ -115,6 +126,11 @@ public class NewRuleNextActivity extends AppCompatActivity {
                 .getType().equals((GameUtils.Type.CHALLENGE.toString()))) {
             SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
             Intent k = new Intent(NewRuleNextActivity.this, ChallengeActivity.class);
+            startActivity(k);
+        } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1)
+                .getType().equals((GameUtils.Type.KCUPS.toString()))) {
+            SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
+            Intent k = new Intent(NewRuleNextActivity.this, KcupActivity.class);
             startActivity(k);
         } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1)
                 .getType().equals((GameUtils.Type.CHOICE.toString()))) {

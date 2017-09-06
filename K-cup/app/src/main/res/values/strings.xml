@@ -37,6 +37,9 @@
     <string name="drink">gorgée</string>
     <string name="drinks">gorgées</string>
 
+    <!-- kcup game -->
+    <string name="kcup_content">C\'est le jeu du "" K-Cup "". Le but est simple deux joueurs jouent à pierre papier ciseau</string>
+
     <!-- fast game -->
     <string-array name="no_need_player_array" formatted="false">
         <item>Les mains en l\'air ! La dernière personne boit %b</item>
@@ -229,6 +232,7 @@
         <item>Ceux qui ont mangé un burger cette semaine boivent %b</item>
         <item>Ceux qui ont mangé une pizza cette semaine boivent %b</item>
         <item>Ceux qui ont mangé des pâtes cette semaine boivent %b</item>
+        <item>Ceux qui ont mangé un kebab cette semaine boivent %b</item>
         <item>Ceux qui ont mangé du riz cette semaine boivent %b</item>
         <item>Ceux qui ont mangé du tofu cette semaine boivent %b</item>
         <item>Ceux qui ont mangé du porc cette semaine boivent %b</item>
@@ -286,6 +290,7 @@
         <item>%s, c\'est le jour des héros ! \nUn sauveur se choisit et doit boire %b à ta place</item>
         <item>%s, c\'est le jour des vengeances ! \nBois %b puis distribue le double</item>
         <item>%s, tu crois aux fées ? Non ? Alors bois %b</item>
+        <item>%s, tu es un vrai poissard, tu finis ton verre</item>
         <item>%s, tu crois à la chance ? Non ? Pourtant le joueur à ta droite bois %b</item>
         <item>%s, tu crois à la chance ? Non ? Pourtant le joueur à ta gauche bois %b</item>
         <item>%s, tu crois à la magie ? Non ? Alors ferme les yeux et quand tu les ouvriras ton verre sera vide</item>
@@ -297,8 +302,12 @@
         <item>%s, distribue %b si tu as déjà eu l\'appendicite</item>
         <item>%s, distribue %b si tu as déjà eu un plâtre</item>
         <item>%s distribue %b si tu as déjà été opéré(e)</item>
+        <item>%s bois %b si tu as déjà fais du ski nautique</item>
+        <item>%s bois %b si tu as déjà fais du ski</item>
+        <item>%s bois %b si tu compte aller en boite ce soir</item>
         <item>%s distribue %b si tu as déjà eu une anesthésie générale</item>
         <item>%s bois %b si tu as Netflix</item>
+        <item>%s bois %b si tu as conduits aujourd\'hui</item>
         <item>%s bois %b si tu télécharges (voleur!)</item>
         <item>%s bois %b si tu as regardé Netflix cette semaine</item>
         <item>%s bois %b si tu va régulièrement au cinéma</item>
@@ -313,15 +322,32 @@
         <item>%s si tu aimes les garçons distribue %b, sinon bois-les</item>
         <item>%s la princesse en toi veut combler les garçons alors %b pour tous les hommes !</item>
         <item>%s le prince en toi veut combler les filles alors %b pour toutes les femmes !</item>
-        aa
         <item>%s, montre les 5 dernières photos de ton portable ou bois %b</item>
         <item>%s, trouve un joueur moins bronzé que toi et donne lui %b !</item>
         <item>%s, trouve un joueur plus bronzé que toi et donne lui %b !</item>
+        <item>%s, trouve un joueur moins grand que toi et donne lui %b !</item>
+        <item>%s, trouve un joueur plus grand que toi et donne lui %b !</item>
+        <item>%s tu dors dans un lit deux places ?\n\n Non. Alors %b !</item>
+        <item>%s Santé !\n\nTu bois %b !</item>
+        <item>%s moment de détente !\n\nTu distribue %b !</item>
+        <item>%s tu lis souvent ?\n\n Non. Alors %b !</item>
         <item>%s tu es bronzé ?\n\n Non. Alors %b !</item>
-        <item>%s tu es enceinte ?\n\n Non. Alors %b (si Oui on ne boit surtout pas !)</item>
+        <item>%s tu as un garçon ?\n\n Non. Alors %b sinon distribue %b!</item>
+        <item>%s tu as une fille ?\n\n Non. Alors %b sinon distribue %b!</item>
+        <item>%s tu as un chien ?\n\n Non. Alors %b sinon distribue %b!</item>
+        <item>%s tu as un chat ?\n\n Non. Alors %b sinon distribue %b!</item>
+        <item>%s tu as une tortue ?\n\n Non. Alors %b sinon distribue %b!</item>
+        <item>%s tu as une tablette ?\n\nAlors %b sinon distribue %b!</item>
+        <item>%s tu as une voiture ?\n\nAlors %b sinon distribue %b!</item>
+        <item>%s tu as une moto ?\n\nAlors %b sinon distribue %b!</item>
+        <item>%s tu as des lunettes ?\n\nAlors %b sinon distribue %b!</item>
+        <item>%s tu as un médoc pour les maux de tête ?\n\nAlors %b car tu en auras besoin!</item>
+        <item>%s tu as un elfe de maison ?\n\n Non. Alors %b sinon tu finis ton verre!</item>
+        <item>%s tu es enceinte ?\n\n Non. Alors %b (si Oui on ne bois surtout pas !)</item>
         <item>%s, si tes jambes ne sont pas épileés bois %b</item>
-        <item>%s raconte un dossier sur un des joueurs ou boit %b et il ou elle boit %b</item>
-        <item>%s raconte une histoire sympa sur un des joueurs ou boit %b</item>
+        <item>%s, si tu portes un soutien gorge bois %b</item>
+        <item>%s raconte un dossier sur un des joueurs ou bois %b et il ou elle boit %b</item>
+        <item>%s raconte une histoire sympa sur un des joueurs ou bois %b</item>
         <item>%s raconte une histoire pour boire %b</item>
         <item>Le joueur à droite de %s boit %b</item>
         <item>Le joueur à droite de %s distribue %b</item>
@@ -333,43 +359,56 @@
         <item>%s, tous ceux qui font partis de ta famille boivent %b</item>
         <item>%s, tous ceux qui font partis de ta famille te donnent %b</item>
         <item>%s regarde ton téléphone si ton dernier appel est une personne pres de toi alors %b chacun</item>
+        <item>%s regarde ton téléphone si ton fond d\'écran est naze alors %b chacun</item>
+        <item>%s regarde ton téléphone s\'il y a un homme sur ton fond d\'écran %b chacun</item>
+        <item>%s regarde ton téléphone s\'il y a une femme sur ton fond d\'écran %b chacun</item>
         <item>%s, donne le titre du dernier film que tu as vu au cinema. Ceux qui ne l\'ont pas vu boivent %b</item>
         <item>%s, donne le titre de la dernière série que tu as vu. Ceux qui l\'ont vu boivent %b</item>
-        <item>%s, tu as 3 secondes pour donner le nombre de personnes avec toi. L\'echec c\'est %b</item>
-        <item>%s, tu as 3 secondes pour donner le nombre de filles avec toi. L\'echec c\'est %b</item>
-        <item>%s, tu as 3 secondes pour donner le nom du président en France actuellement. L\'echec c\'est %b</item>
-        <item>%s, tu as 3 secondes pour donner le nom de la personne que tu aimes. L\'echec c\'est %b</item>
+        <item>%s, donne le titre d\'une série que tu as vu. Si un joueur est plus loins que toi dans cette série tu bois %b</item>
+        <item>%s, tu as 3 secondes pour donner le nombre de personnes avec toi. L\'échec c\'est %b</item>
+        <item>%s, tu as 3 secondes pour donner le nombre de filles avec toi. L\'échec c\'est %b</item>
+        <item>%s, tu as 3 secondes pour donner le nom du président en France actuellement. L\'échec c\'est %b</item>
+        <item>%s, tu as 3 secondes pour donner le nom de la personne que tu aimes. L\'échec c\'est %b</item>
         <item>%s, imite un autre joueur, la première personne qui trouve la réponse distribue %b</item>
+        <item>%s, si tu regardes ton portable pendant le travail/en classe bois %b</item>
         <item>%s, si tu as déjà fait la sieste au travail/en classe bois %b</item>
         <item>%s, si tu as déjà volé dans un magasin bois %b\n\nVoleur !</item>
         <item>%s, si tu as déjà déclaré ta flamme par texto en étant soûl bois %b</item>
         <item>%s, si tu as déjà volé dans un magasin bois %b</item>
-        <item>%s, si tu as déjà été viré de bar / boite bois %b</item>
+        <item>%s, si tu as déjà été viré de bar/boite bois %b</item>
         <item>%s, si tu as déjà rompu avec quelqu\'un par sms bois %b</item>
         <item>%s, si tu as déjà menti sur ton age pour chopper distribue %b</item>
         <item>%s, si tu t\'es déjà battu avec quelqu\'un tu bois %b</item>
-        <item>%s, si tu es a ton 1er verre tu bois %b</item>
+        <item>%s, si tu bois dans une bouteille tu bois %b</item>
+        <item>%s, si tu bois dans un grand verre tu bois %b</item>
+        <item>%s, si tu es à ton 1er verre tu bois %b</item>
         <item>%s, si tu as bu moins de 2 verres tu bois %b</item>
-        <item>%s, si tu as bu plus de 3 verres tu peux distribuer %b</item>
+        <item>%s, si tu as bu plus de 2 verres tu peux distribuer %b</item>
         <item>%s distribue autant de gorgées qu\'il ou elle a de frères et soeurs !</item>
+        <item>%s distribue autant de gorgées qu\'il y a de couleurs sur ton T-shirt ou chemise !</item>
         <item>%s distribue %b si tes chaussettes sont blanches</item>
         <item>%s distribue %b si tu portes un string</item>
         <item>%s boit %b si tu portes un slip</item>
         <item>%s boit %b si tu portes un pantalon</item>
         <item>%s distribue %b si tu te ronges les ongles</item>
+        <item>%s distribue %b si tu as du vernis à ongles</item>
         <item>%s distribue %b si tu dois bosser demain</item>
         <item>%s boit %b si tu es allé sur Instagram aujourd\'hui</item>
+        <item>%s boit %b si tu es allé sur Twitter aujourd\'hui</item>
         <item>%s boit %b si tu es allé sur un jeu sur ton téléphone aujourd\'hui</item>
-        <item>%s distribue %b a une personne a qui tu fais un clin d\'oeil</item>
-        <item>%s distribue %b a une personne a qui tu fais un sourire</item>
-        <item>%s distribue %b a une personne a qui tu montres ton verre</item>
+        <item>%s distribue %b a une personne à qui tu fais un clin d\'oeil</item>
+        <item>%s distribue %b a une personne à qui tu fais un sourire</item>
+        <item>%s distribue %b a une personne à qui tu montres ton verre</item>
+        <item>%s distribue %b a une personne à qui tu montres une grimace</item>
         <item>%s distribue %b a une personne parce qu\'il faut boire voyons !</item>
         <item>%s boit %b si tu aimes la viande</item>
         <item>%s boit %b si tu aimes trop les légumes</item>
-        <item>%s boit %b si tu aimes trop l\'ouvrir</item>
+        <item>%s boit %b si tu aimes trop le fromage</item>
+        <item>%s boit %b si tu aimes trop l\'ouvrir, les autres joueurs choisissent</item>
         <item>%s, bois autant de gorgées que tu as visité de pays !</item>
         <item>%s, distribue autant de gorgées que tu as visité de pays !</item>
         <item>%s distribue %b si tu as déjà acheté un portable plus de 600 euros</item>
+        <item>%s distribue %b si tu connais le nom de la meilleure application d\'alcool</item>
         <item>%s si ton age est pair tu bois %b, 5 s\'il est impair !</item>
         <item>%s si ton age est pair tu distribues %b, 6 s\'il est impair !</item>
         <item>%s, fais 2 culs sec d\'affilée ou distribue %b</item>
@@ -379,48 +418,76 @@
         <item>%s bois %b si t\'as déjà mesuré ton sexe ou celui de ton partenaire</item>
         <item>%s bois %b si tu t\'es déjà réveillé dans le lit de quelqu\'un en te demandant comment t\'es arrivé la</item>
         <item>%s bois %b si tu as souvent le rituel café - clope - caca le matin</item>
+        <item>%s bois %b si tu portes des sandales</item>
         <item>%s bois %b si tes chaussures ont des lacets</item>
         <item>%s bois %b si tu as déjà depense plus de 1000€ dans la meme journee</item>
         <item>%s bois %b si tu as déjà porte un appareil dentaire</item>
         <item>%s bois %b si tu as achété ton portable plus de 300 euros</item>
-        <item>%s bois %b si tu n\'as pas ton veritable nom sur Facebook</item>
+        <item>%s bois %b si tu n\'as pas ton véritable nom sur Facebook</item>
         <item>%s bois %b si tu as fait l\'amour pour la première fois apres 16 ans</item>
         <item>%s bois %b si tu as fait l\'amour pour la première fois apres 20 ans</item>
-        <item>Les mots synonymes de ""PENIS"", le joueur qui repété ou qui se trompe boit %b ! %s commence</item>
-        <item>Les mots synonymes de ""BELGE"", le joueur qui repété ou qui se trompe boit %b ! %s commence</item>
-        <item>Les mots synonymes de ""BANDER"", le joueur qui repété ou qui se trompe boit %b ! %s commence</item>
-        <item>Les mots synonymes de ""CHAUCOLA"", le joueur qui repété ou qui se trompe boit %b ! %s commence</item>
-        <item>Les mots synonymes de ""ANUS"", le joueur qui repété ou qui se trompe boit %b ! %s commence</item>
-        <item>Les mots synonymes de ""CUL"", le joueur qui repété ou qui se trompe boit %b ! %s commence</item>
-        <item>Les mots synonymes de ""BOIRE"", le joueur qui repété ou qui se trompe boit %b ! %s commence</item>
-        <item>%s tu expliques pourquoi te ne devrais pas boire %b la tout de suite. Les autres joueurs trancheront si oui ou non !</item>
-        <item>%s tu expliques pourquoi te ne devrais pas boire ton verre la tout de suite. Les autres joueurs trancheront si oui ou non !</item>
+        <item>Les mots synonymes de ""PENIS"", le joueur qui répéte ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""BELGE"", le joueur qui répéte ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""BANDER"", le joueur qui répéte ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""CHAUCOLA"", le joueur qui répéte ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""ANUS"", le joueur qui répéte ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""CUL"", le joueur qui répéte ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""BOIRE"", le joueur qui répéte ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""ELFE"", le joueur qui répéte ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""VERRE"", le joueur qui répéte ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""POMPETTE"", le joueur qui répéte ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""ELFE"", le joueur qui répéte ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""K-CUP"" en anglais, le joueur qui répéte ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""DRINK"" en anglais, le joueur qui répéte ou qui se trompe boit %b ! %s commence</item>
+        <item>%s tu expliques pourquoi te ne devrais pas boire %b tout de suite. Les autres joueurs trancheront si oui ou non !</item>
+        <item>%s tu expliques pourquoi te ne devrais pas boire ton verre tout de suite. Les autres joueurs trancheront si oui ou non !</item>
         <item>Nouveau decret avec %b en jeu : ""les persos de Tintin"", %s prend en 1er la parole</item>
         <item>Nouveau decret avec %b en jeu : ""les persos Matrix"", %s prend en 1er la parole</item>
         <item>Nouveau decret avec %b en jeu : ""les persos de Teletubbies"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les persos de Futurama"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les persos des feux de l\'amour"", %s prend en 1er la parole</item>
         <item>Nouveau decret avec %b en jeu : ""les films d\'horreur"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les films d\'amour"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les jeux vidéos d\'horreur"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les jeux vidéos d\'aventure"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les marques de cosmétique"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les marques de voitures"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les groupes de musique des années 80"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les groupes de musique des années 90"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les groupes de musique des années 2000"", %s prend en 1er la parole</item>
         <item>Nouveau decret avec %b en jeu : ""les belles chanteuses"", %s prend en 1er la parole</item>
         <item>Nouveau decret avec %b en jeu : ""les chanteurs bogosse"", %s prend en 1er la parole</item>
         <item>Nouveau decret avec %b en jeu : ""le fait d\'être un homme c\'est mieux"", %s prend en 1er la parole</item>
         <item>Nouveau decret avec %b en jeu : ""le fait d\'être une femme c\'est mieux"", %s prend en 1er la parole</item>
-        <item>Nouveau decret avec %b en jeu : ""être bourre c\'est super"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""être bourré c\'est cool"", %s prend en 1er la parole</item>
         <item>Nouveau decret avec %b en jeu : ""les noms de cocktail"", %s prend en 1er la parole</item>
         <item>Nouveau decret avec %b en jeu : ""les personnages de Marvel"", %s prend en 1er la parole</item>
         <item>Nouveau decret avec %b en jeu : ""les fast food"", %s prend en 1er la parole</item>
-        <item>Nouveau decret avec %b en jeu : ""les séries"", %s prend en 1er la parole</item>
-        <item>Nouveau decret avec %b en jeu : ""les emissions de television"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les séries des années 90"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les séries des années 2000"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les séries américaine"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les séries anglaises"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les séries avec plus de 5 saisons"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les emissions de télévision"", %s prend en 1er la parole</item>
         <item>Nouveau decret avec %b en jeu : ""les villes des Etats-Unis"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les applications utilitaires"", %s prend en 1er la parole</item>
+        <item>Nouveau decret avec %b en jeu : ""les applications jeux"", %s prend en 1er la parole</item>
         <item>Nouveau decret avec %b en jeu : ""les pays asiatiques"", %s prend en 1er la parole</item>
         <item>Nouveau decret avec %b en jeu : ""les pays en europe"", %s prend en 1er la parole</item>
-        <item>Photo souvenir, %s prend une jolie photo et la poste sur le Facebook de DrinK-CupGame</item>
-        <item>Photo souvenir, %s prend une photo avec une belle grimace et la poste sur le Facebook de DrinK-CupGame</item>
-        <item>Photo dossier, %s prend une photo de toi bien arrosé et la poste sur le Facebook de DrinK-CupGame</item>
+        <item>Photo souvenir, %s prend une jolie photo et la poste sur le Facebook de DrinK-CupGame ou bois %b</item>
+        <item>Photo souvenir, %s prend une photo avec une belle grimace et la poste sur le Facebook de DrinK-CupGameou bois %b</item>
+        <item>Photo dossier, %s prend une photo de toi bien arrosé et la poste sur le Facebook de DrinK-CupGame ou bois %b</item>
 
         <!-- duo challenge -->
-        <item>%s distribue %b a %a !</item>
-        <item>%s boit %b avec %a !</item>
-        <item>%s et %a se mettent d\'accords pour donner %b a un autre joueur</item>
+        <item>%s distribue %b à %a !</item>
+        <item>%s bois %b avec %a !</item>
+        <item>%s bois %b puis distribue à %a !</item>
+        <item>%s et %a joue à pile ou face. Le perdant boit %b (si personne n\'a de pièces alors vous buvez %b)</item>
+        <item>%s et %a joue à pile ou face. Le gagnant distribue %b (si personne n\'a de pièces alors vous buvez %b)</item>
+        aa
+        <item>%s et %a se mettent d\'accords pour donner %b à un autre joueur</item>
         <item>%s et %a se mettent d\'accords pour se donner %b</item>
+        <item>%s et %a se mettent d\'accords pour savoir si un joueur finit son verre</item>
         <item>%s, si ton verre contient un alcool moins cher que celui de %a, bois %b</item>
         <item>%s, si ton verre contient un alcool plus cher que celui de %a, distribue %b</item>
         <item>Photo souvenir, %s et %a se prennent en selfie en train de loucher</item>

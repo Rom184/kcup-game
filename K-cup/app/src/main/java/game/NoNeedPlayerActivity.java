@@ -122,6 +122,11 @@ public class NoNeedPlayerActivity extends AppCompatActivity {
                 startActivity(k);
                 finish();
             } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
+                    .equals(GameUtils.Type.KCUPS.toString())) {
+                Intent k = new Intent(NoNeedPlayerActivity.this, KcupActivity.class);
+                startActivity(k);
+                finish();
+            } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
                     .equals(GameUtils.Type.NEW_RULE.toString())) {
                 Intent k = new Intent(NoNeedPlayerActivity.this, NewRuleActivity.class);
                 startActivity(k);
@@ -163,6 +168,11 @@ public class NoNeedPlayerActivity extends AppCompatActivity {
                 .getType().equals((GameUtils.Type.CHOICE.toString()))) {
             SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
             Intent k = new Intent(NoNeedPlayerActivity.this, ChoiceActivity.class);
+            startActivity(k);
+        } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1)
+                .getType().equals((GameUtils.Type.KCUPS.toString()))) {
+            SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
+            Intent k = new Intent(NoNeedPlayerActivity.this, KcupActivity.class);
             startActivity(k);
         } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1).getType()
                 .equals(GameUtils.Type.NEW_RULE.toString())

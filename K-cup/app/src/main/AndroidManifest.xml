@@ -49,6 +49,9 @@
             android:name="game.NewRuleNextActivity"
             android:theme="@style/style_new_rule" />
 
+        <activity android:name="game.KcupActivity"
+            android:theme="@style/style_kcup" />
+
         <activity
             android:name="end.EndGameActivity"
             android:theme="@style/style_no_need_player" />
