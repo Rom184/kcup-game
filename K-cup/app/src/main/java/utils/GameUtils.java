@@ -37,6 +37,15 @@ public class GameUtils {
         List<String> newRuleNext = getNewRuleNext(context);
         int positionNewRuleNext = 0;
 
+        Log.e("noNeedPlayer", String.valueOf(noNeedPlayer.size()));
+        Log.e("challenge", String.valueOf(challenge.size()));
+        Log.e("choice", String.valueOf(choice.size()));
+        Log.e("randomForNewRule", String.valueOf(randomForNewRule.size()));
+
+        int test = noNeedPlayer.size() + challenge.size() + choice.size() + randomForNewRule.size();
+
+        Log.e("total", String.valueOf(test));
+
         boolean isPossibleNewRule = false;
 
         List<Integer> newKcup = new ArrayList<>();
