@@ -60,6 +60,7 @@ public class KcupActivity extends AppCompatActivity {
     }
 
     private void bindView() {
+        ruleContent.setText(currentRule.getContent());
         final Animation anim1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.effect_challenge);
         ruleTitle.startAnimation(anim1);
         ruleContent.startAnimation(anim1);
@@ -84,6 +85,7 @@ public class KcupActivity extends AppCompatActivity {
     }
 
     private void bindViewNext() {
+        ruleContent.setText(currentRule.getContent());
         final Animation anim1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.effect_challenge);
         ruleTitle.startAnimation(anim1);
         ruleContent.startAnimation(anim1);

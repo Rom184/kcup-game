@@ -38,7 +38,7 @@
     <string name="drinks">gorgées</string>
 
     <!-- kcup game -->
-    <string name="kcup_content">C\'est le jeu du "" K-Cup "". Le but est simple deux joueurs jouent à pierre papier ciseau</string>
+    <string name="kcup_content" formatted="false">C\'est le jeu du "" K-Cup ""! Le but est simple %s et %a jouent à pierre papier ciseau K-cup.Le 1er à perdre boit %b.\n\nLe geste de K-cup est de saluer comme sur l\'image. Il gagne contre contre la pierre et la feuille mais perd contre le ciseau</string>
 
     <!-- fast game -->
     <string-array name="no_need_player_array" formatted="false">
@@ -426,6 +426,7 @@
         <item>%s bois %b si tu n\'as pas ton véritable nom sur Facebook</item>
         <item>%s bois %b si tu as fait l\'amour pour la première fois apres 16 ans</item>
         <item>%s bois %b si tu as fait l\'amour pour la première fois apres 20 ans</item>
+        <item>%s tu touches tout le temps la table sinon %b à chaque fois que tu l'/enlèves</item>
         <item>Les mots synonymes de ""PENIS"", le joueur qui répéte ou qui se trompe boit %b ! %s commence</item>
         <item>Les mots synonymes de ""BELGE"", le joueur qui répéte ou qui se trompe boit %b ! %s commence</item>
         <item>Les mots synonymes de ""BANDER"", le joueur qui répéte ou qui se trompe boit %b ! %s commence</item>
@@ -484,45 +485,60 @@
         <item>%s bois %b puis distribue à %a !</item>
         <item>%s et %a joue à pile ou face. Le perdant boit %b (si personne n\'a de pièces alors vous buvez %b)</item>
         <item>%s et %a joue à pile ou face. Le gagnant distribue %b (si personne n\'a de pièces alors vous buvez %b)</item>
-        aa
         <item>%s et %a se mettent d\'accords pour donner %b à un autre joueur</item>
         <item>%s et %a se mettent d\'accords pour se donner %b</item>
         <item>%s et %a se mettent d\'accords pour savoir si un joueur finit son verre</item>
         <item>%s, si ton verre contient un alcool moins cher que celui de %a, bois %b</item>
         <item>%s, si ton verre contient un alcool plus cher que celui de %a, distribue %b</item>
-        <item>Photo souvenir, %s et %a se prennent en selfie en train de loucher</item>
-        <item>Photo souvenir, %s et %a se prennent en selfie en train de sourire</item>
-        <item>Photo souvenir, %s et %a se prennent en selfie et le poste sur le Facebook de DrinK-CupGame</item>
+        <item>%s, si ton verre est plus remplis que celui de %a, distribue %b</item>
+        <item>%s, si ton verre est moins remplis que celui de %a, distribue %b</item>
+        <item>Photo souvenir, %s et %a se prennent en selfie en train de loucher ou boivent %b</item>
+        <item>Photo souvenir, %s et %a se prennent en selfie en train de sourire ou boivent %b</item>
+        <item>Photo souvenir, %s et %a se prennent en selfie et le poste sur le Facebook de DrinK-CupGame ou boivent %b</item>
+        <item>%s tu te lèves avec %a, le plus petit distribue %b</item>
+        <item>%s tu te lèves avec %a, le plus grand distribue %b</item>
+        <item>%s tu te lèves avec %a, le plus vieux boit %b</item>
+        <item>%s tu te lèves avec %a, le moins vieux boit %b</item>
+        <item>%s trouve l/'adresse de %a sinon %b</item>
+        <item>%s trouve le numéro de téléphone de %a sinon %b</item>
+        <item>%s trouve la date d\'anniversaire de %a sinon %b</item>
+        <item>%s trouve le nom du chat de %a sinon %b</item>
+        <item>%s trouve le nom du chien de %a sinon %b</item>
+        <item>%s trouve la petite amie de %a sinon %b</item>
+        <item>%s trouve le petit amie de %a sinon %b</item>
         <item>%s rajoute du soft ou de l\'alcool dans le verre de %a</item>
         <item>%s rajoute que de l\'alcool dans le verre de %a</item>
         <item>%s tu sers le verre de %a jusqu\'a la fin de la partie</item>
-        <item>%s tu te met a cote de %a jusqu\'a la fin de la partie</item>
+        <item>%s tu te met a côte de %a jusqu\'a la fin de la partie</item>
         <item>%s tu te met en face de %a jusqu\'a la fin de la partie</item>
         <item>%s et %a, buvez ensemble %b puis une autre bien sur !</item>
         <item>%s et %a, buvez ensemble %b</item>
         <item>%s, donne l\'age de %a ou bois %b</item>
+        <item>%s, donne le métier de %a ou bois %b</item>
         <item>%s, si tu te trouves plus jolie que %a bois %b</item>
-        <item>%s doit boire %b pendant que %a te chuchote des choses cochonnes a l\'oreille</item>
+        <item>%s doit boire %b pendant que %a te chuchote des choses cochonnes à l\'oreille</item>
         <item>%s doit boire %b pendant que %a te regarde avec passion !</item>
         <item>%s fait une grimace en se faisant prendre en photo par %a, et boit %b !</item>
         <item>%s devine une chose que %a adore. Si tu as juste tu lui donne %b, sinon tu bois %b</item>
-        <item>%s devine une chose que %a détéste. Si tu as juste tu lui donne %b, sinon tu bois %b</item>
+        <item>%s devine une chose que %a déteste. Si tu as juste tu lui donne %b, sinon tu bois %b</item>
         <item>%s devine une chose que %a a fait hier. Si tu as juste tu lui donne %b, sinon tu bois %b</item>
         <item>%s devra faire un bruit d\'animal apres chaque gorgée sinon %b de plus jusqu\'a son prochain tour, %a choisit quel sera l\'animal</item>
         <item>%s devra dire un mot apres chaque gorgée sinon %b de plus jusqu\'a son prochain tour, %a choisit quel sera le mot</item>
         <item>%s devra faire un geste apres chaque gorgée sinon %b de plus jusqu\'a son prochain tour, %a choisit quel sera le geste</item>
-        <item>%s tu expliques pourquoi te ne devrais distribuer %b a %a la tout de suite. Les autres joueurs trancheront si oui ou non !</item>
-        <item>%s tu expliques pourquoi te ne devrais distribuer %bs a %a. Les autres joueurs trancheront si oui ou non !</item>
+        <item>%s devra dire un mot doux apres chaque gorgée sinon %b de plus jusqu\'a son prochain tour, %a choisit quel sera le mot</item>
+        <item>%s devra dire un mot d\'amour pour %a apres chaque gorgée sinon %b de plus jusqu\'a son prochain tour, %a choisit quel sera le mot</item>
+        <item>%s tu expliques pourquoi tu devrais distribuer %b à %a là tout de suite. Les autres joueurs trancheront si oui ou non !</item>
+        <item>%s tu expliques pourquoi te ne devrais pas distribuer %bs à %a. Les autres joueurs trancheront si oui ou non !</item>
     </string-array>
 
     <string-array name="choice_array" formatted="false">
         <item>Plutot Stars Wars ou Star Trek ?\n\nVotez ! Le plus grand nombre boit %b</item>
         <item>Plutot Marvel ou DC ?\n\nVotez ! Le plus petit nombre boit %b</item>
         <item>Plutot Paris ou Lyon ?\n\nVotez ! Le plus grand nombre boit %b</item>
-        <item>Plutot s\'eclater a Bangkok ou a Las Vegas ? Le plus petit nombre boit %b</item>
-        <item>Plutot vivre seul ou toujours avec quelqu\'un tout le temps avectoi ?\n\nVotez ! Le plus grand nombre boit %b</item>
-        <item>Plutot France ou pays etranger ?\n\nVotez ! Le plus grand nombre boit %b</item>
-        <item>Plutot être coiffe style 80\'s ou être habille style 80\'s ?\n\nVotez ! Le plus grand petit boit %b</item>
+        <item>Plutot s\'éclater a Bangkok ou à Las Vegas ? Le plus petit nombre boit %b</item>
+        <item>Plutot vivre seul ou toujours avec quelqu\'un tout le temps avec toi ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot France ou pays étranger ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot être coiffé style 80\'s ou être habillé style 80\'s ?\n\nVotez ! Le plus grand petit boit %b</item>
         <item>Plutot Mario ou Sonic ?\n\nVotez ! Le plus grand nombre boit %b</item>
         <item>Plutot Zombie ou Vampire ?\n\nVotez ! Le plus petit nombre boit %b</item>
         <item>Plutot Voiture ou Moto ?\n\nVotez ! Le plus petit nombre boit %b</item>

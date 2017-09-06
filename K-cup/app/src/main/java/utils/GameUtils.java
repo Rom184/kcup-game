@@ -40,7 +40,7 @@ public class GameUtils {
         boolean isPossibleNewRule = false;
 
         List<Integer> newKcup = new ArrayList<>();
-        int positionWhenKcupPossible = 6;
+        int positionWhenKcupPossible = 8;
         boolean isPossibleNewKcup = false;
 
         Random r = new Random();
@@ -74,9 +74,9 @@ public class GameUtils {
                 int randomForKcup = r.nextInt(100) + 1;
 
                 if (isPossibleNewKcup && randomForKcup > 85) {
-                    newRule.add(new Rule("", Type.KCUPS.toString()));
+                    newRule.add(new Rule(getSelectedWithTwoPlayer(context, context.getString(R.string.kcup_content), listPlayer, 6), Type.KCUPS.toString()));
                     newKcup.add(a);
-                    positionWhenKcupPossible = a + 2;
+                    positionWhenKcupPossible = a + 8;
                     isPossibleNewKcup = false;
                 }
 
