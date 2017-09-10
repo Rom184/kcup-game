@@ -15,6 +15,7 @@ import com.kcup.drinkgame.k_cup.R;
 import java.util.ArrayList;
 import java.util.List;
 
+import game.BeginGameActivity;
 import game.ChallengeActivity;
 import game.ChoiceActivity;
 import game.NoNeedPlayerActivity;
@@ -114,17 +115,15 @@ public class PlayerActivity extends AppCompatActivity {
             startActivity(k);
         }
 
+        /*Intent k = new Intent(PlayerActivity.this, BeginGameActivity.class);
+        startActivity(k);*/
+
         finish();
     }
 
     private void createNewGame() {
         List<Rule> ruleList;
         ruleList = GameUtils.createKcupGame(getApplicationContext());
-        /*if (withRule.isChecked()) {
-            ruleList = GameUtils.createRandomGameWithNewRule(getApplicationContext());
-        } else {
-            ruleList = GameUtils.createRandomGame(getApplicationContext());
-        }*/
         SharedPreferenceUtils.saveRule(getApplicationContext(), ruleList, SharedPreferenceUtils.PREFS_RULE);
         SharedPreferenceUtils.setPositionGame(getApplicationContext(), 0);
 

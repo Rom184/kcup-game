@@ -20,6 +20,7 @@ import com.kcup.drinkgame.k_cup.R;
 
 import game.ChallengeActivity;
 import game.ChoiceActivity;
+import game.KcupActivity;
 import game.NewRuleActivity;
 import game.NewRuleNextActivity;
 import game.NoNeedPlayerActivity;
@@ -78,7 +79,9 @@ public class HomeMainFragment extends Fragment {
 
         LinearLayout continueArea = (LinearLayout) view.findViewById(R.id.continue_area);
 
-        if (SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext()) > 0) {
+        if (SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext()) > 0
+                && SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext()) <
+                SharedPreferenceUtils.getRule(getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).size()) {
             continueArea.setVisibility(View.VISIBLE);
             continueGame.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -100,6 +103,12 @@ public class HomeMainFragment extends Fragment {
                             .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
                             .equals(GameUtils.Type.CHOICE.toString())) {
                         Intent k = new Intent(getActivity(), ChoiceActivity.class);
+                        startActivity(k);
+                    } else if (SharedPreferenceUtils.getRule(
+                            getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE)
+                            .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
+                            .equals(GameUtils.Type.KCUPS.toString())) {
+                        Intent k = new Intent(getActivity(), KcupActivity.class);
                         startActivity(k);
                     } else if (SharedPreferenceUtils.getRule(
                             getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE)

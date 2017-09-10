@@ -1,24 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/yellow">
+    android:background="@color/yellow"
+    android:orientation="vertical"
+    android:weightSum="100">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="35"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/begin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="@string/dialog_warning_title_begin"
+            android:textColor="@android:color/black"
+            android:textSize="36sp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:text="@string/dialog_warning_title"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </LinearLayout>
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_gravity="top"
-        android:layout_margin="46dp"
+        android:layout_weight="45"
         android:src="@drawable/kcup_splash" />
 
     <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_gravity="bottom|center_horizontal"
         android:layout_marginBottom="20dp"
+        android:layout_weight="20"
+        android:gravity="center"
         android:text="@string/app_name"
         android:textColor="@android:color/black"
-        android:textSize="46sp" />
+        android:textSize="36sp"
+        android:visibility="visible" />
 
-</FrameLayout>
+    <LinearLayout
+        android:id="@+id/button_area"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_weight="20"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/bouton_type"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="@string/dialog_warning_no"
+            android:textAllCaps="false"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/not_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:layout_weight="1"
+            android:background="@drawable/bouton_type"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="@string/dialog_warning_yes"
+            android:textAllCaps="false"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
