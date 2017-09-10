@@ -132,13 +132,6 @@ public class SplashActivity extends AppCompatActivity {
 
     }
 
-    private void startHomeActivity() {
-        if (isTimeElapsed) {
-            Intent i = new Intent(this, WarningActivity.class);
-            startActivityForResult(i, 1);
-        }
-    }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 

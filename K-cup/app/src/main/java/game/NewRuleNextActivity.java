@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.Animation;
@@ -12,6 +13,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.kcup.drinkgame.k_cup.R;
 
 import dialog.CancelActivity;
@@ -25,11 +27,15 @@ public class NewRuleNextActivity extends AppCompatActivity {
     private Rule currentRule;
     private int position;
 
+    private LottieAnimationView animationView;
+
     private ImageView bulle;
     private ImageView back;
 
     private FrameLayout content;
     private TextView ruleContent;
+
+    private boolean isAnimated = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +45,8 @@ public class NewRuleNextActivity extends AppCompatActivity {
 
         Typeface typeface = Typeface.createFromAsset(getAssets(), "Roboto-Medium.ttf");
 
+        animationView = (LottieAnimationView) findViewById(R.id.animation_view);
+
         content = (FrameLayout) findViewById(R.id.background);
         bulle = (ImageView) findViewById(R.id.bulle);
         back = (ImageView) findViewById(R.id.back);
@@ -47,11 +55,40 @@ public class NewRuleNextActivity extends AppCompatActivity {
 
         getCurrentRule();
         if (currentRule != null) {
-            bindViewNext();
+            final Bundle b = getIntent().getExtras();
+            if (b != null && !isAnimated) {
+                boolean isBegin = b.getBoolean(GameUtils.EXTRA_ANIMATION_BEGIN);
+                if (isBegin) {
+                    setBeginAnimation();
+                } else {
+                    bindView();
+                }
+            } else {
+                bindView();
+            }
         }
     }
 
-    private void bindViewNext() {
+    private void setBeginAnimation() {
+        ruleContent.setVisibility(View.GONE);
+        animationView.setVisibility(View.VISIBLE);
+        animationView.setAnimation("preloader.json");
+        animationView.loop(true);
+        animationView.playAnimation();
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                animationView.setVisibility(View.GONE);
+                animationView.cancelAnimation();
+                ruleContent.setVisibility(View.VISIBLE);
+                isAnimated = true;
+                bindView();
+            }
+        }, GameUtils.TIME_ANIMATION_BEGIN);
+    }
+
+    private void bindView() {
         ruleContent.setText(currentRule.getContent());
         final Animation anim1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.effect_challenge);
         ruleContent.startAnimation(anim1);
@@ -91,7 +128,7 @@ public class NewRuleNextActivity extends AppCompatActivity {
             Intent k = new Intent(NewRuleNextActivity.this, ChoiceActivity.class);
             startActivity(k);
             finish();
-        }  else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
+        } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
                 .equals(GameUtils.Type.NEW_RULE.toString())) {
             Intent k = new Intent(NewRuleNextActivity.this, NewRuleActivity.class);
             startActivity(k);

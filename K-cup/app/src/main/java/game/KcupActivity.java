@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.Animation;
@@ -12,6 +13,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.kcup.drinkgame.k_cup.R;
 
 import dialog.CancelActivity;
@@ -25,12 +27,16 @@ public class KcupActivity extends AppCompatActivity {
     private Rule currentRule;
     private int position;
 
+    private LottieAnimationView animationView;
+
     private ImageView bulle;
     private ImageView back;
 
     private FrameLayout content;
     private TextView ruleTitle;
     private TextView ruleContent;
+
+    private boolean isAnimated = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +45,8 @@ public class KcupActivity extends AppCompatActivity {
         setContentView(R.layout.activity_kcup);
 
         Typeface typeface = Typeface.createFromAsset(getAssets(), "Roboto-Medium.ttf");
+
+        animationView = (LottieAnimationView) findViewById(R.id.animation_view);
 
         content = (FrameLayout) findViewById(R.id.background);
         bulle = (ImageView) findViewById(R.id.bulle);
@@ -51,12 +59,37 @@ public class KcupActivity extends AppCompatActivity {
 
         getCurrentRule();
         if (currentRule != null) {
-            if (currentRule.getType().equals(GameUtils.Type.NEW_RULE.toString())) {
-                bindView();
+            final Bundle b = getIntent().getExtras();
+            if (b != null && !isAnimated) {
+                boolean isBegin = b.getBoolean(GameUtils.EXTRA_ANIMATION_BEGIN);
+                if (isBegin) {
+                    setBeginAnimation();
+                } else {
+                    bindView();
+                }
             } else {
-                bindViewNext();
+                bindView();
             }
         }
+    }
+
+    private void setBeginAnimation() {
+        ruleContent.setVisibility(View.GONE);
+        animationView.setVisibility(View.VISIBLE);
+        animationView.setAnimation("preloader.json");
+        animationView.loop(true);
+        animationView.playAnimation();
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                animationView.setVisibility(View.GONE);
+                animationView.cancelAnimation();
+                ruleContent.setVisibility(View.VISIBLE);
+                isAnimated = true;
+                bindView();
+            }
+        }, GameUtils.TIME_ANIMATION_BEGIN);
     }
 
     private void bindView() {
@@ -73,30 +106,6 @@ public class KcupActivity extends AppCompatActivity {
             }
         });
 
-        if (position > 0) {
-            back.setVisibility(View.VISIBLE);
-        }
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getBack();
-            }
-        });
-    }
-
-    private void bindViewNext() {
-        ruleContent.setText(currentRule.getContent());
-        final Animation anim1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.effect_challenge);
-        ruleTitle.startAnimation(anim1);
-        ruleContent.startAnimation(anim1);
-        bulle.startAnimation(anim1);
-
-        content.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                goToNextRule();
-            }
-        });
         if (position > 0) {
             back.setVisibility(View.VISIBLE);
         }

@@ -89,36 +89,42 @@ public class HomeMainFragment extends Fragment {
                             .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
                             .equals(GameUtils.Type.NO_NEED_PLAYER.toString())) {
                         Intent k = new Intent(getActivity(), NoNeedPlayerActivity.class);
+                        k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
                         startActivity(k);
                     } else if (SharedPreferenceUtils.getRule(
                             getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE)
                             .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
                             .equals(GameUtils.Type.CHALLENGE.toString())) {
                         Intent k = new Intent(getActivity(), ChallengeActivity.class);
+                        k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
                         startActivity(k);
                     } else if (SharedPreferenceUtils.getRule(
                             getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE)
                             .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
                             .equals(GameUtils.Type.CHOICE.toString())) {
                         Intent k = new Intent(getActivity(), ChoiceActivity.class);
+                        k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
                         startActivity(k);
                     } else if (SharedPreferenceUtils.getRule(
                             getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE)
                             .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
                             .equals(GameUtils.Type.KCUPS.toString())) {
                         Intent k = new Intent(getActivity(), KcupActivity.class);
+                        k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
                         startActivity(k);
                     } else if (SharedPreferenceUtils.getRule(
                             getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE)
                             .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
                             .equals(GameUtils.Type.NEW_RULE.toString())) {
                         Intent k = new Intent(getActivity(), NewRuleActivity.class);
+                        k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
                         startActivity(k);
                     } else if (SharedPreferenceUtils.getRule(
                             getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE)
                             .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
                             .equals(GameUtils.Type.NEW_RULE_NEXT.toString())) {
                         Intent k = new Intent(getActivity(), NewRuleNextActivity.class);
+                        k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
                         startActivity(k);
                     }
                 }

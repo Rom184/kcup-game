@@ -30,6 +30,7 @@
 
         <activity
             android:name="player.PlayerActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/style_no_need_player"
             android:windowSoftInputMode="stateHidden|adjustNothing" />
 

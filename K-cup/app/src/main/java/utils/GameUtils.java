@@ -14,6 +14,9 @@ import identity.Rule;
 
 public class GameUtils {
 
+    public static final String EXTRA_ANIMATION_BEGIN = "extra_animation_begin";
+    public static final int TIME_ANIMATION_BEGIN = 3000;
+
     public enum Type {
         NO_NEED_PLAYER,
         CHALLENGE,
@@ -97,7 +100,7 @@ public class GameUtils {
                     noNeedPlayer.remove(0);
                 } else if (randomType == 2) {
                     Collections.shuffle(challenge);
-                    newRule.add(new Rule(getSelectedWithTwoPlayer(context, challenge.get(0), listPlayer, 4), Type.NO_NEED_PLAYER.toString()));
+                    newRule.add(new Rule(getSelectedWithTwoPlayer(context, challenge.get(0), listPlayer, 4), Type.CHALLENGE.toString()));
                     challenge.remove(0);
                 } else {
                     Collections.shuffle(choice);

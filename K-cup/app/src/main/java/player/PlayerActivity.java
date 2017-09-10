@@ -100,14 +100,17 @@ public class PlayerActivity extends AppCompatActivity {
         if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(0).getType()
                 .equals(GameUtils.Type.NO_NEED_PLAYER.toString())) {
             Intent k = new Intent(PlayerActivity.this, NoNeedPlayerActivity.class);
+            k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
             startActivity(k);
         } else if ((SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(0).getType()
                 .equals(GameUtils.Type.CHALLENGE.toString()))) {
             Intent k = new Intent(PlayerActivity.this, ChallengeActivity.class);
+            k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
             startActivity(k);
         } else if ((SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(0).getType()
                 .equals(GameUtils.Type.CHOICE.toString()))) {
             Intent k = new Intent(PlayerActivity.this, ChoiceActivity.class);
+            k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
             startActivity(k);
         }
 
