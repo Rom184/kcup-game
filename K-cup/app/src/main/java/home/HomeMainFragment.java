@@ -77,12 +77,10 @@ public class HomeMainFragment extends Fragment {
             }
         });
 
-        LinearLayout continueArea = (LinearLayout) view.findViewById(R.id.continue_area);
-
         if (SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext()) > 0
                 && SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext()) <
                 SharedPreferenceUtils.getRule(getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).size()) {
-            continueArea.setVisibility(View.VISIBLE);
+            continueGame.setVisibility(View.VISIBLE);
             continueGame.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -126,7 +124,7 @@ public class HomeMainFragment extends Fragment {
                 }
             });
         } else {
-            continueArea.setVisibility(View.GONE);
+            continueGame.setVisibility(View.GONE);
         }
 
         newNormalGame.setOnClickListener(new View.OnClickListener() {
