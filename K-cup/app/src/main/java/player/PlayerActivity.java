@@ -15,7 +15,6 @@ import com.kcup.drinkgame.k_cup.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import game.BeginGameActivity;
 import game.ChallengeActivity;
 import game.ChoiceActivity;
 import game.NoNeedPlayerActivity;
@@ -37,8 +36,6 @@ public class PlayerActivity extends AppCompatActivity {
     private EditText player10;
 
     private Button addPlayer;
-
-    private View line;
 
     private int nbPlayer = 3;
 
@@ -94,7 +91,6 @@ public class PlayerActivity extends AppCompatActivity {
             }
         });
 
-        line = findViewById(R.id.line);
         setPlayer();
 
     }
@@ -237,8 +233,7 @@ public class PlayerActivity extends AppCompatActivity {
         } else if (nbPlayer == 9) {
             player10.setVisibility(View.VISIBLE);
             nbPlayer = 10;
-            addPlayer.setVisibility(View.GONE);
-            line.setVisibility(View.GONE);
+            addPlayer.setVisibility(View.INVISIBLE);
         }
     }
 

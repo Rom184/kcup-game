@@ -24,7 +24,7 @@ import utils.SharedPreferenceUtils;
 
 public class SplashActivity extends AppCompatActivity {
 
-    private static final int SPLASH_DISPLAY_LENGTH = 3500;
+    private static final int SPLASH_DISPLAY_LENGTH = 3300;
     private boolean isTimeElapsed = false;
 
     private LottieAnimationView animationView;

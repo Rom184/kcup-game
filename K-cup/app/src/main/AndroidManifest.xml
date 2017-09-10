@@ -30,7 +30,8 @@
 
         <activity
             android:name="player.PlayerActivity"
-            android:theme="@style/style_no_need_player" />
+            android:theme="@style/style_no_need_player"
+            android:windowSoftInputMode="stateHidden|adjustNothing" />
 
         <activity
             android:name="game.BeginGameActivity"
