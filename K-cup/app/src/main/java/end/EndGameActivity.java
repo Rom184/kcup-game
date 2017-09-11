@@ -4,6 +4,8 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -13,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class EndGameActivity extends AppCompatActivity{
+public class EndGameActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +46,10 @@ public class EndGameActivity extends AppCompatActivity{
         TextView content = (TextView) findViewById(R.id.content_end);
         content.setTypeface(typeface);
         content.setText(end.get(0));
+
+        final Animation anim1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.effect_challenge);
+        title.setAnimation(anim1);
+        content.setAnimation(anim1);
     }
 
 }

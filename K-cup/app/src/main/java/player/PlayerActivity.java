@@ -113,9 +113,7 @@ public class PlayerActivity extends AppCompatActivity {
             k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
             startActivity(k);
         }
-
-        /*Intent k = new Intent(PlayerActivity.this, BeginGameActivity.class);
-        startActivity(k);*/
+        overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
 
         finish();
     }

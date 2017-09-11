@@ -34,6 +34,7 @@ public class NoNeedPlayerActivity extends AppCompatActivity {
 
     private FrameLayout content;
     private TextView ruleContent;
+    private TextView count;
 
     private boolean isAnimated = false;
 
@@ -48,9 +49,13 @@ public class NoNeedPlayerActivity extends AppCompatActivity {
         animationView = (LottieAnimationView) findViewById(R.id.animation_view);
 
         content = (FrameLayout) findViewById(R.id.background);
+
         bulle = (ImageView) findViewById(R.id.bulle);
         back = (ImageView) findViewById(R.id.back);
+
         ruleContent = (TextView) findViewById(R.id.content_rule);
+        count = (TextView) findViewById(R.id.count);
+        count.setTypeface(typeface);
         ruleContent.setTypeface(typeface);
 
         getCurrentRule();
@@ -90,9 +95,15 @@ public class NoNeedPlayerActivity extends AppCompatActivity {
 
 
     private void bindView() {
+
+        String currentCount = String.valueOf(SharedPreferenceUtils.getPositionGame(getApplicationContext()) + 1) + " / "
+                + String.valueOf(SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).size());
+
+        count.setText(currentCount);
         ruleContent.setText(currentRule.getContent());
         final Animation anim1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.effect_challenge);
         ruleContent.startAnimation(anim1);
+        count.startAnimation(anim1);
         bulle.startAnimation(anim1);
 
         content.setOnClickListener(new View.OnClickListener() {
@@ -121,31 +132,37 @@ public class NoNeedPlayerActivity extends AppCompatActivity {
                     .equals(GameUtils.Type.NO_NEED_PLAYER.toString())) {
                 Intent k = new Intent(NoNeedPlayerActivity.this, NoNeedPlayerActivity.class);
                 startActivity(k);
+                overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
                 finish();
             } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
                     .equals(GameUtils.Type.CHALLENGE.toString())) {
                 Intent k = new Intent(NoNeedPlayerActivity.this, ChallengeActivity.class);
                 startActivity(k);
+                overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
                 finish();
             } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
                     .equals(GameUtils.Type.CHOICE.toString())) {
                 Intent k = new Intent(NoNeedPlayerActivity.this, ChoiceActivity.class);
                 startActivity(k);
+                overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
                 finish();
             } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
                     .equals(GameUtils.Type.KCUPS.toString())) {
                 Intent k = new Intent(NoNeedPlayerActivity.this, KcupActivity.class);
                 startActivity(k);
+                overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
                 finish();
             } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
                     .equals(GameUtils.Type.NEW_RULE.toString())) {
                 Intent k = new Intent(NoNeedPlayerActivity.this, NewRuleActivity.class);
                 startActivity(k);
+                overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
                 finish();
             } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
                     .equals(GameUtils.Type.NEW_RULE_NEXT.toString())) {
                 Intent k = new Intent(NoNeedPlayerActivity.this, NewRuleNextActivity.class);
                 startActivity(k);
+                overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
                 finish();
             }
         } else {
@@ -194,7 +211,6 @@ public class NoNeedPlayerActivity extends AppCompatActivity {
             startActivity(k);
         }
         finish();
-
     }
 
     @Override

@@ -91,6 +91,7 @@ public class HomeMainFragment extends Fragment {
                         Intent k = new Intent(getActivity(), NoNeedPlayerActivity.class);
                         k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
                         startActivity(k);
+                        getActivity().overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
                     } else if (SharedPreferenceUtils.getRule(
                             getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE)
                             .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
@@ -98,6 +99,7 @@ public class HomeMainFragment extends Fragment {
                         Intent k = new Intent(getActivity(), ChallengeActivity.class);
                         k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
                         startActivity(k);
+                        getActivity().overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
                     } else if (SharedPreferenceUtils.getRule(
                             getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE)
                             .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
@@ -105,6 +107,7 @@ public class HomeMainFragment extends Fragment {
                         Intent k = new Intent(getActivity(), ChoiceActivity.class);
                         k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
                         startActivity(k);
+                        getActivity().overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
                     } else if (SharedPreferenceUtils.getRule(
                             getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE)
                             .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
@@ -112,6 +115,7 @@ public class HomeMainFragment extends Fragment {
                         Intent k = new Intent(getActivity(), KcupActivity.class);
                         k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
                         startActivity(k);
+                        getActivity().overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
                     } else if (SharedPreferenceUtils.getRule(
                             getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE)
                             .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
@@ -119,6 +123,7 @@ public class HomeMainFragment extends Fragment {
                         Intent k = new Intent(getActivity(), NewRuleActivity.class);
                         k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
                         startActivity(k);
+                        getActivity().overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
                     } else if (SharedPreferenceUtils.getRule(
                             getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE)
                             .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
@@ -126,6 +131,7 @@ public class HomeMainFragment extends Fragment {
                         Intent k = new Intent(getActivity(), NewRuleNextActivity.class);
                         k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
                         startActivity(k);
+                        getActivity().overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
                     }
                 }
             });

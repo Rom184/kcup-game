@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -108,11 +110,16 @@ public class SplashActivity extends AppCompatActivity {
         animationView.cancelAnimation();
         animationView.setVisibility(View.GONE);
 
+        final Animation anim1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.effect_challenge);
+
         content.setVisibility(View.VISIBLE);
+        content.setAnimation(anim1);
         begin.setVisibility(View.VISIBLE);
+        begin.setAnimation(anim1);
 
         text.setVisibility(View.GONE);
         buttonArea.setVisibility(View.VISIBLE);
+        buttonArea.setAnimation(anim1);
 
         cancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
