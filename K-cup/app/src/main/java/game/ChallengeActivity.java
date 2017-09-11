@@ -185,6 +185,7 @@ public class ChallengeActivity extends AppCompatActivity {
             SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
             Intent k = new Intent(ChallengeActivity.this, NoNeedPlayerActivity.class);
             startActivity(k);
+            finish();
         } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1)
                 .getType().equals((GameUtils.Type.CHALLENGE.toString()))) {
             SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
@@ -199,11 +200,13 @@ public class ChallengeActivity extends AppCompatActivity {
             SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
             Intent k = new Intent(ChallengeActivity.this, ChoiceActivity.class);
             startActivity(k);
+            finish();
         } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1)
                 .getType().equals((GameUtils.Type.KCUPS.toString()))) {
             SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
             Intent k = new Intent(ChallengeActivity.this, KcupActivity.class);
             startActivity(k);
+            finish();
         } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1).getType()
                 .equals(GameUtils.Type.NEW_RULE.toString())
                 || SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1).getType()
@@ -211,9 +214,8 @@ public class ChallengeActivity extends AppCompatActivity {
             SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
             Intent k = new Intent(ChallengeActivity.this, NewRuleActivity.class);
             startActivity(k);
+            finish();
         }
-        finish();
-
     }
 
     @Override
