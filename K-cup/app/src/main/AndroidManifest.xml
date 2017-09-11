@@ -10,7 +10,8 @@
         android:theme="@style/style_no_need_player">
         <activity
             android:name="home.SplashActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/kcup_theme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
