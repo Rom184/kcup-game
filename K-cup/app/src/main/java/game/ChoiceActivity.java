@@ -138,10 +138,12 @@ public class ChoiceActivity extends AppCompatActivity {
                 finish();
             } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
                     .equals(GameUtils.Type.CHOICE.toString())) {
-                Intent k = new Intent(ChoiceActivity.this, ChoiceActivity.class);
-                startActivity(k);
-                overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
-                finish();
+                getCurrentRule();
+                if (currentRule != null) {
+                    bindView();
+                } else {
+                    finish();
+                }
             } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
                     .equals(GameUtils.Type.NEW_RULE.toString())) {
                 Intent k = new Intent(ChoiceActivity.this, NewRuleActivity.class);
@@ -191,8 +193,12 @@ public class ChoiceActivity extends AppCompatActivity {
         } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1)
                 .getType().equals((GameUtils.Type.CHOICE.toString()))) {
             SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
-            Intent k = new Intent(ChoiceActivity.this, ChoiceActivity.class);
-            startActivity(k);
+            getCurrentRule();
+            if (currentRule != null) {
+                bindView();
+            } else {
+                finish();
+            }
         } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1)
                 .getType().equals((GameUtils.Type.KCUPS.toString()))) {
             SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
@@ -213,6 +219,7 @@ public class ChoiceActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         Intent i = new Intent(this, CancelActivity.class);
+        i.putExtra(GameUtils.EXTRA_TYPE, GameUtils.Type.CHOICE.toString());
         startActivityForResult(i, 1);
     }
 

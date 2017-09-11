@@ -132,10 +132,12 @@ public class ChallengeActivity extends AppCompatActivity {
                 finish();
             } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
                     .equals(GameUtils.Type.CHALLENGE.toString())) {
-                Intent k = new Intent(ChallengeActivity.this, ChallengeActivity.class);
-                startActivity(k);
-                overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
-                finish();
+                getCurrentRule();
+                if (currentRule != null) {
+                    bindView();
+                } else {
+                    finish();
+                }
             } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
                     .equals(GameUtils.Type.CHOICE.toString())) {
                 Intent k = new Intent(ChallengeActivity.this, ChoiceActivity.class);
@@ -186,8 +188,12 @@ public class ChallengeActivity extends AppCompatActivity {
         } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1)
                 .getType().equals((GameUtils.Type.CHALLENGE.toString()))) {
             SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
-            Intent k = new Intent(ChallengeActivity.this, ChallengeActivity.class);
-            startActivity(k);
+            getCurrentRule();
+            if (currentRule != null) {
+                bindView();
+            } else {
+                finish();
+            }
         } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1)
                 .getType().equals((GameUtils.Type.CHOICE.toString()))) {
             SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
@@ -213,6 +219,7 @@ public class ChallengeActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         Intent i = new Intent(this, CancelActivity.class);
+        i.putExtra(GameUtils.EXTRA_TYPE, GameUtils.Type.CHALLENGE.toString());
         startActivityForResult(i, 1);
     }
 

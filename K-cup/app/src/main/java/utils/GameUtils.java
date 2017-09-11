@@ -15,6 +15,7 @@ import identity.Rule;
 public class GameUtils {
 
     public static final String EXTRA_ANIMATION_BEGIN = "extra_animation_begin";
+    public static final String EXTRA_TYPE = "extra_type";
     public static final int TIME_ANIMATION_BEGIN = 3000;
 
     public enum Type {

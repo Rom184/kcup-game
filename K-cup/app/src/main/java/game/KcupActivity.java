@@ -207,6 +207,7 @@ public class KcupActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         Intent i = new Intent(this, CancelActivity.class);
+        i.putExtra(GameUtils.EXTRA_TYPE, GameUtils.Type.KCUPS.toString());
         startActivityForResult(i, 1);
     }
 
