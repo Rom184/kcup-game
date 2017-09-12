@@ -20,14 +20,12 @@ import com.kcup.drinkgame.k_cup.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import dialog.WarningActivity;
 import io.fabric.sdk.android.Fabric;
 import utils.SharedPreferenceUtils;
 
 public class SplashActivity extends AppCompatActivity {
 
     private static final int SPLASH_DISPLAY_LENGTH = 3300;
-    private boolean isTimeElapsed = false;
 
     private LottieAnimationView animationView;
     private LinearLayout buttonArea;
@@ -99,7 +97,6 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                isTimeElapsed = true;
                 showAdvertissement();
             }
         }, SPLASH_DISPLAY_LENGTH);

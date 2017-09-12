@@ -47,7 +47,6 @@
         <item>C\'est le jour des elfes ! \nEt %b pour faire la fête avec K-Cup</item>
         <item>L\'hote distribue %b. S\'il n\'y en a pas, Tout le monde boit %b</item>
         <item>Tout le monde debout ! La dernière personne boit %b</item>
-        <item>Le dernière personne à avoir fêté son anniversaire peut distribuer %b !</item>
         <item>Le première personne à s\'être levé ce matin boit %b</item>
         <item>La première personne à sortir un mouchoir distribue %b</item>
         <item>La première personne à sortir une capote distribue %b</item>
@@ -56,11 +55,16 @@
         <item>La première personne à crier ""MOI"" distribue %b</item>
         <item>La première personne qui crit ""K-Cup"" distribue %b</item>
         <item>La première personne à se lever distribue %b</item>
-        <item>La dernière personne à être allée aux toilettes boit %b</item>
+        <item>La première personne à montrer un objet rouge distribue %b</item>
+        <item>La première personne à montrer un objet blanc distribue %b</item>
+        <item>La première personne à montrer une pièce distribue %b</item>
+        <item>La première personne à montrer une photo marrante distribue %b</item>
         <item>La première personne qui trouve le joueur le plus jeune distribue %b</item>
+        <item>Le dernière personne à avoir fêté son anniversaire peut distribuer %b !</item>
+        <item>La dernière personne à être allée aux toilettes boit %b</item>
         <item>La dernière personne à avoir publié un statut Facebook boit %b</item>
         <item>La dernière personne à avoir publié un Tweet boit %b</item>
-        <item>La dernière persoone qui était debout boit %b</item>
+        <item>La dernière personne qui était debout boit %b</item>
         <item>Le dernier à s\'être servi un verre boit %b</item>
         <item>Le dernier à avoir bu distribue %b</item>
         <item>Le dernier joueur à avoir vomi en soirée distribue %b</item>
@@ -81,12 +85,13 @@
         <item>Ceux qui sont déjà allés dans un sex shop distribuent %b</item>
         <item>Ceux qui sont déjà allés sur un bateau distribuent %b</item>
         <item>Ceux dont le téléphone est sur la table boivent %b</item>
-        <item>Ceux dont le téléphone est dans leur poches boivent %b</item>
+        <item>Ceux dont le téléphone est dans leurs poches boivent %b</item>
         <item>Ceux qui avaient moins de 8 ans pendant la coupe du monde 98 boivent %b</item>
         <item>Ceux qui avaient moins de 15 ans pour leur première fois distribuent %b</item>
         <item>Ceux qui avaient plus de 20 ans pour leur première fois boivent %b</item>
-        <item>Ceux qui avaient moins de 15 ans pour leur première cigarettes boivent %b</item>
-        <item>Ceux qui n\'ont jamais fais une partie de "" K-Cup "" finissent leur verre\n\nBienvenue les newbies !</item>
+        <item>Ceux qui avaient moins de 15 ans pour leur première cigarette boivent %b</item>
+        <item>Ceux qui n\'ont jamais fumer de cigarette distribuent %b</item>
+        <item>Ceux qui n\'ont jamais fais une partie de "" K-Cup "" finissent leur verre\n\nBienvenue aux nouveaux !</item>
         <item>Ceux qui sont (encore) à boire de l\'alcool soft (vin, biere, ..) boivent %b</item>
         <item>Ceux qui ont du soft (eau, soda, ..) dans leur verre boivent %b</item>
         <item>Ceux qui sont à l\'alcool pur distribuent %b</item>
@@ -95,6 +100,7 @@
         <item>Ceux qui sont à la bière distribuent %b</item>
         <item>Ceux qui sont au vin boivent %b</item>
         <item>Ceux qui ont déjà regardé un film porno boivent %b</item>
+        <item>Ceux qui ont regardé un film porno sur internet cette semaine boivent %b</item>
         <item>Ceux qui ont déjà regardé une emission de télé réalité cette semaine boivent %b</item>
         <item>Ceux qui entendent cette phrase boivent %b</item>
         <item>Ceux qui ont déjà lu un ""Chaire de poule"" boivent %b !</item>
@@ -136,15 +142,18 @@
         <item>Tous les blonds/blondes boivent %b</item>
         <item>Tous les bruns/brunes boivent %b</item>
         <item>Tu es roux ? Alors bois %b !</item>
+        <item>Les fausses couleurs pour les cheveux c\'est %b</item>
+        <item>Les faux ongles c\'est %b</item>
         <item>Les enfants uniques boivent %b !</item>
         <item>Tu as un frère ? %b !</item>
         <item>Tu as une soeur ? %b !</item>
+        <item>Tu as au moins une soeur et un frère ? alors distribue %b !</item>
         <item>Tu as un animal de compagnie ? Alors boit %b !</item>
         <item>Tu as un pc ? Alors boit %b !</item>
         <item>Tu as un mac ? Alors boit %b !</item>
         <item>Tu es un Apple fan ? Alors boit %b !</item>
-        <item>Tu as un un écran de plus de 100 cm chez toi? Alors boit %b !</item>
-        <item>Tu as un nom de famille bizarre et tu en as souffert jeune ? Alors ça continue et boit %b</item>
+        <item>Tu as un un écran de plus de 100 cm chez toi? Alors bois %b !</item>
+        <item>Tu as un nom de famille bizarre et tu en as souffert jeune ? Alors ça continue et bois %b</item>
         <item>Tu as un nom de famille qui veut dire quelque chose ? Alors distribue %b</item>
         <item>Les redoublants boivent %b !</item>
         <item>Les redoublants distribuent %b !</item>
