@@ -77,6 +77,7 @@ public class KcupActivity extends AppCompatActivity {
     }
 
     private void setBeginAnimation() {
+        ruleTitle.setVisibility(View.GONE);
         ruleContent.setVisibility(View.GONE);
         animationView.setVisibility(View.VISIBLE);
         animationView.setAnimation("preloader.json");
@@ -88,6 +89,7 @@ public class KcupActivity extends AppCompatActivity {
             public void run() {
                 animationView.setVisibility(View.GONE);
                 animationView.cancelAnimation();
+                ruleContent.setVisibility(View.VISIBLE);
                 ruleContent.setVisibility(View.VISIBLE);
                 isAnimated = true;
                 bindView();

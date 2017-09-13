@@ -33,6 +33,7 @@ public class NewRuleActivity extends AppCompatActivity {
     private ImageView back;
 
     private FrameLayout content;
+    private TextView title;
     private TextView ruleContent;
     private TextView count;
 
@@ -51,6 +52,8 @@ public class NewRuleActivity extends AppCompatActivity {
         content = (FrameLayout) findViewById(R.id.background);
         bulle = (ImageView) findViewById(R.id.bulle);
         back = (ImageView) findViewById(R.id.back);
+        title = (TextView) findViewById(R.id.title_rule);
+        title.setTypeface(typeface);
         ruleContent = (TextView) findViewById(R.id.content_rule);
         ruleContent.setTypeface(typeface);
         count = (TextView) findViewById(R.id.count);
@@ -73,6 +76,7 @@ public class NewRuleActivity extends AppCompatActivity {
     }
 
     private void setBeginAnimation() {
+        title.setVisibility(View.GONE);
         ruleContent.setVisibility(View.GONE);
         animationView.setVisibility(View.VISIBLE);
         animationView.setAnimation("preloader.json");
@@ -84,6 +88,7 @@ public class NewRuleActivity extends AppCompatActivity {
             public void run() {
                 animationView.setVisibility(View.GONE);
                 animationView.cancelAnimation();
+                title.setVisibility(View.VISIBLE);
                 ruleContent.setVisibility(View.VISIBLE);
                 isAnimated = true;
                 bindView();
@@ -98,6 +103,7 @@ public class NewRuleActivity extends AppCompatActivity {
         count.setText(currentCount);
         ruleContent.setText(currentRule.getContent());
         final Animation anim1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.effect_challenge);
+        title.startAnimation(anim1);
         ruleContent.startAnimation(anim1);
         count.startAnimation(anim1);
         bulle.startAnimation(anim1);

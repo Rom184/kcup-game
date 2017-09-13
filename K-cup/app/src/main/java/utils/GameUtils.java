@@ -74,11 +74,11 @@ public class GameUtils {
             int randomNewRule = r.nextInt(11) + 1;
 
             if (a < nbStopNewRule && isPossibleNewRule && randomNewRule < 3) {
-                newRule.add(new Rule(getRandomSoftDrinks(context, newRuleAll.get(randomForNewRule.get(0)), 8), Type.NEW_RULE.toString()));
+                newRule.add(new Rule(getRandomSoftDrinks(context, newRuleAll.get(randomForNewRule.get(0)), 6), Type.NEW_RULE.toString()));
                 isPossibleNewRule = false;
                 positionNewRuleNext = a + (r.nextInt(3) + 5);
             } else if (!isPossibleNewRule && a > 0 && a == positionNewRuleNext) {
-                newRule.add(new Rule(getRandomSoftDrinks(context, newRuleNext.get(randomForNewRule.get(0)), 8), Type.NEW_RULE_NEXT.toString()));
+                newRule.add(new Rule(getRandomSoftDrinks(context, newRuleNext.get(randomForNewRule.get(0)), 6), Type.NEW_RULE_NEXT.toString()));
                 positionNewRuleNext = 0;
                 randomForNewRule.remove(0);
                 isPossibleNewRule = true;

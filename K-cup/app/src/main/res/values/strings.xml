@@ -8,6 +8,8 @@
     <string name="berserk_game">Le berserk</string>
     <string name="berserk_game_info">Le mode pour les vrais alcoolos !</string>
     <string name="new_game_now">Le K-Cup !</string>
+    <string name="new_rule_title">Nouvelle règle!</string>
+    <string name="new_rule_next_title">Fin de la règle!</string>
     <string name="add_player">Ajouter un joueur ?</string>
 
     <!-- config -->
@@ -488,6 +490,10 @@
         <item>%s bois %b si tu as déjà porté un appareil dentaire</item>
         <item>%s bois %b si tu as achété ton portable plus de 300 euros</item>
         <item>%s bois %b si tu n\'as pas ton véritable nom sur Facebook</item>
+        <item>%s bois %b si tu as une trottinette</item>
+        <item>%s bois %b si tu as une voiture</item>
+        <item>%s bois %b si tu es locataire</item>
+        <item>%s bois %b si tu es propriétaire</item>
         <item>%s bois %b si tu as fait l\'amour pour la première fois apres 16 ans</item>
         <item>%s bois %b si tu as fait l\'amour pour la première fois apres 20 ans</item>
         <item>%s tu touches tout le temps la table sinon %b à chaque fois que tu l\'enlèves</item>
@@ -515,18 +521,20 @@
         <item>Nouveau décret avec %b en jeu : ""les jeux vidéos d\'horreur"", %s prend en 1er la parole</item>
         <item>Nouveau décret avec %b en jeu : ""les jeux vidéos d\'aventure"", %s prend en 1er la parole</item>
         <item>Nouveau décret avec %b en jeu : ""les marques de cosmétique"", %s prend en 1er la parole</item>
-        <item>Nouveau décret avec %b en jeu : ""les marques de voitures"", %s prend en 1er la parole</item>
+        <item>Nouveau décret avec %b en jeu : ""les marques de voitures allemandes"", %s prend en 1er la parole</item>
         <item>Nouveau décret avec %b en jeu : ""les groupes de musique des années 80"", %s prend en 1er la parole</item>
         <item>Nouveau décret avec %b en jeu : ""les groupes de musique des années 90"", %s prend en 1er la parole</item>
         <item>Nouveau décret avec %b en jeu : ""les groupes de musique des années 2000"", %s prend en 1er la parole</item>
-        <item>Nouveau décret avec %b en jeu : ""les belles chanteuses"", %s prend en 1er la parole</item>
-        <item>Nouveau décret avec %b en jeu : ""les chanteurs bogosse"", %s prend en 1er la parole</item>
+        <item>Nouveau décret avec %b en jeu : ""les belles chanteuses américaines"", %s prend en 1er la parole</item>
+        <item>Nouveau décret avec %b en jeu : ""les chanteurs bogosse américains"", %s prend en 1er la parole</item>
         <item>Nouveau décret avec %b en jeu : ""le fait d\'être un homme c\'est mieux"", %s prend en 1er la parole</item>
         <item>Nouveau décret avec %b en jeu : ""le fait d\'être une femme c\'est mieux"", %s prend en 1er la parole</item>
         <item>Nouveau décret avec %b en jeu : ""être bourré c\'est cool"", %s prend en 1er la parole</item>
         <item>Nouveau décret avec %b en jeu : ""les noms de cocktail"", %s prend en 1er la parole</item>
-        <item>Nouveau décret avec %b en jeu : ""les personnages de Marvel"", %s prend en 1er la parole</item>
+        <item>Nouveau décret avec %b en jeu : ""les personnages des X-Men"", %s prend en 1er la parole</item>
         <item>Nouveau décret avec %b en jeu : ""les fast food"", %s prend en 1er la parole</item>
+        <item>Nouveau décret avec %b en jeu : ""les dessins animés des années 90"", %s prend en 1er la parole</item>
+        <item>Nouveau décret avec %b en jeu : ""les dessins animés des années 2000"", %s prend en 1er la parole</item>
         <item>Nouveau décret avec %b en jeu : ""les séries des années 90"", %s prend en 1er la parole</item>
         <item>Nouveau décret avec %b en jeu : ""les séries des années 2000"", %s prend en 1er la parole</item>
         <item>Nouveau décret avec %b en jeu : ""les séries américaine"", %s prend en 1er la parole</item>
@@ -534,6 +542,8 @@
         <item>Nouveau décret avec %b en jeu : ""les séries avec plus de 5 saisons"", %s prend en 1er la parole</item>
         <item>Nouveau décret avec %b en jeu : ""les emissions de télévision"", %s prend en 1er la parole</item>
         <item>Nouveau décret avec %b en jeu : ""les villes des Etats-Unis"", %s prend en 1er la parole</item>
+        <item>Nouveau décret avec %b en jeu : ""les capitales en Europe"", %s prend en 1er la parole</item>
+        <item>Nouveau décret avec %b en jeu : ""les capitales en Asie"", %s prend en 1er la parole</item>
         <item>Nouveau décret avec %b en jeu : ""les applications utilitaires"", %s prend en 1er la parole</item>
         <item>Nouveau décret avec %b en jeu : ""les applications jeux"", %s prend en 1er la parole</item>
         <item>Nouveau décret avec %b en jeu : ""les pays asiatiques"", %s prend en 1er la parole</item>
@@ -571,9 +581,9 @@
         <item>%s trouve le petit amie de %a sinon %b</item>
         <item>%s rajoute du soft ou de l\'alcool dans le verre de %a</item>
         <item>%s rajoute que de l\'alcool dans le verre de %a</item>
-        <item>%s tu sers le verre de %a jusqu\'a la fin de la partie</item>
-        <item>%s tu te met a côte de %a jusqu\'a la fin de la partie</item>
-        <item>%s tu te met en face de %a jusqu\'a la fin de la partie</item>
+        <item>%s tu sers le verre de %a jusqu\'à la fin de la partie</item>
+        <item>%s tu te met a côte de %a jusqu\'à la fin de la partie</item>
+        <item>%s tu te met en face de %a jusqu\'à la fin de la partie</item>
         <item>%s et %a, buvez ensemble %b puis une autre bien sur !</item>
         <item>%s et %a, buvez ensemble %b</item>
         <item>%s, donne l\'age de %a ou bois %b</item>
@@ -585,11 +595,11 @@
         <item>%s devine une chose que %a adore. Si tu as juste tu lui donne %b, sinon tu bois %b</item>
         <item>%s devine une chose que %a déteste. Si tu as juste tu lui donne %b, sinon tu bois %b</item>
         <item>%s devine une chose que %a a fait hier. Si tu as juste tu lui donne %b, sinon tu bois %b</item>
-        <item>%s devra faire un bruit d\'animal apres chaque gorgée sinon %b de plus jusqu\'a son prochain tour, %a choisit quel sera l\'animal</item>
-        <item>%s devra dire un mot apres chaque gorgée sinon %b de plus jusqu\'a son prochain tour, %a choisit quel sera le mot</item>
-        <item>%s devra faire un geste apres chaque gorgée sinon %b de plus jusqu\'a son prochain tour, %a choisit quel sera le geste</item>
-        <item>%s devra dire un mot doux apres chaque gorgée sinon %b de plus jusqu\'a son prochain tour, %a choisit quel sera le mot</item>
-        <item>%s devra dire un mot d\'amour pour %a apres chaque gorgée sinon %b de plus jusqu\'a son prochain tour, %a choisit quel sera le mot</item>
+        <item>%s devra faire un bruit d\'animal apres chaque gorgée sinon %b de plus jusqu\'à la fin de la partie, %a choisit quel sera l\'animal</item>
+        <item>%s devra dire un mot apres chaque gorgée sinon %b de plus jusqu\'à la fin de la partie, %a choisit quel sera le mot</item>
+        <item>%s devra faire un geste apres chaque gorgée sinon %b de plus jusqu\'à la fin de la partie, %a choisit quel sera le geste</item>
+        <item>%s devra dire un mot doux apres chaque gorgée sinon %b de plus jusqu\'à la fin de la partie, %a choisit quel sera le mot</item>
+        <item>%s devra dire un mot d\'amour pour %a apres chaque gorgée sinon %b de plus jusqu\'à la fin de la partie, %a choisit quel sera le mot</item>
         <item>%s tu expliques pourquoi tu devrais distribuer %b à %a là tout de suite. Les autres joueurs trancheront si oui ou non !</item>
         <item>%s tu expliques pourquoi te ne devrais pas distribuer %bs à %a. Les autres joueurs trancheront si oui ou non !</item>
     </string-array>
@@ -663,32 +673,41 @@
         <item>Choisissez une personne qui devra boire %b !</item>
         <item>Choisissez une personne qui devra distribuer %b !</item>
         <item>Choisssez une personne qui doit boire %b (avec le sourire sinon cul sec !)</item>
+        <item>Choisssez une personne qui doit boire %b car il le mérite !</item>
         <item>Choisssez une personne qui doit boire %b (en froncant les sourcils sinon cul sec !)</item>
-        <item>Faites 2 groupes, pour chaque groupe il faut trouver un footballer, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
-        <item>Faites 2 groupes, pour chaque groupe il faut trouver un handicapé célèbre, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
-        <item>Faites 2 groupes, pour chaque groupe il faut trouver un personnage de Futurama, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
-        <item>Faites 2 groupes, pour chaque groupe il faut trouver un personnage de Simpsons, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
-        <item>Faites 2 groupes, pour chaque groupe il faut trouver un personnage de South Park, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
-        <item>Faites 2 groupes, pour chaque groupe il faut trouver un personnage de Star Wars, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
-        <item>Faites 2 groupes, pour chaque groupe il faut trouver un personnage de Dragon Ball Z, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
-        <item>Faites 2 groupes, pour chaque groupe il faut trouver un personnage de Berserk, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
-        <item>Faites 2 groupes, pour chaque groupe il faut trouver un personnage des feux de l\'amour, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
-        <item>Faites 2 groupes, pour chaque groupe il faut trouver un nain de Blanche neige, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
-        <item>Faites 2 groupes, pour chaque groupe il faut trouver un film francais, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
-        <item>Faites 2 groupes, pour chaque groupe il faut trouver un film américain, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
-        <item>Faites 2 groupes, pour chaque groupe il faut trouver un film japonais, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
-        <item>Faites 2 groupes, pour chaque groupe il faut trouver un film coréen, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
-        <item>Faites 2 groupes, pour chaque groupe il faut trouver un film remake, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
-        <item>Faites 2 groupes, pour chaque groupe il faut trouver une série américaine, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
-        <item>Faites 2 groupes, pour chaque groupe il faut trouver un film des années 90, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
-        <item>Faites 2 groupes, pour chaque groupe il faut trouver un film des années 80, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
-        <item>Faites 2 groupes, pour chaque groupe il faut trouver une musique des années 2000, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
-        <item>Faites 2 groupes, pour chaque groupe il faut trouver une musique des années 90, continuer jusqu\'a qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un footballer, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un handicapé célèbre, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un personnage de Futurama, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un personnage de Simpsons, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un personnage de South Park, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un personnage de Star Wars, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un personnage de Dragon Ball Z, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un personnage de Berserk, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un personnage des feux de l\'amour, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un nain de Blanche neige, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un film francais, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un film américain, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un film japonais, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un film coréen, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un film remake, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un film triste, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un film de vampires, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un film de zombies, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver une série américaine, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un film des années 90, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un film des années 80, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un manga des années 90, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un manga des années 2000, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un dessins animés des années 90, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un dessins animés des années 80, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver un dessins animés des années 2000, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver une musique des années 2000, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
+        <item>Faites 2 groupes, pour chaque groupe il faut trouver une musique des années 90, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
         <item>Faites 2 groupes en 5 secondes, le groupe le moins nombreux boit %b</item>
         <item>%s tu choisis 1 personne et jusqu\'à la fin de la partie, interdit d\'allumer une clope sinon cul sec !</item>
-        <item>%s tu choisis 2 personnes et jusqu\'a la fin de la partie, interdit d\'allumer une clope sinon cul sec !</item>
-        <item>%s tu choisis 1 personne et jusqu\'a la fin de la partie, interdit de se lever sinon cul sec !</item>
-        <item>%s tu choisis 1 personne et jusqu\'a la fin de la partie, interdit de toucher son téléphone sinon cul sec !</item>
+        <item>%s tu choisis 2 personnes et jusqu\'à la fin de la partie, interdit d\'allumer une clope sinon cul sec !</item>
+        <item>%s tu choisis 1 personne et jusqu\'à la fin de la partie, interdit de se lever sinon cul sec !</item>
+        <item>%s tu choisis 1 personne et jusqu\'à la fin de la partie, interdit de toucher son téléphone sinon cul sec !</item>
         <item>%s tu choisis 1 personne et échange ta place avec ! Et puis tu peux distribuer %b</item>
         <item>%s tu choisis 1 personne, vous buvez %b puis chacun distribue %b</item>
         <item>%s tu choisis 1 personne, complimente cette personne ou bois %b</item>
@@ -726,8 +745,11 @@
         <item>%s tu choisis un joueur et à tour de role vous devez trouvez des bd de Tintin, le gagnant distribue %b !</item>
         <item>%s tu choisis un joueur et à tour de role vous devez trouvez les actrices sexy du cinema, le perdant boit %b !</item>
         <item>%s tu choisis un joueur et à tour de role vous devez trouvez les acteurs beau gosse du cinema, le perdant boit %b !</item>
-        <item>%s tu choisis 2 joueurs et à tour de role vous devez trouvez les noms de Disney, le gagnant distribue %b !</item>
-        <item>%s tu choisis 2 joueurs et à tour de role vous devez trouvez des dinausores, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez les noms de Disney, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des dinausores, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des oiseaux, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des personnages de Naruto, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des personnages de Fast and Furious, le gagnant distribue %b !</item>
     </string-array>
 
     <string-array name="new_rule_array">
@@ -802,6 +824,8 @@
         <item>Choisissez le Choubaka, il fait un bruit de Choubaka à la place de parler sinon %b</item>
         <item>Choisissez la fayotte, il dit "" Oui maîtresse "" à chaque fois qu\'un joueur lui parle sinon %b</item>
         <item>Choisissez la fayotte, il dit "" Oui maîtresse "" à chaque fois qu\'un joueur lui parle sinon %b</item>
+        <item>Choisissez le buveur, il double ses gorgées</item>
+        <item>Choisissez le buveur, il double ses gorgées</item>
     </string-array>
 
     <string-array name="new_rule_next_array" formatted="false">
@@ -871,11 +895,13 @@
         <item>Tu utilises aussi ma botte secrète ?\n\nTavernier et %b pour tout le monde !</item>
         <item>J\'ai trop peur des zombies\n\nEt %b pour m\'avoir fait peur !</item>
 
-        <item>Ne me transfomes pas !\n\nDonne %b pour me laisser la vie sauve !</item>
+        <item>Ne me transfomes pas en zombie!\n\nDonne %b pour me laisser la vie sauve !</item>
         <item>Le vrai est plus crédible !\n\nEt %b pour t\'améliorer</item>
         <item>Tu vois quand tu veux !\n\Donne %b pour montrer l\'exemple</item>
         <item>Maîtresse ?\n\n Elle doit boire ses %b. Elle n\'a pas fais ses devoirs!</item>
         <item>La maîtresse lui permet de donner %b parce que c\'est sa préférée</item>
+        <item>Et pour finir encore %b (pas doublé)</item>
+        <item>Tu as bien bu, distribue %b</item>
     </string-array>
 
     <string-array name="end_array">
