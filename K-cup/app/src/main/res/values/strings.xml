@@ -47,6 +47,8 @@
         <item>C\'est le jour des elfes ! \nEt %b pour faire la fête avec K-Cup</item>
         <item>L\'hote distribue %b. S\'il n\'y en a pas, Tout le monde boit %b</item>
         <item>Tout le monde debout ! La dernière personne boit %b</item>
+        <item>Tout le monde fait un dab ! La dernière personne boit %b</item>
+        <item>Tout le monde prend son verre ! La dernière personne boit %b</item>
         <item>Le première personne à s\'être levé ce matin boit %b</item>
         <item>La première personne à sortir un mouchoir distribue %b</item>
         <item>La première personne à sortir une capote distribue %b</item>
@@ -327,12 +329,13 @@
         <item>%s, tu crois à la chance ? Non ? Pourtant le joueur à ta droite bois %b</item>
         <item>%s, tu crois au karma ? Non ? Pourtant le joueur à ta droite décide si tu bois %b ou non</item>
         <item>%s, tu crois à la magie ? Non ? Alors ferme les yeux et quand tu les ouvriras ton verre sera vide</item>
+        <item>%s, tu crois à la l\'équilibre ? Non ? Alors tous les joueurs doivent remplir ou boire leur verre pour qu\'il soit comme le tien</item>
         <item>%s, tu crois aux miracles ? Mais si ! Alors distribue %b</item>
         <item>%s, remplis ton verre! \nS\'il était déjà plein bois %b</item>
         <item>%s, distribue %b si tu as déjà eu un accident de voiture</item>
         <item>%s, distribue %b si tu as n\'a jamais eu un accident de voiture</item>
-        <item>%s, montre ta carte d\'identité et bois %b si personne te charie</item>
-        <item>%s, montre ta carte d\'identité et distribue %b à chaque personne qui rigole</item>
+        <item>%s, montre une carte d\'identité et bois %b si personne te charie</item>
+        <item>%s, montre une carte d\'identité et distribue %b à chaque personne qui rigole</item>
         <item>%s, distribue %b si tu t\'es déjà cassé le bras ou la jambe</item>
         <item>%s, distribue %b si tu as déjà eu l\'appendicite</item>
         <item>%s, distribue %b si tu as déjà eu un plâtre</item>
@@ -343,30 +346,37 @@
         <item>%s distribue %b si tu as déjà eu une anesthésie générale</item>
         <item>%s bois %b si tu as Netflix</item>
         <item>%s bois %b si tu as conduits aujourd\'hui</item>
-        <item>%s bois %b si tu télécharges (voleur!)</item>
+        <item>%s bois %b si tu télécharges</item>
         <item>%s bois %b si tu as regardé Netflix cette semaine</item>
         <item>%s bois %b si tu va régulièrement au cinéma</item>
         <item>%s bois si tu ne connais pas les couleurs d\'un arc en ciel</item>
         <item>%s bois si tu connais la couleur du cheval blanc d\'Henri IV</item>
         <item>%s distribue %b si tu connais l\'alphabet à l\'envers</item>
+        <item>%s distribue %b si tu connais l\'alphabet</item>
         <item>%s si tu es une fille distribue %b, autrement bois-les</item>
         <item>%s si tu es un garçon distribue %b, autrement bois-les</item>
         <item>%s si tu es un elfe distribue %b, sinon bois-les</item>
-        <item>%s si tu es puceau distribue %b, sinon bois-les</item>
+        <item>%s si tu es puceau/vierge distribue %b, sinon bois-les</item>
         <item>%s si tu aimes les filles distribue %b, sinon bois-les</item>
         <item>%s si tu aimes les garçons distribue %b, sinon bois-les</item>
+        <item>%s si tu as utilisé Uber cette semaine distribue %b, sinon bois-les</item>
+        <item>%s si tu as joué à un jeu rétro cette semaine distribue %b, sinon bois-les</item>
+        <item>%s si tu as joué à un jeu de cartes cette semaine distribue %b, sinon bois-les</item>
         <item>%s la princesse en toi veut combler les garçons alors %b pour tous les hommes !</item>
         <item>%s le prince en toi veut combler les filles alors %b pour toutes les femmes !</item>
         <item>%s, montre les 5 dernières photos de ton portable ou bois %b</item>
+        <item>%s, montre les 5 premiers contactes de ton portable et bois %b pour chaque femme</item>
+        <item>%s, montre les 5 derniers contactes de ton portable et bois %b pour chaque homme</item>
         <item>%s, appel la dernière personne dans tes contactes et fais la promo de K-Cup ou bois %b</item>
         <item>%s, envoie un message à la 5e personne dans tes contactes et fais la promo de K-Cup ou bois %b</item>
+        <item>%s, écris un tweet et fais la promo de K-Cup ou bois %b</item>
         <item>%s, trouve un joueur moins bronzé que toi et donne lui %b !</item>
         <item>%s, trouve un joueur plus bronzé que toi et donne lui %b !</item>
         <item>%s, trouve un joueur moins grand que toi et donne lui %b !</item>
         <item>%s, trouve un joueur plus grand que toi et donne lui %b !</item>
         <item>%s tu dors dans un lit deux places ?\n\n Non. Alors %b !</item>
         <item>%s Santé !\n\nTu bois %b !</item>
-        <item>%s moment de détente !\n\nTu distribue %b !</item>
+        <item>%s moment de détente !\n\nTu distribues %b !</item>
         <item>%s tu lis souvent ?\n\n Non. Alors %b !</item>
         <item>%s tu es bronzé ?\n\n Non. Alors %b !</item>
         <item>%s tu as un garçon ?\n\n Non. Alors %b sinon distribue %b!</item>
@@ -395,12 +405,14 @@
         <item>%s, tous ceux que tu connais depuis au moins 2 ans te donnent %b</item>
         <item>%s, tous ceux qui font partis de ta famille boivent %b</item>
         <item>%s, tous ceux qui font partis de ta famille te donnent %b</item>
-        <item>%s regarde ton téléphone si ton dernier appel est une personne près de toi alors %b chacun</item>
-        <item>%s regarde ton téléphone si ton fond d\'écran est naze alors %b</item>
-        <item>%s regarde ton téléphone s\'il y a un homme sur ton fond d\'écran %b</item>
-        <item>%s regarde ton téléphone s\'il y a une femme sur ton fond d\'écran %b</item>
+        <item>%s montre ton téléphone si ton dernier appel est une personne près de toi alors %b chacun</item>
+        <item>%s montre ton téléphone si ton fond d\'écran est naze alors %b</item>
+        <item>%s montre ton téléphone s\'il y a un homme sur ton fond d\'écran %b</item>
+        <item>%s montre ton téléphone s\'il y a une femme sur ton fond d\'écran %b</item>
         <item>%s, donne le titre du dernier film que tu as vu au cinéma. Ceux qui ne l\'ont pas vu boivent %b</item>
+        <item>%s, donne le titre du dernier film que tu as vu. Ceux qui l\'ont vu boivent %b</item>
         <item>%s, donne le titre de la dernière série que tu as vu. Ceux qui l\'ont vu boivent %b</item>
+        <item>%s, donne le titre de la dernière série que tu as vu. Ceux qui ne l\'ont pas vu boivent %b</item>
         <item>%s, donne le titre d\'une série que tu as vu. Si un joueur est plus loins que toi dans cette série tu bois %b</item>
         <item>%s, tu as 3 secondes pour donner le nombre de personnes avec toi. L\'échec c\'est %b</item>
         <item>%s, tu as 3 secondes pour donner le nombre de filles avec toi. L\'échec c\'est %b</item>
@@ -433,23 +445,37 @@
         <item>%s boit %b si tu es allé sur Instagram aujourd\'hui</item>
         <item>%s boit %b si tu es allé sur Twitter aujourd\'hui</item>
         <item>%s boit %b si tu es allé sur un jeu sur ton téléphone aujourd\'hui</item>
-        <item>%s distribue %b a une personne à qui tu fais un clin d\'oeil</item>
-        <item>%s distribue %b a une personne à qui tu fais un sourire</item>
-        <item>%s distribue %b a une personne à qui tu montres ton verre</item>
-        <item>%s distribue %b a une personne à qui tu fais une grimace</item>
-        <item>%s distribue %b a une personne parce qu\'il faut boire voyons !</item>
+        <item>%s boit %b car tu as soif !</item>
+        <item>%s distribue %b car le partage c\'est important !</item>
+        <item>%s distribue %b à une personne à qui tu fais un clin d\'oeil</item>
+        <item>%s distribue %b à une personne à qui tu fais un sourire</item>
+        <item>%s distribue %b à une personne à qui tu montres ton verre</item>
+        <item>%s distribue %b à une personne à qui tu fais une grimace</item>
+        <item>%s distribue %b à une personne parce qu\'il faut boire voyons !</item>
         <item>%s boit %b si tu aimes la viande</item>
-        <item>%s boit %b si tu aimes trop les légumes</item>
-        <item>%s boit %b si tu aimes trop le fromage</item>
+        <item>%s boit %b si tu aimes les légumes</item>
+        <item>%s boit %b si tu aimes le fromage</item>
+        <item>%s boit %b si tu aimes le nutella</item>
+        <item>%s boit %b si tu aimes les plats préparés</item>
         <item>%s boit %b si tu aimes trop l\'ouvrir, les autres joueurs choisissent</item>
+        <item>%s boit %b si tu portes un T-shirt/un haut bizarre, les autres joueurs choisissent</item>
+        <item>%s boit %b si tu es gentil, les autres joueurs choisissent</item>
+        <item>%s boit %b si tu es méchant, les autres joueurs choisissent</item>
+        <item>%s boit %b si tu es timide, les autres joueurs choisissent</item>
+        <item>%s boit %b si tu es débile, les autres joueurs choisissent</item>
+        <item>%s boit %b si tu es nul en blagues, les autres joueurs choisissent</item>
+        <item>%s boit %b si tu es trop influençable, les autres joueurs choisissent</item>
+        <item>%s boit %b si tu oublie autour de toi quand tu es amoureux, les autres joueurs choisissent</item>
         <item>%s, bois autant de gorgées que tu as visité de pays !</item>
         <item>%s, distribue autant de gorgées que tu as visité de pays !</item>
         <item>%s, si tu as un appel pendant le jeu, tu bois %b avant de répondre</item>
         <item>%s distribue %b si tu as déjà acheté un portable plus de 600 euros</item>
         <item>%s distribue %b si tu connais le nom de la meilleure application d\'alcool (si tu ne dis pas K-Cup tout le monde boit)</item>
         <item>%s si ton age est pair tu bois %b, 5 s\'il est impair !</item>
-        <item>%s si ton age est pair tu distribues %b, 6 s\'il est impair !</item>
+        <item>%s si ton age est pair tu distribue %b, 6 s\'il est impair !</item>
         <item>%s, fais 2 culs sec d\'affilée ou distribue %b</item>
+        <item>%s, fais une grimace ou bois %b</item>
+        <item>%s, fais un beau sourire et distribue %b</item>
         <item>%s bois %b si tu laisses la porte des toilettes ouverte quand tu vas aux toilettes chez toi</item>
         <item>%s bois %b si tu aimes secrètement une personne de ton entourage</item>
         <item>%s bois %b si tu penses finir tes jours avec la meme personne qu\'aujourd\'hui, bois meme si c\'est pas vrai !</item>
