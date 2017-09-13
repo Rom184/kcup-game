@@ -91,6 +91,7 @@
         <item>Ceux qui avaient plus de 20 ans pour leur première fois boivent %b</item>
         <item>Ceux qui avaient moins de 15 ans pour leur première cigarette boivent %b</item>
         <item>Ceux qui n\'ont jamais fumer de cigarette distribuent %b</item>
+        <item>Ceux qui fument des cigarettes de compétition boivent %b</item>
         <item>Ceux qui n\'ont jamais fais une partie de "" K-Cup "" finissent leur verre\n\nBienvenue aux nouveaux !</item>
         <item>Ceux qui sont (encore) à boire de l\'alcool soft (vin, biere, ..) boivent %b</item>
         <item>Ceux qui ont du soft (eau, soda, ..) dans leur verre boivent %b</item>
@@ -104,19 +105,24 @@
         <item>Ceux qui ont déjà regardé une emission de télé réalité cette semaine boivent %b</item>
         <item>Ceux qui entendent cette phrase boivent %b</item>
         <item>Ceux qui ont déjà lu un ""Chaire de poule"" boivent %b !</item>
+        <item>Ceux qui ont déjà lu un ""Dragon Ball"" boivent %b !</item>
+        <item>Ceux qui ont déjà lu un ""Harry Potter"" boivent %b !</item>
+        <item>Ceux qui ont déjà lu un ""Berserk"" boivent %b !</item>
         <item>Ceux qui ont déjà lu un ""Agata Christie"" boivent %b !</item>
         <item>Ceux qui ont déjà lu un ""Twilight"" boivent %b !</item>
         <item>Ceux qui ont déjà lu un manga boivent %b !</item>
         <item>Ceux qui ont déjà lu un comics boivent %b !</item>
-        <item>Ceux qui ont déjà habité dans plus de 3 villes boivent %b !</item>
+        <item>Ceux qui ont déjà habité dans plus de 3 villes différentes boivent %b !</item>
         <item>Ceux qui vivent dans leur ville natale distribuent %b !</item>
         <item>Ceux qui n\'aime pas MacDonald boivent %b !</item>
         <item>Ceux qui sont allés au MacDonald cette semaine offre %b !</item>
+        <item>Ceux qui sont se sont fait livrer à manger cette semaine boivent %b !</item>
         <item>Ceux qui sont allés au restaurant cette semaine boivent %b !</item>
         <item>Ceux qui sont allés dans un fast-food cette semaine boivent %b !</item>
         <item>Ceux qui ont plus d\'une couleur de cheveux boivent %b</item>
         <item>Ceux qui ont du rose ou violet sur eux distribuent %b</item>
         <item>Ceux qui ont du rouge ou vert sur eux boivent %b</item>
+        <item>Ceux qui ont du noir sur eux boivent %b</item>
         <item>Ceux qui ont pensé qu\'il n\'allait pas boire ce tour là boivent %b\n\nMais non, tout le monde boit !</item>
         <item>Celui/Celle qui a le plus d\'amis sur Facebook boit %b</item>
         <item>Celui/Celle qui a le moins d\'amis sur Facebook distribue %b</item>
@@ -124,6 +130,7 @@
         <item>Celui/Celle qui a le plus vieux téléphone distribue %b</item>
         <item>Celui/Celle qui n\'est pas sur Instagram boit %b</item>
         <item>Celui/Celle qui n\'est pas sur Snapshat boit %b</item>
+        <item>Celui/Celle qui n\'est pas sur Pinterest boit %b</item>
         <item>Celui/Celle qui a mis la musique ou la télé distribue %b</item>
         <item>Celui/Celle qui a eu l\'idée de jouer au "" K-Cup "" distribue %b</item>
         <item>Celui/Celle ayant le verre le plus rempli boit %b</item>
@@ -141,7 +148,7 @@
         <item>Tous ceux dont le prénom comporte un ""T"" boivent %b</item>
         <item>Tous les blonds/blondes boivent %b</item>
         <item>Tous les bruns/brunes boivent %b</item>
-        <item>Tu es roux ? Alors bois %b !</item>
+        <item>Tu es roux ? Alors distribue %b !</item>
         <item>Les fausses couleurs pour les cheveux c\'est %b</item>
         <item>Les faux ongles c\'est %b</item>
         <item>Les enfants uniques boivent %b !</item>
@@ -155,6 +162,8 @@
         <item>Tu as un un écran de plus de 100 cm chez toi? Alors bois %b !</item>
         <item>Tu as un nom de famille bizarre et tu en as souffert jeune ? Alors ça continue et bois %b</item>
         <item>Tu as un nom de famille qui veut dire quelque chose ? Alors distribue %b</item>
+        <item>Tu as un prénom composé ? Alors bois %b</item>
+        <item>Tu as un deuxième prénom ? Alors bois %b</item>
         <item>Les redoublants boivent %b !</item>
         <item>Les redoublants distribuent %b !</item>
         <item>Si tu n\'a jamais redoublé, tu peux distribuer %b</item>
@@ -170,6 +179,8 @@
         <item>Les personnes en couple boivent %b</item>
         <item>Les personnes célibataires boivent %b</item>
         <item>Les personnes mariées distribuent %b</item>
+        <item>Les personnes pacsées distribuent %b</item>
+        <item>Les personnes qui ont mis en "relation libre" sur Facebook boivent %b</item>
         <item>Le joueur le plus grand distribue %b</item>
         <item>Le joueur le plus jeune distribue %b</item>
         <item>Le joueur le plus vieux distribue %b</item>
@@ -179,6 +190,7 @@
         <item>Le joueur avec les relations les plus courtes boit %b</item>
         <item>Le joueur avec le verre le plus alcoolisé distribue %b</item>
         <item>Les joueurs sans alcool distribuent %b</item>
+        <item>Le joueurs avec des habits avec des logos voyants boivent %b</item>
         <item>Les personnes qui n\'ont jamais joué au "" K-Cup "" avant ce soir boivent %b</item>
         <item>Les personnes qui ont déjà joué au DrinK-Cup avant ce soir ditribue %b</item>
         <item>Si ton jour d\'anniversaire est un nombre pair, bois %b</item>
@@ -187,12 +199,13 @@
         <item>Les personnes ayant un piercing boivent %b</item>
         <item>Tatouée et percé ? Alors distribue %b et boit %b</item>
         <item>Pas de tatouage ? Alors bois %b</item>
-        <item>Ceux qui sont arrivés en retard pour démarrer DrinK-Cup boivent %b !</item>
+        <item>Ceux qui sont arrivés en retard pour démarrer Le K-Cup boivent %b !</item>
         <item>Ceux qui portent un string boivent %b</item>
         <item>Ceux qui portent une chaine boivent %b</item>
         <item>Ceux qui portent une bague boivent %b</item>
         <item>Ceux qui portent un jeans boivent %b</item>
         <item>Ceux qui portent une jupe boivent %b</item>
+        <item>Ceux qui portent une sacoche ou un sac à main boivent %b</item>
         <item>Ceux qui ont fait un sport en club distribuent %b</item>
         <item>Ceux qui ont fait un sport en club boivent %b</item>
         <item>Ceux qui n\'ont pas pris de douche aujourd\'hui boivent %b</item>
@@ -202,6 +215,7 @@
         <item>Ceux qui viennent du Sud boivent %b</item>
         <item>Ceux qui ont les yeux bleus boivent %b</item>
         <item>Ceux qui ont les yeux marrons boivent %b</item>
+        <item>Ceux qui ont les yeux verts distribuent %b</item>
         <item>Ceux qui sont allés en Amérique boivent %b</item>
         <item>Ceux qui sont allés en Asie boivent %b</item>
         <item>Ceux qui sont allés en Europe boivent %b</item>
@@ -238,7 +252,11 @@
         <item>Ceux qui écoutent du rock boivent %b</item>
         <item>Ceux qui écoutent de l\'électro boivent %b</item>
         <item>Ceux qui écoutent la radio boivent %b</item>
+        <item>Ceux qui ont écouté Spotify aujourd\'hui boivent %b</item>
+        <item>Ceux qui sont allés sur Youtube aujourd\'hui boivent %b</item>
+        <item>Ceux qui sont allés sur Twitch aujourd\'hui boivent %b</item>
         <item>Ceux qui mangent trop de sucreries boivent %b</item>
+        <item>Ceux qui ont mangé du chocolat aujourd\'hui boivent %b</item>
         <item>Ceux qui ont mangé un burger cette semaine boivent %b</item>
         <item>Ceux qui ont mangé une pizza cette semaine boivent %b</item>
         <item>Ceux qui ont mangé des pâtes cette semaine boivent %b</item>
@@ -251,21 +269,22 @@
         <item>Ceux qui n\'ont pas liké la page facebook K-cup boivent leur verre, sauf si vous mettez un ""j’aime"" dans la minute car K-Cup est grand ;)</item>
         <item>Les fans de football boivent %b</item>
         <item>Les fans de jeux vidéos boivent %b</item>
-        <item>Les fans de série boivent %b</item>
-        <item>Les fans de manga boivent %b</item>
         <item>Les fans de séries boivent %b</item>
-        <item>Les fans de télé réalite boivent %b</item>
+        <item>Les fans de manga boivent %b</item>
+        <item>Les fans de livraison à domicile boivent %b</item>
+        <item>Les fans de télé réalité boivent %b</item>
         <item>Les moins de 21 ans boivent %b !</item>
         <item>Les plus de 25 ans boivent %b !</item>
         <item>La prochaine personne qui dit OUI ou NON prend %b</item>
-        <item>La prochaine personne qui dit BOIT distribue %b</item>
-        <item>La prochaine personne qui dit LE ou LA distribue %b</item>
-        <item>La prochaine personne qui dit UN ou UNE distribue %b</item>
+        <item>La prochaine personne qui dit BOIT prend %b</item>
+        <item>La prochaine personne qui dit LE ou LA boit %b</item>
+        <item>La prochaine personne qui dit UN ou UNE boit %b</item>
+        <item>La prochaine personne qui dit un chiffre ou un nombre boit %b</item>
         <item>La prochaine personne qui s\'allume une cigarette boit %b gorgées</item>
         <item>La ou les prochaines personnes à devoir boire doublera son nombre de gorgées !</item>
         <item>La ou les prochaines personnes à devoir boire triplera son nombre de gorgées !</item>
         <item>Le prochain joueur à devoir boire distribue %b</item>
-        <item>Le prochain joueur à devoir boire distribue toutes ses gorgées</item>
+        <item>Le prochain joueur à devoir boire donne toutes ses gorgées</item>
         <item>Le joueur à droite de celui ou celle qui vient de lire cette règle boit %b</item>
         <item>Le joueur à droite de celui ou celle qui vient de lire cette règle distribue %b</item>
         <item>Le joueur à gauche de celui ou celle qui vient de lire cette règle boit %b</item>
@@ -279,7 +298,10 @@
         <item>%b gorgées pour les chomeurs !</item>
         <item>%b gorgées pour les sportifs !</item>
         <item>%b gorgées pour les geeks !</item>
-        <item>%b gorgées pour les fans de game of throne !</item>
+        <item>%b gorgées pour les fans de Walking Dead !</item>
+        <item>%b gorgées pour les fans de Big Bang Theory !</item>
+        <item>%b gorgées pour les fans de La petite maison dans la prairie !</item>
+        <item>%b gorgées pour les fans de Game of throne !</item>
         <item>%b gorgées pour les fausses blondes !</item>
         <item>%b gorgées pour les couples qui jouent à ce jeu !</item>
         <item>%b gorgée pour tout le monde !</item>
@@ -300,9 +322,10 @@
         <item>%s, c\'est le jour des héros ! \nUn sauveur se choisit et doit boire %b à ta place</item>
         <item>%s, c\'est le jour des vengeances ! \nBois %b puis distribue le double</item>
         <item>%s, tu crois aux fées ? Non ? Alors bois %b</item>
+        <item>%s, tu crois au Père Noël ? Non ? Alors bois %b</item>
         <item>%s, tu es un vrai poissard, tu finis ton verre</item>
         <item>%s, tu crois à la chance ? Non ? Pourtant le joueur à ta droite bois %b</item>
-        <item>%s, tu crois à la chance ? Non ? Pourtant le joueur à ta gauche bois %b</item>
+        <item>%s, tu crois au karma ? Non ? Pourtant le joueur à ta droite décide si tu bois %b ou non</item>
         <item>%s, tu crois à la magie ? Non ? Alors ferme les yeux et quand tu les ouvriras ton verre sera vide</item>
         <item>%s, tu crois aux miracles ? Mais si ! Alors distribue %b</item>
         <item>%s, remplis ton verre! \nS\'il était déjà plein bois %b</item>
