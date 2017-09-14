@@ -97,7 +97,7 @@
             android:background="@drawable/bouton_type"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground"
-            android:text="@string/dialog_warning_no"
+            android:text="@string/dialog_warning_no_no"
             android:textAllCaps="false"
             android:textSize="24sp" />
 

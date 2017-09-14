@@ -10,7 +10,7 @@
     <string name="new_game_now">Le K-Cup !</string>
     <string name="new_rule_title">Nouvelle règle!</string>
     <string name="new_rule_next_title">Fin de la règle!</string>
-    <string name="add_player">Ajouter un joueur ?</string>
+    <string name="add_player">Un buveur de plus ?</string>
 
     <!-- config -->
     <string name="new_game">Nouvelle partie</string>
@@ -33,6 +33,7 @@
     <string name="dialog_warning_title_begin">Eh toi !</string>
     <string name="dialog_warning_title">L\'abus d\'alcool est dangereux pour la santé. En jouant avec k-cup vous confirmez que vous êtes responsable des éventuelles conséquences.</string>
     <string name="dialog_warning_no">Annuler</string>
+    <string name="dialog_warning_no_no">Laisse tomber</string>
     <string name="dialog_warning_yes">Je joue !</string>
     <string name="dialog_game_title">Alors ?\n\nOn ne veut plus boire ?</string>
     <string name="dialog_game_no">Jamais !</string>
