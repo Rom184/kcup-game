@@ -156,10 +156,15 @@ public class HomeMainFragment extends Fragment {
     }
 
     private void goToFacebookPage() {
-        Intent facebookIntent = new Intent(Intent.ACTION_VIEW);
-        String facebookUrl = getFacebookPageURL(getActivity());
-        facebookIntent.setData(Uri.parse(facebookUrl));
-        startActivity(facebookIntent);
+        try {
+            Intent facebookIntent = new Intent(Intent.ACTION_VIEW);
+            String facebookUrl = getFacebookPageURL(getActivity());
+            facebookIntent.setData(Uri.parse(facebookUrl));
+            startActivity(facebookIntent);
+        } catch (Exception e) {
+            Toast.makeText(getActivity(), getString(R.string.error_open_facebook), Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     public String getFacebookPageURL(Context context) {

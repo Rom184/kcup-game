@@ -26,6 +26,7 @@
     <string name="end_game">Disposer !</string>
     <string name="send_mail">Envoie de mail</string>
     <string name="error_send_mail">Envoie de mail impossible !</string>
+    <string name="error_open_facebook">Ouverture de Facebook impossible !</string>
     <string name="adress_mail">kcup-drink-game@hotmail.com</string>
     <string name="subject_mail">Grand K-cup - J\'ai des idées à te dire :</string>
 
