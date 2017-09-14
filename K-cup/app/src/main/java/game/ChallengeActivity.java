@@ -207,12 +207,16 @@ public class ChallengeActivity extends AppCompatActivity {
             Intent k = new Intent(ChallengeActivity.this, KcupActivity.class);
             startActivity(k);
             finish();
-        } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1).getType()
-                .equals(GameUtils.Type.NEW_RULE.toString())
-                || SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1).getType()
-                .equals(GameUtils.Type.NEW_RULE_NEXT.toString())) {
+        } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1)
+                .getType().equals((GameUtils.Type.NEW_RULE.toString()))) {
             SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
             Intent k = new Intent(ChallengeActivity.this, NewRuleActivity.class);
+            startActivity(k);
+            finish();
+        } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1).getType()
+                .equals(GameUtils.Type.NEW_RULE_NEXT.toString())) {
+            SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
+            Intent k = new Intent(ChallengeActivity.this, NewRuleNextActivity.class);
             startActivity(k);
             finish();
         }

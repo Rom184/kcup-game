@@ -194,6 +194,11 @@ public class NewRuleNextActivity extends AppCompatActivity {
             SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
             Intent k = new Intent(NewRuleNextActivity.this, ChoiceActivity.class);
             startActivity(k);
+        } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1)
+                .getType().equals((GameUtils.Type.NEW_RULE.toString()))) {
+            SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
+            Intent k = new Intent(NewRuleNextActivity.this, NewRuleActivity.class);
+            startActivity(k);
         }
         finish();
 

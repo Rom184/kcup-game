@@ -190,11 +190,9 @@ public class NewRuleActivity extends AppCompatActivity {
             Intent k = new Intent(NewRuleActivity.this, KcupActivity.class);
             startActivity(k);
         } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1).getType()
-                .equals(GameUtils.Type.NEW_RULE.toString())
-                || SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1).getType()
                 .equals(GameUtils.Type.NEW_RULE_NEXT.toString())) {
             SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
-            Intent k = new Intent(NewRuleActivity.this, NewRuleActivity.class);
+            Intent k = new Intent(NewRuleActivity.this, NewRuleNextActivity.class);
             startActivity(k);
         }
         finish();

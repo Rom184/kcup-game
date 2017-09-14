@@ -194,12 +194,15 @@ public class KcupActivity extends AppCompatActivity {
             SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
             Intent k = new Intent(KcupActivity.this, ChoiceActivity.class);
             startActivity(k);
-        } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1).getType()
-                .equals(GameUtils.Type.NEW_RULE.toString())
-                || SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1).getType()
-                .equals(GameUtils.Type.NEW_RULE_NEXT.toString())) {
+        } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1)
+                .getType().equals((GameUtils.Type.NEW_RULE.toString()))) {
             SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
             Intent k = new Intent(KcupActivity.this, NewRuleActivity.class);
+            startActivity(k);
+        } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1).getType()
+                .equals(GameUtils.Type.NEW_RULE_NEXT.toString())) {
+            SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
+            Intent k = new Intent(KcupActivity.this, NewRuleNextActivity.class);
             startActivity(k);
         }
         finish();

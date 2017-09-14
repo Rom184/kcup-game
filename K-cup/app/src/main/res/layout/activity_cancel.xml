@@ -20,7 +20,7 @@
             android:layout_marginBottom="20dp"
             android:layout_marginTop="30dp"
             android:scaleType="centerInside"
-            android:src="@drawable/ic_puk_face_blanc_full" />
+            android:src="@drawable/ic_kcup_face" />
 
         <TextView
             android:id="@+id/title"

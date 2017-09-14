@@ -62,7 +62,7 @@
             android:layout_gravity="bottom"
             android:layout_weight="40"
             android:padding="10dp"
-            android:src="@drawable/ic_puk_face_blanc_full" />
+            android:src="@drawable/ic_kcup_face" />
 
     </LinearLayout>
 
