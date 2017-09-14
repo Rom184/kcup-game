@@ -301,11 +301,15 @@
         <item>Le joueur qui vient de toucher sur l\'écran distribue %b</item>
         <item>Le dernier joueur qui a parlé donne %b</item>
         <item>Le dernier joueur qui a parlé boit %b</item>
-        <item>%b gorgée pour les fumeurs !</item>
-        <item>%b gorgée pour les étudiants !</item>
-        <item>%b gorgées pour les chomeurs !</item>
-        <item>%b gorgées pour les sportifs !</item>
-        <item>%b gorgées pour les geeks !</item>
+        <item>%b pour les fumeurs !</item>
+        <item>%b pour les étudiants !</item>
+        <item>%b pour les chomeurs !</item>
+        <item>%b pour les sportifs !</item>
+        <item>%b pour les geeks !</item>
+        <item>%b pour les footballers !</item>
+        <item>%b pour les basketteurs !</item>
+        <item>%b pour les arachnophobes !</item>
+        <item>%b pour ceux qui vont en salle de sport !</item>
         <item>%b gorgées pour les fans de Walking Dead !</item>
         <item>%b gorgées pour les fans de Big Bang Theory !</item>
         <item>%b gorgées pour les fans de La petite maison dans la prairie !</item>
@@ -313,6 +317,23 @@
         <item>%b gorgées pour les fausses blondes !</item>
         <item>%b gorgées pour les couples qui jouent à ce jeu !</item>
         <item>%b gorgée pour tout le monde !</item>
+        <item>La personne avec le plus gros cul boit %b</item>
+        <item>Les joueurs qui étaient saouls hier boivent %b</item>
+        <item>Les joueurs qui ont utilisé MSN boivent %b</item>
+        <item>Les joueurs en train de fumer boivent %b</item>
+        <item>Les joueurs qui ont déjà combattu sur un tatami boivent %b</item>
+        <item>Les joueurs qui sont allés dans un centre commercial aujourd\'hui boivent %b</item>
+        <item>Les joueurs qui ont déjà checkés leur âge dans le fond d\'un verre boivent %b</item>
+        <item>Les joueurs qui vivent seuls en appart ou en studio boivent %b</item>
+        <item>Ceux qui n\'ont pas téléchargé le jeu K-Cup boivent %b (et faites le après !)</item>
+        <item>Le joueur qui a le plus gros billet sur lui peut distribuer %b</item>
+        <item>Ceux qui ont joué à Pokemon GO boivent %b</item>
+        <item>Ceux qui ont joué à Final Fantasy 7 distribuent %b</item>
+        <item>Ceux qui ont joué à World of Warcraft boivent %b</item>
+        <item>Ceux qui ont déjà vu ou lu Berserk distribuent %b</item>
+        <item>Le premier à poser son pouce sur la table distribue %b</item>
+        <item>Le premier à poser un pied sur la table distribue %b (si tu renverses quelque chose tu finis ton verre !)</item>
+        <item>Ceux qui ont déjà sniffé du popers boivent %b</item>
     </string-array>
 
     <string-array name="challenge_array" formatted="false">
@@ -555,6 +576,67 @@
         <item>Photo souvenir, %s prend une jolie photo et la poste sur le Facebook de DrinK-CupGame ou bois %b</item>
         <item>Photo souvenir, %s prend une photo avec une belle grimace et la poste sur le Facebook de DrinK-CupGameou bois %b</item>
         <item>Photo dossier, %s prend une photo de toi bien arrosé et la poste sur le Facebook de DrinK-CupGame ou bois %b</item>
+        <item>%s, tu dis un truc que tu n\'as jamais fait, ceux qui l\'ont fait boivent %b</item>
+        <item>%s, tu dis un truc que tu as déjà fait, ceux qui l\'ont fait boivent %b</item>
+        <item>Gloire à %s qui distribue %b</item>
+        <item>%s, nomme un accessoire (ceinture, tongues, vernis ...). Les personnes portant cet accessoire boivent %b</item>
+        <item>%s tu as des plantes chez toi ?\n\n Alors tu distribues %b</item>
+        <item>%s tu as des plantes chez toi ?\n\n Alors tu bois %b</item>
+        <item>%s bois autant de gorgées qu\'il y a de joueurs !</item>
+        <item>%s distribue autant de gorgées qu\'il y a de joueurs !</item>
+        <item>%s un petite danse ?\n\nSinon c\'est %b</item>
+        <item>%s fais un signe à la personne qui devra boire %b</item>
+        <item>%s tu as déjà eu un coup du soir ?\n\nAlors bois %b</item>
+        <item>%s tu as déjà triché pendant un exam ?\n\nAlors c\'est %b !</item>
+        <item>Ceux qui ont fait plus d\'études que %s boivent %b</item>
+        <item>Ceux qui ont fait moins d\'études que %s boivent %b</item>
+        <item>%s, imite un serpent pendant 5 secondes ou bois %b !</item>
+        <item>%s, imite un éléphant pendant 5 secondes ou bois %b !</item>
+        <item>%s, imite un chien pendant 5 secondes ou bois %b !</item>
+        <item>%s, imite une vache pendant 5 secondes ou bois %b !</item>
+        <item>%s, imite un pokémon (celui que tu veux) pendant 5 secondes ou bois %b !</item>
+        <item>%s, imite un pingouin pendant 5 secondes ou bois %b !</item>
+        <item>%s, imite un elfe pendant 5 secondes ou bois %b !</item>
+        <item>%s, imite Jean-Claude Van Damme pendant 5 secondes ou bois %b !</item>
+        <item>%s si tu t\'es déjà fait contrôler par la police tu bois %b</item>
+        <item>%s si tu as déjà été en garde à vue tu bois %b</item>
+        <item>%s tu as déjà utilisé des habits du sexe opposé ?\n\n Alors tu bois %b</item>
+        <item>%s regarde l\'heure, si les minutes sont paires tu distribues %b, sinon tu les bois</item>
+        <item>%s regarde l\'heure, si les minutes sont impaires tu distribues %b, sinon tu les bois</item>
+        <item>%s si tu as déjà loué un film alors tu distribues %b</item>
+        <item>%s si tu as déjà loué une voiture alors tu distribues %b</item>
+        <item>%s si tu es en couple depuis plus d\'un an tu distribues %b</item>
+        <item>%s si tu es en couple depuis moins d\'un an tu bois %b</item>
+        <item>%s si tu préfères avoir un chat plutôt qu\'un chien tu distribues %b ou tu les bois</item>
+        <item>%s si tu préfères avoir un chien plutôt qu\'un chat tu distribues %b ou tu les bois</item>
+        <item>%s si tu as déjà eu un animal autre qu\'un chien ou un chat tu distribues %b</item>
+        <item>%s si tu es un adepte des casquettes ou bonnets tu bois %b</item>
+        <item>%s si t’es déjà monté sur un cheval tu distribues %b</item>
+        <item>%s si tu bois un alcool que tu n\'as pas payé, tu bois %b</item>
+        <item>%s si tu as déjà assisté à un strip-tease tu bois %b</item>
+        <item>%s si tu as déjà embrassé sur la bouche une personne du même sexe tu bois %b</item>
+        <item>%s si tu trouves que tous les autres joueurs sont sympas tu bois %b</item>
+        <item>%s si tu es déjà allé aux chiottes depuis le début de la soirée tu bois %b. Sinon tu les distribues</item>
+        <item>%s si tu à déjà fumer depuis le début de la partie tu bois %b. Sinon tu les distribues</item>
+        <item>%s donne %b au joueur que tu connais le plus</item>
+        <item>%s donne %b au joueur que tu connais le moins</item>
+        <item>%s tu distribues %s si tu as une Nitendo Switch</item>
+        <item>%s tu distribues %s si tu as une Playstation 4</item>
+        <item>%s tu bois %s si tu as plus de 10 paires de chaussures</item>
+        <item>%s tu bois %s si tu as plus d\'une télé chez toi</item>
+        <item>%s fais le grand écart ou bois %b</item>
+        <item>%s si tu as déjà joué à Clash of Clans ou Clash Royal tu bois %b</item>
+        <item>%s si tu aimes bien une chanson de Justin Bieber tu bois %b</item>
+        <item>%s si tu as déjà eu un scooter tu bois %b</item>
+        <item>%s si tu as déjà eu une moto tu bois %b</item>
+        <item>%s si tu as déjà eu une monoroue ou une trottinette électrique tu bois %b</item>
+        <item>%s tu as déjà pris une drogue dur ? (je n\'espère pas !)\n\nAlors %b</item>
+        <item>%s si tu as déjà fait tombé ton tel dans les chiottes distribue %b. Sinon tu les bois</item>
+        <item>%s si tu as déjà couché avec une personne par une appli de rencontre tu bois %b</item>
+        <item>%s si tu as déjà eu, une gourmette avec ton nom dessus tu bois %b</item>
+        <item>%s si tu as déjà pris une photo avec une star tu distribue %b</item>
+        <item>%s si tu dors nu tu bois %b</item>
+        <item>%s tu dois faire un dab après avoir bu jusqu\'à la fin de la partie sinon c\'est %b</item>
 
         <!-- duo challenge -->
         <item>%s distribue %b à %a !</item>
@@ -606,6 +688,16 @@
         <item>%s devra dire un mot d\'amour pour %a apres chaque gorgée sinon %b de plus jusqu\'à la fin de la partie, %a choisit quel sera le mot</item>
         <item>%s tu expliques pourquoi tu devrais distribuer %b à %a là tout de suite. Les autres joueurs trancheront si oui ou non !</item>
         <item>%s tu expliques pourquoi te ne devrais pas distribuer %bs à %a. Les autres joueurs trancheront si oui ou non !</item>
+        <item>%s, bois %b. %a devra en boire le double</item>
+        <item>Action !\n\n %s choisit une action pour %a ou c\'est %b</item>
+        <item>Vérité !\n\n %s pose une question à %a ou c\'est %b</item>
+        <item>%s, donne le signe astrologique de %a ou bois %b</item>
+        <item>%s, ferme les yeux et trouve la couleur des chaussures de %a ou bois %b</item>
+        <item>%s, ferme les yeux et trouve la couleur des yeux de %a ou bois %b</item>
+        <item>%s, ferme les yeux et trouve la couleur des chaussettes de %a ou bois %b</item>
+        <item>%s si tu chausses plus grand que %a tu bois %s sinon tu les distribues</item>
+        <item>%s si tu es moins habillé que %a tu bois %b sinon tu les distribues</item>
+        <item>%s si tu es plus habillé que %a tu bois %b sinon tu les distribues</item>
     </string-array>
 
     <string-array name="choice_array" formatted="false">
@@ -663,6 +755,21 @@
         <item>Plutot boire un bol de pisse ou un verre de pus ?\n\nVotez ! Le plus grand nombre boit %b</item>
         <item>Plutot être le méchant ou le gentil ?\n\nVotez ! Le plus grand nombre boit %b</item>
         <item>Plutot noir ou blanc ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot avoir la vie d\'Harry Potter ou Luke Skywalker ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot Dumbldore ou Gandalf ?\n\nVotez ! Le plus petit nombre boit %b</item>
+        <item>Plutot Pepsi ou Coca ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot frisson ou ennuie ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot le génie d\'Aladdin ou le dragon de Dragon ball ?\n\nVotez ! Le plus petit nombre boit %b</item>
+        <item>Plutot serviette ou tampon ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot assis dans le salon ou debout dans la cuisine ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot fromage ou charcuterie ?\n\nVotez ! Le plus petit nombre boit %b</item>
+        <item>Plutot salade ou burger ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot voyager dans le futur ou le passé ?\n\nVotez ! Le plus petot npmbre boit %b</item>
+        <item>Plutot ne plus manger de viandes ou de légumes ?\n\nVotez ! Le plus petit nombre boit %b</item>
+        <item>Plutot avoir la vie de Cendrillon ou Blanche Neige ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot avoir la vie de Dark Vador ou Voldemort ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot être costaud ou rapide ?\n\nVotez ! Le plus grand nombre boit %b</item>
+        <item>Plutot épicé ou non épicé ?\n\nVotez ! Le plus petit nombre boit %b</item>
         <item>Choisissez le plus mauvais caractère d\'entre vous qui boira %b !</item>
         <item>Choisissez le plus sage d\'entre vous qui distribura %b !</item>
         <item>Choisissez le plus sobre d\'entre vous qui distribura %b !</item>
@@ -679,6 +786,7 @@
         <item>Choisssez une personne qui doit boire %b (avec le sourire sinon cul sec !)</item>
         <item>Choisssez une personne qui doit boire %b car il le mérite !</item>
         <item>Choisssez une personne qui doit boire %b (en froncant les sourcils sinon cul sec !)</item>
+        <item>Choisissez le plus rageux, il boit %b (il faut savoir se détendre !)</item>
         <item>Faites 2 groupes, pour chaque groupe il faut trouver un footballer, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
         <item>Faites 2 groupes, pour chaque groupe il faut trouver un handicapé célèbre, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
         <item>Faites 2 groupes, pour chaque groupe il faut trouver un personnage de Futurama, continuer jusqu\'à qu\'un groupe se trompe et boit %b</item>
@@ -753,7 +861,43 @@
         <item>%s tu choisis un joueur et à tour de role vous devez trouvez des dinausores, le gagnant distribue %b !</item>
         <item>%s tu choisis un joueur et à tour de role vous devez trouvez des oiseaux, le gagnant distribue %b !</item>
         <item>%s tu choisis un joueur et à tour de role vous devez trouvez des personnages de Naruto, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des personnages qui se battent à l\'épée, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des personnages qui ont réssucité, le gagnant distribue %b !</item>
         <item>%s tu choisis un joueur et à tour de role vous devez trouvez des personnages de Fast and Furious, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des sauces, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des marques de téléphones, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des marques de vodka, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des marques de whisky, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des youtubeurs, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des films qui finissent mal, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des films qui font pleurer, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des ingrédients pour faire un mojito, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des ingrédients pour faire de la bière, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des ingrédients pour faire du whsiky, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des ingrédients pour faire de la vodka, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des ingrédients pour faire du vin, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des ingrédients pour faire un sex on the beach, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des noms des chocolats Kinder, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des noms burgers chez Burger King, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des noms des desserts chez Macdonald, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des façons de mourir dans Destination finale, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des films qui commencent avec "" Le "", le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des élèves de Griffondor, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des élèves de Serpentard, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des jeux de cartes, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des jeux de cour de récréation, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des drogues, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des noms de supermachés, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des noms de consoles de jeux, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des trucs pour faire taire un bébé qui pleure, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des rimes avec "" até "", le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des rimes avec "" ti "", le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des rimes avec "" oin "", le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des rimes avec "" uche "", le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des rimes avec "" ite "", le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des rimes avec "" co "", le gagnant distribue %b !</item>
+        <item>Les filles choisissent un joueur qui prendra %b</item>
+        <item>Les mecs choisissent un joueur qui prendra %b</item>
     </string-array>
 
     <string-array name="new_rule_array">
@@ -829,7 +973,21 @@
         <item>Choisissez la fayotte, il dit "" Oui maîtresse "" à chaque fois qu\'un joueur lui parle sinon %b</item>
         <item>Choisissez la fayotte, il dit "" Oui maîtresse "" à chaque fois qu\'un joueur lui parle sinon %b</item>
         <item>Choisissez le buveur, il double ses gorgées</item>
-        <item>Choisissez le buveur, il double ses gorgées</item>
+        <item>Choisissez le détesté, il doit finir son verre</item>
+        <item>Choisissez le détesté, il doit finir son verre</item>
+        <item>Choisissez mon Pikachu, il ne dit plus que Pikachu sinon %b</item>
+        <item>Choisissez mon Pikachu, il ne dit plus que Pikachu sinon %b</item>
+
+        <item>Choisissez l\'adorateur de boissons, il dit j\'aime à chaque fois que quelqu\'un boit sinon %b</item>
+        <item>Choisissez mon borgne, il ferme son oeil droit tout le temps sinon c\'est %b si ce n\'est pas fais</item>
+        <item>Choisissez mon chanteur, il chante à la place de parler sinon c\'est %b</item>
+        <item>Choisissez mon chanteur, il chante à la place de parler sinon c\'est %b</item>
+        <item>Choisissez mon défouloir, on ne peut que l\'insulter en lui parlant sinon c\'est %b</item>
+        <item>Choisissez mon défouloir, on ne peut que l\'insulter en lui parlant sinon c\'est %b</item>
+        <item>Choisissez le noble, il ne doit parler avec un accent bourgeois sinon c\'est %b</item>
+        <item>Choisissez le noble, il ne doit parler avec un accent bourgeois sinon c\'est %b</item>
+        <item>Choisissez mon commentateur, il doit parler comme un animateur de match de foot pour la partie sinon c\'est %b</item>
+        <item>Choisissez mon commentateur, il doit parler comme un animateur de match de foot pour la partie sinon c\'est %b</item>
     </string-array>
 
     <string-array name="new_rule_next_array" formatted="false">
@@ -905,7 +1063,21 @@
         <item>Maîtresse ?\n\n Elle doit boire ses %b. Elle n\'a pas fais ses devoirs!</item>
         <item>La maîtresse lui permet de donner %b parce que c\'est sa préférée</item>
         <item>Et pour finir encore %b (pas doublé)</item>
-        <item>Tu as bien bu, distribue %b</item>
+        <item>Pour te récompenser, tu choisis une personne qui doit finir son verre (faut jamais se sentir seul)</item>
+        <item>Tu es un champion !\n\nTu donnes %b à tout le monde !</item>
+        <item>Pika Pika !\n\nTu bois %b (les pokemons ont le droit de boire aussi)</item>
+        <item>Tu te crois vraiment pour Pikachu !\n\nAlors attaque éclair ! Donne %b</item>
+
+        <item>Tu aimes tellement les boissons que tu bois %b</item>
+        <item>Tu me rappelles quelqu\'un de proche !\n\nTu peux donner %b</item>
+        <item>On dirait une casserolle !\n\nTu bois %b pour mes pauvres oreilles pointues !</item>
+        <item>Quels chants mélodieux !\n\nTu peux donner %b pour te remercier !</item>
+        <item>Que de grossiertés !\n\nVous buvez tous %b sauf le pauvre malheureux (il a tant souffert !)</item>
+        <item>Eh connard !\n\nTu bois %b</item>
+        <item>On dirait un vrai aristocrate !\n\nTu as le privilège de donner %b</item>
+        <item>On se la pète un peu trop à mon gout !\n\nTu bois %b</item>
+        <item>Il arrête de parler bizarrement, regarde droit dans son verre et bois %b</item>
+        <item>Ses derniers commentaires seront les %b à distribuer</item>
     </string-array>
 
     <string-array name="end_array">

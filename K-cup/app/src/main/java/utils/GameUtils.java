@@ -44,9 +44,10 @@ public class GameUtils {
         Log.e("noNeedPlayer", String.valueOf(noNeedPlayer.size()));
         Log.e("challenge", String.valueOf(challenge.size()));
         Log.e("choice", String.valueOf(choice.size()));
-        Log.e("randomForNewRule", String.valueOf(randomForNewRule.size()));
+        Log.e("randomForNewRule", String.valueOf(newRuleAll.size()));
+        Log.e("randomForNewRuleNext", String.valueOf(newRuleNext.size()));
 
-        int test = noNeedPlayer.size() + challenge.size() + choice.size() + randomForNewRule.size();
+        int test = noNeedPlayer.size() + challenge.size() + choice.size() + newRuleAll.size() + newRuleNext.size();
 
         Log.e("total", String.valueOf(test));
 
