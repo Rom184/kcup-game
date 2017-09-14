@@ -54,6 +54,11 @@ public class HomeMainFragment extends Fragment {
         Button continueGame = (Button) view.findViewById(R.id.continue_game);
         continueGame.setTypeface(typeface);
 
+        LinearLayout newAfterGame = (LinearLayout) view.findViewById(R.id.new_game_after);
+        TextView titleAfterGame = (TextView) view.findViewById(R.id.new_after_game_title);
+        TextView contentAfterGame = (TextView) view.findViewById(R.id.after_game_info);
+        titleAfterGame.setTypeface(typeface);
+        contentAfterGame.setTypeface(typeface);
 
         LinearLayout newBerserkGame = (LinearLayout) view.findViewById(R.id.new_game_berserk);
         TextView titleBerserkGame = (TextView) view.findViewById(R.id.berserk_game_title);
@@ -140,6 +145,14 @@ public class HomeMainFragment extends Fragment {
         }
 
         newNormalGame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent k = new Intent(getActivity(), PlayerActivity.class);
+                startActivity(k);
+            }
+        });
+
+        newAfterGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent k = new Intent(getActivity(), PlayerActivity.class);

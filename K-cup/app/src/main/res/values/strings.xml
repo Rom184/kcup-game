@@ -5,6 +5,8 @@
     <!--Main -->
     <string name="normal_game">Le K-Cup</string>
     <string name="normal_game_info">Un mode pour s\'ambiancer !</string>
+    <string name="after_game">L\'after K-Cup</string>
+    <string name="after_game_info">Le mieux après le boulot !</string>
     <string name="berserk_game">Le berserk</string>
     <string name="berserk_game_info">Le mode pour les vrais alcoolos !</string>
     <string name="new_game_now">Le K-Cup !</string>
