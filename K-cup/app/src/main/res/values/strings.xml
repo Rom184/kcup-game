@@ -386,11 +386,11 @@
         <item>Ceux qui sont déjà allés dans une tente distribuent %b</item>
         <item>Ceux qui sont déjà allés dans un  distribuent %b</item>
         <item>Ceux qui sont déjà allés en pause aujourd\'hui distribuent %b</item>
-        <item>Ceux qui sont ont le bac boivent %b</item>
-        <item>Ceux qui sont ont un bac +3 boivent %b</item>
-        <item>Ceux qui sont ont un bac +5 distribuent %b</item>
-        <item>Ceux qui sont ont un CDD boivent %b</item>
-        <item>Ceux qui sont ont un CDI boivent %b</item>
+        <item>Ceux qui ont le bac boivent %b</item>
+        <item>Ceux qui ont un bac +3 boivent %b</item>
+        <item>Ceux qui ont un bac +5 distribuent %b</item>
+        <item>Ceux qui ont un CDD boivent %b</item>
+        <item>Ceux qui ont un CDI boivent %b</item>
         <item>Ceux qui sont en alternace boivent %b</item>
         <item>Ceux qui sont ont en interim boivent %b</item>
     </string-array>
