@@ -21,6 +21,9 @@ import game.NoNeedPlayerActivity;
 import identity.Rule;
 import utils.GameUtils;
 import utils.SharedPreferenceUtils;
+import utils.TextUtils;
+
+import static utils.GameUtils.EXTRA_TYPE;
 
 public class PlayerActivity extends AppCompatActivity {
 
@@ -149,15 +152,29 @@ public class PlayerActivity extends AppCompatActivity {
     }
 
     private void createNewGame() {
-        List<Rule> ruleList;
-        ruleList = GameUtils.createKcupGame(getApplicationContext());
-        SharedPreferenceUtils.saveRule(getApplicationContext(), ruleList, SharedPreferenceUtils.PREFS_RULE);
-        SharedPreferenceUtils.setPositionGame(getApplicationContext(), 0);
 
-        List<Rule> ttt = SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE);
-        for (int a = 0; a < ttt.size(); a++) {
-            Log.e("rule", String.valueOf(a) + " " + ttt.get(a).getType());
+        if (getIntent() != null) {
+            Bundle b = getIntent().getExtras();
+            if (b != null) {
+
+                String extra = b.getString(EXTRA_TYPE);
+
+                if (!TextUtils.isEmpty(extra)) {
+
+                    List<Rule> ruleList = GameUtils.createKcupGame(getApplicationContext(), extra);
+
+                    SharedPreferenceUtils.saveRule(getApplicationContext(), ruleList, SharedPreferenceUtils.PREFS_RULE);
+                    SharedPreferenceUtils.setPositionGame(getApplicationContext(), 0);
+
+                    List<Rule> ttt = SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE);
+                    for (int a = 0; a < ttt.size(); a++) {
+                        Log.e("rule", String.valueOf(a) + " " + ttt.get(a).getType());
+                    }
+
+                }
+            }
         }
+
     }
 
     private void savePlayer() {

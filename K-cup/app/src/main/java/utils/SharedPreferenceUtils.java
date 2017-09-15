@@ -17,6 +17,7 @@ public class SharedPreferenceUtils {
     public static final String PREFS_PLAYER = "PREFS_PLAYER";
     private static final String KEY_POSITION_GAME = "POSITION_GAME_KEY";
     private static final String PREFS_POSITION_GAME = "PREFS_POSITION_GAME";
+    private static final String PREFS_TYPE_GAME = "PREFS_TYPE_GAME";
     public static final String PREFS_RULE = "PREFS_RULE";
 
     /**** Player ****/
@@ -79,6 +80,21 @@ public class SharedPreferenceUtils {
     public static int getPositionGame(Context context) {
         SharedPreferences sharedPref = context.getSharedPreferences(KEY_POSITION_GAME, Context.MODE_PRIVATE);
         return sharedPref.getInt(PREFS_POSITION_GAME, 0);
+    }
+
+    /**** Type game ****/
+    public static void setTypeGame(Context context, String typeGame) {
+        if (context != null) {
+            SharedPreferences sharedPref = context.getSharedPreferences(KEY_POSITION_GAME, Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPref.edit();
+            editor.putString(PREFS_POSITION_GAME, typeGame);
+            editor.apply();
+        }
+    }
+
+    public static String getTypeGame(Context context) {
+        SharedPreferences sharedPref = context.getSharedPreferences(KEY_POSITION_GAME, Context.MODE_PRIVATE);
+        return sharedPref.getString(PREFS_POSITION_GAME, null);
     }
 
     /**** Rule ****/

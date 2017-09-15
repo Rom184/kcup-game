@@ -55,7 +55,7 @@
         <item>Tout le monde debout ! La dernière personne boit %b</item>
         <item>Tout le monde fait un dab ! La dernière personne boit %b</item>
         <item>Tout le monde prend son verre ! La dernière personne boit %b</item>
-        <item>Le première personne à s\'être levé ce matin boit %b</item>
+        <item>Le première personne à s\'être levée ce matin boit %b</item>
         <item>La première personne à sortir un mouchoir distribue %b</item>
         <item>La première personne à sortir une capote distribue %b</item>
         <item>La première personne à sortir un briquet distribue %b</item>
@@ -81,8 +81,8 @@
         <item>Les droitiers/droitières boivent %b</item>
         <item>Les droitiers/droitières se lèvent pendant que les gauchers/gauchères boivent %b</item>
         <item>Les gauchers/gauchères se lèvent pendant que les droitiers/droitières boivent %b</item>
-        <item>Les gauchers/gauchères on change de main pour boire sinon %b</item>
-        <item>Les droitiers/droitières on change de main pour boire sinon %b</item>
+        <item>Les gauchers/gauchères on change de main le reste de la partie pour boire sinon %b</item>
+        <item>Les droitiers/droitières on change de main le reste de la partie pour boire sinon %b</item>
         <item>Ceux qui sont déjà allés au théâtre boivent %b</item>
         <item>Ceux qui sont déjà allés à un concert distribuent %b</item>
         <item>Ceux qui sont déjà allés dans un igloo distribuent %b</item>
@@ -334,6 +334,65 @@
         <item>Le premier à poser son pouce sur la table distribue %b</item>
         <item>Le premier à poser un pied sur la table distribue %b (si tu renverses quelque chose tu finis ton verre !)</item>
         <item>Ceux qui ont déjà sniffé du popers boivent %b</item>
+    </string-array>
+
+    <string-array name="no_need_player_after_kcup_array" formatted="false">
+        <item>Les mains en l\'air ! La dernière personne boit %b</item>
+        <item>C\'est le jour des employés ! \n\n%b pour chaque employé !</item>
+        <item>C\'est le jour des patrons ! \n\n%b pour chaque patron !</item>
+        <item>C\'est le jour des chomeurs ! \n\n%b pour ceux qui ne bosse pas !</item>
+        <item>L\'hote distribue %b. S\'il n\'y en a pas, Tout le monde boit %b</item>
+        <item>Tout le monde debout ! La dernière personne boit %b</item>
+        <item>Tout le monde prend son verre ! La dernière personne boit %b</item>
+        <item>Le première personne à s\'être levée ce matin boit %b</item>
+        <item>Le première personne à commencer le travail ce matin boit %b</item>
+        <item>Le dernière personne à commencer le travail ce matin boit %b</item>
+        <item>La première personne à sortir un badge de son travail distribue %b</item>
+        <item>La première personne à sortir un briquet distribue %b</item>
+        <item>La première personne à crier ""CHEF"" boit %b</item>
+        <item>La première personne à crier ""PAUSE"" boit %b</item>
+        <item>La première personne à crier ""BOULOT"" distribue %b</item>
+        <item>La première personne à crier ""CDI"" distribue %b</item>
+        <item>La première personne qui crit ""K-Cup"" distribue %b</item>
+        <item>La première personne à montrer un employé distribue %b</item>
+        <item>La première personne à montrer un patron distribue %b</item>
+        <item>La première personne à montrer un chomeur distribue %b</item>
+        <item>La première personne à montrer un objet qui vient de son boulot distribue %b</item>
+        <item>La première personne à montrer une photo marrante de son travail distribue %b</item>
+        <item>La première personne qui trouve le joueur le plus jeune distribue %b</item>
+        <item>La première personne qui trouve le joueur avec le plus d\'ancienneté distribue %b</item>
+        <item>La première personne qui trouve un joueur qui travaille distribue %b</item>
+        <item>La première personne qui trouve un joueur qui ne travaille pas distribue %b</item>
+        <item>La dernière personne à être allée aux toilettes à son travail boit %b</item>
+        <item>Le dernier à s\'être servi un verre boit %b</item>
+        <item>Le dernier à avoir bu distribue %b</item>
+        <item>Le dernier joueur à être allé en repas de boulot distribue %b</item>
+        <item>Le dernier joueur à être allé à un after work distribue %b</item>
+        <item>Les gauchers/gauchères boivent %b</item>
+        <item>Les droitiers/droitières boivent %b</item>
+        <item>Les droitiers/droitières se lèvent pendant que les gauchers/gauchères boivent %b</item>
+        <item>Les gauchers/gauchères se lèvent pendant que les droitiers/droitières boivent %b</item>
+        <item>Les gauchers/gauchères on change de main le reste de la partie pour boire sinon %b</item>
+        <item>Les droitiers/droitières on change de main le reste de la partie pour boire sinon %b</item>
+        <item>Ceux qui sont déjà allés dans un entrepos boivent %b</item>
+        <item>Ceux qui sont déjà allés à une chambre froide distribuent %b</item>
+        <item>Ceux qui sont déjà allés dans le bureau du patron distribuent %b</item>
+        <item>Ceux qui sont déjà allés dans un bar avec des collègues boivent %b</item>
+        <item>Ceux qui sont déjà allés à l\'école boivent %b</item>
+        <item>Ceux qui sont déjà allés dans un bâtiment de plus de 3 étages aujourd\'hui boivent %b</item>
+        <item>Ceux qui sont déjà allés dans un maison aujourd\'hui boivent %b</item>
+        <item>Ceux qui sont déjà allés dans une auberge distribuent %b</item>
+        <item>Ceux qui sont déjà allés dans une hotel distribuent %b</item>
+        <item>Ceux qui sont déjà allés dans une tente distribuent %b</item>
+        <item>Ceux qui sont déjà allés dans un  distribuent %b</item>
+        <item>Ceux qui sont déjà allés en pause aujourd\'hui distribuent %b</item>
+        <item>Ceux qui sont ont le bac boivent %b</item>
+        <item>Ceux qui sont ont un bac +3 boivent %b</item>
+        <item>Ceux qui sont ont un bac +5 distribuent %b</item>
+        <item>Ceux qui sont ont un CDD boivent %b</item>
+        <item>Ceux qui sont ont un CDI boivent %b</item>
+        <item>Ceux qui sont en alternace boivent %b</item>
+        <item>Ceux qui sont ont en interim boivent %b</item>
     </string-array>
 
     <string-array name="challenge_array" formatted="false">
@@ -1079,6 +1138,7 @@
         <item>Il arrête de parler bizarrement, regarde droit dans son verre et bois %b</item>
         <item>Ses derniers commentaires seront les %b à distribuer</item>
     </string-array>
+
 
     <string-array name="end_array">
         <item>Rechargement des verres en cours...</item>

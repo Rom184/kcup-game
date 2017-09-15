@@ -28,6 +28,8 @@ import player.PlayerActivity;
 import utils.GameUtils;
 import utils.SharedPreferenceUtils;
 
+import static utils.GameUtils.EXTRA_TYPE;
+
 public class HomeMainFragment extends Fragment {
 
     public static String FACEBOOK_URL = "https://www.facebook.com/KCupGame/";
@@ -148,6 +150,7 @@ public class HomeMainFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent k = new Intent(getActivity(), PlayerActivity.class);
+                k.putExtra(EXTRA_TYPE, GameUtils.Game.KCUP.toString());
                 startActivity(k);
             }
         });
@@ -156,6 +159,7 @@ public class HomeMainFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent k = new Intent(getActivity(), PlayerActivity.class);
+                k.putExtra(EXTRA_TYPE, GameUtils.Game.AFTER_KCUP.toString());
                 startActivity(k);
             }
         });

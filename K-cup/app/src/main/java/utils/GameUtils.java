@@ -18,6 +18,11 @@ public class GameUtils {
     public static final String EXTRA_TYPE = "extra_type";
     public static final int TIME_ANIMATION_BEGIN = 3000;
 
+    public enum Game {
+        KCUP,
+        AFTER_KCUP
+    }
+
     public enum Type {
         NO_NEED_PLAYER,
         CHALLENGE,
@@ -27,12 +32,12 @@ public class GameUtils {
         KCUPS
     }
 
-    public static List<Rule> createKcupGame(Context context) {
+    public static List<Rule> createKcupGame(Context context, String extra) {
 
         List<String> listPlayer = SharedPreferenceUtils.getAllPlayer(context.getApplicationContext(), SharedPreferenceUtils.PREFS_PLAYER);
         List<Rule> newRule = new ArrayList<>();
 
-        List<String> noNeedPlayer = getNoNeedPlayer(context);
+        List<String> noNeedPlayer = getNoNeedPlayer(context, extra);
         List<String> challenge = getChallenge(context);
         List<String> choice = getChoice(context);
 
@@ -115,314 +120,16 @@ public class GameUtils {
         return newRule;
     }
 
-    /*public static List<Rule> createKcupGame(Context context) {
+    private static List<String> getNoNeedPlayer(Context context, String extra) {
 
-        List<String> listPlayer = SharedPreferenceUtils.getAllPlayer(context.getApplicationContext(), SharedPreferenceUtils.PREFS_PLAYER);
-        List<Rule> newRule = new ArrayList<>();
+        String[] noNeedPlayerArray = new String[0];
 
-        List<String> noNeedPlayer = getNoNeedPlayer(context);
-        List<String> challenge = getChallenge(context);
-        List<String> choice = getChoice(context);
-
-        List<Integer> randomForNewRule = getRandomForNewRule(context);
-        List<String> newRuleAll = getNewRule(context);
-        List<String> newRuleNext = getNewRuleNext(context);
-        int positionNewRuleNext = 0;
-
-        boolean isPossibleNewRule = false;
-
-        Random r = new Random();
-        int nbRule = r.nextInt(40 - 25) + 25;
-        int positionWhenNewRulePossible = 2;
-        int nbStopNewRule = nbRule - 6;
-
-        for (int a = 0; a < nbRule; a++) {
-
-            if (a == positionWhenNewRulePossible) {
-                isPossibleNewRule = true;
-            }
-
-            int randomNewRule = r.nextInt(11) + 1;
-
-            if (a < nbStopNewRule && isPossibleNewRule && randomNewRule < 3) {
-                newRule.add(new Rule(getRandomSoftDrinks(context, newRuleAll.get(randomForNewRule.get(0)), 8), Type.NEW_RULE.toString()));
-                isPossibleNewRule = false;
-                positionNewRuleNext = a + (r.nextInt(3) + 5);
-            } else if (!isPossibleNewRule && a > 0 && a == positionNewRuleNext) {
-                newRule.add(new Rule(getRandomSoftDrinks(context, newRuleNext.get(randomForNewRule.get(0)), 8), Type.NEW_RULE_NEXT.toString()));
-                positionNewRuleNext = 0;
-                randomForNewRule.remove(0);
-                isPossibleNewRule = true;
-            } else {
-                int randomType = r.nextInt(3) + 1;
-
-                if (randomType == 1) {
-                    Collections.shuffle(noNeedPlayer);
-                    newRule.add(new Rule(getRandomSoftDrinks(context, noNeedPlayer.get(0), 4), Type.NO_NEED_PLAYER.toString()));
-                    noNeedPlayer.remove(0);
-                } else if (randomType == 2) {
-                    Collections.shuffle(challenge);
-                    newRule.add(new Rule(getSelectedWithTwoPlayer(context, challenge.get(0), listPlayer, 4), Type.NO_NEED_PLAYER.toString()));
-                    challenge.remove(0);
-                } else {
-                    Collections.shuffle(choice);
-                    newRule.add(new Rule(getChallengeWithPlayer(context, choice.get(0), listPlayer, 4), Type.CHOICE.toString()));
-                    choice.remove(0);
-                }
-            }
+        if (extra.equals(Game.KCUP.toString())) {
+            noNeedPlayerArray = context.getResources().getStringArray(R.array.no_need_player_array);
+        } else {
+            noNeedPlayerArray = context.getResources().getStringArray(R.array.no_need_player_after_kcup_array);
         }
 
-        return newRule;
-    }*/
-
-    /*public static List<Rule> createRandomGame(Context context) {
-
-        List<String> listPlayer = SharedPreferenceUtils.getAllPlayer(context.getApplicationContext(), SharedPreferenceUtils.PREFS_PLAYER);
-        List<Rule> newRule = new ArrayList<>();
-
-        List<String> noNeedPlayer = getNoNeedPlayer(context);
-        List<String> challenge = getChallenge(context);
-        List<String> choice = getChoice(context);
-        List<String> selectedPlayer = getSelectedPlayer(context);
-
-        Random r = new Random();
-        int nbRule = r.nextInt(30 - 25) + 25;
-
-        for (int a = 0; a < nbRule; a++) {
-            int randomType = r.nextInt(7) + 1;
-
-            if (randomType == 1 || randomType == 5) {
-                Collections.shuffle(noNeedPlayer);
-                //newRule.add(new Rule(getRandomSoftDrinks(noNeedPlayer.get(0), Type.NO_NEED_PLAYER.toString())));
-                noNeedPlayer.remove(0);
-            } else if (randomType == 2 || randomType == 7) {
-                Collections.shuffle(challenge);
-                newRule.add(new Rule(getChallengeWithPlayer(context, challenge.get(0), listPlayer), Type.CHALLENGE.toString()));
-                challenge.remove(0);
-            } else if (randomType == 3) {
-                Collections.shuffle(choice);
-                newRule.add(new Rule(choice.get(0), Type.CHOICE.toString()));
-                choice.remove(0);
-            } else if (randomType == 4 || randomType == 6) {
-                Collections.shuffle(selectedPlayer);
-                newRule.add(new Rule(getSelectedWithTwoPlayer(selectedPlayer.get(0), listPlayer), Type.NO_NEED_PLAYER.toString()));
-                selectedPlayer.remove(0);
-            }
-        }
-
-        return newRule;
-
-    }
-
-    public static List<Rule> createRandomLongGame(Context context) {
-
-        List<String> listPlayer = SharedPreferenceUtils.getAllPlayer(context.getApplicationContext(), SharedPreferenceUtils.PREFS_PLAYER);
-        List<Rule> newRule = new ArrayList<>();
-
-        List<String> noNeedPlayer = getNoNeedPlayer(context);
-        List<String> challenge = getChallenge(context);
-        List<String> choice = getChoice(context);
-        List<String> selectedPlayer = getSelectedPlayer(context);
-
-        Random r = new Random();
-        int nbRule = r.nextInt(60 - 50) + 50;
-
-        for (int a = 0; a < nbRule; a++) {
-            int randomType = r.nextInt(7) + 1;
-
-            if (randomType == 1 || randomType == 5) {
-                Collections.shuffle(noNeedPlayer);
-                newRule.add(new Rule(noNeedPlayer.get(0), Type.NO_NEED_PLAYER.toString()));
-                noNeedPlayer.remove(0);
-            } else if (randomType == 2 || randomType == 7) {
-                Collections.shuffle(challenge);
-                newRule.add(new Rule(getChallengeWithPlayer(context, challenge.get(0), listPlayer), Type.CHALLENGE.toString()));
-                challenge.remove(0);
-            } else if (randomType == 3) {
-                Collections.shuffle(choice);
-                newRule.add(new Rule(choice.get(0), Type.CHOICE.toString()));
-                choice.remove(0);
-            } else if (randomType == 4 || randomType == 6) {
-                Collections.shuffle(selectedPlayer);
-                newRule.add(new Rule(getSelectedWithTwoPlayer(selectedPlayer.get(0), listPlayer), Type.NO_NEED_PLAYER.toString()));
-                selectedPlayer.remove(0);
-            }
-        }
-
-        return newRule;
-
-    }
-
-    public static List<Rule> createRandomGameWithNewRule(Context context) {
-
-        List<String> listPlayer = SharedPreferenceUtils.getAllPlayer(context.getApplicationContext(), SharedPreferenceUtils.PREFS_PLAYER);
-        List<Rule> newRule = new ArrayList<>();
-
-        List<String> noNeedPlayer = getNoNeedPlayer(context);
-        List<String> challenge = getChallenge(context);
-        List<String> choice = getChoice(context);
-        List<String> selectedPlayer = getSelectedPlayer(context);
-
-        List<Integer> randomForNewRule = getRandomForNewRule(context);
-        List<String> newRuleAll = getNewRule(context);
-        List<String> newRuleNext = getNewRuleNext(context);
-        int positionNewRuleNext = 0;
-        boolean isPossibleNewRule = true;
-
-        int nbLenght = noNeedPlayer.size() + challenge.size() + choice.size() + selectedPlayer.size() + newRuleAll.size();
-
-        Log.e("size", String.valueOf(nbLenght));
-
-        Random r = new Random();
-        int nbRule = r.nextInt(35 - 30) + 30;
-
-        for (int a = 0; a < nbRule; a++) {
-            int randomType;
-
-            if (a < nbRule - 6 && isPossibleNewRule) {
-                randomType = r.nextInt(8) + 1;
-                if (randomType == 6) {
-                    newRule.add(new Rule(newRuleAll.get(randomForNewRule.get(0)), Type.NEW_RULE.toString()));
-                    isPossibleNewRule = false;
-                    positionNewRuleNext = a + (r.nextInt(4) + 3);
-                } else if (randomType == 1 || randomType == 4) {
-                    Collections.shuffle(noNeedPlayer);
-                    newRule.add(new Rule(noNeedPlayer.get(0), Type.NO_NEED_PLAYER.toString()));
-                    noNeedPlayer.remove(0);
-                } else if (randomType == 2 || randomType == 7) {
-                    Collections.shuffle(challenge);
-                    newRule.add(new Rule(getChallengeWithPlayer(context, challenge.get(0), listPlayer), Type.CHALLENGE.toString()));
-                    challenge.remove(0);
-                } else if (randomType == 3) {
-                    Collections.shuffle(choice);
-                    newRule.add(new Rule(choice.get(0), Type.CHOICE.toString()));
-                    choice.remove(0);
-                } else if (randomType == 5 || randomType == 8) {
-                    Collections.shuffle(selectedPlayer);
-                    newRule.add(new Rule(getSelectedWithTwoPlayer(selectedPlayer.get(0), listPlayer), Type.NO_NEED_PLAYER.toString()));
-                    selectedPlayer.remove(0);
-                }
-
-            } else {
-
-                if (positionNewRuleNext > 0 && a == positionNewRuleNext) {
-                    newRule.add(new Rule(newRuleNext.get(randomForNewRule.get(0)), Type.NEW_RULE_NEXT.toString()));
-                    positionNewRuleNext = 0;
-                    randomForNewRule.remove(0);
-                    isPossibleNewRule = true;
-
-                } else {
-                    randomType = r.nextInt(7) + 1;
-                    if (randomType == 1 || randomType == 5) {
-                        Collections.shuffle(noNeedPlayer);
-                        newRule.add(new Rule(noNeedPlayer.get(0), Type.NO_NEED_PLAYER.toString()));
-                        noNeedPlayer.remove(0);
-                    } else if (randomType == 2 || randomType == 6) {
-                        Collections.shuffle(challenge);
-                        newRule.add(new Rule(getChallengeWithPlayer(context, challenge.get(0), listPlayer), Type.CHALLENGE.toString()));
-                        challenge.remove(0);
-                    } else if (randomType == 3) {
-                        Collections.shuffle(choice);
-                        newRule.add(new Rule(choice.get(0), Type.CHOICE.toString()));
-                        choice.remove(0);
-                    } else if (randomType == 4 || randomType == 7) {
-                        Collections.shuffle(selectedPlayer);
-                        newRule.add(new Rule(getSelectedWithTwoPlayer(selectedPlayer.get(0), listPlayer), Type.NO_NEED_PLAYER.toString()));
-                        selectedPlayer.remove(0);
-                    }
-                }
-            }
-        }
-        return newRule;
-
-    }
-
-    public static List<Rule> createRandomGameWithNewRuleLong(Context context) {
-
-        List<String> listPlayer = SharedPreferenceUtils.getAllPlayer(context.getApplicationContext(), SharedPreferenceUtils.PREFS_PLAYER);
-        List<Rule> newRule = new ArrayList<>();
-
-        List<String> noNeedPlayer = getNoNeedPlayer(context);
-        List<String> challenge = getChallenge(context);
-        List<String> choice = getChoice(context);
-        List<String> selectedPlayer = getSelectedPlayer(context);
-
-        List<Integer> randomForNewRule = getRandomForNewRule(context);
-        List<String> newRuleAll = getNewRule(context);
-        List<String> newRuleNext = getNewRuleNext(context);
-        int positionNewRuleNext = 0;
-        boolean isPossibleNewRule = true;
-
-        int nbLenght = noNeedPlayer.size() + challenge.size() + choice.size() + selectedPlayer.size() + newRuleAll.size();
-
-        Log.e("size", String.valueOf(nbLenght));
-
-        Random r = new Random();
-        int nbRule = r.nextInt(70 - 60) + 60;
-
-        for (int a = 0; a < nbRule; a++) {
-            int randomType;
-
-            if (a < nbRule - 6 && isPossibleNewRule) {
-                randomType = r.nextInt(8) + 1;
-                if (randomType == 6) {
-                    newRule.add(new Rule(newRuleAll.get(randomForNewRule.get(0)), Type.NEW_RULE.toString()));
-                    isPossibleNewRule = false;
-                    positionNewRuleNext = a + (r.nextInt(4) + 3);
-                } else if (randomType == 1 || randomType == 4) {
-                    Collections.shuffle(noNeedPlayer);
-                    newRule.add(new Rule(noNeedPlayer.get(0), Type.NO_NEED_PLAYER.toString()));
-                    noNeedPlayer.remove(0);
-                } else if (randomType == 2 || randomType == 7) {
-                    Collections.shuffle(challenge);
-                    newRule.add(new Rule(getChallengeWithPlayer(context, challenge.get(0), listPlayer), Type.CHALLENGE.toString()));
-                    challenge.remove(0);
-                } else if (randomType == 3) {
-                    Collections.shuffle(choice);
-                    newRule.add(new Rule(choice.get(0), Type.CHOICE.toString()));
-                    choice.remove(0);
-                } else if (randomType == 5 || randomType == 8) {
-                    Collections.shuffle(selectedPlayer);
-                    newRule.add(new Rule(getSelectedWithTwoPlayer(selectedPlayer.get(0), listPlayer), Type.NO_NEED_PLAYER.toString()));
-                    selectedPlayer.remove(0);
-                }
-
-            } else {
-
-                if (positionNewRuleNext > 0 && a == positionNewRuleNext) {
-                    newRule.add(new Rule(newRuleNext.get(randomForNewRule.get(0)), Type.NEW_RULE_NEXT.toString()));
-                    positionNewRuleNext = 0;
-                    randomForNewRule.remove(0);
-                    isPossibleNewRule = true;
-
-                } else {
-                    randomType = r.nextInt(7) + 1;
-                    if (randomType == 1 || randomType == 5) {
-                        Collections.shuffle(noNeedPlayer);
-                        newRule.add(new Rule(noNeedPlayer.get(0), Type.NO_NEED_PLAYER.toString()));
-                        noNeedPlayer.remove(0);
-                    } else if (randomType == 2 || randomType == 6) {
-                        Collections.shuffle(challenge);
-                        newRule.add(new Rule(getChallengeWithPlayer(context, challenge.get(0), listPlayer), Type.CHALLENGE.toString()));
-                        challenge.remove(0);
-                    } else if (randomType == 3) {
-                        Collections.shuffle(choice);
-                        newRule.add(new Rule(choice.get(0), Type.CHOICE.toString()));
-                        choice.remove(0);
-                    } else if (randomType == 4 || randomType == 7) {
-                        Collections.shuffle(selectedPlayer);
-                        newRule.add(new Rule(getSelectedWithTwoPlayer(selectedPlayer.get(0), listPlayer), Type.NO_NEED_PLAYER.toString()));
-                        selectedPlayer.remove(0);
-                    }
-                }
-            }
-        }
-        return newRule;
-
-    }*/
-
-    private static List<String> getNoNeedPlayer(Context context) {
-        String[] noNeedPlayerArray = context.getResources().getStringArray(R.array.no_need_player_array);
         List<String> noNeedPlayer = new ArrayList<>();
         Collections.addAll(noNeedPlayer, noNeedPlayerArray);
         return noNeedPlayer;
