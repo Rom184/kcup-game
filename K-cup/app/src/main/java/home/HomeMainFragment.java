@@ -25,6 +25,7 @@ import game.NewRuleActivity;
 import game.NewRuleNextActivity;
 import game.NoNeedPlayerActivity;
 import player.PlayerActivity;
+import player.PlayerBerserkActivity;
 import utils.GameUtils;
 import utils.SharedPreferenceUtils;
 
@@ -160,6 +161,15 @@ public class HomeMainFragment extends Fragment {
             public void onClick(View view) {
                 Intent k = new Intent(getActivity(), PlayerActivity.class);
                 k.putExtra(EXTRA_TYPE, GameUtils.Game.AFTER_KCUP.toString());
+                startActivity(k);
+            }
+        });
+
+        newBerserkGame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent k = new Intent(getActivity(), PlayerBerserkActivity.class);
+                k.putExtra(EXTRA_TYPE, GameUtils.Game.KCUP.toString());
                 startActivity(k);
             }
         });

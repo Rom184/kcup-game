@@ -43,6 +43,7 @@
 
     <string name="drink">gorgée</string>
     <string name="drinks">gorgées</string>
+    <string name="all">son verre</string>
 
     <!-- kcup game -->
     <string name="kcup_content" formatted="false">C\'est le jeu du "" K-Cup ""! Le but est simple %s et %a jouent à pierre papier ciseau K-cup.Le 1er à perdre boit %b.\n\nLe geste de K-cup est de saluer comme sur l\'image. Il gagne contre la pierre et la feuille mais perd contre le ciseau</string>
@@ -383,6 +384,7 @@
         <item>Ceux qui sont déjà allés dans un maison aujourd\'hui boivent %b</item>
         <item>Ceux qui sont déjà allés dans une auberge distribuent %b</item>
         <item>Ceux qui sont déjà allés dans une hotel distribuent %b</item>
+        <item>Ceux qui sont déjà allés dans une étable distribuent %b</item>
         <item>Ceux qui sont déjà allés dans une tente distribuent %b</item>
         <item>Ceux qui sont déjà allés dans un  distribuent %b</item>
         <item>Ceux qui sont déjà allés en pause aujourd\'hui distribuent %b</item>
@@ -643,7 +645,7 @@
         <item>%s tu as des plantes chez toi ?\n\n Alors tu bois %b</item>
         <item>%s bois autant de gorgées qu\'il y a de joueurs !</item>
         <item>%s distribue autant de gorgées qu\'il y a de joueurs !</item>
-        <item>%s un petite danse ?\n\nSinon c\'est %b</item>
+        <item>%s une petite danse ?\n\nSinon c\'est %b</item>
         <item>%s fais un signe à la personne qui devra boire %b</item>
         <item>%s tu as déjà eu un coup du soir ?\n\nAlors bois %b</item>
         <item>%s tu as déjà triché pendant un exam ?\n\nAlors c\'est %b !</item>
@@ -688,6 +690,7 @@
         <item>%s si tu aimes bien une chanson de Justin Bieber tu bois %b</item>
         <item>%s si tu as déjà eu un scooter tu bois %b</item>
         <item>%s si tu as déjà eu une moto tu bois %b</item>
+        <item>%s si tu as fais de la conduite accompagnée tu bois %b</item>
         <item>%s si tu as déjà eu une monoroue ou une trottinette électrique tu bois %b</item>
         <item>%s tu as déjà pris une drogue dur ? (je n\'espère pas !)\n\nAlors %b</item>
         <item>%s si tu as déjà fait tombé ton tel dans les chiottes distribue %b. Sinon tu les bois</item>
@@ -937,8 +940,9 @@
         <item>%s tu choisis un joueur et à tour de role vous devez trouvez des ingrédients pour faire du vin, le gagnant distribue %b !</item>
         <item>%s tu choisis un joueur et à tour de role vous devez trouvez des ingrédients pour faire un sex on the beach, le gagnant distribue %b !</item>
         <item>%s tu choisis un joueur et à tour de role vous devez trouvez des noms des chocolats Kinder, le gagnant distribue %b !</item>
-        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des noms burgers chez Burger King, le gagnant distribue %b !</item>
-        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des noms des desserts chez Macdonald, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des noms de burgers chez Burger King, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des noms de desserts chez Macdonald, le gagnant distribue %b !</item>
+        <item>%s tu choisis un joueur et à tour de role vous devez trouvez des noms de pizzas chez Dominos, le gagnant distribue %b !</item>
         <item>%s tu choisis un joueur et à tour de role vous devez trouvez des façons de mourir dans Destination finale, le gagnant distribue %b !</item>
         <item>%s tu choisis un joueur et à tour de role vous devez trouvez des films qui commencent avec "" Le "", le gagnant distribue %b !</item>
         <item>%s tu choisis un joueur et à tour de role vous devez trouvez des élèves de Griffondor, le gagnant distribue %b !</item>
