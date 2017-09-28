@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_gravity="center"
-            android:layout_weight="50"
+            android:layout_weight="40"
             android:visibility="gone" />
 
         <TextView
@@ -32,7 +32,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginTop="12dp"
-            android:layout_weight="50"
+            android:layout_weight="40"
             android:gravity="center"
             android:textColor="@android:color/black"
             android:textSize="24sp"
@@ -49,7 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_gravity="bottom"
-            android:layout_weight="40"
+            android:layout_weight="50"
             android:src="@drawable/ic_kcup_chevalier" />
 
     </LinearLayout>
@@ -70,7 +70,7 @@
         android:id="@+id/count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end"
+        android:layout_gravity="center_horizontal"
         android:layout_margin="18dp"
         android:text=""
         android:textColor="@android:color/black"

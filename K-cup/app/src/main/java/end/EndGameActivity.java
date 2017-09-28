@@ -52,9 +52,4 @@ public class EndGameActivity extends AppCompatActivity {
         content.setAnimation(anim1);
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        this.finish();
-    }
 }

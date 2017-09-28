@@ -55,7 +55,6 @@ public class NoNeedPlayerActivity extends AppCompatActivity {
 
         ruleContent = (TextView) findViewById(R.id.content_rule);
         count = (TextView) findViewById(R.id.count);
-        count.setTypeface(typeface);
         ruleContent.setTypeface(typeface);
 
         getCurrentRule();

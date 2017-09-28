@@ -18,7 +18,10 @@
     <string name="new_game">Nouvelle partie</string>
     <string name="fast_game">Partie rapide</string>
     <string name="continue_game">Continuer</string>
-    <string name="enter_name">Entrez le nom des joueurs</string>
+    <string name="new_game_easy">Je bois un peu</string>
+    <string name="new_game_normal">Je sais boire !</string>
+    <string name="new_game_hard">L\'alcool ? C\'est de l\'eau!</string>
+    <string name="enter_name">Entrez le nom des joueurs:</string>
     <string name="player_nb">Joueur</string>
     <string name="player">Joueur %s</string>
     <string name="with_king_rule">K-Cup sera-til de la partie ?</string>
@@ -32,6 +35,10 @@
     <string name="adress_mail">kcup-drink-game@hotmail.com</string>
     <string name="subject_mail">Grand K-cup - J\'ai des idées à te dire :</string>
 
+    <string name="dialog_option_title">Une envie ?</string>
+    <string name="dialog_option_facebook">Un like sur Facebook ?</string>
+    <string name="dialog_option_appli">Une note pour K-Cup ?</string>
+    <string name="dialog_option_mail">Une idée à partager ?</string>
     <string name="dialog_warning_title_begin">Eh toi !</string>
     <string name="dialog_warning_title">L\'abus d\'alcool est dangereux pour la santé. En jouant avec k-cup vous confirmez que vous êtes responsable des éventuelles conséquences.</string>
     <string name="dialog_warning_no">Annuler</string>
