@@ -24,7 +24,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_margin="42dp"
+            android:layout_margin="46dp"
             android:layout_weight="40"
             android:src="@drawable/ic_puk_face_blanc_full" />
 

@@ -21,7 +21,7 @@
     <string name="new_game_easy">Je bois un peu</string>
     <string name="new_game_normal">Je sais boire !</string>
     <string name="new_game_hard">L\'alcool ? C\'est de l\'eau!</string>
-    <string name="enter_name">Entrez le nom des joueurs:</string>
+    <string name="enter_name">Qui seront mes compagnons de boissons ?</string>
     <string name="player_nb">Joueur</string>
     <string name="player">Joueur %s</string>
     <string name="with_king_rule">K-Cup sera-til de la partie ?</string>
