@@ -20,12 +20,11 @@
         android:orientation="vertical"
         android:weightSum="100">
 
-
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_margin="46dp"
-            android:layout_weight="40"
+            android:layout_margin="40dp"
+            android:layout_weight="35"
             android:src="@drawable/ic_puk_face_blanc_full" />
 
         <TextView
@@ -42,7 +41,7 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="45"
+            android:layout_weight="55"
             android:paddingBottom="12dp"
             android:paddingLeft="12dp"
             android:paddingRight="12dp">
@@ -112,71 +111,4 @@
 
     </LinearLayout>
 
-</FrameLayout><!--
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/yellow"
-    android:orientation="vertical"
-    android:padding="12dp"
-    android:weightSum="100">
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="45"
-        android:src="@drawable/kcup_splash" />
-
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="12dp"
-        android:gravity="center"
-        android:text="@string/dialog_option_title"
-        android:textColor="@android:color/black"
-        android:textSize="18sp" />
-
-    <Button
-        android:id="@+id/facebook"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/bouton_type"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        android:padding="10dp"
-        android:text="@string/dialog_option_facebook"
-        android:textAllCaps="false"
-        android:textSize="18sp" />
-
-    <Button
-        android:id="@+id/appli"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/bouton_type"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        android:padding="10dp"
-        android:text="@string/dialog_option_appli"
-        android:textAllCaps="false"
-        android:textSize="18sp" />
-
-    <Button
-        android:id="@+id/mail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/bouton_type"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        android:padding="10dp"
-        android:text="@string/dialog_option_mail"
-        android:textAllCaps="false"
-        android:textSize="18sp" />
-
-</LinearLayout>
--->
+</FrameLayout>

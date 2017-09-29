@@ -24,9 +24,13 @@
     <string name="enter_name">Qui seront mes compagnons de boissons ?</string>
     <string name="player_nb">Joueur</string>
     <string name="player">Joueur %s</string>
+    <string name="choose_game_mode_title">Mes compagnons sont plutôt du genre :</string>
     <string name="with_king_rule">K-Cup sera-til de la partie ?</string>
     <string name="long_game">L\'alcool ne vous fait pas peur ? </string>
     <string name="lets_go">On veut boire !</string>
+    <string name="mode_easy">Il ne faut pas trop boire !</string>
+    <string name="mode_normal">Buveur du soir bonsoir !</string>
+    <string name="mode_hard">L\'alcool ? C\'est de l\'eau !</string>
     <string name="end">Merci pour cette partie !</string>
     <string name="end_game">Disposer !</string>
     <string name="send_mail">Envoie de mail</string>
@@ -1149,7 +1153,6 @@
         <item>Il arrête de parler bizarrement, regarde droit dans son verre et bois %b</item>
         <item>Ses derniers commentaires seront les %b à distribuer</item>
     </string-array>
-
 
     <string-array name="end_array">
         <item>Rechargement des verres en cours...</item>

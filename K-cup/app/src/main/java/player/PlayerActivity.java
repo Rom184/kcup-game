@@ -120,8 +120,13 @@ public class PlayerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 savePlayer();
-                createNewGame();
-                goToNextRule();
+                SharedPreferenceUtils.setPositionGame(getApplicationContext(), 0);
+                Intent k = new Intent(PlayerActivity.this, ChooseGameModeActivity.class);
+                k.putExtra(EXTRA_TYPE, GameUtils.Game.AFTER_KCUP.toString());
+                startActivity(k);
+                finish();
+                /*createNewGame();
+                goToNextRule();*/
             }
         });
 
@@ -134,7 +139,6 @@ public class PlayerActivity extends AppCompatActivity {
                 finish();
             }
         });
-
     }
 
     private void goToNextRule() {
