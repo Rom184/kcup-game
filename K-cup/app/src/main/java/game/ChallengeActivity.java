@@ -33,8 +33,7 @@ public class ChallengeActivity extends AppCompatActivity {
     private FrameLayout content;
     private TextView ruleContent;
     private TextView count;
-
-    private boolean isAnimated = false;
+    private TextView title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +43,7 @@ public class ChallengeActivity extends AppCompatActivity {
 
         Typeface typeface = Typeface.createFromAsset(getAssets(), "Roboto-Medium.ttf");
 
+        title = (TextView) findViewById(R.id.title);
         content = (FrameLayout) findViewById(R.id.background);
         bulle = (ImageView) findViewById(R.id.bulle);
         back = (ImageView) findViewById(R.id.back);
@@ -51,9 +51,12 @@ public class ChallengeActivity extends AppCompatActivity {
         ruleContent.setTypeface(typeface);
         count = (TextView) findViewById(R.id.count);
         count.setTypeface(typeface);
+        title.setTypeface(typeface);
 
         getCurrentRule();
-        bindView();
+        if (currentRule != null) {
+            bindView();
+        }
     }
 
     private void bindView() {
@@ -63,6 +66,7 @@ public class ChallengeActivity extends AppCompatActivity {
         count.setText(currentCount);
         ruleContent.setText(currentRule.getContent());
         final Animation anim1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.effect_challenge);
+        title.startAnimation(anim1);
         ruleContent.startAnimation(anim1);
         count.startAnimation(anim1);
         bulle.startAnimation(anim1);

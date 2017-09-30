@@ -52,7 +52,7 @@ public class KcupActivity extends AppCompatActivity {
         content = (FrameLayout) findViewById(R.id.background);
         bulle = (ImageView) findViewById(R.id.bulle);
         back = (ImageView) findViewById(R.id.back);
-        ruleTitle = (TextView) findViewById(R.id.title_rule);
+        ruleTitle = (TextView) findViewById(R.id.title);
         ruleContent = (TextView) findViewById(R.id.content_rule);
         count = (TextView) findViewById(R.id.count);
         count.setTypeface(typeface);
@@ -62,39 +62,8 @@ public class KcupActivity extends AppCompatActivity {
 
         getCurrentRule();
         if (currentRule != null) {
-            final Bundle b = getIntent().getExtras();
-            if (b != null && !isAnimated) {
-                boolean isBegin = b.getBoolean(GameUtils.EXTRA_ANIMATION_BEGIN);
-                if (isBegin) {
-                    setBeginAnimation();
-                } else {
-                    bindView();
-                }
-            } else {
-                bindView();
-            }
+            bindView();
         }
-    }
-
-    private void setBeginAnimation() {
-        ruleTitle.setVisibility(View.GONE);
-        ruleContent.setVisibility(View.GONE);
-        animationView.setVisibility(View.VISIBLE);
-        animationView.setAnimation("preloader.json");
-        animationView.loop(true);
-        animationView.playAnimation();
-
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                animationView.setVisibility(View.GONE);
-                animationView.cancelAnimation();
-                ruleContent.setVisibility(View.VISIBLE);
-                ruleContent.setVisibility(View.VISIBLE);
-                isAnimated = true;
-                bindView();
-            }
-        }, GameUtils.TIME_ANIMATION_BEGIN);
     }
 
     private void bindView() {

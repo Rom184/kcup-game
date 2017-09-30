@@ -33,8 +33,7 @@ public class ChoiceActivity extends AppCompatActivity {
     private FrameLayout content;
     private TextView ruleContent;
     private TextView count;
-
-    private boolean isAnimated = false;
+    private TextView title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,16 +43,20 @@ public class ChoiceActivity extends AppCompatActivity {
 
         Typeface typeface = Typeface.createFromAsset(getAssets(), "Roboto-Medium.ttf");
 
+        title = (TextView) findViewById(R.id.title);
         content = (FrameLayout) findViewById(R.id.background);
         bulle = (ImageView) findViewById(R.id.bulle);
         back = (ImageView) findViewById(R.id.back);
         ruleContent = (TextView) findViewById(R.id.content_rule);
         ruleContent.setTypeface(typeface);
+        title.setTypeface(typeface);
         count = (TextView) findViewById(R.id.count);
         count.setTypeface(typeface);
 
         getCurrentRule();
-        bindView();
+        if (currentRule != null) {
+            bindView();
+        }
     }
 
     private void bindView() {
@@ -65,6 +68,7 @@ public class ChoiceActivity extends AppCompatActivity {
         final Animation anim1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.effect_challenge);
         ruleContent.startAnimation(anim1);
         count.startAnimation(anim1);
+        title.startAnimation(anim1);
         bulle.startAnimation(anim1);
 
         content.setOnClickListener(new View.OnClickListener() {

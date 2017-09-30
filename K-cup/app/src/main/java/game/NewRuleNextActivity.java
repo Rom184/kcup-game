@@ -27,8 +27,6 @@ public class NewRuleNextActivity extends AppCompatActivity {
     private Rule currentRule;
     private int position;
 
-    private LottieAnimationView animationView;
-
     private ImageView bulle;
     private ImageView back;
 
@@ -36,8 +34,6 @@ public class NewRuleNextActivity extends AppCompatActivity {
     private TextView title;
     private TextView ruleContent;
     private TextView count;
-
-    private boolean isAnimated = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,12 +43,10 @@ public class NewRuleNextActivity extends AppCompatActivity {
 
         Typeface typeface = Typeface.createFromAsset(getAssets(), "Roboto-Medium.ttf");
 
-        animationView = (LottieAnimationView) findViewById(R.id.animation_view);
-
         content = (FrameLayout) findViewById(R.id.background);
         bulle = (ImageView) findViewById(R.id.bulle);
         back = (ImageView) findViewById(R.id.back);
-        title = (TextView) findViewById(R.id.title_rule);
+        title = (TextView) findViewById(R.id.title);
         title.setTypeface(typeface);
         ruleContent = (TextView) findViewById(R.id.content_rule);
         ruleContent.setTypeface(typeface);
@@ -61,39 +55,8 @@ public class NewRuleNextActivity extends AppCompatActivity {
 
         getCurrentRule();
         if (currentRule != null) {
-            final Bundle b = getIntent().getExtras();
-            if (b != null && !isAnimated) {
-                boolean isBegin = b.getBoolean(GameUtils.EXTRA_ANIMATION_BEGIN);
-                if (isBegin) {
-                    setBeginAnimation();
-                } else {
-                    bindView();
-                }
-            } else {
-                bindView();
-            }
+            bindView();
         }
-    }
-
-    private void setBeginAnimation() {
-        title.setVisibility(View.GONE);
-        ruleContent.setVisibility(View.GONE);
-        animationView.setVisibility(View.VISIBLE);
-        animationView.setAnimation("preloader.json");
-        animationView.loop(true);
-        animationView.playAnimation();
-
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                animationView.setVisibility(View.GONE);
-                animationView.cancelAnimation();
-                title.setVisibility(View.VISIBLE);
-                ruleContent.setVisibility(View.VISIBLE);
-                isAnimated = true;
-                bindView();
-            }
-        }, GameUtils.TIME_ANIMATION_BEGIN);
     }
 
     private void bindView() {

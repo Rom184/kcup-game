@@ -33,8 +33,7 @@ public class NoNeedPlayerActivity extends AppCompatActivity {
     private FrameLayout content;
     private TextView ruleContent;
     private TextView count;
-
-    private boolean isAnimated = false;
+    private TextView title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,12 +48,17 @@ public class NoNeedPlayerActivity extends AppCompatActivity {
         bulle = (ImageView) findViewById(R.id.bulle);
         back = (ImageView) findViewById(R.id.back);
 
+        title = (TextView) findViewById(R.id.title);
         ruleContent = (TextView) findViewById(R.id.content_rule);
         count = (TextView) findViewById(R.id.count);
+        title.setTypeface(typeface);
+        count.setTypeface(typeface);
         ruleContent.setTypeface(typeface);
 
         getCurrentRule();
-        bindView();
+        if (currentRule != null) {
+            bindView();
+        }
     }
 
 
@@ -66,6 +70,7 @@ public class NoNeedPlayerActivity extends AppCompatActivity {
         count.setText(currentCount);
         ruleContent.setText(currentRule.getContent());
         final Animation anim1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.effect_challenge);
+        title.startAnimation(anim1);
         ruleContent.startAnimation(anim1);
         count.startAnimation(anim1);
         bulle.startAnimation(anim1);

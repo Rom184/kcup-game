@@ -15,41 +15,48 @@
         android:orientation="vertical"
         android:weightSum="100">
 
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/animation_view"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_gravity="center"
-            android:layout_weight="50"
-            android:visibility="gone" />
-
         <TextView
-            android:id="@+id/content_rule"
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_gravity="center"
-            android:layout_marginBottom="12dp"
-            android:layout_marginTop="12dp"
-            android:layout_weight="50"
+            android:layout_weight="10"
             android:gravity="center"
-            android:paddingLeft="12dp"
-            android:paddingRight="12dp"
+            android:text="@string/choice_title"
             android:textColor="@android:color/white"
-            android:textSize="24sp"
-            tools:text="@string/dialog_game_title" />
+            android:textSize="32sp" />
 
-        <ImageView
-            android:id="@+id/bulle"
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="10"
-            android:src="@drawable/white_bulle" />
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="45">
+
+            <TextView
+                android:id="@+id/content_rule"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                tools:text="@string/dialog_game_title" />
+
+            <ImageView
+                android:id="@+id/bulle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:src="@drawable/white_bulle" />
+
+        </FrameLayout>
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_gravity="bottom"
-            android:layout_weight="40"
+            android:layout_weight="45"
             android:src="@drawable/ic_kcup_scaphandre" />
 
     </LinearLayout>
@@ -59,8 +66,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:layout_margin="18dp"
         android:background="?selectableItemBackgroundBorderless"
+        android:padding="12dp"
         android:src="@drawable/ic_reply_all_white_24dp"
         android:tint="@color/white_selected_black"
         android:visibility="gone"
@@ -70,10 +77,9 @@
         android:id="@+id/count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:layout_margin="18dp"
-        android:text=""
+        android:layout_gravity="bottom|right"
+        android:layout_margin="12dp"
         android:textColor="@android:color/white"
-        android:textSize="24sp" />
+        android:textSize="14sp" />
 
 </FrameLayout>
