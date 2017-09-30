@@ -1,5 +1,6 @@
 package home;
 
+import android.animation.Animator;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -27,12 +29,14 @@ public class SplashActivity extends AppCompatActivity {
     private static final int SPLASH_DISPLAY_LENGTH = 3300;
 
     private LottieAnimationView animationView;
+    private LinearLayout titleArea;
     private LinearLayout buttonArea;
+
+    private ImageView logo;
 
     private Button okButton;
     private Button cancelButton;
 
-    private TextView text;
     private TextView begin;
     private TextView content;
 
@@ -50,16 +54,15 @@ public class SplashActivity extends AppCompatActivity {
         begin.setTypeface(typeface);
         content.setVisibility(View.GONE);
 
+        logo = (ImageView) findViewById(R.id.logo);
+
+        titleArea = (LinearLayout) findViewById(R.id.title_area);
         buttonArea = (LinearLayout) findViewById(R.id.button_area);
         okButton = (Button) findViewById(R.id.not_cancel);
         cancelButton = (Button) findViewById(R.id.cancel);
         okButton.setTypeface(typeface);
         cancelButton.setTypeface(typeface);
         buttonArea.setVisibility(View.GONE);
-
-        text = (TextView) findViewById(R.id.text);
-        text.setTypeface(typeface);
-        text.setVisibility(View.VISIBLE);
 
         animationView = (LottieAnimationView) findViewById(R.id.animation_view);
         animationView.setVisibility(View.VISIBLE);
@@ -89,31 +92,44 @@ public class SplashActivity extends AppCompatActivity {
 
     private void timerToLaunchHome() {
 
-        animationView.setAnimation("preloader.json");
-        animationView.loop(true);
+        animationView.setAnimation("begin.json");
         animationView.playAnimation();
 
-        new Handler().postDelayed(new Runnable() {
+        animationView.addAnimatorListener(new Animator.AnimatorListener() {
             @Override
-            public void run() {
+            public void onAnimationStart(Animator animator) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animator) {
                 showAdvertissement();
             }
-        }, SPLASH_DISPLAY_LENGTH);
+
+            @Override
+            public void onAnimationCancel(Animator animator) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animator) {
+
+            }
+        });
     }
 
     private void showAdvertissement() {
 
-        animationView.cancelAnimation();
         animationView.setVisibility(View.GONE);
 
         final Animation anim1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.effect_challenge);
 
-        content.setVisibility(View.VISIBLE);
         content.setAnimation(anim1);
-        begin.setVisibility(View.VISIBLE);
-        begin.setAnimation(anim1);
+        logo.setAnimation(anim1);
+        titleArea.setAnimation(anim1);
 
-        text.setVisibility(View.GONE);
+        content.setVisibility(View.VISIBLE);
+        titleArea.setVisibility(View.VISIBLE);
         buttonArea.setVisibility(View.VISIBLE);
         buttonArea.setAnimation(anim1);
 

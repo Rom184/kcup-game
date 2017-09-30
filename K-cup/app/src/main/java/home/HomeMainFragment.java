@@ -73,26 +73,17 @@ public class HomeMainFragment extends Fragment {
             }
         });
 
-        /*ImageView like = (ImageView) view.findViewById(R.id.like);
-        like.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                goToFacebookPage();
-            }
-        });
-
-        ImageView mail = (ImageView) view.findViewById(R.id.mail);
-        mail.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sendMail();
-            }
-        });*/
-
         if (SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext()) > 0
                 && SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext()) <
                 SharedPreferenceUtils.getRule(getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).size()) {
             continueGame.setVisibility(View.VISIBLE);
+
+            String continueContent = getString(R.string.continue_game) + "\n" +
+                    (String.valueOf(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext()) + 1))  + " / " +
+                    String.valueOf(SharedPreferenceUtils.getRule(getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).size());
+
+            continueGame.setText(continueContent);
+
             continueGame.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

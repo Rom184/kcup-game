@@ -87,7 +87,7 @@ public class ChooseGameModeActivity extends AppCompatActivity {
 
                 if (!TextUtils.isEmpty(extra)) {
 
-                    List<Rule> ruleList = GameUtils.createCustomKcupGame(getApplicationContext(), extra,nbQuestion ,maxDrinks);
+                    List<Rule> ruleList = GameUtils.createCustomKcupGame(getApplicationContext(), extra, nbQuestion, maxDrinks);
 
                     SharedPreferenceUtils.saveRule(getApplicationContext(), ruleList, SharedPreferenceUtils.PREFS_RULE);
                     SharedPreferenceUtils.setPositionGame(getApplicationContext(), 0);
@@ -96,11 +96,9 @@ public class ChooseGameModeActivity extends AppCompatActivity {
                     for (int a = 0; a < ttt.size(); a++) {
                         Log.e("rule", String.valueOf(a) + " " + ttt.get(a).getType());
                     }
-
                 }
             }
         }
-
     }
 
     private void goToNextRule() {

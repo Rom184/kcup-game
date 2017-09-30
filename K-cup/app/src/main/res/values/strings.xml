@@ -17,7 +17,7 @@
     <!-- config -->
     <string name="new_game">Nouvelle partie</string>
     <string name="fast_game">Partie rapide</string>
-    <string name="continue_game">Continuer</string>
+    <string name="continue_game">On termine ce que l\'on a commencé ?</string>
     <string name="new_game_easy">Je bois un peu</string>
     <string name="new_game_normal">Je sais boire !</string>
     <string name="new_game_hard">L\'alcool ? C\'est de l\'eau!</string>

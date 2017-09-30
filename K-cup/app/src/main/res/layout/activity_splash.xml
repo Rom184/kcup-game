@@ -7,21 +7,24 @@
     android:orientation="vertical"
     android:weightSum="100">
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
     <LinearLayout
+        android:id="@+id/title_area"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_gravity="bottom"
         android:layout_weight="35"
         android:gravity="bottom"
         android:orientation="vertical"
-        android:weightSum="10">
-
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/animation_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:visibility="gone" />
+        android:visibility="gone"
+        android:weightSum="10"
+        tools:visibility="visible">
 
         <TextView
             android:id="@+id/begin"
@@ -35,9 +38,7 @@
             android:paddingRight="12dp"
             android:text="@string/dialog_warning_title_begin"
             android:textColor="@android:color/black"
-            android:textSize="36sp"
-            android:visibility="gone"
-            tools:visibility="visible" />
+            android:textSize="36sp" />
 
         <TextView
             android:id="@+id/content"
@@ -50,31 +51,17 @@
             android:paddingRight="12dp"
             android:text="@string/dialog_warning_title"
             android:textColor="@android:color/black"
-            android:textSize="24sp"
-            android:visibility="gone"
-            tools:visibility="visible" />
+            android:textSize="24sp" />
 
     </LinearLayout>
 
     <ImageView
+        android:id="@+id/logo"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_gravity="top"
         android:layout_weight="45"
-        android:src="@drawable/kcup_splash" />
-
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="20dp"
-        android:layout_weight="20"
-        android:gravity="center"
-        android:text="@string/app_name"
-        android:textColor="@android:color/black"
-        android:textSize="36sp"
-        android:visibility="visible" />
+        android:src="@drawable/ic_kcup_face" />
 
     <LinearLayout
         android:id="@+id/button_area"
@@ -85,7 +72,6 @@
         android:layout_weight="20"
         android:gravity="center"
         android:orientation="horizontal"
-        android:visibility="gone"
         android:weightSum="2">
 
         <Button

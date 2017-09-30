@@ -76,7 +76,7 @@ public class NoNeedPlayerActivity extends AppCompatActivity {
     private void setBeginAnimation() {
         ruleContent.setVisibility(View.GONE);
         animationView.setVisibility(View.VISIBLE);
-        animationView.setAnimation("preloader.json");
+        animationView.setAnimation("begin_game.json");
         animationView.loop(true);
         animationView.playAnimation();
 
