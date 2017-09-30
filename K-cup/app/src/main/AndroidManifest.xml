@@ -53,7 +53,7 @@
             android:windowSoftInputMode="stateHidden|adjustNothing" />
 
         <activity
-            android:name="game.BeginGameActivity"
+            android:name="player.BeginGameActivity"
             android:theme="@style/style_no_need_player" />
 
         <activity

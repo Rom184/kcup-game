@@ -1,18 +1,22 @@
-package game;
+package player;
 
+import android.animation.Animator;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.kcup.drinkgame.k_cup.R;
 
+import game.ChallengeActivity;
+import game.ChoiceActivity;
+import game.NoNeedPlayerActivity;
 import utils.GameUtils;
 import utils.SharedPreferenceUtils;
 
 public class BeginGameActivity extends AppCompatActivity {
+
+    private LottieAnimationView animationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,35 +24,50 @@ public class BeginGameActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_begin_game);
 
-        Typeface typeface = Typeface.createFromAsset(getAssets(), "Roboto-Medium.ttf");
+        animationView = (LottieAnimationView) findViewById(R.id.animation_view);
 
-        LottieAnimationView animationView = (LottieAnimationView) findViewById(R.id.animation_view);
-        animationView.setAnimation("StickAndBall.json");
-        animationView.loop(true);
+        animationView.setAnimation("begin_game.json");
         animationView.playAnimation();
 
-        new Handler().postDelayed(new Runnable() {
+        animationView.addAnimatorListener(new Animator.AnimatorListener() {
             @Override
-            public void run() {
+            public void onAnimationStart(Animator animator) {
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animator) {
                 goToNextRule();
             }
-        }, 5000);
+
+            @Override
+            public void onAnimationCancel(Animator animator) {
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animator) {
+            }
+        });
     }
 
-    private void goToNextRule(){
+    private void goToNextRule() {
+
         if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(0).getType()
                 .equals(GameUtils.Type.NO_NEED_PLAYER.toString())) {
             Intent k = new Intent(BeginGameActivity.this, NoNeedPlayerActivity.class);
+            k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
             startActivity(k);
         } else if ((SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(0).getType()
                 .equals(GameUtils.Type.CHALLENGE.toString()))) {
             Intent k = new Intent(BeginGameActivity.this, ChallengeActivity.class);
+            k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
             startActivity(k);
         } else if ((SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(0).getType()
                 .equals(GameUtils.Type.CHOICE.toString()))) {
             Intent k = new Intent(BeginGameActivity.this, ChoiceActivity.class);
+            k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
             startActivity(k);
         }
+        overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
         finish();
     }
 

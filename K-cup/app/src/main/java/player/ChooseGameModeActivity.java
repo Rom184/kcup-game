@@ -14,9 +14,7 @@ import com.kcup.drinkgame.k_cup.R;
 
 import java.util.List;
 
-import game.ChallengeActivity;
-import game.ChoiceActivity;
-import game.NoNeedPlayerActivity;
+import game.*;
 import identity.Rule;
 import utils.GameUtils;
 import utils.SharedPreferenceUtils;
@@ -48,7 +46,7 @@ public class ChooseGameModeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 createNewGame(25, 2);
-                goToNextRule();
+                goToBeginGame();
             }
         });
 
@@ -56,7 +54,7 @@ public class ChooseGameModeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 createNewGame(40, 4);
-                goToNextRule();
+                goToBeginGame();
             }
         });
 
@@ -64,7 +62,7 @@ public class ChooseGameModeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 createNewGame(66, 6);
-                goToNextRule();
+                goToBeginGame();
             }
         });
 
@@ -75,6 +73,14 @@ public class ChooseGameModeActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    private void goToBeginGame() {
+        Intent k = new Intent(ChooseGameModeActivity.this, BeginGameActivity.class);
+        k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
+        startActivity(k);
+        overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
+        finish();
     }
 
     private void createNewGame(int nbQuestion, int maxDrinks) {

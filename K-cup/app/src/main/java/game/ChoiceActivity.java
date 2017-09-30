@@ -27,8 +27,6 @@ public class ChoiceActivity extends AppCompatActivity {
     private Rule currentRule;
     private int position;
 
-    private LottieAnimationView animationView;
-
     private ImageView bulle;
     private ImageView back;
 
@@ -46,8 +44,6 @@ public class ChoiceActivity extends AppCompatActivity {
 
         Typeface typeface = Typeface.createFromAsset(getAssets(), "Roboto-Medium.ttf");
 
-        animationView = (LottieAnimationView) findViewById(R.id.animation_view);
-
         content = (FrameLayout) findViewById(R.id.background);
         bulle = (ImageView) findViewById(R.id.bulle);
         back = (ImageView) findViewById(R.id.back);
@@ -57,38 +53,7 @@ public class ChoiceActivity extends AppCompatActivity {
         count.setTypeface(typeface);
 
         getCurrentRule();
-        if (currentRule != null) {
-            final Bundle b = getIntent().getExtras();
-            if (b != null && !isAnimated) {
-                boolean isBegin = b.getBoolean(GameUtils.EXTRA_ANIMATION_BEGIN);
-                if (isBegin) {
-                    setBeginAnimation();
-                } else {
-                    bindView();
-                }
-            } else {
-                bindView();
-            }
-        }
-    }
-
-    private void setBeginAnimation() {
-        ruleContent.setVisibility(View.GONE);
-        animationView.setVisibility(View.VISIBLE);
-        animationView.setAnimation("preloader.json");
-        animationView.loop(true);
-        animationView.playAnimation();
-
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                animationView.setVisibility(View.GONE);
-                animationView.cancelAnimation();
-                ruleContent.setVisibility(View.VISIBLE);
-                isAnimated = true;
-                bindView();
-            }
-        }, GameUtils.TIME_ANIMATION_BEGIN);
+        bindView();
     }
 
     private void bindView() {
