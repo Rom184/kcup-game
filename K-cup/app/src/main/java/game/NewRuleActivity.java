@@ -92,30 +92,32 @@ public class NewRuleActivity extends AppCompatActivity {
 
     private void goToNextRule() {
         SharedPreferenceUtils.setPositionGame(getApplicationContext(), position + 1);
-        if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
-                .equals(GameUtils.Type.NO_NEED_PLAYER.toString())) {
-            Intent k = new Intent(NewRuleActivity.this, NoNeedPlayerActivity.class);
-            startActivity(k);
-            overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
-            finish();
-        } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
-                .equals(GameUtils.Type.CHALLENGE.toString())) {
-            Intent k = new Intent(NewRuleActivity.this, ChallengeActivity.class);
-            startActivity(k);
-            overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
-            finish();
-        } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
-                .equals(GameUtils.Type.CHOICE.toString())) {
-            Intent k = new Intent(NewRuleActivity.this, ChoiceActivity.class);
-            startActivity(k);
-            overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
-            finish();
-        } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
-                .equals(GameUtils.Type.KCUPS.toString())) {
-            Intent k = new Intent(NewRuleActivity.this, KcupActivity.class);
-            startActivity(k);
-            overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
-            finish();
+        if (position < SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).size()) {
+            if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
+                    .equals(GameUtils.Type.NO_NEED_PLAYER.toString())) {
+                Intent k = new Intent(NewRuleActivity.this, NoNeedPlayerActivity.class);
+                startActivity(k);
+                overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
+                finish();
+            } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
+                    .equals(GameUtils.Type.CHALLENGE.toString())) {
+                Intent k = new Intent(NewRuleActivity.this, ChallengeActivity.class);
+                startActivity(k);
+                overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
+                finish();
+            } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
+                    .equals(GameUtils.Type.CHOICE.toString())) {
+                Intent k = new Intent(NewRuleActivity.this, ChoiceActivity.class);
+                startActivity(k);
+                overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
+                finish();
+            } else if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
+                    .equals(GameUtils.Type.KCUPS.toString())) {
+                Intent k = new Intent(NewRuleActivity.this, KcupActivity.class);
+                startActivity(k);
+                overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
+                finish();
+            }
         } else {
             SharedPreferenceUtils.setPositionGame(getApplicationContext(), 0);
             Intent k = new Intent(NewRuleActivity.this, EndGameActivity.class);

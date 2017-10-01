@@ -210,87 +210,22 @@ public class GameUtils {
 
     public static List<Rule> createBerserkGame(Context context, String extra) {
 
-        List<String> listPlayer = SharedPreferenceUtils.getAllPlayer(context.getApplicationContext(), SharedPreferenceUtils.PREFS_PLAYER);
         List<Rule> newRule = new ArrayList<>();
-
         List<String> noNeedPlayer = getNoNeedPlayer(context, extra);
-        List<String> challenge = getChallenge(context);
-        List<String> choice = getChoice(context);
-
-        List<Integer> randomForNewRule = getRandomForNewRule(context);
-        List<String> newRuleAll = getNewRule(context);
-        List<String> newRuleNext = getNewRuleNext(context);
-        int positionNewRuleNext = 0;
 
         Log.e("noNeedPlayer", String.valueOf(noNeedPlayer.size()));
-        Log.e("challenge", String.valueOf(challenge.size()));
-        Log.e("choice", String.valueOf(choice.size()));
-        Log.e("randomForNewRule", String.valueOf(newRuleAll.size()));
-        Log.e("randomForNewRuleNext", String.valueOf(newRuleNext.size()));
 
-        int test = noNeedPlayer.size() + challenge.size() + choice.size() + newRuleAll.size() + newRuleNext.size();
+        int test = noNeedPlayer.size();
 
         Log.e("total", String.valueOf(test));
 
-        boolean isPossibleNewRule = false;
-
-        List<Integer> newKcup = new ArrayList<>();
-        int positionWhenKcupPossible = 8;
-        boolean isPossibleNewKcup = false;
-
         Random r = new Random();
         int nbRule = r.nextInt(40 - 25) + 25;
-        int positionWhenNewRulePossible = 2;
-        int nbStopNewRule = nbRule - 6;
 
         for (int a = 0; a < nbRule; a++) {
-
-            if (a == positionWhenNewRulePossible) {
-                isPossibleNewRule = true;
-            }
-
-            if (a == positionWhenKcupPossible && newKcup.size() < 2) {
-                isPossibleNewKcup = true;
-            }
-
-            int randomNewRule = r.nextInt(11) + 1;
-
-            if (a < nbStopNewRule && isPossibleNewRule && randomNewRule < 3) {
-                newRule.add(new Rule(getRandomSoftDrinksBerserk(context, newRuleAll.get(randomForNewRule.get(0)), 6), Type.NEW_RULE.toString()));
-                isPossibleNewRule = false;
-                positionNewRuleNext = a + (r.nextInt(3) + 5);
-            } else if (!isPossibleNewRule && a > 0 && a == positionNewRuleNext) {
-                newRule.add(new Rule(getRandomSoftDrinksBerserk(context, newRuleNext.get(randomForNewRule.get(0)), 6), Type.NEW_RULE_NEXT.toString()));
-                positionNewRuleNext = 0;
-                randomForNewRule.remove(0);
-                isPossibleNewRule = true;
-            } else {
-
-                int randomForKcup = r.nextInt(100) + 1;
-
-                if (isPossibleNewKcup && randomForKcup > 85) {
-                    newRule.add(new Rule(getSelectedWithTwoPlayerBerserk(context, context.getString(R.string.kcup_content), listPlayer, 6), Type.KCUPS.toString()));
-                    newKcup.add(a);
-                    positionWhenKcupPossible = a + 8;
-                    isPossibleNewKcup = false;
-                }
-
-                int randomType = r.nextInt(3) + 1;
-
-                if (randomType == 1) {
-                    Collections.shuffle(noNeedPlayer);
-                    newRule.add(new Rule(getRandomSoftDrinksBerserk(context, noNeedPlayer.get(0), 4), Type.NO_NEED_PLAYER.toString()));
-                    noNeedPlayer.remove(0);
-                } else if (randomType == 2) {
-                    Collections.shuffle(challenge);
-                    newRule.add(new Rule(getSelectedWithTwoPlayerBerserk(context, challenge.get(0), listPlayer, 4), Type.CHALLENGE.toString()));
-                    challenge.remove(0);
-                } else {
-                    Collections.shuffle(choice);
-                    newRule.add(new Rule(getChallengeWithPlayerBerserk(context, choice.get(0), listPlayer, 4), Type.CHOICE.toString()));
-                    choice.remove(0);
-                }
-            }
+            Collections.shuffle(noNeedPlayer);
+            newRule.add(new Rule(getRandomSoftDrinksBerserk(context, noNeedPlayer.get(0), 4), Type.NO_NEED_PLAYER.toString()));
+            noNeedPlayer.remove(0);
         }
 
         return newRule;

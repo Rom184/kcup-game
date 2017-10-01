@@ -14,6 +14,8 @@ import android.widget.TextView;
 
 import com.kcup.drinkgame.k_cup.R;
 
+import java.util.List;
+
 import dialog.homeOptionActivity;
 import game.ChallengeActivity;
 import game.ChoiceActivity;
@@ -21,6 +23,9 @@ import game.KcupActivity;
 import game.NewRuleActivity;
 import game.NewRuleNextActivity;
 import game.NoNeedPlayerActivity;
+import identity.Rule;
+import player.BeginGameActivity;
+import player.BeginGameBerserkActivity;
 import player.PlayerActivity;
 import player.PlayerBerserkActivity;
 import utils.GameUtils;
@@ -79,7 +84,7 @@ public class HomeMainFragment extends Fragment {
             continueGame.setVisibility(View.VISIBLE);
 
             String continueContent = getString(R.string.continue_game) + "\n" +
-                    (String.valueOf(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext()) + 1))  + " / " +
+                    (String.valueOf(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext()) + 1)) + " / " +
                     String.valueOf(SharedPreferenceUtils.getRule(getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).size());
 
             continueGame.setText(continueContent);
@@ -163,9 +168,18 @@ public class HomeMainFragment extends Fragment {
         newBerserkGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent k = new Intent(getActivity(), PlayerBerserkActivity.class);
-                k.putExtra(EXTRA_TYPE, GameUtils.Game.KCUP.toString());
+
+                List<Rule> ruleList = GameUtils.createBerserkGame(getActivity().getApplicationContext(), GameUtils.Game.KCUP.toString());
+
+                SharedPreferenceUtils.saveRule(getActivity().getApplicationContext(), ruleList, SharedPreferenceUtils.PREFS_RULE);
+                SharedPreferenceUtils.setPositionGame(getActivity().getApplicationContext(), 0);
+
+                Intent k = new Intent(getActivity(), BeginGameBerserkActivity.class);
                 startActivity(k);
+
+               /* Intent k = new Intent(getActivity(), PlayerBerserkActivity.class);
+                k.putExtra(EXTRA_TYPE, GameUtils.Game.KCUP.toString());
+                startActivity(k);*/
             }
         });
     }

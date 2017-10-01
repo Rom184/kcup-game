@@ -115,6 +115,7 @@ public class EndGameActivity extends AppCompatActivity {
         content.setAnimation(anim1);
         optionTitle.setAnimation(anim1);
         optionButton.setAnimation(anim1);
+        endButton.setAnimation(anim1);
 
         ImageView back = (ImageView) findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {

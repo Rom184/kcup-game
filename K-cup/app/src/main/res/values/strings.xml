@@ -29,6 +29,7 @@
     <string name="mode_easy">Il ne faut pas trop boire !</string>
     <string name="mode_normal">Buveur du soir bonsoir !</string>
     <string name="mode_hard">L\'alcool ? C\'est de l\'eau !</string>
+    <string name="mode_berserk">Préparez-vous\n\npour le\n\nBerserk !</string>
     <string name="no_need_player_title">OYÉ OYÉ !</string>
     <string name="challenge_title">DUEL !</string>
     <string name="choice_title">LA DEVINETTE !</string>

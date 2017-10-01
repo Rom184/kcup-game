@@ -59,6 +59,11 @@
             android:theme="@style/style_no_need_player" />
 
         <activity
+            android:name="player.BeginGameBerserkActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/style_berserk_black" />
+
+        <activity
             android:name="game.NoNeedPlayerActivity"
             android:screenOrientation="portrait"
             android:theme="@style/style_no_need_player" />
