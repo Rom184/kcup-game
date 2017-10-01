@@ -57,7 +57,7 @@
             android:layout_height="0dp"
             android:layout_gravity="bottom"
             android:layout_weight="45"
-            android:src="@drawable/ic_kcup_face" />
+            android:src="@drawable/ic_kcup_arbitre" />
 
     </LinearLayout>
 

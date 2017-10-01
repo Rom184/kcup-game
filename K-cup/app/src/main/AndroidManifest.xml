@@ -21,6 +21,7 @@
 
         <activity
             android:name="dialog.WarningActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/DialogTheme"
             android:windowSoftInputMode="adjustNothing" />
 
@@ -54,30 +55,37 @@
 
         <activity
             android:name="player.BeginGameActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/style_no_need_player" />
 
         <activity
             android:name="game.NoNeedPlayerActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/style_no_need_player" />
 
         <activity
             android:name="game.ChallengeActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/style_challenge" />
 
         <activity
             android:name="game.ChoiceActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/style_choice" />
 
         <activity
             android:name="game.NewRuleActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/style_new_rule" />
 
         <activity
             android:name="game.NewRuleNextActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/style_new_rule" />
 
         <activity
             android:name="game.KcupActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/style_kcup" />
 
         <activity
@@ -87,6 +95,7 @@
 
         <activity
             android:name="dialog.CancelActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/DialogTheme"
             android:windowSoftInputMode="adjustNothing" />
 

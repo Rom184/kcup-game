@@ -35,8 +35,9 @@
     <string name="kcup_game_title">LE K-CUP !</string>
     <string name="new_rule_title">NOUVELLE RÈGLE !</string>
     <string name="new_rule_next_title">FIN DE LA RÈGLE !</string>
-    <string name="end">Merci pour cette partie !</string>
-    <string name="end_game">Disposer !</string>
+    <string name="end">Que d\'aventures !</string>
+    <string name="end_game">Revenez à vos moutons !</string>
+    <string name="option_end_game">Et pourquoi pas...</string>
     <string name="send_mail">Envoie de mail</string>
     <string name="error_send_mail">Envoie de mail impossible !</string>
     <string name="error_open_facebook">Ouverture de Facebook impossible !</string>

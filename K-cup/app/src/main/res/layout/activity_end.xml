@@ -1,58 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/yellow"
-    android:orientation="vertical"
-    android:paddingLeft="12dp"
-    android:paddingRight="12dp"
-    android:weightSum="100">
+    android:background="@color/yellow">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/yellow"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="40"
+            android:src="@drawable/ic_kcup_choppe" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:text="@string/end"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/content_end"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            tools:text="@string/end" />
+
+        <Button
+            android:id="@+id/end_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="9"
+            android:background="@drawable/bouton_type"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="10dp"
+            android:text="@string/end_game"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/option_title"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:text="@string/option_end_game"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/option_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="9"
+            android:background="@drawable/bouton_type"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="10dp"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+    </LinearLayout>
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="35"
-        android:src="@drawable/ic_kcup_choppe" />
-
-    <TextView
-        android:id="@+id/title"
+        android:id="@+id/back"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="12dp"
-        android:layout_marginTop="12dp"
-        android:layout_weight="20"
-        android:gravity="center"
-        android:text="@string/end"
-        android:textColor="@android:color/black"
-        android:textSize="36sp" />
-
-    <TextView
-        android:id="@+id/content_end"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="12dp"
-        android:layout_marginTop="12dp"
-        android:layout_weight="35"
-        android:gravity="center"
-        android:textColor="@android:color/black"
-        android:textSize="26sp"
-        tools:text="@string/end" />
-
-    <Button
-        android:id="@+id/end_button"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/bouton_type"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        android:padding="10dp"
-        android:text="@string/end_game"
-        android:textAllCaps="false"
-        android:textSize="26sp" />
-
-</LinearLayout>
+        android:layout_gravity="start"
+        android:layout_margin="18dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        android:tint="@color/black_selected_white" />
+</FrameLayout>

@@ -73,7 +73,6 @@ public class homeOptionActivity extends AppCompatActivity {
         } catch (Exception e) {
             Toast.makeText(this, getString(R.string.error_open_facebook), Toast.LENGTH_SHORT).show();
         }
-
     }
 
     public String getFacebookPageURL(Context context) {
