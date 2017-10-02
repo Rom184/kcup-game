@@ -29,7 +29,8 @@
     <string name="mode_easy">Il ne faut pas trop boire !</string>
     <string name="mode_normal">Buveur du soir bonsoir !</string>
     <string name="mode_hard">L\'alcool ? C\'est de l\'eau !</string>
-    <string name="mode_berserk">Préparez-vous\n\npour le\n\nBerserk !</string>
+    <string name="mode_berserk">Préparez-vous\npour le\nBerserk !</string>
+    <string name="mode_berserk_2">Chaque choix aura des conséquences !</string>
     <string name="no_need_player_title">OYÉ OYÉ !</string>
     <string name="challenge_title">DUEL !</string>
     <string name="choice_title">LA DEVINETTE !</string>
@@ -49,7 +50,7 @@
     <string name="dialog_option_facebook">Un like sur Facebook ?</string>
     <string name="dialog_option_appli">Une note pour K-Cup ?</string>
     <string name="dialog_option_mail">Une idée à partager ?</string>
-    <string name="dialog_warning_title_begin">Salutation !</string>
+    <string name="dialog_warning_title_begin">Salutations !</string>
     <string name="dialog_warning_title">L\'abus d\'alcool est dangereux pour la santé. En jouant avec k-cup vous confirmez que vous êtes responsable des éventuelles conséquences.</string>
     <string name="dialog_warning_no">Annuler</string>
     <string name="dialog_warning_no_no">Laisse tomber</string>

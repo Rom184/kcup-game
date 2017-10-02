@@ -6,17 +6,16 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.kcup.drinkgame.k_cup.R;
 
-import game.ChallengeActivity;
-import game.ChoiceActivity;
-import game.NoNeedPlayerActivity;
+import game.BerserkQuestionActivity;
 import utils.GameUtils;
 import utils.SharedPreferenceUtils;
 
@@ -32,42 +31,73 @@ public class BeginGameBerserkActivity extends AppCompatActivity {
 
         Typeface typeface = Typeface.createFromAsset(getAssets(), "Roboto-Medium.ttf");
 
-        FrameLayout container = (FrameLayout) findViewById(R.id.content);
+        LinearLayout container = (LinearLayout) findViewById(R.id.content);
+
+        final ImageView logo = (ImageView) findViewById(R.id.logo);
 
         TextView title = (TextView) findViewById(R.id.title);
         title.setTypeface(typeface);
+
+        final TextView title2 = (TextView) findViewById(R.id.title_2);
+        title2.setTypeface(typeface);
 
         final Animation anim1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.effect_challenge);
         title.startAnimation(anim1);
 
         anim = (AnimationDrawable) container.getBackground();
-        anim.setEnterFadeDuration(1000);
+        anim.setEnterFadeDuration(2000);
         anim.setExitFadeDuration(2000);
         anim.setOneShot(true);
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+                logo.setVisibility(View.VISIBLE);
+                logo.startAnimation(anim1);
+                title2.setVisibility(View.VISIBLE);
+                title2.startAnimation(anim1);
+            }
+        }, 3000);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                final Animation anim2 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.effect_disappear);
+
+                anim2.setAnimationListener(new Animation.AnimationListener() {
+                    @Override
+                    public void onAnimationStart(Animation animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animation animation) {
+                        logo.setVisibility(View.GONE);
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animation animation) {
+
+                    }
+                });
+                logo.startAnimation(anim2);
+            }
+        }, 5000);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
                 goToNextRule();
             }
-        }, 4000);
+        }, 7200);
+
     }
 
     private void goToNextRule() {
 
         if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(0).getType()
-                .equals(GameUtils.Type.NO_NEED_PLAYER.toString())) {
-            Intent k = new Intent(BeginGameBerserkActivity.this, NoNeedPlayerActivity.class);
-            k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
-            startActivity(k);
-        } else if ((SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(0).getType()
-                .equals(GameUtils.Type.CHALLENGE.toString()))) {
-            Intent k = new Intent(BeginGameBerserkActivity.this, ChallengeActivity.class);
-            k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
-            startActivity(k);
-        } else if ((SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(0).getType()
-                .equals(GameUtils.Type.CHOICE.toString()))) {
-            Intent k = new Intent(BeginGameBerserkActivity.this, ChoiceActivity.class);
+                .equals(GameUtils.Type.BERSERK.toString())) {
+            Intent k = new Intent(BeginGameBerserkActivity.this, BerserkQuestionActivity.class);
             k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
             startActivity(k);
         }

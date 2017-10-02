@@ -93,6 +93,10 @@
             android:screenOrientation="portrait"
             android:theme="@style/style_kcup" />
 
+        <activity android:name="game.BerserkQuestionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/style_berserk_black" />
+
         <activity
             android:name="end.EndGameActivity"
             android:screenOrientation="portrait"

@@ -20,7 +20,8 @@ public class GameUtils {
 
     public enum Game {
         KCUP,
-        AFTER_KCUP
+        AFTER_KCUP,
+        BERSERK
     }
 
     public enum Type {
@@ -29,7 +30,8 @@ public class GameUtils {
         CHOICE,
         NEW_RULE,
         NEW_RULE_NEXT,
-        KCUPS
+        KCUPS,
+        BERSERK
     }
 
     public static List<Rule> createKcupGame(Context context, String extra) {
@@ -213,7 +215,7 @@ public class GameUtils {
         List<Rule> newRule = new ArrayList<>();
         List<String> noNeedPlayer = getNoNeedPlayer(context, extra);
 
-        Log.e("noNeedPlayer", String.valueOf(noNeedPlayer.size()));
+        Log.e("berserk question", String.valueOf(noNeedPlayer.size()));
 
         int test = noNeedPlayer.size();
 
@@ -224,7 +226,7 @@ public class GameUtils {
 
         for (int a = 0; a < nbRule; a++) {
             Collections.shuffle(noNeedPlayer);
-            newRule.add(new Rule(getRandomSoftDrinksBerserk(context, noNeedPlayer.get(0), 4), Type.NO_NEED_PLAYER.toString()));
+            newRule.add(new Rule(getRandomSoftDrinksBerserk(context, noNeedPlayer.get(0), 4), Type.BERSERK.toString()));
             noNeedPlayer.remove(0);
         }
 
