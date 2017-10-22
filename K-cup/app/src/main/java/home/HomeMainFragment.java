@@ -24,10 +24,8 @@ import game.NewRuleActivity;
 import game.NewRuleNextActivity;
 import game.NoNeedPlayerActivity;
 import identity.Rule;
-import player.BeginGameActivity;
 import player.BeginGameBerserkActivity;
 import player.PlayerActivity;
-import player.PlayerBerserkActivity;
 import utils.GameUtils;
 import utils.SharedPreferenceUtils;
 

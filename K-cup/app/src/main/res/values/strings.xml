@@ -64,12 +64,17 @@
     <string name="all">son verre</string>
 
     <!-- kcup game -->
+    <string-array name="kcup_array" formatted="false">
+        <item>%s et %a jouent à pierre papier ciseau.\n\nLe perdant c\'est %b !</item>
+        <item>%s et %a jouent à la bataille de regard.\n\nLe perdant c\'est %b !</item>
+        <item>%s et %a jouent au combat de pouces.\n\nLe perdant c\'est %b !</item>
+    </string-array>
     <string name="kcup_content" formatted="false">%s et %a jouent à pierre papier ciseau.\n\nLe perdant c\'est %b !</string>
 
     <!-- fast game -->
     <string-array name="no_need_player_array" formatted="false">
         <item>Les mains en l\'air ! La dernière personne boit %b</item>
-        <item>C\'est le jour des elfes ! \nEt %b pour faire la fête avec K-Cup</item>
+        <item>C\'est le jour des elfes ! \nEt %b pour faire la fête avec K-Cup !</item>
         <item>L\'hote distribue %b. S\'il n\'y en a pas, Tout le monde boit %b</item>
         <item>Tout le monde debout ! La dernière personne boit %b</item>
         <item>Tout le monde fait un dab ! La dernière personne boit %b</item>
@@ -80,7 +85,7 @@
         <item>La première personne à sortir un briquet distribue %b</item>
         <item>La première personne à crier ""ENCORE"" boit %b</item>
         <item>La première personne à crier ""MOI"" distribue %b</item>
-        <item>La première personne qui crit ""K-Cup"" distribue %b</item>
+        <item>La première personne à crier ""K-CUP"" distribue %b</item>
         <item>La première personne à se lever distribue %b</item>
         <item>La première personne à montrer un objet rouge distribue %b</item>
         <item>La première personne à montrer un objet blanc distribue %b</item>
@@ -111,13 +116,14 @@
         <item>Ceux qui sont déjà allés dans une tente distribuent %b</item>
         <item>Ceux qui sont déjà allés dans un sex shop distribuent %b</item>
         <item>Ceux qui sont déjà allés sur un bateau distribuent %b</item>
+        <item>Ceux qui sont déjà allés dans un bâtiment de plus de 1O étages distribuent %b</item>
         <item>Ceux dont le téléphone est sur la table boivent %b</item>
         <item>Ceux dont le téléphone est dans leurs poches boivent %b</item>
         <item>Ceux qui avaient moins de 8 ans pendant la coupe du monde 98 boivent %b</item>
         <item>Ceux qui avaient moins de 15 ans pour leur première fois distribuent %b</item>
         <item>Ceux qui avaient plus de 20 ans pour leur première fois boivent %b</item>
         <item>Ceux qui avaient moins de 15 ans pour leur première cigarette boivent %b</item>
-        <item>Ceux qui n\'ont jamais fumer de cigarette distribuent %b</item>
+        <item>Ceux qui n\'ont jamais fumer de cigarette distribuent %b (continuez comme ça !)</item>
         <item>Ceux qui fument des cigarettes de compétition boivent %b</item>
         <item>Ceux qui n\'ont jamais fais une partie de "" K-Cup "" finissent leur verre\n\nBienvenue aux nouveaux !</item>
         <item>Ceux qui sont (encore) à boire de l\'alcool soft (vin, biere, ..) boivent %b</item>
@@ -129,7 +135,7 @@
         <item>Ceux qui sont au vin boivent %b</item>
         <item>Ceux qui ont déjà regardé un film porno boivent %b</item>
         <item>Ceux qui ont regardé un film porno sur internet cette semaine boivent %b</item>
-        <item>Ceux qui ont déjà regardé une emission de télé réalité cette semaine boivent %b</item>
+        <item>Ceux qui ont déjà regardé une émission de télé-réalité cette semaine boivent %b</item>
         <item>Ceux qui entendent cette phrase boivent %b</item>
         <item>Ceux qui ont déjà lu un ""Chaire de poule"" boivent %b !</item>
         <item>Ceux qui ont déjà lu un ""Dragon Ball"" boivent %b !</item>
@@ -137,8 +143,8 @@
         <item>Ceux qui ont déjà lu un ""Berserk"" boivent %b !</item>
         <item>Ceux qui ont déjà lu un ""Agata Christie"" boivent %b !</item>
         <item>Ceux qui ont déjà lu un ""Twilight"" boivent %b !</item>
-        <item>Ceux qui ont déjà lu un manga boivent %b !</item>
-        <item>Ceux qui ont déjà lu un comics boivent %b !</item>
+        <item>Ceux qui ont déjà lu un ""Manga"" boivent %b !</item>
+        <item>Ceux qui ont déjà lu un ""comics"" boivent %b !</item>
         <item>Ceux qui ont déjà habité dans plus de 3 villes différentes boivent %b !</item>
         <item>Ceux qui vivent dans leur ville natale distribuent %b !</item>
         <item>Ceux qui n\'aime pas MacDonald boivent %b !</item>
@@ -150,7 +156,7 @@
         <item>Ceux qui ont du rose ou violet sur eux distribuent %b</item>
         <item>Ceux qui ont du rouge ou vert sur eux boivent %b</item>
         <item>Ceux qui ont du noir sur eux boivent %b</item>
-        <item>Ceux qui ont pensé qu\'il n\'allait pas boire ce tour là boivent %b\n\nMais non, tout le monde boit !</item>
+        <item>Tout le monde boit %b !\n\n(plutôt simple comme règle)</item>
         <item>Celui/Celle qui a le plus d\'amis sur Facebook boit %b</item>
         <item>Celui/Celle qui a le moins d\'amis sur Facebook distribue %b</item>
         <item>Celui/Celle qui n\'est pas sur Facebook boit %b</item>
@@ -159,7 +165,7 @@
         <item>Celui/Celle qui n\'est pas sur Snapshat boit %b</item>
         <item>Celui/Celle qui n\'est pas sur Pinterest boit %b</item>
         <item>Celui/Celle qui a mis la musique ou la télé distribue %b</item>
-        <item>Celui/Celle qui a eu l\'idée de jouer au "" K-Cup "" distribue %b</item>
+        <item>Celui/Celle qui a eu l\'idée de jouer au "" K-Cup "" distribue %b (K-Cup te remercie !)</item>
         <item>Celui/Celle ayant le verre le plus rempli boit %b</item>
         <item>Celui/Celle qui a le moins de cheveux boit %b</item>
         <item>Celui/Celle qui a le moins de cheveux distribue %b</item>
@@ -173,13 +179,15 @@
         <item>Tous ceux dont le prénom comporte un ""R"" boivent %b</item>
         <item>Tous ceux dont le prénom comporte un ""C"" boivent %b</item>
         <item>Tous ceux dont le prénom comporte un ""T"" boivent %b</item>
+        <item>Tous ceux dont le prénom commençant par un ""R"" boivent %b</item>
+        <item>Tous ceux dont le prénom commençant par un ""C"" boivent %b</item>
         <item>Tous les blonds/blondes boivent %b</item>
         <item>Tous les bruns/brunes boivent %b</item>
         <item>Tu es roux ? Alors distribue %b !</item>
-        <item>Les fausses couleurs pour les cheveux c\'est %b</item>
+        <item>Les fausses couleurs pour les cheveux c\'est %b( (fallait être plus naturelle !)</item>
         <item>Les faux ongles c\'est %b</item>
         <item>Les enfants uniques boivent %b !</item>
-        <item>Tu as un frère ? %b !</item>
+        <item>Tu as un frangin ? %b !</item>
         <item>Tu as une soeur ? %b !</item>
         <item>Tu as au moins une soeur et un frère ? alors distribue %b !</item>
         <item>Tu as un animal de compagnie ? Alors boit %b !</item>
@@ -190,7 +198,7 @@
         <item>Tu as un nom de famille bizarre et tu en as souffert jeune ? Alors ça continue et bois %b</item>
         <item>Tu as un nom de famille qui veut dire quelque chose ? Alors distribue %b</item>
         <item>Tu as un prénom composé ? Alors bois %b</item>
-        <item>Tu as un deuxième prénom ? Alors bois %b</item>
+        <item>Tu as un deuxième prénom ? Alors bois %b (un suffit amplement voyons)</item>
         <item>Les redoublants boivent %b !</item>
         <item>Les redoublants distribuent %b !</item>
         <item>Si tu n\'a jamais redoublé, tu peux distribuer %b</item>
@@ -198,6 +206,7 @@
         <item>Les barbus, vous buvez %b !</item>
         <item>Les imberbes, vous buvez %b !</item>
         <item>Les binoclards boivent %b</item>
+        <item>Tu as des lentilles de contacts ? Alors %b !</item>
         <item>Les hommes distribuent %b</item>
         <item>Les hommes boivent %b !</item>
         <item>Les femmes boivent %b !</item>
@@ -216,9 +225,9 @@
         <item>Le joueur avec les pires histoires d\'amour distribue %b</item>
         <item>Le joueur avec les relations les plus courtes boit %b</item>
         <item>Le joueur avec le verre le plus alcoolisé distribue %b</item>
-        <item>Les joueurs sans alcool distribuent %b</item>
+        <item>Les joueurs sans alcool distribuent %b (Mais au fait, vous faites quoi ici ?)</item>
         <item>Le joueurs avec des habits avec des logos voyants boivent %b</item>
-        <item>Les personnes qui n\'ont jamais joué au "" K-Cup "" avant ce soir boivent %b</item>
+        <item>Les personnes qui n\'ont jamais joué au "" K-Cup "" avant ce soir boivent %b (Ravi de faire votre connaissance !)</item>
         <item>Les personnes qui ont déjà joué au DrinK-Cup avant ce soir ditribue %b</item>
         <item>Si ton jour d\'anniversaire est un nombre pair, bois %b</item>
         <item>Si ton jour d\'anniversaire est un nombre impair, bois %b</item>
@@ -253,6 +262,7 @@
         <item>Ceux qui sont allés en Espagne boivent %b</item>
         <item>Ceux qui sont allés en Suisse boivent %b</item>
         <item>Ceux qui sont allés en France boivent %b</item>
+        <item>Ceux qui ne sont pas allées au pays des elfes boivent %b (Et pourtant c\'est magnifique !)</item>
         <item>Ceux qui sont déjà allés a un match de foot boivent %b</item>
         <item>Ceux qui ont déjà pissé ou chié dans l\'océan boivent %b</item>
         <item>Ceux qui ont déjà pissé dans une piscine boivent %b</item>
@@ -266,7 +276,7 @@
         <item>Ceux qui ont déjà fait l\'amour dans une voiture boivent %b</item>
         <item>Ceux qui ont déjà fait l\'amour dans la forêt boivent %b</item>
         <item>Ceux qui ont déjà comparé la taille de leur sexe avec des amis boivent %b</item>
-        <item>Ceux qui travaillent ou étudient dans la finance ou la comptabilite boivent %b</item>
+        <item>Ceux qui travaillent ou étudient dans la finance ou la comptabilité boivent %b</item>
         <item>Ceux qui travaillent ou étudient dans l\'informatique boivent %b</item>
         <item>Ceux qui travaillent ou étudient dans le commerce ou la vente boivent %b</item>
         <item>Ceux qui son étudiants, %b pour mieux etudier !</item>
@@ -299,15 +309,15 @@
         <item>Les fans de séries boivent %b</item>
         <item>Les fans de manga boivent %b</item>
         <item>Les fans de livraison à domicile boivent %b</item>
-        <item>Les fans de télé réalité boivent %b</item>
+        <item>Les fans de télé-réalité boivent %b</item>
         <item>Les moins de 21 ans boivent %b !</item>
         <item>Les plus de 25 ans boivent %b !</item>
-        <item>La prochaine personne qui dit OUI ou NON prend %b</item>
-        <item>La prochaine personne qui dit BOIT prend %b</item>
-        <item>La prochaine personne qui dit LE ou LA boit %b</item>
-        <item>La prochaine personne qui dit UN ou UNE boit %b</item>
+        <item>La prochaine personne qui dit ""OUI"" ou ""NON"" prend %b</item>
+        <item>La prochaine personne qui dit ""BOIT"" prend %b</item>
+        <item>La prochaine personne qui dit ""LE"" ou ""LA"" boit %b</item>
+        <item>La prochaine personne qui dit ""UN"" ou ""UNE"" boit %b</item>
         <item>La prochaine personne qui dit un chiffre ou un nombre boit %b</item>
-        <item>La prochaine personne qui s\'allume une cigarette boit %b gorgées</item>
+        <item>La prochaine personne qui s\'allume une cigarette finit son verre (boire ou fumer il faut choisir)</item>
         <item>La ou les prochaines personnes à devoir boire doublera son nombre de gorgées !</item>
         <item>La ou les prochaines personnes à devoir boire triplera son nombre de gorgées !</item>
         <item>Le prochain joueur à devoir boire distribue %b</item>
@@ -328,6 +338,7 @@
         <item>%b pour les footballers !</item>
         <item>%b pour les basketteurs !</item>
         <item>%b pour les arachnophobes !</item>
+        <item>%b pour les peureux des souris !</item>
         <item>%b pour ceux qui vont en salle de sport !</item>
         <item>%b gorgées pour les fans de Walking Dead !</item>
         <item>%b gorgées pour les fans de Big Bang Theory !</item>
@@ -342,78 +353,80 @@
         <item>Les joueurs en train de fumer boivent %b</item>
         <item>Les joueurs qui ont déjà combattu sur un tatami boivent %b</item>
         <item>Les joueurs qui sont allés dans un centre commercial aujourd\'hui boivent %b</item>
-        <item>Les joueurs qui ont déjà checkés leur âge dans le fond d\'un verre boivent %b</item>
+        <item>Les joueurs qui ont déjà regardé leur âge dans le fond d\'un verre boivent %b</item>
         <item>Les joueurs qui vivent seuls en appart ou en studio boivent %b</item>
         <item>Ceux qui n\'ont pas téléchargé le jeu K-Cup boivent %b (et faites le après !)</item>
         <item>Le joueur qui a le plus gros billet sur lui peut distribuer %b</item>
         <item>Ceux qui ont joué à Pokemon GO boivent %b</item>
         <item>Ceux qui ont joué à Final Fantasy 7 distribuent %b</item>
         <item>Ceux qui ont joué à World of Warcraft boivent %b</item>
+        <item>Ceux qui ont joué à Candy Crush boivent %b</item>
+        <item>Ceux qui ont joué au Zelda sur Switch boivent %b</item>
         <item>Ceux qui ont déjà vu ou lu Berserk distribuent %b</item>
         <item>Le premier à poser son pouce sur la table distribue %b</item>
         <item>Le premier à poser un pied sur la table distribue %b (si tu renverses quelque chose tu finis ton verre !)</item>
-        <item>Ceux qui ont déjà sniffé du popers boivent %b</item>
+        <item>Ceux qui ont déjà sniffé du popers boivent %b(si tu ne connais pas tant mieux !)</item>
     </string-array>
 
-    <string-array name="no_need_player_after_kcup_array" formatted="false">
-        <item>Les mains en l\'air ! La dernière personne boit %b</item>
-        <item>C\'est le jour des employés ! \n\n%b pour chaque employé !</item>
-        <item>C\'est le jour des patrons ! \n\n%b pour chaque patron !</item>
-        <item>C\'est le jour des chomeurs ! \n\n%b pour ceux qui ne bosse pas !</item>
-        <item>L\'hote distribue %b. S\'il n\'y en a pas, Tout le monde boit %b</item>
-        <item>Tout le monde debout ! La dernière personne boit %b</item>
-        <item>Tout le monde prend son verre ! La dernière personne boit %b</item>
-        <item>Le première personne à s\'être levée ce matin boit %b</item>
-        <item>Le première personne à commencer le travail ce matin boit %b</item>
-        <item>Le dernière personne à commencer le travail ce matin boit %b</item>
-        <item>La première personne à sortir un badge de son travail distribue %b</item>
-        <item>La première personne à sortir un briquet distribue %b</item>
-        <item>La première personne à crier ""CHEF"" boit %b</item>
-        <item>La première personne à crier ""PAUSE"" boit %b</item>
-        <item>La première personne à crier ""BOULOT"" distribue %b</item>
-        <item>La première personne à crier ""CDI"" distribue %b</item>
-        <item>La première personne qui crit ""K-Cup"" distribue %b</item>
-        <item>La première personne à montrer un employé distribue %b</item>
-        <item>La première personne à montrer un patron distribue %b</item>
-        <item>La première personne à montrer un chomeur distribue %b</item>
-        <item>La première personne à montrer un objet qui vient de son boulot distribue %b</item>
-        <item>La première personne à montrer une photo marrante de son travail distribue %b</item>
-        <item>La première personne qui trouve le joueur le plus jeune distribue %b</item>
-        <item>La première personne qui trouve le joueur avec le plus d\'ancienneté distribue %b</item>
-        <item>La première personne qui trouve un joueur qui travaille distribue %b</item>
-        <item>La première personne qui trouve un joueur qui ne travaille pas distribue %b</item>
-        <item>La dernière personne à être allée aux toilettes à son travail boit %b</item>
-        <item>Le dernier à s\'être servi un verre boit %b</item>
-        <item>Le dernier à avoir bu distribue %b</item>
-        <item>Le dernier joueur à être allé en repas de boulot distribue %b</item>
-        <item>Le dernier joueur à être allé à un after work distribue %b</item>
-        <item>Les gauchers/gauchères boivent %b</item>
-        <item>Les droitiers/droitières boivent %b</item>
-        <item>Les droitiers/droitières se lèvent pendant que les gauchers/gauchères boivent %b</item>
-        <item>Les gauchers/gauchères se lèvent pendant que les droitiers/droitières boivent %b</item>
-        <item>Les gauchers/gauchères on change de main le reste de la partie pour boire sinon %b</item>
-        <item>Les droitiers/droitières on change de main le reste de la partie pour boire sinon %b</item>
-        <item>Ceux qui sont déjà allés dans un entrepos boivent %b</item>
-        <item>Ceux qui sont déjà allés à une chambre froide distribuent %b</item>
-        <item>Ceux qui sont déjà allés dans le bureau du patron distribuent %b</item>
-        <item>Ceux qui sont déjà allés dans un bar avec des collègues boivent %b</item>
-        <item>Ceux qui sont déjà allés à l\'école boivent %b</item>
-        <item>Ceux qui sont déjà allés dans un bâtiment de plus de 3 étages aujourd\'hui boivent %b</item>
-        <item>Ceux qui sont déjà allés dans un maison aujourd\'hui boivent %b</item>
-        <item>Ceux qui sont déjà allés dans une auberge distribuent %b</item>
-        <item>Ceux qui sont déjà allés dans une hotel distribuent %b</item>
-        <item>Ceux qui sont déjà allés dans une étable distribuent %b</item>
-        <item>Ceux qui sont déjà allés dans une tente distribuent %b</item>
-        <item>Ceux qui sont déjà allés dans un  distribuent %b</item>
-        <item>Ceux qui sont déjà allés en pause aujourd\'hui distribuent %b</item>
-        <item>Ceux qui ont le bac boivent %b</item>
-        <item>Ceux qui ont un bac +3 boivent %b</item>
-        <item>Ceux qui ont un bac +5 distribuent %b</item>
-        <item>Ceux qui ont un CDD boivent %b</item>
-        <item>Ceux qui ont un CDI boivent %b</item>
-        <item>Ceux qui sont en alternace boivent %b</item>
-        <item>Ceux qui sont ont en interim boivent %b</item>
-    </string-array>
+    <!--    <string-array name="no_need_player_after_kcup_array" formatted="false">
+            <item>Les mains en l\'air ! La dernière personne boit %b</item>
+            <item>C\'est le jour des employés ! \n\n%b pour chaque employé !</item>
+            <item>C\'est le jour des patrons ! \n\n%b pour chaque patron !</item>
+            <item>C\'est le jour des chomeurs ! \n\n%b pour ceux qui ne bosse pas !</item>
+            <item>L\'hote distribue %b. S\'il n\'y en a pas, Tout le monde boit %b</item>
+            <item>Tout le monde debout ! La dernière personne boit %b</item>
+            <item>Tout le monde prend son verre ! La dernière personne boit %b</item>
+            <item>Le première personne à s\'être levée ce matin boit %b</item>
+            <item>Le première personne à commencer le travail ce matin boit %b</item>
+            <item>Le dernière personne à commencer le travail ce matin boit %b</item>
+            <item>La première personne à sortir un badge de son travail distribue %b</item>
+            <item>La première personne à sortir un briquet distribue %b</item>
+            <item>La première personne à crier ""CHEF"" boit %b</item>
+            <item>La première personne à crier ""PAUSE"" boit %b</item>
+            <item>La première personne à crier ""BOULOT"" distribue %b</item>
+            <item>La première personne à crier ""CDI"" distribue %b</item>
+            <item>La première personne qui crit ""K-Cup"" distribue %b</item>
+            <item>La première personne à montrer un employé distribue %b</item>
+            <item>La première personne à montrer un patron distribue %b</item>
+            <item>La première personne à montrer un chomeur distribue %b</item>
+            <item>La première personne à montrer un objet qui vient de son boulot distribue %b</item>
+            <item>La première personne à montrer une photo marrante de son travail distribue %b</item>
+            <item>La première personne qui trouve le joueur le plus jeune distribue %b</item>
+            <item>La première personne qui trouve le joueur avec le plus d\'ancienneté distribue %b</item>
+            <item>La première personne qui trouve un joueur qui travaille distribue %b</item>
+            <item>La première personne qui trouve un joueur qui ne travaille pas distribue %b</item>
+            <item>La dernière personne à être allée aux toilettes à son travail boit %b</item>
+            <item>Le dernier à s\'être servi un verre boit %b</item>
+            <item>Le dernier à avoir bu distribue %b</item>
+            <item>Le dernier joueur à être allé en repas de boulot distribue %b</item>
+            <item>Le dernier joueur à être allé à un after work distribue %b</item>
+            <item>Les gauchers/gauchères boivent %b</item>
+            <item>Les droitiers/droitières boivent %b</item>
+            <item>Les droitiers/droitières se lèvent pendant que les gauchers/gauchères boivent %b</item>
+            <item>Les gauchers/gauchères se lèvent pendant que les droitiers/droitières boivent %b</item>
+            <item>Les gauchers/gauchères on change de main le reste de la partie pour boire sinon %b</item>
+            <item>Les droitiers/droitières on change de main le reste de la partie pour boire sinon %b</item>
+            <item>Ceux qui sont déjà allés dans un entrepos boivent %b</item>
+            <item>Ceux qui sont déjà allés à une chambre froide distribuent %b</item>
+            <item>Ceux qui sont déjà allés dans le bureau du patron distribuent %b</item>
+            <item>Ceux qui sont déjà allés dans un bar avec des collègues boivent %b</item>
+            <item>Ceux qui sont déjà allés à l\'école boivent %b</item>
+            <item>Ceux qui sont déjà allés dans un bâtiment de plus de 3 étages aujourd\'hui boivent %b</item>
+            <item>Ceux qui sont déjà allés dans un maison aujourd\'hui boivent %b</item>
+            <item>Ceux qui sont déjà allés dans une auberge distribuent %b</item>
+            <item>Ceux qui sont déjà allés dans une hotel distribuent %b</item>
+            <item>Ceux qui sont déjà allés dans une étable distribuent %b</item>
+            <item>Ceux qui sont déjà allés dans une tente distribuent %b</item>
+            <item>Ceux qui sont déjà allés dans un  distribuent %b</item>
+            <item>Ceux qui sont déjà allés en pause aujourd\'hui distribuent %b</item>
+            <item>Ceux qui ont le bac boivent %b</item>
+            <item>Ceux qui ont un bac +3 boivent %b</item>
+            <item>Ceux qui ont un bac +5 distribuent %b</item>
+            <item>Ceux qui ont un CDD boivent %b</item>
+            <item>Ceux qui ont un CDI boivent %b</item>
+            <item>Ceux qui sont en alternace boivent %b</item>
+            <item>Ceux qui sont ont en interim boivent %b</item>
+        </string-array>-->
 
     <string-array name="challenge_array" formatted="false">
         <!-- solo challenge -->
@@ -426,26 +439,26 @@
         <item>%s, c\'est le jour du wiskhy ! \nDistribue %b de wiskhy où bois %b</item>
         <item>%s, c\'est le jour de la vodka ! \nDistribue %b de vodka où bois %b</item>
         <item>%s, c\'est le jour du partage ! \nDistribue %b puis bois %b</item>
-        <item>%s, c\'est le jour du communisme ! \nBois %b puis les autres joueurs pour l\'équilibre</item>
+        <item>%s, c\'est le jour du communisme ! \nBois %b puis tous les autres joueurs pour l\'équilibre</item>
         <item>%s, c\'est le jour des héros ! \nUn sauveur se choisit et doit boire %b à ta place</item>
         <item>%s, c\'est le jour des vengeances ! \nBois %b puis distribue le double</item>
         <item>%s, tu crois aux fées ? Non ? Alors bois %b</item>
         <item>%s, tu crois au Père Noël ? Non ? Alors bois %b</item>
         <item>%s, tu es un vrai poissard, tu finis ton verre</item>
-        <item>%s, tu crois à la chance ? Non ? Pourtant le joueur à ta droite bois %b</item>
+        <item>%s, tu crois à la chance ? Non ? Pourtant le joueur à ta droite et à ta gauche boivent %b</item>
         <item>%s, tu crois au karma ? Non ? Pourtant le joueur à ta droite décide si tu bois %b ou non</item>
         <item>%s, tu crois à la magie ? Non ? Alors ferme les yeux et quand tu les ouvriras ton verre sera vide</item>
         <item>%s, tu crois à la l\'équilibre ? Non ? Alors tous les joueurs doivent remplir ou boire leur verre pour qu\'il soit comme le tien</item>
-        <item>%s, tu crois aux miracles ? Mais si ! Alors distribue %b</item>
+        <item>%s, tu crois aux miracles ? Mais si ! Alors distribue %b puis encore encore %b</item>
         <item>%s, remplis ton verre! \nS\'il était déjà plein bois %b</item>
-        <item>%s, distribue %b si tu as déjà eu un accident de voiture</item>
+        <item>%s, distribue %b si tu as déjà eu un accident de voiture (et ne conduit surtout pas après le K-Cup !)</item>
         <item>%s, distribue %b si tu as n\'a jamais eu un accident de voiture</item>
-        <item>%s, montre une carte d\'identité et bois %b si personne te charie</item>
-        <item>%s, montre une carte d\'identité et distribue %b à chaque personne qui rigole</item>
+        <item>%s, montre une pièce d\'identité et bois %b si personne te charie</item>
+        <item>%s, montre une pièce d\'identité et distribue %b à chaque personne qui rigole</item>
         <item>%s, distribue %b si tu t\'es déjà cassé le bras ou la jambe</item>
         <item>%s, distribue %b si tu as déjà eu l\'appendicite</item>
         <item>%s, distribue %b si tu as déjà eu un plâtre</item>
-        <item>%s distribue %b si tu as déjà été opéré(e)</item>
+        <item>%s distribue %b si tu as déjà été opéré</item>
         <item>%s bois %b si tu as déjà fais du ski nautique</item>
         <item>%s bois %b si tu as déjà fais du ski</item>
         <item>%s bois %b si tu compte aller en boite ce soir</item>
@@ -471,8 +484,8 @@
         <item>%s la princesse en toi veut combler les garçons alors %b pour tous les hommes !</item>
         <item>%s le prince en toi veut combler les filles alors %b pour toutes les femmes !</item>
         <item>%s, montre les 5 dernières photos de ton portable ou bois %b</item>
-        <item>%s, montre les 5 premiers contactes de ton portable et bois %b pour chaque femme</item>
-        <item>%s, montre les 5 derniers contactes de ton portable et bois %b pour chaque homme</item>
+        <item>%s, montre les 5 premiers contactes de ton portable et bois %b pour chaque femme présentes dessus</item>
+        <item>%s, montre les 5 derniers contactes de ton portable et bois %b pour chaque homme présents dessus</item>
         <item>%s, appel la dernière personne dans tes contactes et fais la promo de K-Cup ou bois %b</item>
         <item>%s, envoie un message à la 5e personne dans tes contactes et fais la promo de K-Cup ou bois %b</item>
         <item>%s, écris un tweet et fais la promo de K-Cup ou bois %b</item>
@@ -494,8 +507,8 @@
         <item>%s tu as une voiture ?\n\nAlors %b sinon distribue %b!</item>
         <item>%s tu as une moto ?\n\nAlors %b sinon distribue %b!</item>
         <item>%s tu as des lunettes ?\n\nAlors %b sinon distribue %b!</item>
-        <item>%s tu as un médoc pour les maux de tête ?\n\nAlors %b car tu en auras besoin!</item>
-        <item>%s tu as un elfe de maison ?\n\n Non. Alors %b sinon tu finis ton verre!</item>
+        <item>%s tu as un médoc pour les maux de tête ?\n\nAlors %b car tu en auras besoin !</item>
+        <item>%s tu as un elfe de maison ?\n\n Non. Alors %b sinon tu finis ton verre !</item>
         <item>%s tu es enceinte ?\n\n Non. Alors %b (si Oui on ne bois surtout pas !)</item>
         <item>%s, si tes jambes ne sont pas épileés bois %b</item>
         <item>%s, si tu portes un soutien gorge bois %b</item>
@@ -531,7 +544,7 @@
         <item>%s, si tu as déjà déclaré ta flamme par texto en étant soûl bois %b</item>
         <item>%s, si tu as déjà volé dans un magasin bois %b</item>
         <item>%s, si tu as déjà été viré de bar/boite bois %b</item>
-        <item>%s, si tu as déjà rompu avec quelqu\'un par sms bois %b</item>
+        <item>%s, si tu as déjà rompu avec quelqu\'un par message bois %b</item>
         <item>%s, si tu as déjà menti sur ton age pour chopper distribue %b</item>
         <item>%s, si tu t\'es déjà battu avec quelqu\'un tu bois %b</item>
         <item>%s, si tu bois dans une bouteille tu bois %b</item>
@@ -552,6 +565,7 @@
         <item>%s boit %b si tu es allé sur Twitter aujourd\'hui</item>
         <item>%s boit %b si tu es allé sur un jeu sur ton téléphone aujourd\'hui</item>
         <item>%s boit %b car tu as soif !</item>
+        <item>%s boit %b car avoir le ventre vide n\'est jamais bon !</item>
         <item>%s distribue %b car le partage c\'est important !</item>
         <item>%s distribue %b à une personne à qui tu fais un clin d\'oeil</item>
         <item>%s distribue %b à une personne à qui tu fais un sourire</item>
@@ -571,10 +585,10 @@
         <item>%s boit %b si tu es débile, les autres joueurs choisissent</item>
         <item>%s boit %b si tu es nul en blagues, les autres joueurs choisissent</item>
         <item>%s boit %b si tu es trop influençable, les autres joueurs choisissent</item>
-        <item>%s boit %b si tu oublie autour de toi quand tu es amoureux, les autres joueurs choisissent</item>
+        <item>%s boit %b si tu oublie tout autour de toi quand tu es amoureux, les autres joueurs choisissent</item>
         <item>%s, bois autant de gorgées que tu as visité de pays !</item>
         <item>%s, distribue autant de gorgées que tu as visité de pays !</item>
-        <item>%s, si tu as un appel pendant le jeu, tu bois %b avant de répondre</item>
+        <item>%s, si tu as un appel ou un message pendant le jeu, tu bois %b à chaque fois !</item>
         <item>%s distribue %b si tu as déjà acheté un portable plus de 600 euros</item>
         <item>%s distribue %b si tu connais le nom de la meilleure application d\'alcool (si tu ne dis pas K-Cup tout le monde boit)</item>
         <item>%s si ton age est pair tu bois %b, 5 s\'il est impair !</item>
@@ -594,25 +608,25 @@
         <item>%s bois %b si tu as déjà porté un appareil dentaire</item>
         <item>%s bois %b si tu as achété ton portable plus de 300 euros</item>
         <item>%s bois %b si tu n\'as pas ton véritable nom sur Facebook</item>
-        <item>%s bois %b si tu as une trottinette</item>
+        <item>%s bois %b si tu as une trottinette, électrique c\'est pareil !</item>
         <item>%s bois %b si tu as une voiture</item>
         <item>%s bois %b si tu es locataire</item>
         <item>%s bois %b si tu es propriétaire</item>
         <item>%s bois %b si tu as fait l\'amour pour la première fois apres 16 ans</item>
         <item>%s bois %b si tu as fait l\'amour pour la première fois apres 20 ans</item>
         <item>%s tu touches tout le temps la table sinon %b à chaque fois que tu l\'enlèves</item>
-        <item>Les mots synonymes de ""PENIS"", le joueur qui répéte ou qui se trompe boit %b ! %s commence</item>
-        <item>Les mots synonymes de ""BELGE"", le joueur qui répéte ou qui se trompe boit %b ! %s commence</item>
-        <item>Les mots synonymes de ""BANDER"", le joueur qui répéte ou qui se trompe boit %b ! %s commence</item>
-        <item>Les mots synonymes de ""CHAUCOLA"", le joueur qui répéte ou qui se trompe boit %b ! %s commence</item>
-        <item>Les mots synonymes de ""ANUS"", le joueur qui répéte ou qui se trompe boit %b ! %s commence</item>
-        <item>Les mots synonymes de ""CUL"", le joueur qui répéte ou qui se trompe boit %b ! %s commence</item>
-        <item>Les mots synonymes de ""BOIRE"", le joueur qui répéte ou qui se trompe boit %b ! %s commence</item>
-        <item>Les mots synonymes de ""ELFE"", le joueur qui répéte ou qui se trompe boit %b ! %s commence</item>
-        <item>Les mots synonymes de ""VERRE"", le joueur qui répéte ou qui se trompe boit %b ! %s commence</item>
-        <item>Les mots synonymes de ""POMPETTE"", le joueur qui répéte ou qui se trompe boit %b ! %s commence</item>
-        <item>Les mots synonymes de ""K-CUP"" en anglais, le joueur qui répéte ou qui se trompe boit %b ! %s commence</item>
-        <item>Les mots synonymes de ""DRINK"" en anglais, le joueur qui répéte ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""PENIS"", le joueur qui répète ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""BELGE"", le joueur qui répète ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""BANDER"", le joueur qui répète ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""CHAUCOLA"", le joueur qui répète ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""ANUS"", le joueur qui répète ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""CUL"", le joueur qui répète ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""BOIRE"", le joueur qui répète ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""ELFE"", le joueur qui répète ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""VERRE"", le joueur qui répète ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""POMPETTE"", le joueur qui répète ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""K-CUP"" en anglais, le joueur qui répète ou qui se trompe boit %b ! %s commence</item>
+        <item>Les mots synonymes de ""DRINK"" en anglais, le joueur qui répète ou qui se trompe boit %b ! %s commence</item>
         <item>%s tu expliques pourquoi te ne devrais pas boire %b tout de suite. Les autres joueurs trancheront si oui ou non !</item>
         <item>%s tu expliques pourquoi te ne devrais pas boire ton verre tout de suite. Les autres joueurs trancheront si oui ou non !</item>
         <item>Nouveau decret avec %b en jeu : ""les persos de Tintin"", %s prend en 1er la parole</item>
@@ -636,12 +650,12 @@
         <item>Nouveau décret avec %b en jeu : ""être bourré c\'est cool"", %s prend en 1er la parole</item>
         <item>Nouveau décret avec %b en jeu : ""les noms de cocktail"", %s prend en 1er la parole</item>
         <item>Nouveau décret avec %b en jeu : ""les personnages des X-Men"", %s prend en 1er la parole</item>
-        <item>Nouveau décret avec %b en jeu : ""les fast food"", %s prend en 1er la parole</item>
+        <item>Nouveau décret avec %b en jeu : ""les noms fast food"", %s prend en 1er la parole</item>
         <item>Nouveau décret avec %b en jeu : ""les dessins animés des années 90"", %s prend en 1er la parole</item>
         <item>Nouveau décret avec %b en jeu : ""les dessins animés des années 2000"", %s prend en 1er la parole</item>
         <item>Nouveau décret avec %b en jeu : ""les séries des années 90"", %s prend en 1er la parole</item>
         <item>Nouveau décret avec %b en jeu : ""les séries des années 2000"", %s prend en 1er la parole</item>
-        <item>Nouveau décret avec %b en jeu : ""les séries américaine"", %s prend en 1er la parole</item>
+        <item>Nouveau décret avec %b en jeu : ""les séries américaines"", %s prend en 1er la parole</item>
         <item>Nouveau décret avec %b en jeu : ""les séries anglaises"", %s prend en 1er la parole</item>
         <item>Nouveau décret avec %b en jeu : ""les séries avec plus de 5 saisons"", %s prend en 1er la parole</item>
         <item>Nouveau décret avec %b en jeu : ""les emissions de télévision"", %s prend en 1er la parole</item>
@@ -671,6 +685,8 @@
         <item>Ceux qui ont fait moins d\'études que %s boivent %b</item>
         <item>%s, imite un serpent pendant 5 secondes ou bois %b !</item>
         <item>%s, imite un éléphant pendant 5 secondes ou bois %b !</item>
+        <item>%s, imite un gorille pendant 5 secondes ou bois %b !</item>
+        <item>%s, imite une princesse pendant 5 secondes ou bois %b !</item>
         <item>%s, imite un chien pendant 5 secondes ou bois %b !</item>
         <item>%s, imite une vache pendant 5 secondes ou bois %b !</item>
         <item>%s, imite un pokémon (celui que tu veux) pendant 5 secondes ou bois %b !</item>
@@ -701,6 +717,7 @@
         <item>%s donne %b au joueur que tu connais le moins</item>
         <item>%s tu distribues %s si tu as une Nitendo Switch</item>
         <item>%s tu distribues %s si tu as une Playstation 4</item>
+        <item>%s tu distribues %s si tu as une console retro</item>
         <item>%s tu bois %s si tu as plus de 10 paires de chaussures</item>
         <item>%s tu bois %s si tu as plus d\'une télé chez toi</item>
         <item>%s fais le grand écart ou bois %b</item>
@@ -715,7 +732,7 @@
         <item>%s si tu as déjà couché avec une personne par une appli de rencontre tu bois %b</item>
         <item>%s si tu as déjà eu, une gourmette avec ton nom dessus tu bois %b</item>
         <item>%s si tu as déjà pris une photo avec une star tu distribue %b</item>
-        <item>%s si tu dors nu tu bois %b</item>
+        <item>%s si tu dors nu ou en caleçon tu bois %b</item>
         <item>%s tu dois faire un dab après avoir bu jusqu\'à la fin de la partie sinon c\'est %b</item>
 
         <!-- duo challenge -->
@@ -744,12 +761,12 @@
         <item>%s trouve le nom du chat de %a sinon %b</item>
         <item>%s trouve le nom du chien de %a sinon %b</item>
         <item>%s trouve la petite amie de %a sinon %b</item>
-        <item>%s trouve le petit amie de %a sinon %b</item>
+        <item>%s trouve le petit ami de %a sinon %b</item>
         <item>%s rajoute du soft ou de l\'alcool dans le verre de %a</item>
         <item>%s rajoute que de l\'alcool dans le verre de %a</item>
         <item>%s tu sers le verre de %a jusqu\'à la fin de la partie</item>
-        <item>%s tu te met a côte de %a jusqu\'à la fin de la partie</item>
-        <item>%s tu te met en face de %a jusqu\'à la fin de la partie</item>
+        <item>%s tu te met à côté de %a jusqu\'à la fin de la partie</item>
+        <item>%s tu te mets en face de %a jusqu\'à la fin de la partie</item>
         <item>%s et %a, buvez ensemble %b puis une autre bien sur !</item>
         <item>%s et %a, buvez ensemble %b</item>
         <item>%s, donne l\'age de %a ou bois %b</item>

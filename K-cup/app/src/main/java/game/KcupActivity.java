@@ -37,8 +37,6 @@ public class KcupActivity extends AppCompatActivity {
     private TextView ruleContent;
     private TextView count;
 
-    private boolean isAnimated = false;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -39,9 +39,10 @@ public class GameUtils {
         List<String> listPlayer = SharedPreferenceUtils.getAllPlayer(context.getApplicationContext(), SharedPreferenceUtils.PREFS_PLAYER);
         List<Rule> newRule = new ArrayList<>();
 
-        List<String> noNeedPlayer = getNoNeedPlayer(context, extra);
+        List<String> noNeedPlayer = getNoNeedPlayer(context);
         List<String> challenge = getChallenge(context);
         List<String> choice = getChoice(context);
+        List<String> kcup = getKcup(context);
 
         List<Integer> randomForNewRule = getRandomForNewRule(context);
         List<String> newRuleAll = getNewRule(context);
@@ -95,8 +96,11 @@ public class GameUtils {
                 int randomForKcup = r.nextInt(100) + 1;
 
                 if (isPossibleNewKcup && randomForKcup > 85) {
-                    newRule.add(new Rule(getSelectedWithTwoPlayer(context, context.getString(R.string.kcup_content), listPlayer, 6), Type.KCUPS.toString()));
+                    newRule.add(new Rule(getSelectedWithTwoPlayer(context, kcup.get(0), listPlayer, 6), Type.KCUPS.toString()));
+                    kcup.remove(0);
                     newKcup.add(a);
+                    /*newRule.add(new Rule(getSelectedWithTwoPlayer(context, context.getString(R.string.kcup_content), listPlayer, 6), Type.KCUPS.toString()));
+                    newKcup.add(a);*/
                     positionWhenKcupPossible = a + 8;
                     isPossibleNewKcup = false;
                 }
@@ -127,9 +131,10 @@ public class GameUtils {
         List<String> listPlayer = SharedPreferenceUtils.getAllPlayer(context.getApplicationContext(), SharedPreferenceUtils.PREFS_PLAYER);
         List<Rule> newRule = new ArrayList<>();
 
-        List<String> noNeedPlayer = getNoNeedPlayer(context, extra);
+        List<String> noNeedPlayer = getNoNeedPlayer(context);
         List<String> challenge = getChallenge(context);
         List<String> choice = getChoice(context);
+        List<String> kcup = getKcup(context);
 
         List<Integer> randomForNewRule = getRandomForNewRule(context);
         List<String> newRuleAll = getNewRule(context);
@@ -183,8 +188,11 @@ public class GameUtils {
                 int randomForKcup = r.nextInt(100) + 1;
 
                 if (isPossibleNewKcup && randomForKcup > 85) {
-                    newRule.add(new Rule(getSelectedWithTwoPlayer(context, context.getString(R.string.kcup_content), listPlayer, maxDrinks + 2), Type.KCUPS.toString()));
+                    newRule.add(new Rule(getSelectedWithTwoPlayer(context, kcup.get(0), listPlayer, maxDrinks + 2), Type.KCUPS.toString()));
+                    kcup.remove(0);
                     newKcup.add(a);
+                    /*newRule.add(new Rule(getSelectedWithTwoPlayer(context, context.getString(R.string.kcup_content), listPlayer, maxDrinks + 2), Type.KCUPS.toString()));
+                    newKcup.add(a);*/
                     positionWhenKcupPossible = a + 8;
                     isPossibleNewKcup = false;
                 }
@@ -213,7 +221,7 @@ public class GameUtils {
     public static List<Rule> createBerserkGame(Context context, String extra) {
 
         List<Rule> newRule = new ArrayList<>();
-        List<String> noNeedPlayer = getNoNeedPlayer(context, extra);
+        List<String> noNeedPlayer = getNoNeedPlayer(context);
 
         Log.e("berserk question", String.valueOf(noNeedPlayer.size()));
 
@@ -233,15 +241,8 @@ public class GameUtils {
         return newRule;
     }
 
-    private static List<String> getNoNeedPlayer(Context context, String extra) {
-
-        String[] noNeedPlayerArray = new String[0];
-
-        if (extra.equals(Game.KCUP.toString())) {
-            noNeedPlayerArray = context.getResources().getStringArray(R.array.no_need_player_array);
-        } else {
-            noNeedPlayerArray = context.getResources().getStringArray(R.array.no_need_player_after_kcup_array);
-        }
+    private static List<String> getNoNeedPlayer(Context context) {
+        String[] noNeedPlayerArray = context.getResources().getStringArray(R.array.no_need_player_array);
 
         List<String> noNeedPlayer = new ArrayList<>();
         Collections.addAll(noNeedPlayer, noNeedPlayerArray);
@@ -389,6 +390,13 @@ public class GameUtils {
         List<String> choice = new ArrayList<>();
         Collections.addAll(choice, choiceArray);
         return choice;
+    }
+
+    private static List<String> getKcup(Context context) {
+        String[] kcupArray = context.getResources().getStringArray(R.array.kcup_array);
+        List<String> kcup = new ArrayList<>();
+        Collections.addAll(kcup, kcupArray);
+        return kcup;
     }
 
     private static List<Integer> getRandomForNewRule(Context context) {
