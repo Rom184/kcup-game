@@ -23,6 +23,7 @@ import game.KcupActivity;
 import game.NewRuleActivity;
 import game.NewRuleNextActivity;
 import game.NoNeedPlayerActivity;
+import identity.BerserkRule;
 import identity.Rule;
 import player.BeginGameBerserkActivity;
 import player.PlayerActivity;
@@ -90,54 +91,56 @@ public class HomeMainFragment extends Fragment {
             continueGame.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (SharedPreferenceUtils.getRule(
-                            getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE)
-                            .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
-                            .equals(GameUtils.Type.NO_NEED_PLAYER.toString())) {
-                        Intent k = new Intent(getActivity(), NoNeedPlayerActivity.class);
-                        k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
-                        startActivity(k);
-                        getActivity().overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
-                    } else if (SharedPreferenceUtils.getRule(
-                            getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE)
-                            .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
-                            .equals(GameUtils.Type.CHALLENGE.toString())) {
-                        Intent k = new Intent(getActivity(), ChallengeActivity.class);
-                        k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
-                        startActivity(k);
-                        getActivity().overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
-                    } else if (SharedPreferenceUtils.getRule(
-                            getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE)
-                            .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
-                            .equals(GameUtils.Type.CHOICE.toString())) {
-                        Intent k = new Intent(getActivity(), ChoiceActivity.class);
-                        k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
-                        startActivity(k);
-                        getActivity().overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
-                    } else if (SharedPreferenceUtils.getRule(
-                            getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE)
-                            .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
-                            .equals(GameUtils.Type.KCUPS.toString())) {
-                        Intent k = new Intent(getActivity(), KcupActivity.class);
-                        k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
-                        startActivity(k);
-                        getActivity().overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
-                    } else if (SharedPreferenceUtils.getRule(
-                            getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE)
-                            .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
-                            .equals(GameUtils.Type.NEW_RULE.toString())) {
-                        Intent k = new Intent(getActivity(), NewRuleActivity.class);
-                        k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
-                        startActivity(k);
-                        getActivity().overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
-                    } else if (SharedPreferenceUtils.getRule(
-                            getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE)
-                            .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
-                            .equals(GameUtils.Type.NEW_RULE_NEXT.toString())) {
-                        Intent k = new Intent(getActivity(), NewRuleNextActivity.class);
-                        k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
-                        startActivity(k);
-                        getActivity().overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
+                    if (SharedPreferenceUtils.getTypeGame(getActivity().getApplicationContext()).equals(GameUtils.Game.KCUP.toString())) {
+                        if (SharedPreferenceUtils.getRule(
+                                getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE)
+                                .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
+                                .equals(GameUtils.Type.NO_NEED_PLAYER.toString())) {
+                            Intent k = new Intent(getActivity(), NoNeedPlayerActivity.class);
+                            k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
+                            startActivity(k);
+                            getActivity().overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
+                        } else if (SharedPreferenceUtils.getRule(
+                                getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE)
+                                .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
+                                .equals(GameUtils.Type.CHALLENGE.toString())) {
+                            Intent k = new Intent(getActivity(), ChallengeActivity.class);
+                            k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
+                            startActivity(k);
+                            getActivity().overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
+                        } else if (SharedPreferenceUtils.getRule(
+                                getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE)
+                                .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
+                                .equals(GameUtils.Type.CHOICE.toString())) {
+                            Intent k = new Intent(getActivity(), ChoiceActivity.class);
+                            k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
+                            startActivity(k);
+                            getActivity().overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
+                        } else if (SharedPreferenceUtils.getRule(
+                                getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE)
+                                .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
+                                .equals(GameUtils.Type.KCUPS.toString())) {
+                            Intent k = new Intent(getActivity(), KcupActivity.class);
+                            k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
+                            startActivity(k);
+                            getActivity().overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
+                        } else if (SharedPreferenceUtils.getRule(
+                                getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE)
+                                .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
+                                .equals(GameUtils.Type.NEW_RULE.toString())) {
+                            Intent k = new Intent(getActivity(), NewRuleActivity.class);
+                            k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
+                            startActivity(k);
+                            getActivity().overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
+                        } else if (SharedPreferenceUtils.getRule(
+                                getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE)
+                                .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
+                                .equals(GameUtils.Type.NEW_RULE_NEXT.toString())) {
+                            Intent k = new Intent(getActivity(), NewRuleNextActivity.class);
+                            k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
+                            startActivity(k);
+                            getActivity().overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
+                        }
                     }
                 }
             });
@@ -148,6 +151,7 @@ public class HomeMainFragment extends Fragment {
         newNormalGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                SharedPreferenceUtils.setTypeGame(getActivity().getApplicationContext(), GameUtils.Game.KCUP.toString());
                 Intent k = new Intent(getActivity(), PlayerActivity.class);
                 k.putExtra(EXTRA_TYPE, GameUtils.Game.KCUP.toString());
                 startActivity(k);
@@ -167,17 +171,15 @@ public class HomeMainFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                List<Rule> ruleList = GameUtils.createBerserkGame(getActivity().getApplicationContext(), GameUtils.Game.KCUP.toString());
+                List<BerserkRule> ruleList = GameUtils.createBerserkGame(getActivity().getApplicationContext());
 
-                SharedPreferenceUtils.saveRule(getActivity().getApplicationContext(), ruleList, SharedPreferenceUtils.PREFS_RULE);
+                SharedPreferenceUtils.saveBerserkRuleGame(getActivity().getApplicationContext(), ruleList, SharedPreferenceUtils.PREFS_BERSERK_RULE_GAME);
                 SharedPreferenceUtils.setPositionGame(getActivity().getApplicationContext(), 0);
+                SharedPreferenceUtils.setTypeGame(getActivity().getApplicationContext(), GameUtils.Game.BERSERK.toString());
+                SharedPreferenceUtils.setRoundGame(getActivity().getApplicationContext(), GameUtils.Type.BERSERK_QUESTION.toString());
 
                 Intent k = new Intent(getActivity(), BeginGameBerserkActivity.class);
                 startActivity(k);
-
-               /* Intent k = new Intent(getActivity(), PlayerBerserkActivity.class);
-                k.putExtra(EXTRA_TYPE, GameUtils.Game.KCUP.toString());
-                startActivity(k);*/
             }
         });
     }

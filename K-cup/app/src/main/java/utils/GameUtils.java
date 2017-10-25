@@ -10,13 +10,13 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
+import identity.BerserkRule;
 import identity.Rule;
 
 public class GameUtils {
 
     public static final String EXTRA_ANIMATION_BEGIN = "extra_animation_begin";
     public static final String EXTRA_TYPE = "extra_type";
-    public static final int TIME_ANIMATION_BEGIN = 3000;
 
     public enum Game {
         KCUP,
@@ -31,7 +31,9 @@ public class GameUtils {
         NEW_RULE,
         NEW_RULE_NEXT,
         KCUPS,
-        BERSERK
+        BERSERK_QUESTION,
+        BERSERK_BAD_ANSWER,
+        BERSERK_GOOD_ANSWER
     }
 
     public static List<Rule> createKcupGame(Context context, String extra) {
@@ -218,9 +220,25 @@ public class GameUtils {
         return newRule;
     }
 
-    public static List<Rule> createBerserkGame(Context context, String extra) {
+    public static List<BerserkRule> createBerserkGame(Context context) {
 
-        List<Rule> newRule = new ArrayList<>();
+        List<BerserkRule> berserkRules = SharedPreferenceUtils.getBerserkRule(context, SharedPreferenceUtils.PREFS_BERSERK_RULE);
+        List<BerserkRule> newRule = new ArrayList<>();
+
+        Collections.shuffle(berserkRules);
+
+        Random r = new Random();
+        //int nbRule = r.nextInt(20) + 25;
+
+        int nbRule = 3;
+
+        for (int a = 0; a < nbRule; a++) {
+            newRule.add(berserkRules.get(a));
+        }
+
+        return newRule;
+
+       /* List<Rule> newRule = new ArrayList<>();
         List<String> noNeedPlayer = getNoNeedPlayer(context);
 
         Log.e("berserk question", String.valueOf(noNeedPlayer.size()));
@@ -232,13 +250,13 @@ public class GameUtils {
         Random r = new Random();
         int nbRule = r.nextInt(40 - 25) + 25;
 
-        for (int a = 0; a < nbRule; a++) {
+        *//*for (int a = 0; a < nbRule; a++) {
             Collections.shuffle(noNeedPlayer);
             newRule.add(new Rule(getRandomSoftDrinksBerserk(context, noNeedPlayer.get(0), 4), Type.BERSERK.toString()));
             noNeedPlayer.remove(0);
         }
-
-        return newRule;
+*//*
+        return newRule;*/
     }
 
     private static List<String> getNoNeedPlayer(Context context) {
@@ -314,27 +332,6 @@ public class GameUtils {
         return tmp;
     }
 
-    private static String getChallengeWithPlayerBerserk(Context context, String challenge, List<String> listPlayer, int nbRandom) {
-        String tmp = challenge;
-        tmp = tmp.replace("%s", getRandomPlayer(listPlayer));
-
-        Random r = new Random();
-
-        String newDrinks;
-
-        int nbRule = r.nextInt(nbRandom) + 1;
-
-        if (nbRule > 1) {
-            newDrinks = String.valueOf(nbRule) + " " + context.getString(R.string.drinks);
-        } else {
-            newDrinks = String.valueOf(nbRule) + " " + context.getString(R.string.drink);
-        }
-
-        tmp = tmp.replace("%b", context.getString(R.string.all));
-
-        return tmp;
-    }
-
     private static String getSelectedWithTwoPlayer(Context context, String rule, List<String> listPlayer, int nbRandom) {
         String player1 = getRandomPlayer(listPlayer);
         String player2 = getRandomPlayer(listPlayer);
@@ -357,31 +354,6 @@ public class GameUtils {
         ruleWithPlayer = ruleWithPlayer.replace("%s", player1);
         ruleWithPlayer = ruleWithPlayer.replace("%a", player2);
         ruleWithPlayer = ruleWithPlayer.replace("%b", newDrinks);
-        return ruleWithPlayer;
-    }
-
-    private static String getSelectedWithTwoPlayerBerserk(Context context, String rule, List<String> listPlayer, int nbRandom) {
-        String player1 = getRandomPlayer(listPlayer);
-        String player2 = getRandomPlayer(listPlayer);
-
-        while (player2.equals(player1)) {
-            player2 = getRandomPlayer(listPlayer);
-        }
-
-        String newDrinks;
-        Random r = new Random();
-        int nbRule = r.nextInt(nbRandom) + 1;
-
-        if (nbRule > 1) {
-            newDrinks = String.valueOf(nbRule) + " " + context.getString(R.string.drinks);
-        } else {
-            newDrinks = String.valueOf(nbRule) + " " + context.getString(R.string.drink);
-        }
-
-        String ruleWithPlayer = rule;
-        ruleWithPlayer = ruleWithPlayer.replace("%s", player1);
-        ruleWithPlayer = ruleWithPlayer.replace("%a", player2);
-        ruleWithPlayer = ruleWithPlayer.replace("%b", context.getString(R.string.all));
         return ruleWithPlayer;
     }
 
@@ -421,13 +393,6 @@ public class GameUtils {
         Collections.addAll(newRuleNext, newRuleNextArray);
         return newRuleNext;
     }
-
-    /*private static List<String> getSelectedPlayer(Context context) {
-        String[] selectedPlayerArray = context.getResources().getStringArray(R.array.selected_player_array);
-        List<String> selectedPlayer = new ArrayList<>();
-        Collections.addAll(selectedPlayer, selectedPlayerArray);
-        return selectedPlayer;
-    }*/
 
     private static String getRandomPlayer(List<String> listPlayer) {
 

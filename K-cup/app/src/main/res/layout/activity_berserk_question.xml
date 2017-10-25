@@ -16,18 +16,18 @@
         android:weightSum="100">
 
         <TextView
-            android:id="@+id/question"
+            android:id="@+id/content"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_gravity="center"
-            android:layout_weight="22"
+            android:layout_weight="27"
             android:gravity="center"
             android:text="question"
             android:textColor="@android:color/white"
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/answer_1"
+            android:id="@+id/good_question"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginBottom="12dp"
@@ -44,7 +44,7 @@
             android:visibility="visible" />
 
         <Button
-            android:id="@+id/answer_2"
+            android:id="@+id/bad_question"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginBottom="12dp"
@@ -65,7 +65,7 @@
             android:layout_height="0dp"
             android:layout_gravity="bottom"
             android:layout_margin="12dp"
-            android:layout_weight="35"
+            android:layout_weight="30"
             android:src="@drawable/ic_berserk_guts1" />
 
     </LinearLayout>

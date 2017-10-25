@@ -8,28 +8,25 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.kcup.drinkgame.k_cup.R;
 
-import end.EndGameActivity;
-import identity.Rule;
+import identity.BerserkRule;
 import utils.GameUtils;
 import utils.SharedPreferenceUtils;
+import utils.TextUtils;
 
 public class BerserkQuestionActivity extends AppCompatActivity {
 
-    private Rule currentRule;
+    private BerserkRule currentRule;
     private int position;
 
-    private ImageView back;
-
-    private TextView question;
+    private TextView content;
     private TextView count;
 
-    private Button answer1;
-    private Button answer2;
+    private Button goodQuestion;
+    private Button badQuestion;
 
 
     @Override
@@ -40,16 +37,15 @@ public class BerserkQuestionActivity extends AppCompatActivity {
 
         Typeface typeface = Typeface.createFromAsset(getAssets(), "Roboto-Medium.ttf");
 
-        back = (ImageView) findViewById(R.id.back);
+        goodQuestion = (Button) findViewById(R.id.good_question);
+        badQuestion = (Button) findViewById(R.id.bad_question);
 
-        answer1 = (Button) findViewById(R.id.answer_1);
-        answer2 = (Button) findViewById(R.id.answer_2);
-
-        question = (TextView) findViewById(R.id.question);
+        content = (TextView) findViewById(R.id.content);
         count = (TextView) findViewById(R.id.count);
+        content.setTypeface(typeface);
         count.setTypeface(typeface);
-        answer1.setTypeface(typeface);
-        answer2.setTypeface(typeface);
+        goodQuestion.setTypeface(typeface);
+        badQuestion.setTypeface(typeface);
 
         getCurrentRule();
         if (currentRule != null) {
@@ -59,78 +55,61 @@ public class BerserkQuestionActivity extends AppCompatActivity {
 
     private void bindView() {
         String currentCount = String.valueOf(SharedPreferenceUtils.getPositionGame(getApplicationContext()) + 1) + " / "
-                + String.valueOf(SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).size());
+                + String.valueOf(SharedPreferenceUtils.getBerserkRuleGame(getApplicationContext(), SharedPreferenceUtils.PREFS_BERSERK_RULE_GAME).size());
 
         count.setText(currentCount);
+
+        if (!TextUtils.isEmpty(currentRule.getContent())) {
+            content.setText(currentRule.getContent());
+        }
+
+        if (!TextUtils.isEmpty(currentRule.getGoodQuestion())) {
+            goodQuestion.setText(currentRule.getGoodQuestion());
+        }
+
+        if (!TextUtils.isEmpty(currentRule.getBadQuestion())) {
+            badQuestion.setText(currentRule.getBadQuestion());
+        }
 
         final Animation anim1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.effect_challenge);
 
         count.startAnimation(anim1);
 
-        answer1.setOnClickListener(new View.OnClickListener() {
+        goodQuestion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goToNextRule();
+                goToNextRule(GameUtils.Type.BERSERK_GOOD_ANSWER.toString());
             }
         });
 
-        answer2.setOnClickListener(new View.OnClickListener() {
+        badQuestion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goToNextRule();
-            }
-        });
-
-        if (position > 0) {
-            back.setVisibility(View.VISIBLE);
-        }
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getBack();
+                goToNextRule(GameUtils.Type.BERSERK_BAD_ANSWER.toString());
             }
         });
     }
 
-    private void goToNextRule() {
+    private void goToNextRule(String type) {
 
-        if (position < SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).size() - 1) {
-            SharedPreferenceUtils.setPositionGame(getApplicationContext(), position + 1);
-            if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position + 1).getType()
-                    .equals(GameUtils.Type.BERSERK.toString())) {
-                getCurrentRule();
-                if (currentRule != null) {
-                    bindView();
-                } else {
-                    finish();
-                }
-            }
-        } else {
-            SharedPreferenceUtils.setPositionGame(getApplicationContext(), 0);
-            Intent k = new Intent(BerserkQuestionActivity.this, EndGameActivity.class);
+        if (type.equals(GameUtils.Type.BERSERK_GOOD_ANSWER.toString())) {
+            SharedPreferenceUtils.setRoundGame(getApplicationContext(), GameUtils.Type.BERSERK_GOOD_ANSWER.toString());
+            Intent k = new Intent(BerserkQuestionActivity.this, BerserkGoodAnswerActivity.class);
             startActivity(k);
             finish();
+            overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
+        } else {
+            SharedPreferenceUtils.setRoundGame(getApplicationContext(), GameUtils.Type.BERSERK_BAD_ANSWER.toString());
+            Intent k = new Intent(BerserkQuestionActivity.this, BerserkBadAnswerActivity.class);
+            startActivity(k);
+            finish();
+            overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
         }
-
     }
 
     private void getCurrentRule() {
         position = SharedPreferenceUtils.getPositionGame(getApplicationContext());
-        this.currentRule = SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).
-                get(position);
-    }
-
-    private void getBack() {
-        if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(position - 1)
-                .getType().equals((GameUtils.Type.BERSERK.toString()))) {
-            SharedPreferenceUtils.setPositionGame(getApplicationContext(), position - 1);
-            getCurrentRule();
-            if (currentRule != null) {
-                bindView();
-            } else {
-                finish();
-            }
-        }
+        this.currentRule = SharedPreferenceUtils.getBerserkRuleGame(getApplicationContext(), SharedPreferenceUtils.PREFS_BERSERK_RULE_GAME).get(position);
     }
 
 }

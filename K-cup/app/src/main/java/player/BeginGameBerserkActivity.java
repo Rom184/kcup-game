@@ -68,12 +68,12 @@ public class BeginGameBerserkActivity extends AppCompatActivity {
 
     private void goToNextRule() {
 
-        if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(0).getType()
-                .equals(GameUtils.Type.BERSERK.toString())) {
+        /*if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(0).getType()
+                .equals(GameUtils.Type.BERSERK.toString())) {*/
             Intent k = new Intent(BeginGameBerserkActivity.this, BerserkQuestionActivity.class);
             k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
             startActivity(k);
-        }
+     //   }
         overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
         finish();
     }

@@ -87,14 +87,30 @@
             android:screenOrientation="portrait"
             android:theme="@style/style_kcup" />
 
-        <activity android:name="game.BerserkQuestionActivity"
+        <activity
+            android:name="game.BerserkQuestionActivity"
             android:screenOrientation="portrait"
             android:theme="@style/style_berserk_black" />
+
+        <activity
+            android:name="game.BerserkGoodAnswerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/style_berserk_black" />
+
+        <activity
+            android:name="game.BerserkBadAnswerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/style_berserk_white" />
 
         <activity
             android:name="end.EndGameActivity"
             android:screenOrientation="portrait"
             android:theme="@style/style_no_need_player" />
+
+        <activity
+            android:name="end.EndGameBerserkActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/style_berserk_black" />
 
         <activity
             android:name="dialog.CancelActivity"

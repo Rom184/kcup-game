@@ -1178,6 +1178,54 @@
         <item>Ses derniers commentaires seront les %b à distribuer</item>
     </string-array>
 
+    <string-array name="b_content_array">
+        <item>Un homme vous propose de boire...</item>
+        <item>Vous êtes dans un bar, que faites-vous ?</item>
+        <item>Vous regardez votre verre...</item>
+    </string-array>
+
+    <string-array name="b_good_question_array">
+        <item>Vous acceptez</item>
+        <item>On commande à boire !</item>
+        <item>Pour le boire ?</item>
+    </string-array>
+
+    <string-array name="b_bad_question_array">
+        <item>Vous refusez</item>
+        <item>On s\'assoit et on attends...</item>
+        <item>Parce qu\'il est jolie</item>
+    </string-array>
+
+    <string-array name="b_good_answer_array_0">
+        <item>L\'homme est heureux !\n\nEt %b pour tout le monde</item>
+        <item>Vous lui montrer votre chope et finissez tous votre verre dans la joie !</item>
+    </string-array>
+
+    <string-array name="b_bad_answer_array_0">
+        <item>L\'homme est déçu, vous ne voulez pas boire</item>
+        <item>On ne refuse pas un verre voyons !\n\nOn finit son verre !</item>
+    </string-array>
+
+    <string-array name="b_good_answer_array_1">
+        <item>Allez garçon et un verre bien remplis pour tout le monde !</item>
+        <item>Santé!\n\nEt %b pour tout le monde !</item>
+    </string-array>
+
+    <string-array name="b_bad_answer_array_1">
+        <item>On ne peut pas rester dans un bar sans boire !\n\nEt %b pour ne pas se voiler la face !</item>
+        <item>On attends que le temps passe en ne faisant rien...</item>
+    </string-array>
+
+    <string-array name="b_good_answer_array_2">
+        <item>Un verre c\'est fait pour être bu !\n\nEt hope %b pour tout le monde !</item>
+        <item>Il faut le finir !</item>
+    </string-array>
+
+    <string-array name="b_bad_answer_array_2">
+        <item>Il sera bien plus beau en étant vide !</item>
+        <item>Il vaut mieux juste le regarder pour le moment.</item>
+    </string-array>
+
     <string-array name="end_array">
         <item>Rechargement des verres en cours...</item>
         <item>Celui qui vomit à perdu !</item>
