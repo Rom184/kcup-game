@@ -45,7 +45,7 @@
             android:name="player.ChooseGameModeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/style_no_need_player"
-            android:windowSoftInputMode="stateHidden|adjustNothing" />
+            android:windowSoftInputMode="stateHidden" />
 
         <activity
             android:name="player.BeginGameActivity"
@@ -91,7 +91,7 @@
             android:name="player.PlayerKingActivity"
             android:screenOrientation="portrait"
             android:theme="@style/style_no_need_player"
-            android:windowSoftInputMode="stateHidden|adjustNothing" />
+            android:windowSoftInputMode="stateHidden" />
 
         <activity
             android:name="player.ChooseGameModeKingActivity"

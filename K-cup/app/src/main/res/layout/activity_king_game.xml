@@ -45,7 +45,7 @@
 
         </LinearLayout>
 
-        <LinearLayout
+        <utils.MyRotateLayout
             android:layout_width="24dp"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|right"
@@ -68,16 +68,16 @@
                 android:textSize="20sp"
                 tools:text="1" />
 
-        </LinearLayout>
+        </utils.MyRotateLayout>
 
         <TextView
             android:id="@+id/content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
+            android:gravity="center"
             android:textColor="@android:color/black"
             android:textSize="26sp" />
 

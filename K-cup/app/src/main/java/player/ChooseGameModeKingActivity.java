@@ -72,7 +72,7 @@ public class ChooseGameModeKingActivity extends AppCompatActivity {
         reallyHard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                createNewGame(4);
+                createNewGame(5);
                 goToBeginGame();
             }
         });
@@ -106,24 +106,27 @@ public class ChooseGameModeKingActivity extends AppCompatActivity {
             int nbKing = 0;
 
             Collections.shuffle(kingRules);
-            for (int a = 0;a < kingRules.size();a++){
+            for (int a = 0; a < kingRules.size(); a++) {
 
                 KingRule kingRule = new KingRule();
                 String player = getRandomPlayer(listPlayer);
 
-                if (kingRules.get(a).getContent().equals(getString(R.string.card_king))){
+                if (kingRules.get(a).getContent().equals(getString(R.string.card_king))) {
                     nbKing++;
                 }
 
-                if (nbKing == 4){
+                if (nbKing == 4) {
                     kingRule.setKing(true);
                     kingRule.setNameKing(player);
+                    kingRule.setContent(getContentForKing(getApplicationContext(), getString(R.string.you_are_the_king), player, nbDrinks));
                     nbKing++;
+                } else {
+                    kingRule.setContent(getContentForKing(getApplicationContext(), kingRules.get(a).getContent(), player, nbDrinks));
                 }
 
                 kingRule.setType(kingRules.get(a).getType());
                 kingRule.setNumber(kingRules.get(a).getNumber());
-                kingRule.setContent(getContentForKing(getApplicationContext(), kingRules.get(a).getContent(), player, nbDrinks));
+
 
                 kingRulesForGame.add(kingRule);
             }

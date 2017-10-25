@@ -84,6 +84,7 @@
     <string name="card_knight">%s, tu inventes une règle</string>
     <string name="card_queen" formatted="false">%s, tu choisis un joueur.\nIl doit tout le temps te vouvoyer et te complimenter. A chaque oublie c\'est %b !</string>
     <string name="card_king">%s, tu mets une partie de ton verre dans celui au centre</string>
+    <string name="you_are_the_king">Oyé Oyé !\n\n%s est le nouveau Roi ! \n\nTu peux boire le verre au centre !</string>
 
     <!-- kcup game -->
     <string-array name="kcup_array" formatted="false">
