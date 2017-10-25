@@ -20,8 +20,15 @@ public class GameUtils {
 
     public enum Game {
         KCUP,
-        AFTER_KCUP,
+        KINGKCUP,
         BERSERK
+    }
+
+    public enum KingType {
+        TREFLE,
+        PIQUE,
+        CARREAU,
+        COEUR
     }
 
     public enum Type {
@@ -394,7 +401,7 @@ public class GameUtils {
         return newRuleNext;
     }
 
-    private static String getRandomPlayer(List<String> listPlayer) {
+    public static String getRandomPlayer(List<String> listPlayer) {
 
         if (listPlayer != null && !listPlayer.isEmpty()) {
             Collections.shuffle(listPlayer);

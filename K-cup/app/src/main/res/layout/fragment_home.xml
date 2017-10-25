@@ -89,7 +89,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/new_game_after"
+                    android:id="@+id/new_game_king"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="12dp"
@@ -103,22 +103,22 @@
                     android:padding="10dp">
 
                     <TextView
-                        android:id="@+id/new_after_game_title"
+                        android:id="@+id/new_king_game_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/after_game"
+                        android:text="@string/king_game"
                         android:textAllCaps="false"
                         android:textColor="@android:color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/after_game_info"
+                        android:id="@+id/king_game_info"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="12dp"
-                        android:text="@string/after_game_info"
+                        android:text="@string/king_game_info"
                         android:textColor="@android:color/black"
                         android:textSize="16sp" />
 

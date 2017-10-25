@@ -106,28 +106,4 @@ public class ChooseGameModeActivity extends AppCompatActivity {
             }
         }
     }
-
-    private void goToNextRule() {
-
-        if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(0).getType()
-                .equals(GameUtils.Type.NO_NEED_PLAYER.toString())) {
-            Intent k = new Intent(ChooseGameModeActivity.this, NoNeedPlayerActivity.class);
-            k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
-            startActivity(k);
-        } else if ((SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(0).getType()
-                .equals(GameUtils.Type.CHALLENGE.toString()))) {
-            Intent k = new Intent(ChooseGameModeActivity.this, ChallengeActivity.class);
-            k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
-            startActivity(k);
-        } else if ((SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(0).getType()
-                .equals(GameUtils.Type.CHOICE.toString()))) {
-            Intent k = new Intent(ChooseGameModeActivity.this, ChoiceActivity.class);
-            k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
-            startActivity(k);
-        }
-        overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
-
-        finish();
-    }
-
 }

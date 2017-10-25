@@ -88,6 +88,23 @@
             android:theme="@style/style_kcup" />
 
         <activity
+            android:name="player.PlayerKingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/style_no_need_player"
+            android:windowSoftInputMode="stateHidden|adjustNothing" />
+
+        <activity
+            android:name="player.ChooseGameModeKingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/style_no_need_player"
+            android:windowSoftInputMode="stateHidden|adjustNothing" />
+
+        <activity
+            android:name="game.KingGameActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/style_no_need_player" />
+
+        <activity
             android:name="game.BerserkQuestionActivity"
             android:screenOrientation="portrait"
             android:theme="@style/style_berserk_black" />

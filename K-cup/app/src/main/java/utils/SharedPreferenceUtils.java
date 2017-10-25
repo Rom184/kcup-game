@@ -10,6 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import identity.BerserkRule;
+import identity.KingRule;
 import identity.Rule;
 
 public class SharedPreferenceUtils {
@@ -23,6 +24,8 @@ public class SharedPreferenceUtils {
     public static final String PREFS_ROUND_GAME = "PREFS_ROUND_GAME";
     private static final String KEY_ROUND_GAME = "KEY_ROUND_GAME";
     public static final String PREFS_RULE = "PREFS_RULE";
+    public static final String PREFS_KING_RULE = "PREFS_KING_RULE";
+    public static final String PREFS_KING_RULE_GAME = "PREFS_KING_RULE_GAME";
     public static final String PREFS_BERSERK_RULE = "PREFS_BERSERK_RULE";
     public static final String PREFS_BERSERK_RULE_GAME = "PREFS_BERSERK_RULE_GAME";
 
@@ -165,6 +168,99 @@ public class SharedPreferenceUtils {
         editor.apply();
     }
 
+    /**** King Rule ****/
+    public static List<KingRule> getkingRule(Context context, String key) {
+
+        if (context == null) {
+            return null;
+        }
+
+        SharedPreferences settings;
+        List<KingRule> cardList;
+
+        settings = context.getSharedPreferences(KEY,
+                Context.MODE_PRIVATE);
+
+        if (settings.contains(key)) {
+            String jsonReview = settings.getString(key, null);
+            Gson gson = new Gson();
+            KingRule[] reviewItems = gson.fromJson(jsonReview,
+                    KingRule[].class);
+
+            cardList = Arrays.asList(reviewItems);
+            cardList = new ArrayList<>(cardList);
+        } else
+            return null;
+
+        return cardList;
+    }
+
+    public static void saveKingkRule(Context context, List<KingRule> ruleList, String key) {
+
+        if (context == null) {
+            return;
+        }
+
+        SharedPreferences settings;
+        SharedPreferences.Editor editor;
+
+        settings = context.getSharedPreferences(KEY,
+                Context.MODE_PRIVATE);
+        editor = settings.edit();
+
+        Gson gson = new Gson();
+        String jsonAgence = gson.toJson(ruleList);
+
+        editor.putString(key, jsonAgence);
+        editor.apply();
+    }
+
+    public static List<KingRule> getkingRuleGame(Context context, String key) {
+
+        if (context == null) {
+            return null;
+        }
+
+        SharedPreferences settings;
+        List<KingRule> cardList;
+
+        settings = context.getSharedPreferences(KEY,
+                Context.MODE_PRIVATE);
+
+        if (settings.contains(key)) {
+            String jsonReview = settings.getString(key, null);
+            Gson gson = new Gson();
+            KingRule[] reviewItems = gson.fromJson(jsonReview,
+                    KingRule[].class);
+
+            cardList = Arrays.asList(reviewItems);
+            cardList = new ArrayList<>(cardList);
+        } else
+            return null;
+
+        return cardList;
+    }
+
+    public static void saveKingkRuleGame(Context context, List<KingRule> ruleList, String key) {
+
+        if (context == null) {
+            return;
+        }
+
+        SharedPreferences settings;
+        SharedPreferences.Editor editor;
+
+        settings = context.getSharedPreferences(KEY,
+                Context.MODE_PRIVATE);
+        editor = settings.edit();
+
+        Gson gson = new Gson();
+        String jsonAgence = gson.toJson(ruleList);
+
+        editor.putString(key, jsonAgence);
+        editor.apply();
+    }
+
     /**** Berserk Rule ****/
     public static List<BerserkRule> getBerserkRule(Context context, String key) {
 
@@ -212,7 +308,6 @@ public class SharedPreferenceUtils {
         editor.apply();
     }
 
-    /**** Berserk Rule ****/
     public static List<BerserkRule> getBerserkRuleGame(Context context, String key) {
 
         if (context == null) {

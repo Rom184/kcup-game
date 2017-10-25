@@ -23,7 +23,9 @@ import java.util.Collections;
 import java.util.List;
 
 import identity.BerserkRule;
+import identity.KingRule;
 import io.fabric.sdk.android.Fabric;
+import utils.GameUtils;
 import utils.SharedPreferenceUtils;
 
 public class SplashActivity extends AppCompatActivity {
@@ -74,6 +76,7 @@ public class SplashActivity extends AppCompatActivity {
     public void onResume() {
         super.onResume();
         savePlayer();
+        saveKing();
         saveQuestionAnswerBerserk();
         timerToLaunchHome();
     }
@@ -91,6 +94,76 @@ public class SplashActivity extends AppCompatActivity {
 
             SharedPreferenceUtils.savePlayer(getApplicationContext(), playerList, SharedPreferenceUtils.PREFS_PLAYER);
         }
+    }
+
+    private void saveKing(){
+
+        List<KingRule> kingRules = SharedPreferenceUtils.getkingRule(getApplicationContext(), SharedPreferenceUtils.PREFS_KING_RULE);
+
+        if (kingRules == null || kingRules.isEmpty()){
+            saveKingInfo();
+        }
+
+    }
+
+    private void saveKingInfo(){
+
+        List<KingRule> kingRules = new ArrayList<>();
+
+        kingRules.add(new KingRule(getString(R.string.card_1), GameUtils.KingType.PIQUE.toString(), "1"));
+        kingRules.add(new KingRule(getString(R.string.card_2), GameUtils.KingType.PIQUE.toString(), "2"));
+        kingRules.add(new KingRule(getString(R.string.card_3), GameUtils.KingType.PIQUE.toString(), "3"));
+        kingRules.add(new KingRule(getString(R.string.card_4), GameUtils.KingType.PIQUE.toString(), "4"));
+        kingRules.add(new KingRule(getString(R.string.card_5), GameUtils.KingType.PIQUE.toString(), "5"));
+        kingRules.add(new KingRule(getString(R.string.card_6), GameUtils.KingType.PIQUE.toString(), "6"));
+        kingRules.add(new KingRule(getString(R.string.card_7), GameUtils.KingType.PIQUE.toString(), "7"));
+        kingRules.add(new KingRule(getString(R.string.card_8), GameUtils.KingType.PIQUE.toString(), "8"));
+        kingRules.add(new KingRule(getString(R.string.card_9), GameUtils.KingType.PIQUE.toString(), "9"));
+        kingRules.add(new KingRule(getString(R.string.card_10), GameUtils.KingType.PIQUE.toString(), "10"));
+        kingRules.add(new KingRule(getString(R.string.card_knight), GameUtils.KingType.PIQUE.toString(), "V"));
+        kingRules.add(new KingRule(getString(R.string.card_queen), GameUtils.KingType.PIQUE.toString(), "D"));
+        kingRules.add(new KingRule(getString(R.string.card_king), GameUtils.KingType.PIQUE.toString(), "R"));
+        kingRules.add(new KingRule(getString(R.string.card_1), GameUtils.KingType.TREFLE.toString(), "1"));
+        kingRules.add(new KingRule(getString(R.string.card_2), GameUtils.KingType.TREFLE.toString(), "2"));
+        kingRules.add(new KingRule(getString(R.string.card_3), GameUtils.KingType.TREFLE.toString(), "3"));
+        kingRules.add(new KingRule(getString(R.string.card_4), GameUtils.KingType.TREFLE.toString(), "4"));
+        kingRules.add(new KingRule(getString(R.string.card_5), GameUtils.KingType.TREFLE.toString(), "5"));
+        kingRules.add(new KingRule(getString(R.string.card_6), GameUtils.KingType.TREFLE.toString(), "6"));
+        kingRules.add(new KingRule(getString(R.string.card_7), GameUtils.KingType.TREFLE.toString(), "7"));
+        kingRules.add(new KingRule(getString(R.string.card_8), GameUtils.KingType.TREFLE.toString(), "8"));
+        kingRules.add(new KingRule(getString(R.string.card_9), GameUtils.KingType.TREFLE.toString(), "9"));
+        kingRules.add(new KingRule(getString(R.string.card_10), GameUtils.KingType.TREFLE.toString(), "10"));
+        kingRules.add(new KingRule(getString(R.string.card_knight), GameUtils.KingType.TREFLE.toString(), "V"));
+        kingRules.add(new KingRule(getString(R.string.card_queen), GameUtils.KingType.TREFLE.toString(), "D"));
+        kingRules.add(new KingRule(getString(R.string.card_king), GameUtils.KingType.TREFLE.toString(), "R"));
+        kingRules.add(new KingRule(getString(R.string.card_1), GameUtils.KingType.CARREAU.toString(), "1"));
+        kingRules.add(new KingRule(getString(R.string.card_2), GameUtils.KingType.CARREAU.toString(), "2"));
+        kingRules.add(new KingRule(getString(R.string.card_3), GameUtils.KingType.CARREAU.toString(), "3"));
+        kingRules.add(new KingRule(getString(R.string.card_4), GameUtils.KingType.CARREAU.toString(), "4"));
+        kingRules.add(new KingRule(getString(R.string.card_5), GameUtils.KingType.CARREAU.toString(), "5"));
+        kingRules.add(new KingRule(getString(R.string.card_6), GameUtils.KingType.CARREAU.toString(), "6"));
+        kingRules.add(new KingRule(getString(R.string.card_7), GameUtils.KingType.CARREAU.toString(), "7"));
+        kingRules.add(new KingRule(getString(R.string.card_8), GameUtils.KingType.CARREAU.toString(), "8"));
+        kingRules.add(new KingRule(getString(R.string.card_9), GameUtils.KingType.CARREAU.toString(), "9"));
+        kingRules.add(new KingRule(getString(R.string.card_10), GameUtils.KingType.CARREAU.toString(), "10"));
+        kingRules.add(new KingRule(getString(R.string.card_knight), GameUtils.KingType.CARREAU.toString(), "V"));
+        kingRules.add(new KingRule(getString(R.string.card_queen), GameUtils.KingType.CARREAU.toString(), "D"));
+        kingRules.add(new KingRule(getString(R.string.card_king), GameUtils.KingType.CARREAU.toString(), "R"));
+        kingRules.add(new KingRule(getString(R.string.card_1), GameUtils.KingType.COEUR.toString(), "1"));
+        kingRules.add(new KingRule(getString(R.string.card_2), GameUtils.KingType.COEUR.toString(), "2"));
+        kingRules.add(new KingRule(getString(R.string.card_3), GameUtils.KingType.COEUR.toString(), "3"));
+        kingRules.add(new KingRule(getString(R.string.card_4), GameUtils.KingType.COEUR.toString(), "4"));
+        kingRules.add(new KingRule(getString(R.string.card_5), GameUtils.KingType.COEUR.toString(), "5"));
+        kingRules.add(new KingRule(getString(R.string.card_6), GameUtils.KingType.COEUR.toString(), "6"));
+        kingRules.add(new KingRule(getString(R.string.card_7), GameUtils.KingType.COEUR.toString(), "7"));
+        kingRules.add(new KingRule(getString(R.string.card_8), GameUtils.KingType.COEUR.toString(), "8"));
+        kingRules.add(new KingRule(getString(R.string.card_9), GameUtils.KingType.COEUR.toString(), "9"));
+        kingRules.add(new KingRule(getString(R.string.card_10), GameUtils.KingType.COEUR.toString(), "10"));
+        kingRules.add(new KingRule(getString(R.string.card_knight), GameUtils.KingType.COEUR.toString(), "V"));
+        kingRules.add(new KingRule(getString(R.string.card_queen), GameUtils.KingType.COEUR.toString(), "D"));
+        kingRules.add(new KingRule(getString(R.string.card_king), GameUtils.KingType.COEUR.toString(), "R"));
+
+        SharedPreferenceUtils.saveKingkRule(getApplicationContext(), kingRules, SharedPreferenceUtils.PREFS_KING_RULE);
     }
 
     private void saveQuestionAnswerBerserk() {

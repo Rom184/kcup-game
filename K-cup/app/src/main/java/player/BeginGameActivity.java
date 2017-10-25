@@ -10,6 +10,7 @@ import com.kcup.drinkgame.k_cup.R;
 
 import game.ChallengeActivity;
 import game.ChoiceActivity;
+import game.KingGameActivity;
 import game.NoNeedPlayerActivity;
 import utils.GameUtils;
 import utils.SharedPreferenceUtils;
@@ -51,20 +52,25 @@ public class BeginGameActivity extends AppCompatActivity {
 
     private void goToNextRule() {
 
-        if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(0).getType()
-                .equals(GameUtils.Type.NO_NEED_PLAYER.toString())) {
-            Intent k = new Intent(BeginGameActivity.this, NoNeedPlayerActivity.class);
-            k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
-            startActivity(k);
-        } else if ((SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(0).getType()
-                .equals(GameUtils.Type.CHALLENGE.toString()))) {
-            Intent k = new Intent(BeginGameActivity.this, ChallengeActivity.class);
-            k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
-            startActivity(k);
-        } else if ((SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(0).getType()
-                .equals(GameUtils.Type.CHOICE.toString()))) {
-            Intent k = new Intent(BeginGameActivity.this, ChoiceActivity.class);
-            k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
+        if (SharedPreferenceUtils.getTypeGame(getApplicationContext()).equals(GameUtils.Game.KCUP)) {
+            if (SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(0).getType()
+                    .equals(GameUtils.Type.NO_NEED_PLAYER.toString())) {
+                Intent k = new Intent(BeginGameActivity.this, NoNeedPlayerActivity.class);
+                k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
+                startActivity(k);
+            } else if ((SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(0).getType()
+                    .equals(GameUtils.Type.CHALLENGE.toString()))) {
+                Intent k = new Intent(BeginGameActivity.this, ChallengeActivity.class);
+                k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
+                startActivity(k);
+            } else if ((SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).get(0).getType()
+                    .equals(GameUtils.Type.CHOICE.toString()))) {
+                Intent k = new Intent(BeginGameActivity.this, ChoiceActivity.class);
+                k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
+                startActivity(k);
+            }
+        } else {
+            Intent k = new Intent(BeginGameActivity.this, KingGameActivity.class);
             startActivity(k);
         }
         overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);

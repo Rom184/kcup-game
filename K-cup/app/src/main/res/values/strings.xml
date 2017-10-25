@@ -7,6 +7,8 @@
     <string name="normal_game_info">Un mode pour s\'ambiancer !</string>
     <string name="after_game">L\'after K-Cup</string>
     <string name="after_game_info">Le mieux après le boulot !</string>
+    <string name="king_game">Le King K-Cup</string>
+    <string name="king_game_info">Un verre au centre et let\'s go !</string>
     <string name="berserk_game">Le berserk</string>
     <string name="berserk_game_info">Le mode pour les vrais alcoolos !</string>
     <string name="new_game_now">Le K-Cup !</string>
@@ -23,6 +25,11 @@
     <string name="player_nb">Joueur</string>
     <string name="player">Joueur %s</string>
     <string name="choose_game_mode_title">Mes compagnons sont plutôt du genre :</string>
+    <string name="choose_game_mode_king_title">J\'aime l\'alcool :</string>
+    <string name="new_game_king_easy">Un peu</string>
+    <string name="new_game_king_normal">Beaucoup</string>
+    <string name="new_game_king_hard">Passionnément</string>
+    <string name="new_game_king_really_hard">A la folie !</string>
     <string name="with_king_rule">K-Cup sera-til de la partie ?</string>
     <string name="long_game">L\'alcool ne vous fait pas peur ? </string>
     <string name="lets_go">On veut boire !</string>
@@ -62,6 +69,21 @@
     <string name="drink">gorgée</string>
     <string name="drinks">gorgées</string>
     <string name="all">son verre</string>
+
+    <!-- king card game -->
+    <string name="card_1">%s, tu choisis une personne qui doit boire la moitié de son verre</string>
+    <string name="card_2" formatted="false">%s, tu bois %b</string>
+    <string name="card_3" formatted="false">%s, tu donnes %b</string>
+    <string name="card_4">Tous les joueurs touchent le sol. Le dernier boit %b</string>
+    <string name="card_5">Tous les hommes boivent %b</string>
+    <string name="card_6">Toutes les femmes boivent %b</string>
+    <string name="card_7">Tous les joueurs lève une main. Le dernier boit %b</string>
+    <string name="card_8">%s, tu choisis un joueur. Si un des deux joueurs boit, l\'autre boit à chaque fois !</string>
+    <string name="card_9" formatted="false">%s, tu choisis un mot et un sens. Chaque joueur doit trouver une rime à tour de rôle. Le premier qui se trompe boit %b</string>
+    <string name="card_10" formatted="false">%s, tu dois dire une action que tu n\'as jamais faite. Les joueurs qui l\'ont fait boivent %b</string>
+    <string name="card_knight">%s, tu inventes une règle</string>
+    <string name="card_queen" formatted="false">%s, tu choisis un joueur.\nIl doit tout le temps te vouvoyer et te complimenter. A chaque oublie c\'est %b !</string>
+    <string name="card_king">%s, tu mets une partie de ton verre dans celui au centre</string>
 
     <!-- kcup game -->
     <string-array name="kcup_array" formatted="false">

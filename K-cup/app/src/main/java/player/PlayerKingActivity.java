@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,17 +15,9 @@ import com.kcup.drinkgame.k_cup.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import game.ChallengeActivity;
-import game.ChoiceActivity;
-import game.NoNeedPlayerActivity;
-import identity.Rule;
-import utils.GameUtils;
 import utils.SharedPreferenceUtils;
-import utils.TextUtils;
 
-import static utils.GameUtils.EXTRA_TYPE;
-
-public class PlayerActivity extends AppCompatActivity {
+public class PlayerKingActivity extends AppCompatActivity {
 
     private EditText player1;
     private EditText player2;
@@ -120,8 +111,7 @@ public class PlayerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 savePlayer();
-                SharedPreferenceUtils.setPositionGame(getApplicationContext(), 0);
-                Intent k = new Intent(PlayerActivity.this, ChooseGameModeActivity.class);
+                Intent k = new Intent(PlayerKingActivity.this, ChooseGameModeKingActivity.class);
                 startActivity(k);
                 finish();
             }
