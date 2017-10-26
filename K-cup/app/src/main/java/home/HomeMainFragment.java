@@ -17,6 +17,9 @@ import com.kcup.drinkgame.k_cup.R;
 import java.util.List;
 
 import dialog.homeOptionActivity;
+import game.BerserkBadAnswerActivity;
+import game.BerserkGoodAnswerActivity;
+import game.BerserkQuestionActivity;
 import game.ChallengeActivity;
 import game.ChoiceActivity;
 import game.KcupActivity;
@@ -99,6 +102,33 @@ public class HomeMainFragment extends Fragment {
                 });
             }
 
+            if (SharedPreferenceUtils.getTypeGame(getActivity().getApplicationContext()).equals(GameUtils.Game.BERSERK.toString())){
+                String continueContent = getString(R.string.continue_game) + "\n" +
+                        (String.valueOf(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext()) + 1)) + " / " +
+                        String.valueOf(SharedPreferenceUtils.getBerserkRuleGame(getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_BERSERK_RULE_GAME).size());
+
+                continueGame.setText(continueContent);
+                continueGame.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if (SharedPreferenceUtils.getRoundGame(getActivity().getApplicationContext()).equals(GameUtils.Type.BERSERK_QUESTION.toString())) {
+
+                            Intent k = new Intent(getActivity(), BerserkQuestionActivity.class);
+                            startActivity(k);
+                            getActivity().overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
+                        } else if (SharedPreferenceUtils.getRoundGame(getActivity().getApplicationContext()).equals(GameUtils.Type.BERSERK_GOOD_ANSWER.toString())){
+                            Intent k = new Intent(getActivity(), BerserkGoodAnswerActivity.class);
+                            startActivity(k);
+                            getActivity().overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
+                        } else {
+                            Intent k = new Intent(getActivity(), BerserkBadAnswerActivity.class);
+                            startActivity(k);
+                            getActivity().overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
+                        }
+                    }
+                });
+            }
+
             if (SharedPreferenceUtils.getTypeGame(getActivity().getApplicationContext()).equals(GameUtils.Game.KCUP.toString())) {
                 if (SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext()) <
                         SharedPreferenceUtils.getRule(getActivity().getApplicationContext(), SharedPreferenceUtils.PREFS_RULE).size()) {
@@ -119,7 +149,6 @@ public class HomeMainFragment extends Fragment {
                                         .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
                                         .equals(GameUtils.Type.NO_NEED_PLAYER.toString())) {
                                     Intent k = new Intent(getActivity(), NoNeedPlayerActivity.class);
-                                    k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
                                     startActivity(k);
                                     getActivity().overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
                                 } else if (SharedPreferenceUtils.getRule(
@@ -127,7 +156,6 @@ public class HomeMainFragment extends Fragment {
                                         .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
                                         .equals(GameUtils.Type.CHALLENGE.toString())) {
                                     Intent k = new Intent(getActivity(), ChallengeActivity.class);
-                                    k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
                                     startActivity(k);
                                     getActivity().overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
                                 } else if (SharedPreferenceUtils.getRule(
@@ -135,7 +163,6 @@ public class HomeMainFragment extends Fragment {
                                         .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
                                         .equals(GameUtils.Type.CHOICE.toString())) {
                                     Intent k = new Intent(getActivity(), ChoiceActivity.class);
-                                    k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
                                     startActivity(k);
                                     getActivity().overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
                                 } else if (SharedPreferenceUtils.getRule(
@@ -143,7 +170,6 @@ public class HomeMainFragment extends Fragment {
                                         .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
                                         .equals(GameUtils.Type.KCUPS.toString())) {
                                     Intent k = new Intent(getActivity(), KcupActivity.class);
-                                    k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
                                     startActivity(k);
                                     getActivity().overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
                                 } else if (SharedPreferenceUtils.getRule(
@@ -151,7 +177,6 @@ public class HomeMainFragment extends Fragment {
                                         .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
                                         .equals(GameUtils.Type.NEW_RULE.toString())) {
                                     Intent k = new Intent(getActivity(), NewRuleActivity.class);
-                                    k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
                                     startActivity(k);
                                     getActivity().overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
                                 } else if (SharedPreferenceUtils.getRule(
@@ -159,7 +184,6 @@ public class HomeMainFragment extends Fragment {
                                         .get(SharedPreferenceUtils.getPositionGame(getActivity().getApplicationContext())).getType()
                                         .equals(GameUtils.Type.NEW_RULE_NEXT.toString())) {
                                     Intent k = new Intent(getActivity(), NewRuleNextActivity.class);
-                                    k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
                                     startActivity(k);
                                     getActivity().overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
                                 }
@@ -202,6 +226,7 @@ public class HomeMainFragment extends Fragment {
 
                 SharedPreferenceUtils.saveBerserkRuleGame(getActivity().getApplicationContext(), ruleList, SharedPreferenceUtils.PREFS_BERSERK_RULE_GAME);
                 SharedPreferenceUtils.setPositionGame(getActivity().getApplicationContext(), 0);
+                SharedPreferenceUtils.setPositionEnrage(getActivity().getApplicationContext(), 0);
                 SharedPreferenceUtils.setTypeGame(getActivity().getApplicationContext(), GameUtils.Game.BERSERK.toString());
                 SharedPreferenceUtils.setRoundGame(getActivity().getApplicationContext(), GameUtils.Type.BERSERK_QUESTION.toString());
 

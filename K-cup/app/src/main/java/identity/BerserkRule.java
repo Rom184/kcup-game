@@ -5,11 +5,19 @@ import java.util.List;
 public class BerserkRule {
 
     public String content;
-    public String goodQuestion;
-    public String badQuestion;
+    private String goodQuestion;
+    private String badQuestion;
 
     private List<String> goodAnswers;
     private List<String> badAnswers;
+
+
+    private String goodAnswer;
+    private String badAnswer;
+    private int randomGoodAnswer;
+    private int randomBadAnswer;
+
+    public BerserkRule(){}
 
     public BerserkRule(String content, String goodQuestion, String badQuestion, List<String> goodAnswers, List<String> badAnswers) {
         this.content = content;
@@ -57,5 +65,37 @@ public class BerserkRule {
 
     public void setBadAnswers(List<String> badAnswers) {
         this.badAnswers = badAnswers;
+    }
+
+    public String getGoodAnswer() {
+        return goodAnswer;
+    }
+
+    public void setGoodAnswer(String goodAnswer) {
+        this.goodAnswer = goodAnswer;
+    }
+
+    public String getBadAnswer() {
+        return badAnswer;
+    }
+
+    public void setBadAnswer(String badAnswer) {
+        this.badAnswer = badAnswer;
+    }
+
+    public int getRandomGoodAnswer() {
+        return randomGoodAnswer;
+    }
+
+    public void setRandomGoodAnswer(int randomGoodAnswer) {
+        this.randomGoodAnswer = randomGoodAnswer;
+    }
+
+    public int getRandomBadAnswer() {
+        return randomBadAnswer;
+    }
+
+    public void setRandomBadAnswer(int randomBadAnswer) {
+        this.randomBadAnswer = randomBadAnswer;
     }
 }

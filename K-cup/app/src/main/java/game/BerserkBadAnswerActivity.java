@@ -28,6 +28,7 @@ public class BerserkBadAnswerActivity extends AppCompatActivity{
 
     private TextView content;
     private TextView count;
+    private TextView enrage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +45,9 @@ public class BerserkBadAnswerActivity extends AppCompatActivity{
         count = (TextView) findViewById(R.id.count);
         count.setTypeface(typeface);
 
+        enrage = (TextView) findViewById(R.id.enrage);
+        enrage.setTypeface(typeface);
+
         getCurrentRule();
         if (currentRule != null) {
             bindView();
@@ -55,10 +59,14 @@ public class BerserkBadAnswerActivity extends AppCompatActivity{
                 + String.valueOf(SharedPreferenceUtils.getBerserkRuleGame(getApplicationContext(), SharedPreferenceUtils.PREFS_BERSERK_RULE_GAME).size());
 
         count.setText(currentCount);
-        content.setText(currentRule.getBadAnswers().get(0));
+        content.setText(currentRule.getBadAnswer());
         final Animation anim1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.effect_challenge);
         content.startAnimation(anim1);
         count.startAnimation(anim1);
+
+        String currentEnrage = String.valueOf(SharedPreferenceUtils.getPositionEnrage(getApplicationContext())) + " / " + "100";
+        enrage.setText(currentEnrage);
+        enrage.startAnimation(anim1);
 
         background.setOnClickListener(new View.OnClickListener() {
             @Override

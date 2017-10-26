@@ -39,7 +39,13 @@
             android:name="player.PlayerActivity"
             android:screenOrientation="portrait"
             android:theme="@style/style_no_need_player"
-            android:windowSoftInputMode="stateHidden|adjustNothing" />
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="player.PlayerKingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/style_no_need_player"
+            android:windowSoftInputMode="stateHidden" />
 
         <activity
             android:name="player.ChooseGameModeActivity"
@@ -86,12 +92,6 @@
             android:name="game.KcupActivity"
             android:screenOrientation="portrait"
             android:theme="@style/style_kcup" />
-
-        <activity
-            android:name="player.PlayerKingActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/style_no_need_player"
-            android:windowSoftInputMode="stateHidden" />
 
         <activity
             android:name="player.ChooseGameModeKingActivity"

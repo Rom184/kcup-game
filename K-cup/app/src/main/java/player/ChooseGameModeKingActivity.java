@@ -88,7 +88,6 @@ public class ChooseGameModeKingActivity extends AppCompatActivity {
 
     private void goToBeginGame() {
         Intent k = new Intent(ChooseGameModeKingActivity.this, BeginGameActivity.class);
-        k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
         startActivity(k);
         overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
         finish();

@@ -91,6 +91,7 @@
         <item>%s et %a jouent à pierre papier ciseau.\n\nLe perdant c\'est %b !</item>
         <item>%s et %a jouent à la bataille de regard.\n\nLe perdant c\'est %b !</item>
         <item>%s et %a jouent au combat de pouces.\n\nLe perdant c\'est %b !</item>
+        <item>%s et %a jouent à pile ou face.\n\nLe perdant c\'est %b !</item>
     </string-array>
     <string name="kcup_content" formatted="false">%s et %a jouent à pierre papier ciseau.\n\nLe perdant c\'est %b !</string>
 

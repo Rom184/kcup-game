@@ -28,6 +28,7 @@ public class BerserkQuestionActivity extends AppCompatActivity {
     private Button goodQuestion;
     private Button badQuestion;
 
+    private TextView enrage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,9 @@ public class BerserkQuestionActivity extends AppCompatActivity {
         count.setTypeface(typeface);
         goodQuestion.setTypeface(typeface);
         badQuestion.setTypeface(typeface);
+
+        enrage = (TextView) findViewById(R.id.enrage);
+        enrage.setTypeface(typeface);
 
         getCurrentRule();
         if (currentRule != null) {
@@ -75,6 +79,10 @@ public class BerserkQuestionActivity extends AppCompatActivity {
 
         count.startAnimation(anim1);
 
+        String currentEnrage = String.valueOf(SharedPreferenceUtils.getPositionEnrage(getApplicationContext())) + " / " + "100";
+        enrage.setText(currentEnrage);
+        enrage.startAnimation(anim1);
+
         goodQuestion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -93,12 +101,17 @@ public class BerserkQuestionActivity extends AppCompatActivity {
     private void goToNextRule(String type) {
 
         if (type.equals(GameUtils.Type.BERSERK_GOOD_ANSWER.toString())) {
+            SharedPreferenceUtils.setPositionEnrage(getApplicationContext(), (
+                    SharedPreferenceUtils.getPositionEnrage(getApplicationContext()) + currentRule.getRandomGoodAnswer()));
             SharedPreferenceUtils.setRoundGame(getApplicationContext(), GameUtils.Type.BERSERK_GOOD_ANSWER.toString());
             Intent k = new Intent(BerserkQuestionActivity.this, BerserkGoodAnswerActivity.class);
             startActivity(k);
             finish();
             overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
         } else {
+            SharedPreferenceUtils.setPositionEnrage(getApplicationContext(), (
+                    SharedPreferenceUtils.getPositionEnrage(getApplicationContext()) + currentRule.getRandomBadAnswer()));
+            SharedPreferenceUtils.setPositionEnrage(getApplicationContext(), currentRule.getRandomGoodAnswer());
             SharedPreferenceUtils.setRoundGame(getApplicationContext(), GameUtils.Type.BERSERK_BAD_ANSWER.toString());
             Intent k = new Intent(BerserkQuestionActivity.this, BerserkBadAnswerActivity.class);
             startActivity(k);

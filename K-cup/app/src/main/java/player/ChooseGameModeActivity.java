@@ -14,13 +14,9 @@ import com.kcup.drinkgame.k_cup.R;
 
 import java.util.List;
 
-import game.*;
 import identity.Rule;
 import utils.GameUtils;
 import utils.SharedPreferenceUtils;
-import utils.TextUtils;
-
-import static utils.GameUtils.EXTRA_TYPE;
 
 public class ChooseGameModeActivity extends AppCompatActivity {
 
@@ -77,7 +73,6 @@ public class ChooseGameModeActivity extends AppCompatActivity {
 
     private void goToBeginGame() {
         Intent k = new Intent(ChooseGameModeActivity.this, BeginGameActivity.class);
-        k.putExtra(GameUtils.EXTRA_ANIMATION_BEGIN, true);
         startActivity(k);
         overridePendingTransition(R.anim.slide_in_right, android.R.anim.fade_out);
         finish();
@@ -85,25 +80,12 @@ public class ChooseGameModeActivity extends AppCompatActivity {
 
     private void createNewGame(int nbQuestion, int maxDrinks) {
 
-        if (getIntent() != null) {
-            Bundle b = getIntent().getExtras();
-            if (b != null) {
+        List<Rule> ruleList = GameUtils.createCustomKcupGame(getApplicationContext(), nbQuestion, maxDrinks);
+        SharedPreferenceUtils.saveRule(getApplicationContext(), ruleList, SharedPreferenceUtils.PREFS_RULE);
 
-                String extra = b.getString(EXTRA_TYPE);
-
-                if (!TextUtils.isEmpty(extra)) {
-
-                    List<Rule> ruleList = GameUtils.createCustomKcupGame(getApplicationContext(), extra, nbQuestion, maxDrinks);
-
-                    SharedPreferenceUtils.saveRule(getApplicationContext(), ruleList, SharedPreferenceUtils.PREFS_RULE);
-                    SharedPreferenceUtils.setPositionGame(getApplicationContext(), 0);
-
-                    List<Rule> ttt = SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE);
-                    for (int a = 0; a < ttt.size(); a++) {
-                        Log.e("rule", String.valueOf(a) + " " + ttt.get(a).getType());
-                    }
-                }
-            }
+        List<Rule> ttt = SharedPreferenceUtils.getRule(getApplicationContext(), SharedPreferenceUtils.PREFS_RULE);
+        for (int a = 0; a < ttt.size(); a++) {
+            Log.e("rule", String.valueOf(a) + " " + ttt.get(a).getType());
         }
     }
 }

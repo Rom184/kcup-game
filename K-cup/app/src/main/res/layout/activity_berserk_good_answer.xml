@@ -44,6 +44,15 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/enrage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_margin="12dp"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+    <TextView
         android:id="@+id/count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

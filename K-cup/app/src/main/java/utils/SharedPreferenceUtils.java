@@ -28,6 +28,8 @@ public class SharedPreferenceUtils {
     public static final String PREFS_KING_RULE_GAME = "PREFS_KING_RULE_GAME";
     public static final String PREFS_BERSERK_RULE = "PREFS_BERSERK_RULE";
     public static final String PREFS_BERSERK_RULE_GAME = "PREFS_BERSERK_RULE_GAME";
+    private static final String KEY_POSITION_ENRAGE = "POSITION_ENRAGE_KEY";
+    private static final String PREFS_POSITION_ENRAGE = "PREFS_POSITION_ENRAGE";
 
     /**** Player ****/
     public static List<String> getAllPlayer(Context context, String key) {
@@ -353,4 +355,20 @@ public class SharedPreferenceUtils {
         editor.putString(key, jsonAgence);
         editor.apply();
     }
+
+    /**** Position enrage ****/
+    public static void setPositionEnrage(Context context, int positionGame) {
+        if (context != null) {
+            SharedPreferences sharedPref = context.getSharedPreferences(KEY_POSITION_ENRAGE, Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPref.edit();
+            editor.putInt(PREFS_POSITION_ENRAGE, positionGame);
+            editor.apply();
+        }
+    }
+
+    public static int getPositionEnrage(Context context) {
+        SharedPreferences sharedPref = context.getSharedPreferences(KEY_POSITION_ENRAGE, Context.MODE_PRIVATE);
+        return sharedPref.getInt(PREFS_POSITION_ENRAGE, 0);
+    }
+
 }

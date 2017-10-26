@@ -15,7 +15,6 @@ import identity.Rule;
 
 public class GameUtils {
 
-    public static final String EXTRA_ANIMATION_BEGIN = "extra_animation_begin";
     public static final String EXTRA_TYPE = "extra_type";
 
     public enum Game {
@@ -43,99 +42,7 @@ public class GameUtils {
         BERSERK_GOOD_ANSWER
     }
 
-    public static List<Rule> createKcupGame(Context context, String extra) {
-
-        List<String> listPlayer = SharedPreferenceUtils.getAllPlayer(context.getApplicationContext(), SharedPreferenceUtils.PREFS_PLAYER);
-        List<Rule> newRule = new ArrayList<>();
-
-        List<String> noNeedPlayer = getNoNeedPlayer(context);
-        List<String> challenge = getChallenge(context);
-        List<String> choice = getChoice(context);
-        List<String> kcup = getKcup(context);
-
-        List<Integer> randomForNewRule = getRandomForNewRule(context);
-        List<String> newRuleAll = getNewRule(context);
-        List<String> newRuleNext = getNewRuleNext(context);
-        int positionNewRuleNext = 0;
-
-        Log.e("noNeedPlayer", String.valueOf(noNeedPlayer.size()));
-        Log.e("challenge", String.valueOf(challenge.size()));
-        Log.e("choice", String.valueOf(choice.size()));
-        Log.e("randomForNewRule", String.valueOf(newRuleAll.size()));
-        Log.e("randomForNewRuleNext", String.valueOf(newRuleNext.size()));
-
-        int test = noNeedPlayer.size() + challenge.size() + choice.size() + newRuleAll.size() + newRuleNext.size();
-
-        Log.e("total", String.valueOf(test));
-
-        boolean isPossibleNewRule = false;
-
-        List<Integer> newKcup = new ArrayList<>();
-        int positionWhenKcupPossible = 8;
-        boolean isPossibleNewKcup = false;
-
-        Random r = new Random();
-        int nbRule = r.nextInt(40 - 25) + 25;
-        int positionWhenNewRulePossible = 2;
-        int nbStopNewRule = nbRule - 6;
-
-        for (int a = 0; a < nbRule; a++) {
-
-            if (a == positionWhenNewRulePossible) {
-                isPossibleNewRule = true;
-            }
-
-            if (a == positionWhenKcupPossible && newKcup.size() < 2) {
-                isPossibleNewKcup = true;
-            }
-
-            int randomNewRule = r.nextInt(11) + 1;
-
-            if (a < nbStopNewRule && isPossibleNewRule && randomNewRule < 3) {
-                newRule.add(new Rule(getRandomSoftDrinks(context, newRuleAll.get(randomForNewRule.get(0)), 6), Type.NEW_RULE.toString()));
-                isPossibleNewRule = false;
-                positionNewRuleNext = a + (r.nextInt(3) + 5);
-            } else if (!isPossibleNewRule && a > 0 && a == positionNewRuleNext) {
-                newRule.add(new Rule(getRandomSoftDrinks(context, newRuleNext.get(randomForNewRule.get(0)), 6), Type.NEW_RULE_NEXT.toString()));
-                positionNewRuleNext = 0;
-                randomForNewRule.remove(0);
-                isPossibleNewRule = true;
-            } else {
-
-                int randomForKcup = r.nextInt(100) + 1;
-
-                if (isPossibleNewKcup && randomForKcup > 85) {
-                    newRule.add(new Rule(getSelectedWithTwoPlayer(context, kcup.get(0), listPlayer, 6), Type.KCUPS.toString()));
-                    kcup.remove(0);
-                    newKcup.add(a);
-                    /*newRule.add(new Rule(getSelectedWithTwoPlayer(context, context.getString(R.string.kcup_content), listPlayer, 6), Type.KCUPS.toString()));
-                    newKcup.add(a);*/
-                    positionWhenKcupPossible = a + 8;
-                    isPossibleNewKcup = false;
-                }
-
-                int randomType = r.nextInt(3) + 1;
-
-                if (randomType == 1) {
-                    Collections.shuffle(noNeedPlayer);
-                    newRule.add(new Rule(getRandomSoftDrinks(context, noNeedPlayer.get(0), 4), Type.NO_NEED_PLAYER.toString()));
-                    noNeedPlayer.remove(0);
-                } else if (randomType == 2) {
-                    Collections.shuffle(challenge);
-                    newRule.add(new Rule(getSelectedWithTwoPlayer(context, challenge.get(0), listPlayer, 4), Type.CHALLENGE.toString()));
-                    challenge.remove(0);
-                } else {
-                    Collections.shuffle(choice);
-                    newRule.add(new Rule(getChallengeWithPlayer(context, choice.get(0), listPlayer, 4), Type.CHOICE.toString()));
-                    choice.remove(0);
-                }
-            }
-        }
-
-        return newRule;
-    }
-
-    public static List<Rule> createCustomKcupGame(Context context, String extra, int nbQuestion, int maxDrinks) {
+    public static List<Rule> createCustomKcupGame(Context context, int nbQuestion, int maxDrinks) {
 
         List<String> listPlayer = SharedPreferenceUtils.getAllPlayer(context.getApplicationContext(), SharedPreferenceUtils.PREFS_PLAYER);
         List<Rule> newRule = new ArrayList<>();
@@ -235,35 +142,35 @@ public class GameUtils {
         Collections.shuffle(berserkRules);
 
         Random r = new Random();
-        //int nbRule = r.nextInt(20) + 25;
 
         int nbRule = 3;
 
         for (int a = 0; a < nbRule; a++) {
-            newRule.add(berserkRules.get(a));
+
+            BerserkRule berserkRule = new BerserkRule();
+
+            berserkRule.setContent(berserkRules.get(a).getContent());
+            berserkRule.setGoodQuestion(berserkRules.get(a).getGoodQuestion());
+            berserkRule.setBadQuestion(berserkRules.get(a).getBadQuestion());
+
+            List<String> goodAnswers = berserkRules.get(a).getGoodAnswers();
+            Collections.shuffle(goodAnswers);
+            int randomAnswer = r.nextInt(5) + 2;
+            berserkRule.setGoodAnswer(getRandomDrinks(context, goodAnswers.get(0), randomAnswer));
+            int randomGoodAnswer = r.nextInt(3) + 1;
+            berserkRule.setRandomGoodAnswer(randomGoodAnswer);
+
+            List<String> badAnswers = berserkRules.get(a).getBadAnswers();
+            Collections.shuffle(badAnswers);
+            int randomAnswer2 = r.nextInt(4) + 1;
+            berserkRule.setBadAnswer(getRandomDrinks(context, badAnswers.get(0), randomAnswer2));
+            int randomBadAnswer = (r.nextInt(5)) + 2;
+            berserkRule.setRandomBadAnswer(randomBadAnswer);
+
+            newRule.add(berserkRule);
         }
 
         return newRule;
-
-       /* List<Rule> newRule = new ArrayList<>();
-        List<String> noNeedPlayer = getNoNeedPlayer(context);
-
-        Log.e("berserk question", String.valueOf(noNeedPlayer.size()));
-
-        int test = noNeedPlayer.size();
-
-        Log.e("total", String.valueOf(test));
-
-        Random r = new Random();
-        int nbRule = r.nextInt(40 - 25) + 25;
-
-        *//*for (int a = 0; a < nbRule; a++) {
-            Collections.shuffle(noNeedPlayer);
-            newRule.add(new Rule(getRandomSoftDrinksBerserk(context, noNeedPlayer.get(0), 4), Type.BERSERK.toString()));
-            noNeedPlayer.remove(0);
-        }
-*//*
-        return newRule;*/
     }
 
     private static List<String> getNoNeedPlayer(Context context) {
@@ -280,6 +187,21 @@ public class GameUtils {
         List<String> challenge = new ArrayList<>();
         Collections.addAll(challenge, challengeArray);
         return challenge;
+    }
+
+    private static String getRandomDrinks(Context context, String rule, int nbRule) {
+        String tmp = rule;
+
+        String newDrinks;
+
+        if (nbRule > 1) {
+            newDrinks = String.valueOf(nbRule) + " " + context.getString(R.string.drinks);
+        } else {
+            newDrinks = String.valueOf(nbRule) + " " + context.getString(R.string.drink);
+        }
+
+        tmp = tmp.replace("%b", newDrinks);
+        return tmp;
     }
 
     private static String getRandomSoftDrinks(Context context, String rule, int nbRandom) {
