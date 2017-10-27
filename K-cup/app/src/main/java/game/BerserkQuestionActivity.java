@@ -111,7 +111,6 @@ public class BerserkQuestionActivity extends AppCompatActivity {
         } else {
             SharedPreferenceUtils.setPositionEnrage(getApplicationContext(), (
                     SharedPreferenceUtils.getPositionEnrage(getApplicationContext()) + currentRule.getRandomBadAnswer()));
-            SharedPreferenceUtils.setPositionEnrage(getApplicationContext(), currentRule.getRandomGoodAnswer());
             SharedPreferenceUtils.setRoundGame(getApplicationContext(), GameUtils.Type.BERSERK_BAD_ANSWER.toString());
             Intent k = new Intent(BerserkQuestionActivity.this, BerserkBadAnswerActivity.class);
             startActivity(k);

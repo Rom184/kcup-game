@@ -78,7 +78,7 @@ public class BerserkBadAnswerActivity extends AppCompatActivity{
 
     private void goToNextRule() {
 
-        if (position < SharedPreferenceUtils.getBerserkRule(getApplicationContext(), SharedPreferenceUtils.PREFS_BERSERK_RULE).size() - 1) {
+        if (position < SharedPreferenceUtils.getBerserkRuleGame(getApplicationContext(), SharedPreferenceUtils.PREFS_BERSERK_RULE_GAME).size() -1) {
             SharedPreferenceUtils.setRoundGame(getApplicationContext(), GameUtils.Type.BERSERK_QUESTION.toString());
             SharedPreferenceUtils.setPositionGame(getApplicationContext(), position + 1);
             Intent k = new Intent(BerserkBadAnswerActivity.this, BerserkQuestionActivity.class);

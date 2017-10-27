@@ -96,17 +96,17 @@ public class SplashActivity extends AppCompatActivity {
         }
     }
 
-    private void saveKing(){
+    private void saveKing() {
 
         List<KingRule> kingRules = SharedPreferenceUtils.getkingRule(getApplicationContext(), SharedPreferenceUtils.PREFS_KING_RULE);
 
-        if (kingRules == null || kingRules.isEmpty()){
+        if (kingRules == null || kingRules.isEmpty()) {
             saveKingInfo();
         }
 
     }
 
-    private void saveKingInfo(){
+    private void saveKingInfo() {
 
         List<KingRule> kingRules = new ArrayList<>();
 
@@ -168,11 +168,8 @@ public class SplashActivity extends AppCompatActivity {
 
     private void saveQuestionAnswerBerserk() {
 
-        List<BerserkRule> berserkRules = SharedPreferenceUtils.getBerserkRule(getApplicationContext(), SharedPreferenceUtils.PREFS_BERSERK_RULE);
-
-        if (berserkRules == null || berserkRules.isEmpty()) {
-            saveBerserkInfo();
-        }
+        //List<BerserkRule> berserkRules = SharedPreferenceUtils.getBerserkRule(getApplicationContext(), SharedPreferenceUtils.PREFS_BERSERK_RULE);
+        saveBerserkInfo();
     }
 
     private void saveBerserkInfo() {
@@ -205,6 +202,26 @@ public class SplashActivity extends AppCompatActivity {
         } else if (position == 2) {
             List<String> goodAnswer = getGoodAnswerBerserk2(getApplicationContext());
             List<String> badAnswer = getBadAnswerBerserk2(getApplicationContext());
+            return new BerserkRule(content.get(position), goodQuestion.get(position), badQuestion.get(position), goodAnswer, badAnswer);
+        } else if (position == 3) {
+            List<String> goodAnswer = getGoodAnswerBerserk3(getApplicationContext());
+            List<String> badAnswer = getBadAnswerBerserk3(getApplicationContext());
+            return new BerserkRule(content.get(position), goodQuestion.get(position), badQuestion.get(position), goodAnswer, badAnswer);
+        } else if (position == 4) {
+            List<String> goodAnswer = getGoodAnswerBerserk4(getApplicationContext());
+            List<String> badAnswer = getBadAnswerBerserk4(getApplicationContext());
+            return new BerserkRule(content.get(position), goodQuestion.get(position), badQuestion.get(position), goodAnswer, badAnswer);
+        } else if (position == 5) {
+            List<String> goodAnswer = getGoodAnswerBerserk5(getApplicationContext());
+            List<String> badAnswer = getBadAnswerBerserk5(getApplicationContext());
+            return new BerserkRule(content.get(position), goodQuestion.get(position), badQuestion.get(position), goodAnswer, badAnswer);
+        } else if (position == 6) {
+            List<String> goodAnswer = getGoodAnswerBerserk6(getApplicationContext());
+            List<String> badAnswer = getBadAnswerBerserk6(getApplicationContext());
+            return new BerserkRule(content.get(position), goodQuestion.get(position), badQuestion.get(position), goodAnswer, badAnswer);
+        } else if (position == 7) {
+            List<String> goodAnswer = getGoodAnswerBerserk7(getApplicationContext());
+            List<String> badAnswer = getBadAnswerBerserk7(getApplicationContext());
             return new BerserkRule(content.get(position), goodQuestion.get(position), badQuestion.get(position), goodAnswer, badAnswer);
         }
         return null;
@@ -329,6 +346,76 @@ public class SplashActivity extends AppCompatActivity {
 
     private static List<String> getBadAnswerBerserk2(Context context) {
         String[] listString = context.getResources().getStringArray(R.array.b_bad_answer_array_2);
+        List<String> newString = new ArrayList<>();
+        Collections.addAll(newString, listString);
+        return newString;
+    }
+
+    private static List<String> getGoodAnswerBerserk3(Context context) {
+        String[] listString = context.getResources().getStringArray(R.array.b_good_answer_array_3);
+        List<String> newString = new ArrayList<>();
+        Collections.addAll(newString, listString);
+        return newString;
+    }
+
+    private static List<String> getBadAnswerBerserk3(Context context) {
+        String[] listString = context.getResources().getStringArray(R.array.b_bad_answer_array_3);
+        List<String> newString = new ArrayList<>();
+        Collections.addAll(newString, listString);
+        return newString;
+    }
+
+    private static List<String> getGoodAnswerBerserk4(Context context) {
+        String[] listString = context.getResources().getStringArray(R.array.b_good_answer_array_4);
+        List<String> newString = new ArrayList<>();
+        Collections.addAll(newString, listString);
+        return newString;
+    }
+
+    private static List<String> getBadAnswerBerserk4(Context context) {
+        String[] listString = context.getResources().getStringArray(R.array.b_bad_answer_array_4);
+        List<String> newString = new ArrayList<>();
+        Collections.addAll(newString, listString);
+        return newString;
+    }
+
+    private static List<String> getGoodAnswerBerserk5(Context context) {
+        String[] listString = context.getResources().getStringArray(R.array.b_good_answer_array_5);
+        List<String> newString = new ArrayList<>();
+        Collections.addAll(newString, listString);
+        return newString;
+    }
+
+    private static List<String> getBadAnswerBerserk5(Context context) {
+        String[] listString = context.getResources().getStringArray(R.array.b_bad_answer_array_5);
+        List<String> newString = new ArrayList<>();
+        Collections.addAll(newString, listString);
+        return newString;
+    }
+
+    private static List<String> getGoodAnswerBerserk6(Context context) {
+        String[] listString = context.getResources().getStringArray(R.array.b_good_answer_array_6);
+        List<String> newString = new ArrayList<>();
+        Collections.addAll(newString, listString);
+        return newString;
+    }
+
+    private static List<String> getBadAnswerBerserk6(Context context) {
+        String[] listString = context.getResources().getStringArray(R.array.b_bad_answer_array_6);
+        List<String> newString = new ArrayList<>();
+        Collections.addAll(newString, listString);
+        return newString;
+    }
+
+    private static List<String> getGoodAnswerBerserk7(Context context) {
+        String[] listString = context.getResources().getStringArray(R.array.b_good_answer_array_7);
+        List<String> newString = new ArrayList<>();
+        Collections.addAll(newString, listString);
+        return newString;
+    }
+
+    private static List<String> getBadAnswerBerserk7(Context context) {
+        String[] listString = context.getResources().getStringArray(R.array.b_bad_answer_array_7);
         List<String> newString = new ArrayList<>();
         Collections.addAll(newString, listString);
         return newString;

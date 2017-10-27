@@ -143,7 +143,7 @@ public class GameUtils {
 
         Random r = new Random();
 
-        int nbRule = 3;
+        int nbRule = 5;
 
         for (int a = 0; a < nbRule; a++) {
 
@@ -162,9 +162,9 @@ public class GameUtils {
 
             List<String> badAnswers = berserkRules.get(a).getBadAnswers();
             Collections.shuffle(badAnswers);
-            int randomAnswer2 = r.nextInt(4) + 1;
+            int randomAnswer2 = (r.nextInt(4)) + 1;
             berserkRule.setBadAnswer(getRandomDrinks(context, badAnswers.get(0), randomAnswer2));
-            int randomBadAnswer = (r.nextInt(5)) + 2;
+            int randomBadAnswer = (r.nextInt(6)) + 2;
             berserkRule.setRandomBadAnswer(randomBadAnswer);
 
             newRule.add(berserkRule);

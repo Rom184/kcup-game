@@ -1206,18 +1206,33 @@
         <item>Un homme vous propose de boire...</item>
         <item>Vous êtes dans un bar, que faites-vous ?</item>
         <item>Vous regardez votre verre...</item>
+        <item>Vous aimez le K-Cup ?</item>
+        <item>On s\'en jette un petit ?</item>
+        <item>Un homme se tient devant vous avec l\'air menaçant...</item>
+        <item>Vous dever aller au Nord...</item>
+        <item>Vous êtes dans votre voiture</item>
     </string-array>
 
     <string-array name="b_good_question_array">
         <item>Vous acceptez</item>
         <item>On commande à boire !</item>
         <item>Pour le boire ?</item>
+        <item>Bien sur !</item>
+        <item>Je dirais pas non</item>
+        <item>On lui en colle un bonne !</item>
+        <item>C\'est quoi cette connerie de Nord ?</item>
+        <item>Vous conduisez</item>
     </string-array>
 
     <string-array name="b_bad_question_array">
         <item>Vous refusez</item>
         <item>On s\'assoit et on attends...</item>
         <item>Parce qu\'il est jolie</item>
+        <item>Je ne crois pas...</item>
+        <item>Un petit quoi ?</item>
+        <item>On lui propose à boire !</item>
+        <item>Allons-y !</item>
+        <item>Vous cherchez vos clés</item>
     </string-array>
 
     <string-array name="b_good_answer_array_0">
@@ -1248,6 +1263,56 @@
     <string-array name="b_bad_answer_array_2">
         <item>Il sera bien plus beau en étant vide !</item>
         <item>Il vaut mieux juste le regarder pour le moment.</item>
+    </string-array>
+
+    <string-array name="b_good_answer_array_3">
+        <item>C\'est bien parlé !\n\nVive le K-Cup</item>
+        <item>Et pour fêter ça :\n\n%b pour tout le monde</item>
+    </string-array>
+
+    <string-array name="b_bad_answer_array_3">
+        <item>K-Cup est tellement triste d\'apprendre la nouvelle..\n\nFinissez vos verres (insolents !)</item>
+        <item>Ce n\'est pas possible !\n\n%b pour se reconcilier !</item>
+    </string-array>
+
+    <string-array name="b_good_answer_array_4">
+        <item>Donc une petite tournée pour tout le monde !\n\nEt %b !</item>
+        <item>Une petite gorgée et on reprend la route !</item>
+    </string-array>
+
+    <string-array name="b_bad_answer_array_4">
+        <item>Laisse tomber...</item>
+        <item>A ton avis ?\n\n%b pour comprendre !</item>
+    </string-array>
+
+    <string-array name="b_good_answer_array_5">
+        <item>En plein dans sa mouille !\n\n%b pour les vainqueurs</item>
+        <item>L\'homme se défend et vous met à terre.\n\n%b pour se rétablir plus vite</item>
+    </string-array>
+
+    <string-array name="b_bad_answer_array_5">
+        <item>L\'homme devient d\'un coup gentil et se laisse amadouer</item>
+        <item>%b pour notre nouvel ami !</item>
+    </string-array>
+
+    <string-array name="b_good_answer_array_6">
+        <item>Le nord, suivant comment on est tourné, ça change tout !\n\n%b pour enfin comprendre</item>
+        <item>Le Nord est froid aussi !\n\n%b pour se réchauffer</item>
+    </string-array>
+
+    <string-array name="b_bad_answer_array_6">
+        <item>Une longue marche vous attend...\n\n%b pour la route !</item>
+        <item>Il faudra %b pour s\'équipper avant !</item>
+    </string-array>
+
+    <string-array name="b_good_answer_array_7">
+        <item>Il est interdit de conduire après avoir bu !\n\nFinissez vos verres pour ne pas pouvoir conduire !</item>
+        <item>Et puis quoi encore !\n\nOn va boire plutôt %b</item>
+    </string-array>
+
+    <string-array name="b_bad_answer_array_7">
+        <item>Clés retrouvées mais on va attendre de décuver avant de reprendre la route</item>
+        <item>Les clés sont introuvables...\n\n%b pour se consoler (et ne pas prendre la voiture)</item>
     </string-array>
 
     <string-array name="end_array">
